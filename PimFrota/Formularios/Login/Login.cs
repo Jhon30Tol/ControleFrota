@@ -11,60 +11,53 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PimFrota.Formularios.Login
+namespace PimFrota.Formularios.Login 
 {
     public partial class Login : Form
     {
         public string ativo;
-        //public int id;
+       
         public string nome;
         public Login()
         {
             InitializeComponent();
+            Senhatxb.PasswordChar = '*';
         }
 
-        private void Entrarbtn_Click(object sender, EventArgs e)
+        private void validarUsuario()
         {
-            
-            FrmHome home = new FrmHome();
-            home.ShowDialog();
-            this.Close();
-
-            /*
-            
-            Usuario cry = new Usuario();
-
-
-            //FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
-
-
-            cry.Nome = Usuariotxb.Text;
-            cry.Nome = Senhatxb.Text;
-
-            Usuario novocry = new Usuario();
-
-            novocry = Usuario.ControllerUsuario.PesquisaLogin(usuario);
-
-            if (novocry.id != 0)
+            if (Usuariotxb.Text.Equals("admin") && Senhatxb.Text.Equals("admin"))
             {
-                //id = novocry.id;
-                ativo = novocry.Ativo;
-                nome = novocry.Nome;
-                DialogResult = DialogResult.OK;
+
+                FrmHome home = new FrmHome();
+                MessageBox.Show("Login efetuado com sucesso!");
+                home.ShowDialog();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Usuário ou senha incorretos!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtLogin.Focus();
+                MessageBox.Show("Dados incorretos, informe novamente!");
+                Usuariotxb.Text = "";
+                Senhatxb.Text = "";
+                //Usuariotxb.Text.Focus();
             }
+        }
+        private void Entrarbtn_Click(object sender, EventArgs e)
+        {
+            validarUsuario();
 
-            */
-    
         }
 
         private void Usuariotxb_Validating(object sender, CancelEventArgs e)
         {
             
+        }
+        private void Senhatxb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                validarUsuario();
+            }
         }
     }
 }
