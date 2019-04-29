@@ -16,7 +16,7 @@ namespace PimServices.RepositorySql
 
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
-                String nome = usu;
+                String nome = ;
                 String senha = ;
                 String validarUsuario = "SELECT * FROM cadastro_usuario Where nome_usuario = '"+nome+"' and senha_usuario = '"+senha+"'; ";
                 conn.Open();
