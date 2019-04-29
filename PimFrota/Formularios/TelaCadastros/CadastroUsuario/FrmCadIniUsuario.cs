@@ -103,8 +103,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             }
             else
             {
+                FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
                 Usuario u = new Usuario();
                 DaoUsuario dao = new DaoUsuario();
+
+                u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
+                u.Nome = NomeUsuarioTbx.Text;
+                u.Senha = SenhaUsuarioTbx.Text;
+                u.Ativo = AtivoCbx.Text;
                 dao.EditarrUsuario(u);
             }
 
@@ -244,15 +250,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void dataGridViewUsuario_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            
             CodUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
             NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
             AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
             //   SenhaUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
             u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
-            u.Nome = NomeUsuarioTbx.Text;
-            u.Nome = SenhaUsuarioTbx.Text;
-
             MessageBox.Show(Convert.ToString(u.Id), "");
 
             usuarioPesquisaPnl.Visible = false;
@@ -262,7 +264,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             SenhaUsuarioTbx.Enabled = false;
             CancelarUsuBtn.Enabled = true;
             EditarUsuBtn.Enabled = true;
-            
+
         }
     }
     

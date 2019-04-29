@@ -58,10 +58,11 @@ namespace PimServices.RepositorySql
 
             try
             {
-                 
-        //teste novo git        
 
-                //  MessageBox.Show(id_usuario, "");
+
+
+
+
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
                 String alteratDados = "UPDATE cadastro_usuario set nome_usuario = @nome, senha_usuario = @senha, ativo = @ativo where id_usuario = @id";
@@ -73,7 +74,7 @@ namespace PimServices.RepositorySql
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("ativo", u.Ativo));
 
                 cmd.Prepare();
-               // MessageBox.Show(cmd.Parameters(),"");
+                MessageBox.Show(u.Senha, "");
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
