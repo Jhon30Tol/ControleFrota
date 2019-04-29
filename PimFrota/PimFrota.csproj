@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C191953-6FDB-4A90-B1BC-729A4CBC3BA1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PimFrota</RootNamespace>
+    <AssemblyName>PimFrota</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Base\BaseCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Base\BaseCadastro.Designer.cs">
+      <DependentUpon>BaseCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBaseFundoCad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBaseFundoCad.Designer.cs">
+      <DependentUpon>FrmBaseFundoCad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBaseViagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBaseViagem.Designer.cs">
+      <DependentUpon>FrmBaseViagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMensagemCadSucesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMensagemCadSucesso.Designer.cs">
+      <DependentUpon>FrmMensagemCadSucesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMensagemCampoObrigatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMensagemCampoObrigatorio.Designer.cs">
+      <DependentUpon>FrmMensagemCampoObrigatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMensagemErroCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMensagemErroCadastro.Designer.cs">
+      <DependentUpon>FrmMensagemErroCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCidade\FrmCadCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCidade\FrmCadCidade.Designer.cs">
+      <DependentUpon>FrmCadCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCidade\FrmCadIniCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCidade\FrmCadIniCidade.Designer.cs">
+      <DependentUpon>FrmCadIniCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCidade\FrmPesquisaCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCidade\FrmPesquisaCidade.Designer.cs">
+      <DependentUpon>FrmPesquisaCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadCliente.Designer.cs">
+      <DependentUpon>FrmCadCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadIniCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadIniCliente.Designer.cs">
+      <DependentUpon>FrmCadIniCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.Designer.cs">
+      <DependentUpon>FrmPesquisaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadIniMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadIniMotorista.Designer.cs">
+      <DependentUpon>FrmCadIniMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.Designer.cs">
+      <DependentUpon>FrmCadMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmPesquisaMotorista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmPesquisaMotorista.Designer.cs">
+      <DependentUpon>FrmPesquisaMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadIniProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadIniProduto.Designer.cs">
+      <DependentUpon>FrmCadIniProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadProduto.Designer.cs">
+      <DependentUpon>FrmCadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmPesquisaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmPesquisaProduto.Designer.cs">
+      <DependentUpon>FrmPesquisaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadIniSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadIniSeguro.Designer.cs">
+      <DependentUpon>FrmCadIniSeguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadSeguro.Designer.cs">
+      <DependentUpon>FrmCadSeguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmPesquisarSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmPesquisarSeguro.Designer.cs">
+      <DependentUpon>FrmPesquisarSeguro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadIniServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadIniServico.Designer.cs">
+      <DependentUpon>FrmCadIniServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadServico.Designer.cs">
+      <DependentUpon>FrmCadServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmPesquisarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmPesquisarServico.Designer.cs">
+      <DependentUpon>FrmPesquisarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadIniUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadIniUsuario.Designer.cs">
+      <DependentUpon>FrmCadIniUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadusuario.Designer.cs">
+      <DependentUpon>FrmCadusuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmPesquisaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmPesquisaUsuario.Designer.cs">
+      <DependentUpon>FrmPesquisaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadIniVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadIniVeiculo.Designer.cs">
+      <DependentUpon>FrmCadIniVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadVeiculo.Designer.cs">
+      <DependentUpon>FrmCadVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmPesquisarVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmPesquisarVeiculo.Designer.cs">
+      <DependentUpon>FrmPesquisarVeiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaHome\FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaHome\FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\Retorno Viagem\CadRetornoViagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\Retorno Viagem\CadRetornoViagem.Designer.cs">
+      <DependentUpon>CadRetornoViagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\Retorno Viagem\FrmCadIniRetornoViagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\Retorno Viagem\FrmCadIniRetornoViagem.Designer.cs">
+      <DependentUpon>FrmCadIniRetornoViagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\SaidaViagem\CadSaidaViagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\SaidaViagem\CadSaidaViagem.Designer.cs">
+      <DependentUpon>CadSaidaViagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\SaidaViagem\FrmCadIniSaidaViagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaViagem\SaidaViagem\FrmCadIniSaidaViagem.Designer.cs">
+      <DependentUpon>FrmCadIniSaidaViagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="syslogDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>syslogDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formularios\Base\BaseCadastro.resx">
+      <DependentUpon>BaseCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Base\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Base\FrmBaseFundoCad.resx">
+      <DependentUpon>FrmBaseFundoCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Base\FrmBaseViagem.resx">
+      <DependentUpon>FrmBaseViagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mensagens\FrmMensagemCadSucesso.resx">
+      <DependentUpon>FrmMensagemCadSucesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mensagens\FrmMensagemCampoObrigatorio.resx">
+      <DependentUpon>FrmMensagemCampoObrigatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mensagens\FrmMensagemErroCadastro.resx">
+      <DependentUpon>FrmMensagemErroCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroCidade\FrmCadCidade.resx">
+      <DependentUpon>FrmCadCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroCidade\FrmCadIniCidade.resx">
+      <DependentUpon>FrmCadIniCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroCidade\FrmPesquisaCidade.resx">
+      <DependentUpon>FrmPesquisaCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroCliente\FrmCadCliente.resx">
+      <DependentUpon>FrmCadCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroCliente\FrmCadIniCliente.resx">
+      <DependentUpon>FrmCadIniCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.resx">
+      <DependentUpon>FrmPesquisaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadIniMotorista.resx">
+      <DependentUpon>FrmCadIniMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.resx">
+      <DependentUpon>FrmCadMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroMotorista\FrmPesquisaMotorista.resx">
+      <DependentUpon>FrmPesquisaMotorista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroProduto\FrmCadIniProduto.resx">
+      <DependentUpon>FrmCadIniProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroProduto\FrmCadProduto.resx">
+      <DependentUpon>FrmCadProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroProduto\FrmPesquisaProduto.resx">
+      <DependentUpon>FrmPesquisaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadIniSeguro.resx">
+      <DependentUpon>FrmCadIniSeguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadSeguro.resx">
+      <DependentUpon>FrmCadSeguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroSeguro\FrmPesquisarSeguro.resx">
+      <DependentUpon>FrmPesquisarSeguro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroServico\FrmCadIniServico.resx">
+      <DependentUpon>FrmCadIniServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroServico\FrmCadServico.resx">
+      <DependentUpon>FrmCadServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroServico\FrmPesquisarServico.resx">
+      <DependentUpon>FrmPesquisarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadIniUsuario.resx">
+      <DependentUpon>FrmCadIniUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadusuario.resx">
+      <DependentUpon>FrmCadusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroUsuario\FrmPesquisaUsuario.resx">
+      <DependentUpon>FrmPesquisaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadIniVeiculo.resx">
+      <DependentUpon>FrmCadIniVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadVeiculo.resx">
+      <DependentUpon>FrmCadVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroVeiculo\FrmPesquisarVeiculo.resx">
+      <DependentUpon>FrmPesquisarVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaHome\FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaViagem\Retorno Viagem\CadRetornoViagem.resx">
+      <DependentUpon>CadRetornoViagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaViagem\Retorno Viagem\FrmCadIniRetornoViagem.resx">
+      <DependentUpon>FrmCadIniRetornoViagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaViagem\SaidaViagem\CadSaidaViagem.resx">
+      <DependentUpon>CadSaidaViagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaViagem\SaidaViagem\FrmCadIniSaidaViagem.resx">
+      <DependentUpon>FrmCadIniSaidaViagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="syslogDataSet.xsc">
+      <DependentUpon>syslogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="syslogDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>syslogDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="syslogDataSet.xss">
+      <DependentUpon>syslogDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PimServices\PimServices.csproj">
+      <Project>{98dbaa37-a792-4dad-b431-6b3f23fdce87}</Project>
+      <Name>PimServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
