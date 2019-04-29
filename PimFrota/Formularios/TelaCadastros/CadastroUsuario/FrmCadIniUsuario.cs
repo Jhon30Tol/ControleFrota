@@ -250,6 +250,9 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
             //   SenhaUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
             u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
+            u.Nome = NomeUsuarioTbx.Text;
+            u.Nome = SenhaUsuarioTbx.Text;
+
             MessageBox.Show(Convert.ToString(u.Id), "");
 
             usuarioPesquisaPnl.Visible = false;
