@@ -31,7 +31,7 @@ namespace PimServices.RepositorySql
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
                 String insertDados = "INSERT INTO cadastro_usuario(nome_usuario, senha_usuario, ativo)" +
-                    "VALUES (?, ?, ?);";
+                    "VALUES (?, MD5(?), ?);";
                 conn.Open();
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(insertDados, conn);
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", u.Nome));
@@ -80,6 +80,39 @@ namespace PimServices.RepositorySql
                 conn.Close();
 
                 MessageBox.Show("Usuario salvo com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar o usuario, verifique a conexão com o banco de dados: " + ex.ToString());
+
+            }
+        }
+
+        public void ExcluirUsuario(Usuario u)
+        {
+
+            try
+            {
+
+
+
+
+
+                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+                conn = new MySqlConnection(connectionString);
+                String alteratDados = "DELETE FROM cadastro_usuario where id_usuario = @id";
+                conn.Open();
+                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alteratDados, conn);
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", u.Id));
+
+
+                cmd.Prepare();
+                MessageBox.Show(u.Senha, "");
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+
+                MessageBox.Show("Usuario Excluido com sucesso!");
             }
             catch (Exception ex)
             {

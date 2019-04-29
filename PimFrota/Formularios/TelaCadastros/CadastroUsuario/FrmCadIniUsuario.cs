@@ -55,21 +55,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             modoGravar();
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
-            
-            //novo_usuario.TopLevel = false;
-            //novo_usuario.AutoScroll = true;
-            //novo_usuario.FormBorderStyle = FormBorderStyle.None;
-            //this.CadUsuIniPnl.Controls.Add(novo_usuario);
-            //novo_usuario.Show();
-            
-
 
         }
 
         private void CancelarBtn_Click(object sender, EventArgs e)
         {
-            //FrmCadusuario frmusuform = new FrmCadusuario();
-            //frmusuform.Close();
+            
             this.Close();
 
         }
@@ -114,24 +105,18 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 dao.EditarrUsuario(u);
             }
 
-
-            
        
             iniciaForm();
-           // novo_usuario.Close();
             
         }
 
         private void PesquisarUsuBtn_Click(object sender, EventArgs e)
         {
             FrmPesquisaUsuario pesquisa_usuario = new FrmPesquisaUsuario();
-            //pesquisa_usuario.TopLevel = false;
-            //pesquisa_usuario.AutoScroll = true;
-            //pesquisa_usuario.FormBorderStyle = FormBorderStyle.None;
-            //this.CadUsuIniPnl.Controls.Add(pesquisa_usuario);
+ 
             usuarioPnl.Visible = false;
             usuarioPesquisaPnl.Visible = true;
-            //pesquisa_usuario.Show();
+         
         }
 
         private void FrmCadIniUsuario_Load(object sender, EventArgs e)
@@ -172,36 +157,26 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void dataGridViewUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           // FrmCadusuario frmusuform = new FrmCadusuario();
             NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
             AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
             SenhaUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
-            //FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
-
-
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
             NomeUsuarioTbx.Enabled = false;
             AtivoCbx.Enabled = false;
             SenhaUsuarioTbx.Enabled = false;
             CancelarUsuBtn.Enabled = true;
-           
-
-
 
         }
 
         private void dataGridViewUsuario_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-           // CodUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
             NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
             AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
             SenhaUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
 
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
-
-    
             NomeUsuarioTbx.Enabled = false;
             AtivoCbx.Enabled = false;
             SenhaUsuarioTbx.Enabled = false;
@@ -253,7 +228,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             CodUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
             NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
             AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
-            //   SenhaUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
             u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
             MessageBox.Show(Convert.ToString(u.Id), "");
 
@@ -264,7 +238,19 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             SenhaUsuarioTbx.Enabled = false;
             CancelarUsuBtn.Enabled = true;
             EditarUsuBtn.Enabled = true;
+            ExcluirUsuBtn.Enabled = true;
 
+        }
+
+        private void ExcluirUsuBtn_Click(object sender, EventArgs e)
+        {
+            FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+            Usuario u = new Usuario();
+            DaoUsuario dao = new DaoUsuario();
+
+            u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
+ 
+            dao.ExcluirUsuario(u);
         }
     }
     

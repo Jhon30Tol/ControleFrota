@@ -185,6 +185,7 @@
             this.ExcluirUsuBtn.Size = new System.Drawing.Size(26, 44);
             this.ExcluirUsuBtn.TabIndex = 17;
             this.ExcluirUsuBtn.UseVisualStyleBackColor = false;
+            this.ExcluirUsuBtn.Click += new System.EventHandler(this.ExcluirUsuBtn_Click);
             // 
             // CadUsuIniPnl
             // 
