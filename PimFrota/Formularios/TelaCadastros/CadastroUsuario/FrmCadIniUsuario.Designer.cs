@@ -53,6 +53,8 @@
             this.SenhaUsuarioLbl = new System.Windows.Forms.Label();
             this.Codusuariobl = new System.Windows.Forms.Label();
             this.NomeUsuarioLbl = new System.Windows.Forms.Label();
+            this.usuarioLbl = new System.Windows.Forms.Label();
+            this.linhaUsuarioLbl = new System.Windows.Forms.Label();
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadUsuIniPnl.SuspendLayout();
             this.usuarioPesquisaPnl.SuspendLayout();
@@ -191,9 +193,9 @@
             // 
             this.CadUsuIniPnl.Controls.Add(this.usuarioPesquisaPnl);
             this.CadUsuIniPnl.Controls.Add(this.usuarioPnl);
-            this.CadUsuIniPnl.Location = new System.Drawing.Point(2, 55);
+            this.CadUsuIniPnl.Location = new System.Drawing.Point(2, 69);
             this.CadUsuIniPnl.Name = "CadUsuIniPnl";
-            this.CadUsuIniPnl.Size = new System.Drawing.Size(594, 428);
+            this.CadUsuIniPnl.Size = new System.Drawing.Size(594, 414);
             this.CadUsuIniPnl.TabIndex = 23;
             this.CadUsuIniPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.CadUsuIniPnl_Paint);
             // 
@@ -383,10 +385,32 @@
             this.NomeUsuarioLbl.TabIndex = 109;
             this.NomeUsuarioLbl.Text = "Nome:";
             // 
+            // usuarioLbl
+            // 
+            this.usuarioLbl.AutoSize = true;
+            this.usuarioLbl.BackColor = System.Drawing.Color.Transparent;
+            this.usuarioLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioLbl.ForeColor = System.Drawing.Color.GreenYellow;
+            this.usuarioLbl.Location = new System.Drawing.Point(459, 18);
+            this.usuarioLbl.Name = "usuarioLbl";
+            this.usuarioLbl.Size = new System.Drawing.Size(126, 31);
+            this.usuarioLbl.TabIndex = 27;
+            this.usuarioLbl.Text = "Usuário";
+            // 
+            // linhaUsuarioLbl
+            // 
+            this.linhaUsuarioLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.linhaUsuarioLbl.Location = new System.Drawing.Point(-1, 56);
+            this.linhaUsuarioLbl.Name = "linhaUsuarioLbl";
+            this.linhaUsuarioLbl.Size = new System.Drawing.Size(598, 10);
+            this.linhaUsuarioLbl.TabIndex = 28;
+            // 
             // FrmCadIniUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 495);
+            this.Controls.Add(this.linhaUsuarioLbl);
+            this.Controls.Add(this.usuarioLbl);
             this.Controls.Add(this.CadUsuIniPnl);
             this.Controls.Add(this.BotaoCadastroPnl);
             this.Name = "FrmCadIniUsuario";
@@ -401,6 +425,7 @@
             this.usuarioPnl.ResumeLayout(false);
             this.usuarioPnl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -430,5 +455,7 @@
         public System.Windows.Forms.TextBox PesquisarTbx;
         public System.Windows.Forms.TextBox CodUsuarioTbx;
         private System.Windows.Forms.DataGridView dataGridViewUsuario;
+        private System.Windows.Forms.Label usuarioLbl;
+        private System.Windows.Forms.Label linhaUsuarioLbl;
     }
 }

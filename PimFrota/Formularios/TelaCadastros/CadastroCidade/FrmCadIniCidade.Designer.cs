@@ -53,6 +53,7 @@
             this.GravarCidadeBtn = new System.Windows.Forms.Button();
             this.PesquisarCidadeBtn = new System.Windows.Forms.Button();
             this.ExcluirCidadeBtn = new System.Windows.Forms.Button();
+            this.cidadeLbl = new System.Windows.Forms.Label();
             this.CadCidIniPnl.SuspendLayout();
             this.cidadePesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCidade)).BeginInit();
@@ -370,10 +371,23 @@
             this.ExcluirCidadeBtn.TabIndex = 17;
             this.ExcluirCidadeBtn.UseVisualStyleBackColor = false;
             // 
+            // cidadeLbl
+            // 
+            this.cidadeLbl.AutoSize = true;
+            this.cidadeLbl.BackColor = System.Drawing.Color.Transparent;
+            this.cidadeLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cidadeLbl.ForeColor = System.Drawing.Color.GreenYellow;
+            this.cidadeLbl.Location = new System.Drawing.Point(440, 9);
+            this.cidadeLbl.Name = "cidadeLbl";
+            this.cidadeLbl.Size = new System.Drawing.Size(130, 31);
+            this.cidadeLbl.TabIndex = 26;
+            this.cidadeLbl.Text = "CIDADE";
+            // 
             // FrmCadIniCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
+            this.Controls.Add(this.cidadeLbl);
             this.Controls.Add(this.CadCidIniPnl);
             this.Controls.Add(this.BotaoCadastroPnl);
             this.Name = "FrmCadIniCidade";
@@ -387,6 +401,7 @@
             this.BotaoCadastroPnl.ResumeLayout(false);
             this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -416,5 +431,6 @@
         private MaterialSkin.Controls.MaterialLabel PesquisarLbl;
         private System.Windows.Forms.Button PesquisarBtn;
         private System.Windows.Forms.TextBox PesquisarTbx;
+        private System.Windows.Forms.Label cidadeLbl;
     }
 }
