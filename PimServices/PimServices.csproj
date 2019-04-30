@@ -46,7 +46,6 @@
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorySql\ConexaoBancoMySQL.cs" />
-    <Compile Include="RepositorySql\DaoLogin.cs" />
     <Compile Include="RepositorySql\DaoUsuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
