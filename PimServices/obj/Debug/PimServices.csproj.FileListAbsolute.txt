@@ -78,3 +78,12 @@ F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\obj\Debug\Pi
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csproj.CopyComplete
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.dll
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.pdb
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\bin\Debug\PimServices.dll
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\bin\Debug\PimServices.pdb
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Google.Protobuf.dll
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\bin\Debug\MySql.Data.xml
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csprojAssemblyReference.cache
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csproj.CoreCompileInputs.cache
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csproj.CopyComplete
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.dll
+C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.pdb
