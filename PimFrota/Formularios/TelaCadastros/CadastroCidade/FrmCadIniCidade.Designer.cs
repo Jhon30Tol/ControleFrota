@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniCidade));
             this.CadCidIniPnl = new System.Windows.Forms.Panel();
-            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
-            this.CancelarCidadeBtn = new System.Windows.Forms.Button();
-            this.EditarCidadeBtn = new System.Windows.Forms.Button();
-            this.IncluirCidadeBtn = new System.Windows.Forms.Button();
-            this.GravarCidadeBtn = new System.Windows.Forms.Button();
-            this.PesquisarCidadeBtn = new System.Windows.Forms.Button();
-            this.ExcluirCidadeBtn = new System.Windows.Forms.Button();
+            this.cidadePesquisarPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewCidade = new System.Windows.Forms.DataGridView();
+            this.EstadoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.CidadeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.cidadePnl = new System.Windows.Forms.Panel();
             this.EstadoTbx = new System.Windows.Forms.TextBox();
             this.CodIbgeTbx = new System.Windows.Forms.TextBox();
@@ -46,18 +46,18 @@
             this.CodCidadelbl = new System.Windows.Forms.Label();
             this.IbgeCidadeLbl = new System.Windows.Forms.Label();
             this.NomeCidadeLbl = new System.Windows.Forms.Label();
-            this.cidadePesquisarPnl = new System.Windows.Forms.Panel();
-            this.EstadoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.CidadeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.dataGridViewCidade = new System.Windows.Forms.DataGridView();
+            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
+            this.CancelarCidadeBtn = new System.Windows.Forms.Button();
+            this.EditarCidadeBtn = new System.Windows.Forms.Button();
+            this.IncluirCidadeBtn = new System.Windows.Forms.Button();
+            this.GravarCidadeBtn = new System.Windows.Forms.Button();
+            this.PesquisarCidadeBtn = new System.Windows.Forms.Button();
+            this.ExcluirCidadeBtn = new System.Windows.Forms.Button();
             this.CadCidIniPnl.SuspendLayout();
-            this.BotaoCadastroPnl.SuspendLayout();
-            this.cidadePnl.SuspendLayout();
             this.cidadePesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCidade)).BeginInit();
+            this.cidadePnl.SuspendLayout();
+            this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadCidIniPnl
@@ -68,6 +68,183 @@
             this.CadCidIniPnl.Name = "CadCidIniPnl";
             this.CadCidIniPnl.Size = new System.Drawing.Size(594, 338);
             this.CadCidIniPnl.TabIndex = 25;
+            // 
+            // cidadePesquisarPnl
+            // 
+            this.cidadePesquisarPnl.Controls.Add(this.dataGridViewCidade);
+            this.cidadePesquisarPnl.Controls.Add(this.EstadoCkbx);
+            this.cidadePesquisarPnl.Controls.Add(this.CidadeCkbx);
+            this.cidadePesquisarPnl.Controls.Add(this.PesquisarLbl);
+            this.cidadePesquisarPnl.Controls.Add(this.PesquisarBtn);
+            this.cidadePesquisarPnl.Controls.Add(this.PesquisarTbx);
+            this.cidadePesquisarPnl.Location = new System.Drawing.Point(11, 16);
+            this.cidadePesquisarPnl.Name = "cidadePesquisarPnl";
+            this.cidadePesquisarPnl.Size = new System.Drawing.Size(573, 312);
+            this.cidadePesquisarPnl.TabIndex = 1;
+            // 
+            // dataGridViewCidade
+            // 
+            this.dataGridViewCidade.AllowUserToAddRows = false;
+            this.dataGridViewCidade.AllowUserToDeleteRows = false;
+            this.dataGridViewCidade.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewCidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCidade.Location = new System.Drawing.Point(11, 80);
+            this.dataGridViewCidade.Name = "dataGridViewCidade";
+            this.dataGridViewCidade.Size = new System.Drawing.Size(547, 229);
+            this.dataGridViewCidade.TabIndex = 62;
+            // 
+            // EstadoCkbx
+            // 
+            this.EstadoCkbx.AutoSize = true;
+            this.EstadoCkbx.Depth = 0;
+            this.EstadoCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.EstadoCkbx.Location = new System.Drawing.Point(133, 41);
+            this.EstadoCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.EstadoCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.EstadoCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.EstadoCkbx.Name = "EstadoCkbx";
+            this.EstadoCkbx.Ripple = true;
+            this.EstadoCkbx.Size = new System.Drawing.Size(72, 30);
+            this.EstadoCkbx.TabIndex = 61;
+            this.EstadoCkbx.Text = "Estado";
+            this.EstadoCkbx.UseVisualStyleBackColor = true;
+            // 
+            // CidadeCkbx
+            // 
+            this.CidadeCkbx.AutoSize = true;
+            this.CidadeCkbx.Depth = 0;
+            this.CidadeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CidadeCkbx.Location = new System.Drawing.Point(11, 41);
+            this.CidadeCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.CidadeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CidadeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CidadeCkbx.Name = "CidadeCkbx";
+            this.CidadeCkbx.Ripple = true;
+            this.CidadeCkbx.Size = new System.Drawing.Size(73, 30);
+            this.CidadeCkbx.TabIndex = 60;
+            this.CidadeCkbx.Text = "Cidade";
+            this.CidadeCkbx.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarLbl
+            // 
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(217, 13);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 59;
+            this.PesquisarLbl.Text = "Pesquisar";
+            // 
+            // PesquisarBtn
+            // 
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(168, 9);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 58;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(11, 12);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 57;
+            // 
+            // cidadePnl
+            // 
+            this.cidadePnl.Controls.Add(this.EstadoTbx);
+            this.cidadePnl.Controls.Add(this.CodIbgeTbx);
+            this.cidadePnl.Controls.Add(this.NomeCidadeTbx);
+            this.cidadePnl.Controls.Add(this.CodCidadeTbx);
+            this.cidadePnl.Controls.Add(this.EstadoLbl);
+            this.cidadePnl.Controls.Add(this.CodCidadelbl);
+            this.cidadePnl.Controls.Add(this.IbgeCidadeLbl);
+            this.cidadePnl.Controls.Add(this.NomeCidadeLbl);
+            this.cidadePnl.Location = new System.Drawing.Point(11, 25);
+            this.cidadePnl.Name = "cidadePnl";
+            this.cidadePnl.Size = new System.Drawing.Size(339, 126);
+            this.cidadePnl.TabIndex = 0;
+            // 
+            // EstadoTbx
+            // 
+            this.EstadoTbx.Location = new System.Drawing.Point(101, 68);
+            this.EstadoTbx.MaxLength = 2;
+            this.EstadoTbx.Name = "EstadoTbx";
+            this.EstadoTbx.Size = new System.Drawing.Size(56, 20);
+            this.EstadoTbx.TabIndex = 107;
+            // 
+            // CodIbgeTbx
+            // 
+            this.CodIbgeTbx.Location = new System.Drawing.Point(101, 91);
+            this.CodIbgeTbx.Name = "CodIbgeTbx";
+            this.CodIbgeTbx.Size = new System.Drawing.Size(95, 20);
+            this.CodIbgeTbx.TabIndex = 106;
+            // 
+            // NomeCidadeTbx
+            // 
+            this.NomeCidadeTbx.Location = new System.Drawing.Point(101, 42);
+            this.NomeCidadeTbx.MaxLength = 50;
+            this.NomeCidadeTbx.Name = "NomeCidadeTbx";
+            this.NomeCidadeTbx.Size = new System.Drawing.Size(222, 20);
+            this.NomeCidadeTbx.TabIndex = 105;
+            // 
+            // CodCidadeTbx
+            // 
+            this.CodCidadeTbx.Location = new System.Drawing.Point(102, 16);
+            this.CodCidadeTbx.Name = "CodCidadeTbx";
+            this.CodCidadeTbx.Size = new System.Drawing.Size(94, 20);
+            this.CodCidadeTbx.TabIndex = 104;
+            // 
+            // EstadoLbl
+            // 
+            this.EstadoLbl.AutoSize = true;
+            this.EstadoLbl.BackColor = System.Drawing.Color.Transparent;
+            this.EstadoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EstadoLbl.Location = new System.Drawing.Point(32, 71);
+            this.EstadoLbl.Name = "EstadoLbl";
+            this.EstadoLbl.Size = new System.Drawing.Size(63, 17);
+            this.EstadoLbl.TabIndex = 103;
+            this.EstadoLbl.Text = "Estado:";
+            // 
+            // CodCidadelbl
+            // 
+            this.CodCidadelbl.AutoSize = true;
+            this.CodCidadelbl.BackColor = System.Drawing.Color.Transparent;
+            this.CodCidadelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodCidadelbl.Location = new System.Drawing.Point(32, 19);
+            this.CodCidadelbl.Name = "CodCidadelbl";
+            this.CodCidadelbl.Size = new System.Drawing.Size(63, 17);
+            this.CodCidadelbl.TabIndex = 102;
+            this.CodCidadelbl.Text = "Código:";
+            // 
+            // IbgeCidadeLbl
+            // 
+            this.IbgeCidadeLbl.AutoSize = true;
+            this.IbgeCidadeLbl.BackColor = System.Drawing.Color.Transparent;
+            this.IbgeCidadeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbgeCidadeLbl.Location = new System.Drawing.Point(8, 94);
+            this.IbgeCidadeLbl.Name = "IbgeCidadeLbl";
+            this.IbgeCidadeLbl.Size = new System.Drawing.Size(87, 17);
+            this.IbgeCidadeLbl.TabIndex = 101;
+            this.IbgeCidadeLbl.Text = "Cod. IBGE:";
+            // 
+            // NomeCidadeLbl
+            // 
+            this.NomeCidadeLbl.AutoSize = true;
+            this.NomeCidadeLbl.BackColor = System.Drawing.Color.Transparent;
+            this.NomeCidadeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeCidadeLbl.Location = new System.Drawing.Point(27, 45);
+            this.NomeCidadeLbl.Name = "NomeCidadeLbl";
+            this.NomeCidadeLbl.Size = new System.Drawing.Size(68, 17);
+            this.NomeCidadeLbl.TabIndex = 100;
+            this.NomeCidadeLbl.Text = " Cidade:";
             // 
             // BotaoCadastroPnl
             // 
@@ -193,183 +370,6 @@
             this.ExcluirCidadeBtn.TabIndex = 17;
             this.ExcluirCidadeBtn.UseVisualStyleBackColor = false;
             // 
-            // cidadePnl
-            // 
-            this.cidadePnl.Controls.Add(this.EstadoTbx);
-            this.cidadePnl.Controls.Add(this.CodIbgeTbx);
-            this.cidadePnl.Controls.Add(this.NomeCidadeTbx);
-            this.cidadePnl.Controls.Add(this.CodCidadeTbx);
-            this.cidadePnl.Controls.Add(this.EstadoLbl);
-            this.cidadePnl.Controls.Add(this.CodCidadelbl);
-            this.cidadePnl.Controls.Add(this.IbgeCidadeLbl);
-            this.cidadePnl.Controls.Add(this.NomeCidadeLbl);
-            this.cidadePnl.Location = new System.Drawing.Point(11, 25);
-            this.cidadePnl.Name = "cidadePnl";
-            this.cidadePnl.Size = new System.Drawing.Size(339, 126);
-            this.cidadePnl.TabIndex = 0;
-            // 
-            // EstadoTbx
-            // 
-            this.EstadoTbx.Location = new System.Drawing.Point(101, 68);
-            this.EstadoTbx.MaxLength = 2;
-            this.EstadoTbx.Name = "EstadoTbx";
-            this.EstadoTbx.Size = new System.Drawing.Size(56, 20);
-            this.EstadoTbx.TabIndex = 107;
-            // 
-            // CodIbgeTbx
-            // 
-            this.CodIbgeTbx.Location = new System.Drawing.Point(101, 91);
-            this.CodIbgeTbx.Name = "CodIbgeTbx";
-            this.CodIbgeTbx.Size = new System.Drawing.Size(95, 20);
-            this.CodIbgeTbx.TabIndex = 106;
-            // 
-            // NomeCidadeTbx
-            // 
-            this.NomeCidadeTbx.Location = new System.Drawing.Point(101, 42);
-            this.NomeCidadeTbx.MaxLength = 50;
-            this.NomeCidadeTbx.Name = "NomeCidadeTbx";
-            this.NomeCidadeTbx.Size = new System.Drawing.Size(222, 20);
-            this.NomeCidadeTbx.TabIndex = 105;
-            // 
-            // CodCidadeTbx
-            // 
-            this.CodCidadeTbx.Location = new System.Drawing.Point(102, 16);
-            this.CodCidadeTbx.Name = "CodCidadeTbx";
-            this.CodCidadeTbx.Size = new System.Drawing.Size(94, 20);
-            this.CodCidadeTbx.TabIndex = 104;
-            // 
-            // EstadoLbl
-            // 
-            this.EstadoLbl.AutoSize = true;
-            this.EstadoLbl.BackColor = System.Drawing.Color.Transparent;
-            this.EstadoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EstadoLbl.Location = new System.Drawing.Point(32, 71);
-            this.EstadoLbl.Name = "EstadoLbl";
-            this.EstadoLbl.Size = new System.Drawing.Size(63, 17);
-            this.EstadoLbl.TabIndex = 103;
-            this.EstadoLbl.Text = "Estado:";
-            // 
-            // CodCidadelbl
-            // 
-            this.CodCidadelbl.AutoSize = true;
-            this.CodCidadelbl.BackColor = System.Drawing.Color.Transparent;
-            this.CodCidadelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodCidadelbl.Location = new System.Drawing.Point(32, 19);
-            this.CodCidadelbl.Name = "CodCidadelbl";
-            this.CodCidadelbl.Size = new System.Drawing.Size(63, 17);
-            this.CodCidadelbl.TabIndex = 102;
-            this.CodCidadelbl.Text = "Código:";
-            // 
-            // IbgeCidadeLbl
-            // 
-            this.IbgeCidadeLbl.AutoSize = true;
-            this.IbgeCidadeLbl.BackColor = System.Drawing.Color.Transparent;
-            this.IbgeCidadeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IbgeCidadeLbl.Location = new System.Drawing.Point(8, 94);
-            this.IbgeCidadeLbl.Name = "IbgeCidadeLbl";
-            this.IbgeCidadeLbl.Size = new System.Drawing.Size(87, 17);
-            this.IbgeCidadeLbl.TabIndex = 101;
-            this.IbgeCidadeLbl.Text = "Cod. IBGE:";
-            // 
-            // NomeCidadeLbl
-            // 
-            this.NomeCidadeLbl.AutoSize = true;
-            this.NomeCidadeLbl.BackColor = System.Drawing.Color.Transparent;
-            this.NomeCidadeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeCidadeLbl.Location = new System.Drawing.Point(27, 45);
-            this.NomeCidadeLbl.Name = "NomeCidadeLbl";
-            this.NomeCidadeLbl.Size = new System.Drawing.Size(68, 17);
-            this.NomeCidadeLbl.TabIndex = 100;
-            this.NomeCidadeLbl.Text = " Cidade:";
-            // 
-            // cidadePesquisarPnl
-            // 
-            this.cidadePesquisarPnl.Controls.Add(this.dataGridViewCidade);
-            this.cidadePesquisarPnl.Controls.Add(this.EstadoCkbx);
-            this.cidadePesquisarPnl.Controls.Add(this.CidadeCkbx);
-            this.cidadePesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.cidadePesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.cidadePesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.cidadePesquisarPnl.Location = new System.Drawing.Point(336, 157);
-            this.cidadePesquisarPnl.Name = "cidadePesquisarPnl";
-            this.cidadePesquisarPnl.Size = new System.Drawing.Size(573, 312);
-            this.cidadePesquisarPnl.TabIndex = 1;
-            // 
-            // EstadoCkbx
-            // 
-            this.EstadoCkbx.AutoSize = true;
-            this.EstadoCkbx.Depth = 0;
-            this.EstadoCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.EstadoCkbx.Location = new System.Drawing.Point(133, 41);
-            this.EstadoCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.EstadoCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.EstadoCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.EstadoCkbx.Name = "EstadoCkbx";
-            this.EstadoCkbx.Ripple = true;
-            this.EstadoCkbx.Size = new System.Drawing.Size(72, 30);
-            this.EstadoCkbx.TabIndex = 61;
-            this.EstadoCkbx.Text = "Estado";
-            this.EstadoCkbx.UseVisualStyleBackColor = true;
-            // 
-            // CidadeCkbx
-            // 
-            this.CidadeCkbx.AutoSize = true;
-            this.CidadeCkbx.Depth = 0;
-            this.CidadeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CidadeCkbx.Location = new System.Drawing.Point(11, 41);
-            this.CidadeCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.CidadeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CidadeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CidadeCkbx.Name = "CidadeCkbx";
-            this.CidadeCkbx.Ripple = true;
-            this.CidadeCkbx.Size = new System.Drawing.Size(73, 30);
-            this.CidadeCkbx.TabIndex = 60;
-            this.CidadeCkbx.Text = "Cidade";
-            this.CidadeCkbx.UseVisualStyleBackColor = true;
-            // 
-            // PesquisarLbl
-            // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(217, 13);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 59;
-            this.PesquisarLbl.Text = "Pesquisar";
-            // 
-            // PesquisarBtn
-            // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(168, 9);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 58;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
-            // 
-            // PesquisarTbx
-            // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(11, 12);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 57;
-            // 
-            // dataGridViewCidade
-            // 
-            this.dataGridViewCidade.AllowUserToAddRows = false;
-            this.dataGridViewCidade.AllowUserToDeleteRows = false;
-            this.dataGridViewCidade.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewCidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCidade.Location = new System.Drawing.Point(11, 80);
-            this.dataGridViewCidade.Name = "dataGridViewCidade";
-            this.dataGridViewCidade.Size = new System.Drawing.Size(547, 229);
-            this.dataGridViewCidade.TabIndex = 62;
-            // 
             // FrmCadIniCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,13 +379,13 @@
             this.Name = "FrmCadIniCidade";
             this.Load += new System.EventHandler(this.FrmCadIniCidade_Load);
             this.CadCidIniPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.PerformLayout();
-            this.cidadePnl.ResumeLayout(false);
-            this.cidadePnl.PerformLayout();
             this.cidadePesquisarPnl.ResumeLayout(false);
             this.cidadePesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCidade)).EndInit();
+            this.cidadePnl.ResumeLayout(false);
+            this.cidadePnl.PerformLayout();
+            this.BotaoCadastroPnl.ResumeLayout(false);
+            this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
 
         }

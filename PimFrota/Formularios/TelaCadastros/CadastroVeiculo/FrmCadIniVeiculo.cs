@@ -17,12 +17,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
 
         private void IncluirVeiucloBtn_Click(object sender, EventArgs e)
         {
-            FrmCadVeiculo novo_veiculo = new FrmCadVeiculo();
-            novo_veiculo.TopLevel = false;
-            novo_veiculo.AutoScroll = true;
-            novo_veiculo.FormBorderStyle = FormBorderStyle.None;
-            this.CadVeiculoIniPnl.Controls.Add(novo_veiculo);
-            novo_veiculo.Show();
+            veiculoPesquisarPnl.Visible = false;
+            veiculoPnl.Visible = true;
         }
 
         private void CancelarVeiucloBtn_Click(object sender, EventArgs e)
@@ -32,12 +28,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
 
         private void PesquisarVeiucloBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisarVeiculo pesquisa_veiculo = new FrmPesquisarVeiculo();
-            pesquisa_veiculo.TopLevel = false;
-            pesquisa_veiculo.AutoScroll = true;
-            pesquisa_veiculo.FormBorderStyle = FormBorderStyle.None;
-            this.CadVeiculoIniPnl.Controls.Add(pesquisa_veiculo);
-            pesquisa_veiculo.Show();
+            veiculoPesquisarPnl.Visible = true;
+            veiculoPnl.Visible = false;
+        }
+
+        private void FrmCadIniVeiculo_Load(object sender, EventArgs e)
+        {
+            veiculoPesquisarPnl.Visible = false;
+            veiculoPnl.Visible = false;
         }
     }
 }

@@ -17,12 +17,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void IncluirMotoristaBtn_Click(object sender, EventArgs e)
         {
-            FrmCadMotorista novo_motorista = new FrmCadMotorista();
-            novo_motorista.TopLevel = false;
-            novo_motorista.AutoScroll = true;
-            novo_motorista.FormBorderStyle = FormBorderStyle.None;
-            this.CadMotoristaIniPnl.Controls.Add(novo_motorista);
-            novo_motorista.Show();
+            motoristaPnl.Visible = true;
+            motoristaPesquisarPnl.Visible = false;
         }
 
         private void CancelarMotoristaBtn_Click(object sender, EventArgs e)
@@ -32,12 +28,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void PesquisarMotoristaBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisaMotorista pesquisar_motorista = new FrmPesquisaMotorista();
-            pesquisar_motorista.TopLevel = false;
-            pesquisar_motorista.AutoScroll = true;
-            pesquisar_motorista.FormBorderStyle = FormBorderStyle.None;
-            this.CadMotoristaIniPnl.Controls.Add(pesquisar_motorista);
-            pesquisar_motorista.Show();
+            motoristaPnl.Visible = false;
+            motoristaPesquisarPnl.Visible = true;
+        }
+
+        private void FrmCadIniMotorista_Load(object sender, EventArgs e)
+        {
+            motoristaPnl.Visible = false;
+            motoristaPesquisarPnl.Visible = false;
         }
     }
 }

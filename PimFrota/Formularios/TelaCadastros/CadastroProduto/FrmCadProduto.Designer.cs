@@ -46,12 +46,12 @@
             // 
             this.CodProdutoLbl.AutoSize = true;
             this.CodProdutoLbl.Depth = 0;
-            this.CodProdutoLbl.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodProdutoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.CodProdutoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CodProdutoLbl.Location = new System.Drawing.Point(3, 9);
             this.CodProdutoLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.CodProdutoLbl.Name = "CodProdutoLbl";
-            this.CodProdutoLbl.Size = new System.Drawing.Size(63, 18);
+            this.CodProdutoLbl.Size = new System.Drawing.Size(62, 18);
             this.CodProdutoLbl.TabIndex = 0;
             this.CodProdutoLbl.Text = "Código";
             // 
@@ -67,12 +67,12 @@
             // 
             this.TipProdutoLbl.AutoSize = true;
             this.TipProdutoLbl.Depth = 0;
-            this.TipProdutoLbl.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TipProdutoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.TipProdutoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TipProdutoLbl.Location = new System.Drawing.Point(3, 36);
             this.TipProdutoLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.TipProdutoLbl.Name = "TipProdutoLbl";
-            this.TipProdutoLbl.Size = new System.Drawing.Size(42, 18);
+            this.TipProdutoLbl.Size = new System.Drawing.Size(41, 18);
             this.TipProdutoLbl.TabIndex = 2;
             this.TipProdutoLbl.Text = "Tipo";
             // 
@@ -89,12 +89,12 @@
             // 
             this.NomeProdLbl.AutoSize = true;
             this.NomeProdLbl.Depth = 0;
-            this.NomeProdLbl.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeProdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.NomeProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.NomeProdLbl.Location = new System.Drawing.Point(2, 63);
             this.NomeProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.NomeProdLbl.Name = "NomeProdLbl";
-            this.NomeProdLbl.Size = new System.Drawing.Size(56, 18);
+            this.NomeProdLbl.Size = new System.Drawing.Size(53, 18);
             this.NomeProdLbl.TabIndex = 4;
             this.NomeProdLbl.Text = "Nome";
             // 
@@ -102,12 +102,12 @@
             // 
             this.MarcaProdLbl.AutoSize = true;
             this.MarcaProdLbl.Depth = 0;
-            this.MarcaProdLbl.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarcaProdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.MarcaProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.MarcaProdLbl.Location = new System.Drawing.Point(2, 89);
             this.MarcaProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.MarcaProdLbl.Name = "MarcaProdLbl";
-            this.MarcaProdLbl.Size = new System.Drawing.Size(57, 18);
+            this.MarcaProdLbl.Size = new System.Drawing.Size(55, 18);
             this.MarcaProdLbl.TabIndex = 5;
             this.MarcaProdLbl.Text = "Marca";
             // 
@@ -115,12 +115,12 @@
             // 
             this.FabricanteProdLbl.AutoSize = true;
             this.FabricanteProdLbl.Depth = 0;
-            this.FabricanteProdLbl.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FabricanteProdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.FabricanteProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.FabricanteProdLbl.Location = new System.Drawing.Point(2, 115);
             this.FabricanteProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.FabricanteProdLbl.Name = "FabricanteProdLbl";
-            this.FabricanteProdLbl.Size = new System.Drawing.Size(94, 18);
+            this.FabricanteProdLbl.Size = new System.Drawing.Size(87, 18);
             this.FabricanteProdLbl.TabIndex = 6;
             this.FabricanteProdLbl.Text = "Fabricante";
             // 
@@ -128,12 +128,12 @@
             // 
             this.ValorProdLbl.AutoSize = true;
             this.ValorProdLbl.Depth = 0;
-            this.ValorProdLbl.Font = new System.Drawing.Font("Verdana", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValorProdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.ValorProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ValorProdLbl.Location = new System.Drawing.Point(2, 141);
             this.ValorProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.ValorProdLbl.Name = "ValorProdLbl";
-            this.ValorProdLbl.Size = new System.Drawing.Size(50, 18);
+            this.ValorProdLbl.Size = new System.Drawing.Size(47, 18);
             this.ValorProdLbl.TabIndex = 7;
             this.ValorProdLbl.Text = "Valor";
             // 

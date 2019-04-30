@@ -17,12 +17,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroSeguro
 
         private void IncluirSeguroBtn_Click(object sender, EventArgs e)
         {
-            FrmCadSeguro novo_seguro = new FrmCadSeguro();
-            novo_seguro.TopLevel = false;
-            novo_seguro.AutoScroll = true;
-            novo_seguro.FormBorderStyle = FormBorderStyle.None;
-            this.CadSeguroIniPnl.Controls.Add(novo_seguro);
-            novo_seguro.Show();
+            seguroPesquisarPnl.Visible = false;
+            SeguroPnl.Visible = true;
         }
 
         private void CancelarSeguroBtn_Click(object sender, EventArgs e)
@@ -32,12 +28,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroSeguro
 
         private void PesquisarSeguroBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisarSeguro pesquisar_Seguro = new FrmPesquisarSeguro();
-            pesquisar_Seguro.TopLevel = false;
-            pesquisar_Seguro.AutoScroll = true;
-            pesquisar_Seguro.FormBorderStyle = FormBorderStyle.None;
-            this.CadSeguroIniPnl.Controls.Add(pesquisar_Seguro);
-            pesquisar_Seguro.Show();
+            seguroPesquisarPnl.Visible = true;
+            SeguroPnl.Visible = false;
+        }
+
+        private void FrmCadIniSeguro_Load(object sender, EventArgs e)
+        {
+            seguroPesquisarPnl.Visible = false;
+            SeguroPnl.Visible = false;
         }
     }
 }

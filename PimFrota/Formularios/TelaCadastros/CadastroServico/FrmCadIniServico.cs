@@ -32,12 +32,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroServico
 
         private void IncluirServicoBtn_Click_1(object sender, EventArgs e)
         {
-            FrmCadServico novo_servico = new FrmCadServico();
-            novo_servico.TopLevel = false;
-            novo_servico.AutoScroll = true;
-            novo_servico.FormBorderStyle = FormBorderStyle.None;
-            this.CadServicoIniPnl.Controls.Add(novo_servico);
-            novo_servico.Show();
+            servicoPesquisarPnl.Visible = false;
+            servicoPnl.Visible = true;
         }
 
         private void CancelarServicoBtn_Click_1(object sender, EventArgs e)
@@ -47,12 +43,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroServico
 
         private void PesquisarServicoBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisarServico pesquisa_servico = new FrmPesquisarServico();
-            pesquisa_servico.TopLevel = false;
-            pesquisa_servico.AutoScroll = true;
-            pesquisa_servico.FormBorderStyle = FormBorderStyle.None;
-            this.CadServicoIniPnl.Controls.Add(pesquisa_servico);
-            pesquisa_servico.Show();
+            servicoPesquisarPnl.Visible = true;
+            servicoPnl.Visible = false;
+        }
+
+        private void FrmCadIniServico_Load(object sender, EventArgs e)
+        {
+            servicoPesquisarPnl.Visible = false;
+            servicoPnl.Visible = false;
         }
     }
 }

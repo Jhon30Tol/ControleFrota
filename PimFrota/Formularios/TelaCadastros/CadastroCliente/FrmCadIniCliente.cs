@@ -17,12 +17,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroCliente
 
         private void IncluirClienteBtn_Click(object sender, EventArgs e)
         {
-            FrmCadCliente novo_cliente = new FrmCadCliente();
-            novo_cliente.TopLevel = false;
-            novo_cliente.AutoScroll = true;
-            novo_cliente.FormBorderStyle = FormBorderStyle.None;
-            this.CadClienteIniPnl.Controls.Add(novo_cliente);
-            novo_cliente.Show();
+            ClientePesquisarPnl.Visible = false;
+            ClientePnl.Visible = true;
         }
 
         private void CancelarClienteBtn_Click(object sender, EventArgs e)
@@ -32,12 +28,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroCliente
 
         private void PesquisarClienteBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisaCliente pesquisar_cliente = new FrmPesquisaCliente();
-            pesquisar_cliente.TopLevel = false;
-            pesquisar_cliente.AutoScroll = true;
-            pesquisar_cliente.FormBorderStyle = FormBorderStyle.None;
-            this.CadClienteIniPnl.Controls.Add(pesquisar_cliente);
-            pesquisar_cliente.Show();
+            ClientePnl.Visible = false;
+            ClientePesquisarPnl.Visible = true;
+        }
+
+        private void FrmCadIniCliente_Load(object sender, EventArgs e)
+        {
+            ClientePesquisarPnl.Visible = false;
+            ClientePnl.Visible = false;
         }
     }
 }

@@ -17,12 +17,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroProduto
 
         private void IncluirProdutoBtn_Click(object sender, EventArgs e)
         {
-            FrmCadProduto novo_produto = new FrmCadProduto();
-            novo_produto.TopLevel = false;
-            novo_produto.AutoScroll = true;
-            novo_produto.FormBorderStyle = FormBorderStyle.None;
-            this.CadProdutoIniPnl.Controls.Add(novo_produto);
-            novo_produto.Show();
+            produtoPnl.Visible = true;
+            produtoPesquisarPnl.Visible = false;
         }
 
         private void CancelarProdutoBtn_Click(object sender, EventArgs e)
@@ -32,12 +28,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroProduto
 
         private void PesquisarProdutoBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisaProduto pesquisar_produto = new FrmPesquisaProduto();
-            pesquisar_produto.TopLevel = false;
-            pesquisar_produto.AutoScroll = true;
-            pesquisar_produto.FormBorderStyle = FormBorderStyle.None;
-            this.CadProdutoIniPnl.Controls.Add(pesquisar_produto);
-            pesquisar_produto.Show();
+            produtoPnl.Visible = false;
+            produtoPesquisarPnl.Visible = true;
+        }
+
+        private void FrmCadIniProduto_Load(object sender, EventArgs e)
+        {
+            produtoPnl.Visible = false;
+            produtoPesquisarPnl.Visible = false;
         }
     }
 }

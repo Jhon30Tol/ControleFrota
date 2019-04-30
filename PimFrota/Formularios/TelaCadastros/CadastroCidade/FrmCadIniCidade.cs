@@ -20,6 +20,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroCidade
         private void IncluirCidadeBtn_Click(object sender, EventArgs e)
         {
            cidadePnl.Visible = true;
+            cidadePesquisarPnl.Visible = false;
 
         }
 
@@ -30,12 +31,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroCidade
 
         private void PesquisarCidadeBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisaCidade pesquisar_cidade = new FrmPesquisaCidade();
-            pesquisar_cidade.TopLevel = false;
-            pesquisar_cidade.AutoScroll = true;
-            pesquisar_cidade.FormBorderStyle = FormBorderStyle.None;
-            this.CadCidIniPnl.Controls.Add(pesquisar_cidade);
-            pesquisar_cidade.Show();
+            cidadePnl.Visible = false;
+            cidadePesquisarPnl.Visible = true;
         }
 
         private void FrmCadIniCidade_Load(object sender, EventArgs e)
