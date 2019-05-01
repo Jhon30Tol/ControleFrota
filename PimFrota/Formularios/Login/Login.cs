@@ -59,5 +59,14 @@ namespace PimFrota.Formularios.Login
                 validarUsuario();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void Senhatxb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
