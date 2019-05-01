@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniMotorista));
             this.CadMotoristaIniPnl = new System.Windows.Forms.Panel();
-            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
-            this.CancelarMotoristaBtn = new System.Windows.Forms.Button();
-            this.EditarMotoristaBtn = new System.Windows.Forms.Button();
-            this.IncluirMotoristaBtn = new System.Windows.Forms.Button();
-            this.GravarMotoristaBtn = new System.Windows.Forms.Button();
-            this.PesquisarMotoristaBtn = new System.Windows.Forms.Button();
-            this.ExcluirMotoristaBtn = new System.Windows.Forms.Button();
+            this.motoristaPesquisarPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewMotorista = new System.Windows.Forms.DataGridView();
+            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.motoristaPnl = new System.Windows.Forms.Panel();
             this.DtVencCnhTbx = new System.Windows.Forms.TextBox();
             this.DtVencCnhLbl = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.BairroMotoristaTbx = new System.Windows.Forms.TextBox();
             this.CelularClienteTbx = new System.Windows.Forms.TextBox();
             this.CpfMotoristaTbx = new System.Windows.Forms.TextBox();
-            this.NomeClienteTbx = new System.Windows.Forms.TextBox();
+            this.NomeMotoristaTbx = new System.Windows.Forms.TextBox();
             this.CodMotoristaTbx = new System.Windows.Forms.TextBox();
             this.DtNascMotoristalbl = new System.Windows.Forms.Label();
             this.CodMotoristaLbl = new System.Windows.Forms.Label();
@@ -58,18 +58,20 @@
             this.CpfMotoristaLbl = new System.Windows.Forms.Label();
             this.RuaMotoristaLbl = new System.Windows.Forms.Label();
             this.NomeClientelbl = new System.Windows.Forms.Label();
-            this.motoristaPesquisarPnl = new System.Windows.Forms.Panel();
-            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.dataGridViewMotorista = new System.Windows.Forms.DataGridView();
+            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
+            this.CancelarMotoristaBtn = new System.Windows.Forms.Button();
+            this.EditarMotoristaBtn = new System.Windows.Forms.Button();
+            this.IncluirMotoristaBtn = new System.Windows.Forms.Button();
+            this.GravarMotoristaBtn = new System.Windows.Forms.Button();
+            this.PesquisarMotoristaBtn = new System.Windows.Forms.Button();
+            this.ExcluirMotoristaBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cnhMotoristaTbx = new System.Windows.Forms.TextBox();
             this.CadMotoristaIniPnl.SuspendLayout();
-            this.BotaoCadastroPnl.SuspendLayout();
-            this.motoristaPnl.SuspendLayout();
             this.motoristaPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).BeginInit();
+            this.motoristaPnl.SuspendLayout();
+            this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadMotoristaIniPnl
@@ -80,6 +82,301 @@
             this.CadMotoristaIniPnl.Name = "CadMotoristaIniPnl";
             this.CadMotoristaIniPnl.Size = new System.Drawing.Size(594, 338);
             this.CadMotoristaIniPnl.TabIndex = 27;
+            // 
+            // motoristaPesquisarPnl
+            // 
+            this.motoristaPesquisarPnl.Controls.Add(this.dataGridViewMotorista);
+            this.motoristaPesquisarPnl.Controls.Add(this.CpfCkbx);
+            this.motoristaPesquisarPnl.Controls.Add(this.NomeCkbx);
+            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarLbl);
+            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarBtn);
+            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
+            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(503, 19);
+            this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
+            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 291);
+            this.motoristaPesquisarPnl.TabIndex = 123;
+            // 
+            // dataGridViewMotorista
+            // 
+            this.dataGridViewMotorista.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMotorista.Location = new System.Drawing.Point(12, 74);
+            this.dataGridViewMotorista.Name = "dataGridViewMotorista";
+            this.dataGridViewMotorista.Size = new System.Drawing.Size(486, 200);
+            this.dataGridViewMotorista.TabIndex = 51;
+            // 
+            // CpfCkbx
+            // 
+            this.CpfCkbx.AutoSize = true;
+            this.CpfCkbx.Depth = 0;
+            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CpfCkbx.Location = new System.Drawing.Point(134, 35);
+            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CpfCkbx.Name = "CpfCkbx";
+            this.CpfCkbx.Ripple = true;
+            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
+            this.CpfCkbx.TabIndex = 50;
+            this.CpfCkbx.Text = "CPF";
+            this.CpfCkbx.UseVisualStyleBackColor = true;
+            // 
+            // NomeCkbx
+            // 
+            this.NomeCkbx.AutoSize = true;
+            this.NomeCkbx.Depth = 0;
+            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NomeCkbx.Location = new System.Drawing.Point(12, 35);
+            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NomeCkbx.Name = "NomeCkbx";
+            this.NomeCkbx.Ripple = true;
+            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
+            this.NomeCkbx.TabIndex = 49;
+            this.NomeCkbx.Text = "Nome";
+            this.NomeCkbx.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarLbl
+            // 
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(218, 7);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 48;
+            this.PesquisarLbl.Text = "Pesquisar";
+            // 
+            // PesquisarBtn
+            // 
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(169, 3);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 47;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(12, 6);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 45;
+            // 
+            // motoristaPnl
+            // 
+            this.motoristaPnl.Controls.Add(this.cnhMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.label1);
+            this.motoristaPnl.Controls.Add(this.DtVencCnhTbx);
+            this.motoristaPnl.Controls.Add(this.DtVencCnhLbl);
+            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.RuaMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.DtNascimentoMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.TelefoneClienteTbx);
+            this.motoristaPnl.Controls.Add(this.BairroMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.CelularClienteTbx);
+            this.motoristaPnl.Controls.Add(this.CpfMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.NomeMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.CodMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.DtNascMotoristalbl);
+            this.motoristaPnl.Controls.Add(this.CodMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.CelularClientelbl);
+            this.motoristaPnl.Controls.Add(this.TelefoneClientelbl);
+            this.motoristaPnl.Controls.Add(this.BairroMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.CpfMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.RuaMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.NomeClientelbl);
+            this.motoristaPnl.Location = new System.Drawing.Point(15, 19);
+            this.motoristaPnl.Name = "motoristaPnl";
+            this.motoristaPnl.Size = new System.Drawing.Size(469, 282);
+            this.motoristaPnl.TabIndex = 0;
+            // 
+            // DtVencCnhTbx
+            // 
+            this.DtVencCnhTbx.Location = new System.Drawing.Point(99, 252);
+            this.DtVencCnhTbx.Name = "DtVencCnhTbx";
+            this.DtVencCnhTbx.Size = new System.Drawing.Size(223, 20);
+            this.DtVencCnhTbx.TabIndex = 121;
+            // 
+            // DtVencCnhLbl
+            // 
+            this.DtVencCnhLbl.AutoSize = true;
+            this.DtVencCnhLbl.BackColor = System.Drawing.Color.Transparent;
+            this.DtVencCnhLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtVencCnhLbl.Location = new System.Drawing.Point(5, 255);
+            this.DtVencCnhLbl.Name = "DtVencCnhLbl";
+            this.DtVencCnhLbl.Size = new System.Drawing.Size(91, 17);
+            this.DtVencCnhLbl.TabIndex = 120;
+            this.DtVencCnhLbl.Text = "Venc. CNH:";
+            // 
+            // NumeroRuaMotoristaTbx
+            // 
+            this.NumeroRuaMotoristaTbx.Location = new System.Drawing.Point(99, 200);
+            this.NumeroRuaMotoristaTbx.Name = "NumeroRuaMotoristaTbx";
+            this.NumeroRuaMotoristaTbx.Size = new System.Drawing.Size(56, 20);
+            this.NumeroRuaMotoristaTbx.TabIndex = 119;
+            // 
+            // RuaMotoristaTbx
+            // 
+            this.RuaMotoristaTbx.Location = new System.Drawing.Point(99, 174);
+            this.RuaMotoristaTbx.Name = "RuaMotoristaTbx";
+            this.RuaMotoristaTbx.Size = new System.Drawing.Size(348, 20);
+            this.RuaMotoristaTbx.TabIndex = 118;
+            // 
+            // DtNascimentoMotoristaTbx
+            // 
+            this.DtNascimentoMotoristaTbx.Location = new System.Drawing.Point(99, 226);
+            this.DtNascimentoMotoristaTbx.Name = "DtNascimentoMotoristaTbx";
+            this.DtNascimentoMotoristaTbx.Size = new System.Drawing.Size(145, 20);
+            this.DtNascimentoMotoristaTbx.TabIndex = 117;
+            // 
+            // TelefoneClienteTbx
+            // 
+            this.TelefoneClienteTbx.Location = new System.Drawing.Point(99, 122);
+            this.TelefoneClienteTbx.Name = "TelefoneClienteTbx";
+            this.TelefoneClienteTbx.Size = new System.Drawing.Size(166, 20);
+            this.TelefoneClienteTbx.TabIndex = 116;
+            // 
+            // BairroMotoristaTbx
+            // 
+            this.BairroMotoristaTbx.Location = new System.Drawing.Point(220, 200);
+            this.BairroMotoristaTbx.Name = "BairroMotoristaTbx";
+            this.BairroMotoristaTbx.Size = new System.Drawing.Size(227, 20);
+            this.BairroMotoristaTbx.TabIndex = 115;
+            // 
+            // CelularClienteTbx
+            // 
+            this.CelularClienteTbx.Location = new System.Drawing.Point(99, 148);
+            this.CelularClienteTbx.Name = "CelularClienteTbx";
+            this.CelularClienteTbx.Size = new System.Drawing.Size(166, 20);
+            this.CelularClienteTbx.TabIndex = 114;
+            // 
+            // CpfMotoristaTbx
+            // 
+            this.CpfMotoristaTbx.Location = new System.Drawing.Point(99, 64);
+            this.CpfMotoristaTbx.Name = "CpfMotoristaTbx";
+            this.CpfMotoristaTbx.Size = new System.Drawing.Size(167, 20);
+            this.CpfMotoristaTbx.TabIndex = 113;
+            // 
+            // NomeMotoristaTbx
+            // 
+            this.NomeMotoristaTbx.Location = new System.Drawing.Point(99, 38);
+            this.NomeMotoristaTbx.Name = "NomeMotoristaTbx";
+            this.NomeMotoristaTbx.Size = new System.Drawing.Size(348, 20);
+            this.NomeMotoristaTbx.TabIndex = 112;
+            // 
+            // CodMotoristaTbx
+            // 
+            this.CodMotoristaTbx.Location = new System.Drawing.Point(99, 12);
+            this.CodMotoristaTbx.Name = "CodMotoristaTbx";
+            this.CodMotoristaTbx.Size = new System.Drawing.Size(139, 20);
+            this.CodMotoristaTbx.TabIndex = 111;
+            // 
+            // DtNascMotoristalbl
+            // 
+            this.DtNascMotoristalbl.AutoSize = true;
+            this.DtNascMotoristalbl.BackColor = System.Drawing.Color.Transparent;
+            this.DtNascMotoristalbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtNascMotoristalbl.Location = new System.Drawing.Point(13, 227);
+            this.DtNascMotoristalbl.Name = "DtNascMotoristalbl";
+            this.DtNascMotoristalbl.Size = new System.Drawing.Size(80, 17);
+            this.DtNascMotoristalbl.TabIndex = 110;
+            this.DtNascMotoristalbl.Text = "Dt. Nasc.:";
+            // 
+            // CodMotoristaLbl
+            // 
+            this.CodMotoristaLbl.AutoSize = true;
+            this.CodMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
+            this.CodMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodMotoristaLbl.Location = new System.Drawing.Point(30, 15);
+            this.CodMotoristaLbl.Name = "CodMotoristaLbl";
+            this.CodMotoristaLbl.Size = new System.Drawing.Size(63, 17);
+            this.CodMotoristaLbl.TabIndex = 109;
+            this.CodMotoristaLbl.Text = "Código:";
+            // 
+            // CelularClientelbl
+            // 
+            this.CelularClientelbl.AutoSize = true;
+            this.CelularClientelbl.BackColor = System.Drawing.Color.Transparent;
+            this.CelularClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CelularClientelbl.Location = new System.Drawing.Point(52, 151);
+            this.CelularClientelbl.Name = "CelularClientelbl";
+            this.CelularClientelbl.Size = new System.Drawing.Size(36, 17);
+            this.CelularClientelbl.TabIndex = 108;
+            this.CelularClientelbl.Text = "Cel:";
+            // 
+            // TelefoneClientelbl
+            // 
+            this.TelefoneClientelbl.AutoSize = true;
+            this.TelefoneClientelbl.BackColor = System.Drawing.Color.Transparent;
+            this.TelefoneClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TelefoneClientelbl.Location = new System.Drawing.Point(52, 123);
+            this.TelefoneClientelbl.Name = "TelefoneClientelbl";
+            this.TelefoneClientelbl.Size = new System.Drawing.Size(36, 17);
+            this.TelefoneClientelbl.TabIndex = 107;
+            this.TelefoneClientelbl.Text = "Tel:";
+            // 
+            // BairroMotoristaLbl
+            // 
+            this.BairroMotoristaLbl.AutoSize = true;
+            this.BairroMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
+            this.BairroMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BairroMotoristaLbl.Location = new System.Drawing.Point(161, 201);
+            this.BairroMotoristaLbl.Name = "BairroMotoristaLbl";
+            this.BairroMotoristaLbl.Size = new System.Drawing.Size(57, 17);
+            this.BairroMotoristaLbl.TabIndex = 106;
+            this.BairroMotoristaLbl.Text = "Bairro:";
+            // 
+            // NumeroRuaMotoristaLbl
+            // 
+            this.NumeroRuaMotoristaLbl.AutoSize = true;
+            this.NumeroRuaMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
+            this.NumeroRuaMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumeroRuaMotoristaLbl.Location = new System.Drawing.Point(52, 201);
+            this.NumeroRuaMotoristaLbl.Name = "NumeroRuaMotoristaLbl";
+            this.NumeroRuaMotoristaLbl.Size = new System.Drawing.Size(31, 17);
+            this.NumeroRuaMotoristaLbl.TabIndex = 105;
+            this.NumeroRuaMotoristaLbl.Text = "N°:";
+            // 
+            // CpfMotoristaLbl
+            // 
+            this.CpfMotoristaLbl.AutoSize = true;
+            this.CpfMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
+            this.CpfMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CpfMotoristaLbl.Location = new System.Drawing.Point(51, 64);
+            this.CpfMotoristaLbl.Name = "CpfMotoristaLbl";
+            this.CpfMotoristaLbl.Size = new System.Drawing.Size(42, 17);
+            this.CpfMotoristaLbl.TabIndex = 104;
+            this.CpfMotoristaLbl.Text = "CPF:";
+            // 
+            // RuaMotoristaLbl
+            // 
+            this.RuaMotoristaLbl.AutoSize = true;
+            this.RuaMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
+            this.RuaMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RuaMotoristaLbl.Location = new System.Drawing.Point(51, 177);
+            this.RuaMotoristaLbl.Name = "RuaMotoristaLbl";
+            this.RuaMotoristaLbl.Size = new System.Drawing.Size(42, 17);
+            this.RuaMotoristaLbl.TabIndex = 103;
+            this.RuaMotoristaLbl.Text = "Rua:";
+            // 
+            // NomeClientelbl
+            // 
+            this.NomeClientelbl.AutoSize = true;
+            this.NomeClientelbl.BackColor = System.Drawing.Color.Transparent;
+            this.NomeClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeClientelbl.Location = new System.Drawing.Point(39, 39);
+            this.NomeClientelbl.Name = "NomeClientelbl";
+            this.NomeClientelbl.Size = new System.Drawing.Size(54, 17);
+            this.NomeClientelbl.TabIndex = 102;
+            this.NomeClientelbl.Text = "Nome:";
             // 
             // BotaoCadastroPnl
             // 
@@ -167,6 +464,7 @@
             this.GravarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarMotoristaBtn.TabIndex = 19;
             this.GravarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.GravarMotoristaBtn.Click += new System.EventHandler(this.GravarMotoristaBtn_Click);
             // 
             // PesquisarMotoristaBtn
             // 
@@ -205,298 +503,23 @@
             this.ExcluirMotoristaBtn.TabIndex = 17;
             this.ExcluirMotoristaBtn.UseVisualStyleBackColor = false;
             // 
-            // motoristaPnl
+            // label1
             // 
-            this.motoristaPnl.Controls.Add(this.DtVencCnhTbx);
-            this.motoristaPnl.Controls.Add(this.DtVencCnhLbl);
-            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.RuaMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.DtNascimentoMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.TelefoneClienteTbx);
-            this.motoristaPnl.Controls.Add(this.BairroMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.CelularClienteTbx);
-            this.motoristaPnl.Controls.Add(this.CpfMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.NomeClienteTbx);
-            this.motoristaPnl.Controls.Add(this.CodMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.DtNascMotoristalbl);
-            this.motoristaPnl.Controls.Add(this.CodMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.CelularClientelbl);
-            this.motoristaPnl.Controls.Add(this.TelefoneClientelbl);
-            this.motoristaPnl.Controls.Add(this.BairroMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.CpfMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.RuaMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.NomeClientelbl);
-            this.motoristaPnl.Location = new System.Drawing.Point(15, 19);
-            this.motoristaPnl.Name = "motoristaPnl";
-            this.motoristaPnl.Size = new System.Drawing.Size(469, 282);
-            this.motoristaPnl.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 122;
+            this.label1.Text = "CNH:";
             // 
-            // DtVencCnhTbx
+            // cnhMotoristaTbx
             // 
-            this.DtVencCnhTbx.Location = new System.Drawing.Point(99, 220);
-            this.DtVencCnhTbx.Name = "DtVencCnhTbx";
-            this.DtVencCnhTbx.Size = new System.Drawing.Size(223, 20);
-            this.DtVencCnhTbx.TabIndex = 121;
-            // 
-            // DtVencCnhLbl
-            // 
-            this.DtVencCnhLbl.AutoSize = true;
-            this.DtVencCnhLbl.BackColor = System.Drawing.Color.Transparent;
-            this.DtVencCnhLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtVencCnhLbl.Location = new System.Drawing.Point(5, 223);
-            this.DtVencCnhLbl.Name = "DtVencCnhLbl";
-            this.DtVencCnhLbl.Size = new System.Drawing.Size(91, 17);
-            this.DtVencCnhLbl.TabIndex = 120;
-            this.DtVencCnhLbl.Text = "Venc. CNH:";
-            // 
-            // NumeroRuaMotoristaTbx
-            // 
-            this.NumeroRuaMotoristaTbx.Location = new System.Drawing.Point(99, 168);
-            this.NumeroRuaMotoristaTbx.Name = "NumeroRuaMotoristaTbx";
-            this.NumeroRuaMotoristaTbx.Size = new System.Drawing.Size(56, 20);
-            this.NumeroRuaMotoristaTbx.TabIndex = 119;
-            // 
-            // RuaMotoristaTbx
-            // 
-            this.RuaMotoristaTbx.Location = new System.Drawing.Point(99, 142);
-            this.RuaMotoristaTbx.Name = "RuaMotoristaTbx";
-            this.RuaMotoristaTbx.Size = new System.Drawing.Size(348, 20);
-            this.RuaMotoristaTbx.TabIndex = 118;
-            // 
-            // DtNascimentoMotoristaTbx
-            // 
-            this.DtNascimentoMotoristaTbx.Location = new System.Drawing.Point(99, 194);
-            this.DtNascimentoMotoristaTbx.Name = "DtNascimentoMotoristaTbx";
-            this.DtNascimentoMotoristaTbx.Size = new System.Drawing.Size(145, 20);
-            this.DtNascimentoMotoristaTbx.TabIndex = 117;
-            // 
-            // TelefoneClienteTbx
-            // 
-            this.TelefoneClienteTbx.Location = new System.Drawing.Point(99, 90);
-            this.TelefoneClienteTbx.Name = "TelefoneClienteTbx";
-            this.TelefoneClienteTbx.Size = new System.Drawing.Size(166, 20);
-            this.TelefoneClienteTbx.TabIndex = 116;
-            // 
-            // BairroMotoristaTbx
-            // 
-            this.BairroMotoristaTbx.Location = new System.Drawing.Point(220, 168);
-            this.BairroMotoristaTbx.Name = "BairroMotoristaTbx";
-            this.BairroMotoristaTbx.Size = new System.Drawing.Size(227, 20);
-            this.BairroMotoristaTbx.TabIndex = 115;
-            // 
-            // CelularClienteTbx
-            // 
-            this.CelularClienteTbx.Location = new System.Drawing.Point(99, 116);
-            this.CelularClienteTbx.Name = "CelularClienteTbx";
-            this.CelularClienteTbx.Size = new System.Drawing.Size(166, 20);
-            this.CelularClienteTbx.TabIndex = 114;
-            // 
-            // CpfMotoristaTbx
-            // 
-            this.CpfMotoristaTbx.Location = new System.Drawing.Point(99, 64);
-            this.CpfMotoristaTbx.Name = "CpfMotoristaTbx";
-            this.CpfMotoristaTbx.Size = new System.Drawing.Size(167, 20);
-            this.CpfMotoristaTbx.TabIndex = 113;
-            // 
-            // NomeClienteTbx
-            // 
-            this.NomeClienteTbx.Location = new System.Drawing.Point(99, 38);
-            this.NomeClienteTbx.Name = "NomeClienteTbx";
-            this.NomeClienteTbx.Size = new System.Drawing.Size(348, 20);
-            this.NomeClienteTbx.TabIndex = 112;
-            // 
-            // CodMotoristaTbx
-            // 
-            this.CodMotoristaTbx.Location = new System.Drawing.Point(99, 12);
-            this.CodMotoristaTbx.Name = "CodMotoristaTbx";
-            this.CodMotoristaTbx.Size = new System.Drawing.Size(139, 20);
-            this.CodMotoristaTbx.TabIndex = 111;
-            // 
-            // DtNascMotoristalbl
-            // 
-            this.DtNascMotoristalbl.AutoSize = true;
-            this.DtNascMotoristalbl.BackColor = System.Drawing.Color.Transparent;
-            this.DtNascMotoristalbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtNascMotoristalbl.Location = new System.Drawing.Point(13, 195);
-            this.DtNascMotoristalbl.Name = "DtNascMotoristalbl";
-            this.DtNascMotoristalbl.Size = new System.Drawing.Size(80, 17);
-            this.DtNascMotoristalbl.TabIndex = 110;
-            this.DtNascMotoristalbl.Text = "Dt. Nasc.:";
-            // 
-            // CodMotoristaLbl
-            // 
-            this.CodMotoristaLbl.AutoSize = true;
-            this.CodMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
-            this.CodMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodMotoristaLbl.Location = new System.Drawing.Point(30, 15);
-            this.CodMotoristaLbl.Name = "CodMotoristaLbl";
-            this.CodMotoristaLbl.Size = new System.Drawing.Size(63, 17);
-            this.CodMotoristaLbl.TabIndex = 109;
-            this.CodMotoristaLbl.Text = "Código:";
-            // 
-            // CelularClientelbl
-            // 
-            this.CelularClientelbl.AutoSize = true;
-            this.CelularClientelbl.BackColor = System.Drawing.Color.Transparent;
-            this.CelularClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CelularClientelbl.Location = new System.Drawing.Point(52, 119);
-            this.CelularClientelbl.Name = "CelularClientelbl";
-            this.CelularClientelbl.Size = new System.Drawing.Size(36, 17);
-            this.CelularClientelbl.TabIndex = 108;
-            this.CelularClientelbl.Text = "Cel:";
-            // 
-            // TelefoneClientelbl
-            // 
-            this.TelefoneClientelbl.AutoSize = true;
-            this.TelefoneClientelbl.BackColor = System.Drawing.Color.Transparent;
-            this.TelefoneClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelefoneClientelbl.Location = new System.Drawing.Point(52, 91);
-            this.TelefoneClientelbl.Name = "TelefoneClientelbl";
-            this.TelefoneClientelbl.Size = new System.Drawing.Size(36, 17);
-            this.TelefoneClientelbl.TabIndex = 107;
-            this.TelefoneClientelbl.Text = "Tel:";
-            // 
-            // BairroMotoristaLbl
-            // 
-            this.BairroMotoristaLbl.AutoSize = true;
-            this.BairroMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
-            this.BairroMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BairroMotoristaLbl.Location = new System.Drawing.Point(161, 169);
-            this.BairroMotoristaLbl.Name = "BairroMotoristaLbl";
-            this.BairroMotoristaLbl.Size = new System.Drawing.Size(57, 17);
-            this.BairroMotoristaLbl.TabIndex = 106;
-            this.BairroMotoristaLbl.Text = "Bairro:";
-            // 
-            // NumeroRuaMotoristaLbl
-            // 
-            this.NumeroRuaMotoristaLbl.AutoSize = true;
-            this.NumeroRuaMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
-            this.NumeroRuaMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumeroRuaMotoristaLbl.Location = new System.Drawing.Point(52, 169);
-            this.NumeroRuaMotoristaLbl.Name = "NumeroRuaMotoristaLbl";
-            this.NumeroRuaMotoristaLbl.Size = new System.Drawing.Size(31, 17);
-            this.NumeroRuaMotoristaLbl.TabIndex = 105;
-            this.NumeroRuaMotoristaLbl.Text = "N°:";
-            // 
-            // CpfMotoristaLbl
-            // 
-            this.CpfMotoristaLbl.AutoSize = true;
-            this.CpfMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
-            this.CpfMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CpfMotoristaLbl.Location = new System.Drawing.Point(51, 64);
-            this.CpfMotoristaLbl.Name = "CpfMotoristaLbl";
-            this.CpfMotoristaLbl.Size = new System.Drawing.Size(42, 17);
-            this.CpfMotoristaLbl.TabIndex = 104;
-            this.CpfMotoristaLbl.Text = "CPF:";
-            // 
-            // RuaMotoristaLbl
-            // 
-            this.RuaMotoristaLbl.AutoSize = true;
-            this.RuaMotoristaLbl.BackColor = System.Drawing.Color.Transparent;
-            this.RuaMotoristaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RuaMotoristaLbl.Location = new System.Drawing.Point(51, 145);
-            this.RuaMotoristaLbl.Name = "RuaMotoristaLbl";
-            this.RuaMotoristaLbl.Size = new System.Drawing.Size(42, 17);
-            this.RuaMotoristaLbl.TabIndex = 103;
-            this.RuaMotoristaLbl.Text = "Rua:";
-            // 
-            // NomeClientelbl
-            // 
-            this.NomeClientelbl.AutoSize = true;
-            this.NomeClientelbl.BackColor = System.Drawing.Color.Transparent;
-            this.NomeClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeClientelbl.Location = new System.Drawing.Point(39, 39);
-            this.NomeClientelbl.Name = "NomeClientelbl";
-            this.NomeClientelbl.Size = new System.Drawing.Size(54, 17);
-            this.NomeClientelbl.TabIndex = 102;
-            this.NomeClientelbl.Text = "Nome:";
-            // 
-            // motoristaPesquisarPnl
-            // 
-            this.motoristaPesquisarPnl.Controls.Add(this.dataGridViewMotorista);
-            this.motoristaPesquisarPnl.Controls.Add(this.CpfCkbx);
-            this.motoristaPesquisarPnl.Controls.Add(this.NomeCkbx);
-            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(11, 7);
-            this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
-            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 291);
-            this.motoristaPesquisarPnl.TabIndex = 123;
-            // 
-            // CpfCkbx
-            // 
-            this.CpfCkbx.AutoSize = true;
-            this.CpfCkbx.Depth = 0;
-            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CpfCkbx.Location = new System.Drawing.Point(134, 35);
-            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CpfCkbx.Name = "CpfCkbx";
-            this.CpfCkbx.Ripple = true;
-            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
-            this.CpfCkbx.TabIndex = 50;
-            this.CpfCkbx.Text = "CPF";
-            this.CpfCkbx.UseVisualStyleBackColor = true;
-            // 
-            // NomeCkbx
-            // 
-            this.NomeCkbx.AutoSize = true;
-            this.NomeCkbx.Depth = 0;
-            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NomeCkbx.Location = new System.Drawing.Point(12, 35);
-            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NomeCkbx.Name = "NomeCkbx";
-            this.NomeCkbx.Ripple = true;
-            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
-            this.NomeCkbx.TabIndex = 49;
-            this.NomeCkbx.Text = "Nome";
-            this.NomeCkbx.UseVisualStyleBackColor = true;
-            // 
-            // PesquisarLbl
-            // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(218, 7);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 48;
-            this.PesquisarLbl.Text = "Pesquisar";
-            // 
-            // PesquisarBtn
-            // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(169, 3);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 47;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
-            // 
-            // PesquisarTbx
-            // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(12, 6);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 45;
-            // 
-            // dataGridViewMotorista
-            // 
-            this.dataGridViewMotorista.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMotorista.Location = new System.Drawing.Point(12, 74);
-            this.dataGridViewMotorista.Name = "dataGridViewMotorista";
-            this.dataGridViewMotorista.Size = new System.Drawing.Size(486, 200);
-            this.dataGridViewMotorista.TabIndex = 51;
+            this.cnhMotoristaTbx.Location = new System.Drawing.Point(99, 95);
+            this.cnhMotoristaTbx.Name = "cnhMotoristaTbx";
+            this.cnhMotoristaTbx.Size = new System.Drawing.Size(167, 20);
+            this.cnhMotoristaTbx.TabIndex = 123;
             // 
             // FrmCadIniMotorista
             // 
@@ -507,13 +530,13 @@
             this.Name = "FrmCadIniMotorista";
             this.Load += new System.EventHandler(this.FrmCadIniMotorista_Load);
             this.CadMotoristaIniPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.PerformLayout();
-            this.motoristaPnl.ResumeLayout(false);
-            this.motoristaPnl.PerformLayout();
             this.motoristaPesquisarPnl.ResumeLayout(false);
             this.motoristaPesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).EndInit();
+            this.motoristaPnl.ResumeLayout(false);
+            this.motoristaPnl.PerformLayout();
+            this.BotaoCadastroPnl.ResumeLayout(false);
+            this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -529,17 +552,7 @@
         private System.Windows.Forms.Button PesquisarMotoristaBtn;
         private System.Windows.Forms.Button ExcluirMotoristaBtn;
         private System.Windows.Forms.Panel motoristaPnl;
-        private System.Windows.Forms.TextBox DtVencCnhTbx;
         private System.Windows.Forms.Label DtVencCnhLbl;
-        private System.Windows.Forms.TextBox NumeroRuaMotoristaTbx;
-        private System.Windows.Forms.TextBox RuaMotoristaTbx;
-        private System.Windows.Forms.TextBox DtNascimentoMotoristaTbx;
-        private System.Windows.Forms.TextBox TelefoneClienteTbx;
-        private System.Windows.Forms.TextBox BairroMotoristaTbx;
-        private System.Windows.Forms.TextBox CelularClienteTbx;
-        private System.Windows.Forms.TextBox CpfMotoristaTbx;
-        private System.Windows.Forms.TextBox NomeClienteTbx;
-        private System.Windows.Forms.TextBox CodMotoristaTbx;
         private System.Windows.Forms.Label DtNascMotoristalbl;
         private System.Windows.Forms.Label CodMotoristaLbl;
         private System.Windows.Forms.Label CelularClientelbl;
@@ -556,5 +569,17 @@
         private System.Windows.Forms.Button PesquisarBtn;
         private System.Windows.Forms.TextBox PesquisarTbx;
         private System.Windows.Forms.DataGridView dataGridViewMotorista;
+        public System.Windows.Forms.TextBox DtVencCnhTbx;
+        public System.Windows.Forms.TextBox NumeroRuaMotoristaTbx;
+        public System.Windows.Forms.TextBox RuaMotoristaTbx;
+        public System.Windows.Forms.TextBox DtNascimentoMotoristaTbx;
+        public System.Windows.Forms.TextBox TelefoneClienteTbx;
+        public System.Windows.Forms.TextBox BairroMotoristaTbx;
+        public System.Windows.Forms.TextBox CelularClienteTbx;
+        public System.Windows.Forms.TextBox CpfMotoristaTbx;
+        public System.Windows.Forms.TextBox NomeMotoristaTbx;
+        public System.Windows.Forms.TextBox CodMotoristaTbx;
+        public System.Windows.Forms.TextBox cnhMotoristaTbx;
+        private System.Windows.Forms.Label label1;
     }
 }

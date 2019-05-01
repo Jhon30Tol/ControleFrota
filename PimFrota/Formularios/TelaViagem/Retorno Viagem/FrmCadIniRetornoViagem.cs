@@ -17,17 +17,18 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
 
         private void IncluirRetornoBtn_Click(object sender, EventArgs e)
         {
-            CadRetornoViagem novo_retorno = new CadRetornoViagem();
-            novo_retorno.TopLevel = false;
-            novo_retorno.AutoScroll = true;
-            novo_retorno.FormBorderStyle = FormBorderStyle.None;
-            this.CadRetornoIniPnl.Controls.Add(novo_retorno);
-            novo_retorno.Show();
+            
+            BotaoRetornoPnl.Visible = true;
         }
 
         private void CancelarRetornoBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmCadIniRetornoViagem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

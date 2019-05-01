@@ -1,4 +1,4 @@
-﻿using PimFrota.Formularios.TelaViagem.SaidaViagem;
+﻿//using PimFrota.Formularios.TelaViagem.SaidaViagem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,17 +18,19 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void IncluirViagemBtn_Click(object sender, EventArgs e)
         {
-            CadSaidaViagem nova_saida = new CadSaidaViagem();
-            nova_saida.TopLevel = false;
-            nova_saida.AutoScroll = true;
-            nova_saida.FormBorderStyle = FormBorderStyle.None;
-            this.CadViagemIniPnl.Controls.Add(nova_saida);
-            nova_saida.Show();
+            
+            saidaViagemPnl.Visible = true;
+
         }
 
         private void CancelarViagemBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmCadIniSaidaViagem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

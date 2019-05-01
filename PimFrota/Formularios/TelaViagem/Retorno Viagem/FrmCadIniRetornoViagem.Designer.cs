@@ -37,11 +37,30 @@
             this.GravarRetornoBtn = new System.Windows.Forms.Button();
             this.PesquisarRetornoBtn = new System.Windows.Forms.Button();
             this.ExcluirRetornoBtn = new System.Windows.Forms.Button();
+            this.retornoViagemPnl = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DtRetonoViagLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.LinhaLbl = new System.Windows.Forms.Label();
+            this.DtRetornoViagRTbx = new System.Windows.Forms.TextBox();
+            this.DtSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.CidadeDestSaidaViagRTbx = new System.Windows.Forms.TextBox();
+            this.CidadeSaidaViagRTbx = new System.Windows.Forms.TextBox();
+            this.VeiculoSaidaViagRTbx = new System.Windows.Forms.TextBox();
+            this.MotoristaSaidaViagRTbx = new System.Windows.Forms.TextBox();
+            this.CodSaidaViagRTbx = new System.Windows.Forms.TextBox();
+            this.CidadeDestRetornoViagRLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.CidadeSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.VeiculoSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.MotoristaSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.CodSaidaViagemRLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.CadRetornoIniPnl.SuspendLayout();
             this.BotaoRetornoPnl.SuspendLayout();
+            this.retornoViagemPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadRetornoIniPnl
             // 
+            this.CadRetornoIniPnl.Controls.Add(this.retornoViagemPnl);
             this.CadRetornoIniPnl.Location = new System.Drawing.Point(1, 55);
             this.CadRetornoIniPnl.Name = "CadRetornoIniPnl";
             this.CadRetornoIniPnl.Size = new System.Drawing.Size(594, 338);
@@ -170,6 +189,176 @@
             this.ExcluirRetornoBtn.TabIndex = 17;
             this.ExcluirRetornoBtn.UseVisualStyleBackColor = false;
             // 
+            // retornoViagemPnl
+            // 
+            this.retornoViagemPnl.Controls.Add(this.textBox1);
+            this.retornoViagemPnl.Controls.Add(this.DtRetonoViagLbl);
+            this.retornoViagemPnl.Controls.Add(this.LinhaLbl);
+            this.retornoViagemPnl.Controls.Add(this.DtRetornoViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CidadeDestSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CodSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CidadeDestRetornoViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CodSaidaViagemRLbl);
+            this.retornoViagemPnl.Location = new System.Drawing.Point(7, 3);
+            this.retornoViagemPnl.Name = "retornoViagemPnl";
+            this.retornoViagemPnl.Size = new System.Drawing.Size(577, 325);
+            this.retornoViagemPnl.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(148, 270);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 41;
+            // 
+            // DtRetonoViagLbl
+            // 
+            this.DtRetonoViagLbl.AutoSize = true;
+            this.DtRetonoViagLbl.Depth = 0;
+            this.DtRetonoViagLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.DtRetonoViagLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DtRetonoViagLbl.Location = new System.Drawing.Point(37, 272);
+            this.DtRetonoViagLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DtRetonoViagLbl.Name = "DtRetonoViagLbl";
+            this.DtRetonoViagLbl.Size = new System.Drawing.Size(85, 19);
+            this.DtRetonoViagLbl.TabIndex = 40;
+            this.DtRetonoViagLbl.Text = "Dt. Retorno";
+            // 
+            // LinhaLbl
+            // 
+            this.LinhaLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LinhaLbl.Location = new System.Drawing.Point(11, 202);
+            this.LinhaLbl.Name = "LinhaLbl";
+            this.LinhaLbl.Size = new System.Drawing.Size(405, 18);
+            this.LinhaLbl.TabIndex = 39;
+            // 
+            // DtRetornoViagRTbx
+            // 
+            this.DtRetornoViagRTbx.Location = new System.Drawing.Point(148, 153);
+            this.DtRetornoViagRTbx.Name = "DtRetornoViagRTbx";
+            this.DtRetornoViagRTbx.Size = new System.Drawing.Size(250, 20);
+            this.DtRetornoViagRTbx.TabIndex = 38;
+            // 
+            // DtSaidaViagRLbl
+            // 
+            this.DtSaidaViagRLbl.AutoSize = true;
+            this.DtSaidaViagRLbl.Depth = 0;
+            this.DtSaidaViagRLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.DtSaidaViagRLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DtSaidaViagRLbl.Location = new System.Drawing.Point(59, 155);
+            this.DtSaidaViagRLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.DtSaidaViagRLbl.Name = "DtSaidaViagRLbl";
+            this.DtSaidaViagRLbl.Size = new System.Drawing.Size(69, 19);
+            this.DtSaidaViagRLbl.TabIndex = 37;
+            this.DtSaidaViagRLbl.Text = "Dt. Saída";
+            // 
+            // CidadeDestSaidaViagRTbx
+            // 
+            this.CidadeDestSaidaViagRTbx.Location = new System.Drawing.Point(148, 127);
+            this.CidadeDestSaidaViagRTbx.Name = "CidadeDestSaidaViagRTbx";
+            this.CidadeDestSaidaViagRTbx.Size = new System.Drawing.Size(250, 20);
+            this.CidadeDestSaidaViagRTbx.TabIndex = 36;
+            // 
+            // CidadeSaidaViagRTbx
+            // 
+            this.CidadeSaidaViagRTbx.Location = new System.Drawing.Point(148, 100);
+            this.CidadeSaidaViagRTbx.Name = "CidadeSaidaViagRTbx";
+            this.CidadeSaidaViagRTbx.Size = new System.Drawing.Size(250, 20);
+            this.CidadeSaidaViagRTbx.TabIndex = 35;
+            // 
+            // VeiculoSaidaViagRTbx
+            // 
+            this.VeiculoSaidaViagRTbx.Location = new System.Drawing.Point(148, 74);
+            this.VeiculoSaidaViagRTbx.Name = "VeiculoSaidaViagRTbx";
+            this.VeiculoSaidaViagRTbx.Size = new System.Drawing.Size(250, 20);
+            this.VeiculoSaidaViagRTbx.TabIndex = 34;
+            // 
+            // MotoristaSaidaViagRTbx
+            // 
+            this.MotoristaSaidaViagRTbx.Location = new System.Drawing.Point(148, 48);
+            this.MotoristaSaidaViagRTbx.Name = "MotoristaSaidaViagRTbx";
+            this.MotoristaSaidaViagRTbx.Size = new System.Drawing.Size(250, 20);
+            this.MotoristaSaidaViagRTbx.TabIndex = 33;
+            // 
+            // CodSaidaViagRTbx
+            // 
+            this.CodSaidaViagRTbx.Location = new System.Drawing.Point(148, 21);
+            this.CodSaidaViagRTbx.Name = "CodSaidaViagRTbx";
+            this.CodSaidaViagRTbx.Size = new System.Drawing.Size(100, 20);
+            this.CodSaidaViagRTbx.TabIndex = 32;
+            // 
+            // CidadeDestRetornoViagRLbl
+            // 
+            this.CidadeDestRetornoViagRLbl.AutoSize = true;
+            this.CidadeDestRetornoViagRLbl.Depth = 0;
+            this.CidadeDestRetornoViagRLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.CidadeDestRetornoViagRLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CidadeDestRetornoViagRLbl.Location = new System.Drawing.Point(11, 129);
+            this.CidadeDestRetornoViagRLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CidadeDestRetornoViagRLbl.Name = "CidadeDestRetornoViagRLbl";
+            this.CidadeDestRetornoViagRLbl.Size = new System.Drawing.Size(111, 19);
+            this.CidadeDestRetornoViagRLbl.TabIndex = 31;
+            this.CidadeDestRetornoViagRLbl.Text = "Cidade Destino";
+            // 
+            // CidadeSaidaViagRLbl
+            // 
+            this.CidadeSaidaViagRLbl.AutoSize = true;
+            this.CidadeSaidaViagRLbl.Depth = 0;
+            this.CidadeSaidaViagRLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.CidadeSaidaViagRLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CidadeSaidaViagRLbl.Location = new System.Drawing.Point(28, 102);
+            this.CidadeSaidaViagRLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CidadeSaidaViagRLbl.Name = "CidadeSaidaViagRLbl";
+            this.CidadeSaidaViagRLbl.Size = new System.Drawing.Size(96, 19);
+            this.CidadeSaidaViagRLbl.TabIndex = 30;
+            this.CidadeSaidaViagRLbl.Text = "Cidade Saída";
+            // 
+            // VeiculoSaidaViagRLbl
+            // 
+            this.VeiculoSaidaViagRLbl.AutoSize = true;
+            this.VeiculoSaidaViagRLbl.Depth = 0;
+            this.VeiculoSaidaViagRLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.VeiculoSaidaViagRLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.VeiculoSaidaViagRLbl.Location = new System.Drawing.Point(75, 76);
+            this.VeiculoSaidaViagRLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.VeiculoSaidaViagRLbl.Name = "VeiculoSaidaViagRLbl";
+            this.VeiculoSaidaViagRLbl.Size = new System.Drawing.Size(60, 19);
+            this.VeiculoSaidaViagRLbl.TabIndex = 29;
+            this.VeiculoSaidaViagRLbl.Text = "Veículo";
+            // 
+            // MotoristaSaidaViagRLbl
+            // 
+            this.MotoristaSaidaViagRLbl.AutoSize = true;
+            this.MotoristaSaidaViagRLbl.Depth = 0;
+            this.MotoristaSaidaViagRLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.MotoristaSaidaViagRLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.MotoristaSaidaViagRLbl.Location = new System.Drawing.Point(55, 50);
+            this.MotoristaSaidaViagRLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MotoristaSaidaViagRLbl.Name = "MotoristaSaidaViagRLbl";
+            this.MotoristaSaidaViagRLbl.Size = new System.Drawing.Size(75, 19);
+            this.MotoristaSaidaViagRLbl.TabIndex = 28;
+            this.MotoristaSaidaViagRLbl.Text = "Motorista";
+            // 
+            // CodSaidaViagemRLbl
+            // 
+            this.CodSaidaViagemRLbl.AutoSize = true;
+            this.CodSaidaViagemRLbl.Depth = 0;
+            this.CodSaidaViagemRLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.CodSaidaViagemRLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CodSaidaViagemRLbl.Location = new System.Drawing.Point(27, 23);
+            this.CodSaidaViagemRLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CodSaidaViagemRLbl.Name = "CodSaidaViagemRLbl";
+            this.CodSaidaViagemRLbl.Size = new System.Drawing.Size(98, 19);
+            this.CodSaidaViagemRLbl.TabIndex = 27;
+            this.CodSaidaViagemRLbl.Text = "Código Saída";
+            // 
             // FrmCadIniRetornoViagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,8 +366,12 @@
             this.Controls.Add(this.CadRetornoIniPnl);
             this.Controls.Add(this.BotaoRetornoPnl);
             this.Name = "FrmCadIniRetornoViagem";
+            this.Load += new System.EventHandler(this.FrmCadIniRetornoViagem_Load);
+            this.CadRetornoIniPnl.ResumeLayout(false);
             this.BotaoRetornoPnl.ResumeLayout(false);
             this.BotaoRetornoPnl.PerformLayout();
+            this.retornoViagemPnl.ResumeLayout(false);
+            this.retornoViagemPnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +386,21 @@
         private System.Windows.Forms.Button GravarRetornoBtn;
         private System.Windows.Forms.Button PesquisarRetornoBtn;
         private System.Windows.Forms.Button ExcluirRetornoBtn;
+        public System.Windows.Forms.Panel retornoViagemPnl;
+        private System.Windows.Forms.TextBox textBox1;
+        private MaterialSkin.Controls.MaterialLabel DtRetonoViagLbl;
+        private System.Windows.Forms.Label LinhaLbl;
+        private System.Windows.Forms.TextBox DtRetornoViagRTbx;
+        private MaterialSkin.Controls.MaterialLabel DtSaidaViagRLbl;
+        private System.Windows.Forms.TextBox CidadeDestSaidaViagRTbx;
+        private System.Windows.Forms.TextBox CidadeSaidaViagRTbx;
+        private System.Windows.Forms.TextBox VeiculoSaidaViagRTbx;
+        private System.Windows.Forms.TextBox MotoristaSaidaViagRTbx;
+        private System.Windows.Forms.TextBox CodSaidaViagRTbx;
+        private MaterialSkin.Controls.MaterialLabel CidadeDestRetornoViagRLbl;
+        private MaterialSkin.Controls.MaterialLabel CidadeSaidaViagRLbl;
+        private MaterialSkin.Controls.MaterialLabel VeiculoSaidaViagRLbl;
+        private MaterialSkin.Controls.MaterialLabel MotoristaSaidaViagRLbl;
+        private MaterialSkin.Controls.MaterialLabel CodSaidaViagemRLbl;
     }
 }
