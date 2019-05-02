@@ -1,4 +1,6 @@
-﻿namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
+﻿using System;
+
+namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 {
     partial class FrmCadIniMotorista
     {
@@ -65,13 +67,10 @@
             this.GravarMotoristaBtn = new System.Windows.Forms.Button();
             this.PesquisarMotoristaBtn = new System.Windows.Forms.Button();
             this.ExcluirMotoristaBtn = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             this.linhaMotoristaLbl = new System.Windows.Forms.Label();
             this.motoristaLbl = new System.Windows.Forms.Label();
-=======
             this.label1 = new System.Windows.Forms.Label();
             this.cnhMotoristaTbx = new System.Windows.Forms.TextBox();
->>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
             this.CadMotoristaIniPnl.SuspendLayout();
             this.motoristaPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).BeginInit();
@@ -96,11 +95,9 @@
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarLbl);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarBtn);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
-<<<<<<< HEAD
             this.motoristaPesquisarPnl.Location = new System.Drawing.Point(11, 7);
-=======
+
             this.motoristaPesquisarPnl.Location = new System.Drawing.Point(503, 19);
->>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
             this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
             this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 291);
             this.motoristaPesquisarPnl.TabIndex = 123;
@@ -473,10 +470,7 @@
             this.GravarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarMotoristaBtn.TabIndex = 19;
             this.GravarMotoristaBtn.UseVisualStyleBackColor = false;
-<<<<<<< HEAD
-=======
             this.GravarMotoristaBtn.Click += new System.EventHandler(this.GravarMotoristaBtn_Click);
->>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
             // 
             // PesquisarMotoristaBtn
             // 
@@ -515,7 +509,6 @@
             this.ExcluirMotoristaBtn.TabIndex = 17;
             this.ExcluirMotoristaBtn.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
             // linhaMotoristaLbl
             // 
             this.linhaMotoristaLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -535,7 +528,6 @@
             this.motoristaLbl.Size = new System.Drawing.Size(152, 31);
             this.motoristaLbl.TabIndex = 124;
             this.motoristaLbl.Text = "Motorista";
-=======
             // label1
             // 
             this.label1.AutoSize = true;
@@ -553,7 +545,6 @@
             this.cnhMotoristaTbx.Name = "cnhMotoristaTbx";
             this.cnhMotoristaTbx.Size = new System.Drawing.Size(167, 20);
             this.cnhMotoristaTbx.TabIndex = 123;
->>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
             // 
             // FrmCadIniMotorista
             // 
@@ -576,6 +567,31 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void FrmCadIniMotorista_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void PesquisarMotoristaBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void GravarMotoristaBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void IncluirMotoristaBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CancelarMotoristaBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -606,10 +622,8 @@
         private System.Windows.Forms.Button PesquisarBtn;
         private System.Windows.Forms.TextBox PesquisarTbx;
         private System.Windows.Forms.DataGridView dataGridViewMotorista;
-<<<<<<< HEAD
         private System.Windows.Forms.Label linhaMotoristaLbl;
         private System.Windows.Forms.Label motoristaLbl;
-=======
         public System.Windows.Forms.TextBox DtVencCnhTbx;
         public System.Windows.Forms.TextBox NumeroRuaMotoristaTbx;
         public System.Windows.Forms.TextBox RuaMotoristaTbx;
@@ -622,6 +636,5 @@
         public System.Windows.Forms.TextBox CodMotoristaTbx;
         public System.Windows.Forms.TextBox cnhMotoristaTbx;
         private System.Windows.Forms.Label label1;
->>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
     }
 }

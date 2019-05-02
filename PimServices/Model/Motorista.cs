@@ -11,21 +11,6 @@ namespace PimServices.Model
 
        
 
-        public int id { get; set; }
-        public string nome { get; set; }
-
-        public int cpf { get; set; }
-
-        public int cnh { get; set; }
-
-        public string dtaNascimento { get; set; }
-
-        public string dtaVencimentoCnh { get; set; }
-
-<<<<<<< HEAD
-
-=======
-        /*
 
         private string _nome;
         private decimal _cnh;
@@ -138,8 +123,6 @@ namespace PimServices.Model
             this._estado = _estado;
         }
 
-    */
->>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
 
     }
 }
