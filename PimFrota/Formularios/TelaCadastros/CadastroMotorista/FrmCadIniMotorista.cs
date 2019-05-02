@@ -12,6 +12,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 {
     public partial class FrmCadIniMotorista : PimFrota.Formularios.Base.FrmBaseFundoCad
     {
+
+        Motorista u = new Motorista();
+        bool modoEdit = false;
+        DaoMotorista daoUsuario = new DaoMotorista();
+        Endereco e = new Endereco();
+
         public FrmCadIniMotorista()
         {
             InitializeComponent();
@@ -51,8 +57,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void GravarMotoristaBtn_Click(object sender, EventArgs e)
         {
+            
             /*
-
             if (String.IsNullOrEmpty(CodUsuarioTbx.Text))
                 MessageBox.Show("Campo nome obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (String.IsNullOrEmpty(AtivoCbx.Text))
@@ -62,6 +68,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             else if (String.IsNullOrEmpty(SenhaUsuarioTbx.Text))
                 MessageBox.Show("Campo senha obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
+            */
             {
 
                 if
@@ -72,11 +79,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     DaoMotorista dao = new DaoMotorista();
                     // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
 
-                    m.nome = NomeMotoristaTbx.Text;
-                    m.cpf = Convert.ToInt32(CpfMotoristaTbx.Text);
-                    m.cnh = Convert.ToInt32(cnhMotoristaTbx.Text);
-                    m.dtaNascimento = DtNascimentoMotoristaTbx.Text;
-                    m.dtaVencimentoCnh = DtVencCnhTbx.Text;
+                  //  m.nome = ;
+                  //  m.
                     //  m.Motorista.nomeRua = RuaMotoristaTbx.Text;
 
 
