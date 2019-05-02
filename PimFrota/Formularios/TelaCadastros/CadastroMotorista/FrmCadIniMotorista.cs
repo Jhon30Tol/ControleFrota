@@ -52,6 +52,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void GravarMotoristaBtn_Click(object sender, EventArgs e)
         {
             /*
+
             if (String.IsNullOrEmpty(CodUsuarioTbx.Text))
                 MessageBox.Show("Campo nome obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (String.IsNullOrEmpty(AtivoCbx.Text))
@@ -69,22 +70,23 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     Motorista m = new Motorista();
                     Endereco e = new Endereco();
                     DaoMotorista dao = new DaoMotorista();
-                   // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+                    // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
 
                     m.nome = NomeMotoristaTbx.Text;
                     m.cpf = Convert.ToInt32(CpfMotoristaTbx.Text);
                     m.cnh = Convert.ToInt32(cnhMotoristaTbx.Text);
                     m.dtaNascimento = DtNascimentoMotoristaTbx.Text;
                     m.dtaVencimentoCnh = DtVencCnhTbx.Text;
-                  //  m.Motorista.nomeRua = RuaMotoristaTbx.Text;
-
-
-     
+                    //  m.Motorista.nomeRua = RuaMotoristaTbx.Text;
 
 
 
 
-        dao.SalvarUsuario(u);
+
+
+
+                    dao.SalvarMotorista(m);
+                    /*
 
                 }
                 else
@@ -104,6 +106,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             }
             */
 
+                }
+            }
         }
-    }
-}
+    
+
