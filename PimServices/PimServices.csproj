@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Model\Motorista.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorySql\ConexaoBancoMySQL.cs" />
+    <Compile Include="RepositorySql\DaoMotorista.cs" />
     <Compile Include="RepositorySql\DaoUsuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

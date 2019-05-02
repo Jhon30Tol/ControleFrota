@@ -30,13 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniVeiculo));
             this.CadVeiculoIniPnl = new System.Windows.Forms.Panel();
-            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
-            this.CancelarVeiucloBtn = new System.Windows.Forms.Button();
-            this.EditarVeiucloBtn = new System.Windows.Forms.Button();
-            this.IncluirVeiucloBtn = new System.Windows.Forms.Button();
-            this.GravarVeiucloBtn = new System.Windows.Forms.Button();
-            this.PesquisarVeiucloBtn = new System.Windows.Forms.Button();
-            this.ExcluirVeiucloBtn = new System.Windows.Forms.Button();
+            this.veiculoPesquisarPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewVeiculo = new System.Windows.Forms.DataGridView();
+            this.PlacaCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.AnoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.MarcaCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.CodigoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.veiculoPnl = new System.Windows.Forms.Panel();
             this.TipCombustivelCbx = new System.Windows.Forms.ComboBox();
             this.ChassiTbx = new System.Windows.Forms.TextBox();
@@ -54,154 +56,150 @@
             this.AnoVeiuclolbl = new System.Windows.Forms.Label();
             this.ChassiLbl = new System.Windows.Forms.Label();
             this.MarcaVeiculolbl = new System.Windows.Forms.Label();
-            this.veiculoPesquisarPnl = new System.Windows.Forms.Panel();
-            this.PlacaCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.AnoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.MarcaCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.CodigoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.dataGridViewVeiculo = new System.Windows.Forms.DataGridView();
+            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
+            this.CancelarVeiucloBtn = new System.Windows.Forms.Button();
+            this.EditarVeiucloBtn = new System.Windows.Forms.Button();
+            this.IncluirVeiucloBtn = new System.Windows.Forms.Button();
+            this.GravarVeiucloBtn = new System.Windows.Forms.Button();
+            this.PesquisarVeiucloBtn = new System.Windows.Forms.Button();
+            this.ExcluirVeiucloBtn = new System.Windows.Forms.Button();
+            this.linhaVeiculoLbl = new System.Windows.Forms.Label();
+            this.veiculoLbl = new System.Windows.Forms.Label();
             this.CadVeiculoIniPnl.SuspendLayout();
-            this.BotaoCadastroPnl.SuspendLayout();
-            this.veiculoPnl.SuspendLayout();
             this.veiculoPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).BeginInit();
+            this.veiculoPnl.SuspendLayout();
+            this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadVeiculoIniPnl
             // 
             this.CadVeiculoIniPnl.Controls.Add(this.veiculoPesquisarPnl);
             this.CadVeiculoIniPnl.Controls.Add(this.veiculoPnl);
-            this.CadVeiculoIniPnl.Location = new System.Drawing.Point(1, 55);
+            this.CadVeiculoIniPnl.Location = new System.Drawing.Point(1, 67);
             this.CadVeiculoIniPnl.Name = "CadVeiculoIniPnl";
-            this.CadVeiculoIniPnl.Size = new System.Drawing.Size(594, 338);
+            this.CadVeiculoIniPnl.Size = new System.Drawing.Size(594, 325);
             this.CadVeiculoIniPnl.TabIndex = 25;
             // 
-            // BotaoCadastroPnl
+            // veiculoPesquisarPnl
             // 
-            this.BotaoCadastroPnl.Controls.Add(this.CancelarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.EditarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.IncluirVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.GravarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.PesquisarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.ExcluirVeiucloBtn);
-            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
-            this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
-            this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
-            this.BotaoCadastroPnl.TabIndex = 24;
+            this.veiculoPesquisarPnl.Controls.Add(this.dataGridViewVeiculo);
+            this.veiculoPesquisarPnl.Controls.Add(this.PlacaCkbx);
+            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarLbl);
+            this.veiculoPesquisarPnl.Controls.Add(this.AnoCkbx);
+            this.veiculoPesquisarPnl.Controls.Add(this.MarcaCkbx);
+            this.veiculoPesquisarPnl.Controls.Add(this.CodigoCkbx);
+            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarBtn);
+            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarTbx);
+            this.veiculoPesquisarPnl.Location = new System.Drawing.Point(9, 11);
+            this.veiculoPesquisarPnl.Name = "veiculoPesquisarPnl";
+            this.veiculoPesquisarPnl.Size = new System.Drawing.Size(575, 279);
+            this.veiculoPesquisarPnl.TabIndex = 125;
             // 
-            // CancelarVeiucloBtn
+            // dataGridViewVeiculo
             // 
-            this.CancelarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelarVeiucloBtn.AutoSize = true;
-            this.CancelarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CancelarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarVeiucloBtn.BackgroundImage")));
-            this.CancelarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CancelarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.CancelarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelarVeiucloBtn.Location = new System.Drawing.Point(142, 3);
-            this.CancelarVeiucloBtn.Name = "CancelarVeiucloBtn";
-            this.CancelarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CancelarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.CancelarVeiucloBtn.TabIndex = 18;
-            this.CancelarVeiucloBtn.UseVisualStyleBackColor = false;
-            this.CancelarVeiucloBtn.Click += new System.EventHandler(this.CancelarVeiucloBtn_Click);
+            this.dataGridViewVeiculo.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewVeiculo.Location = new System.Drawing.Point(13, 105);
+            this.dataGridViewVeiculo.Name = "dataGridViewVeiculo";
+            this.dataGridViewVeiculo.Size = new System.Drawing.Size(543, 150);
+            this.dataGridViewVeiculo.TabIndex = 26;
             // 
-            // EditarVeiucloBtn
+            // PlacaCkbx
             // 
-            this.EditarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditarVeiucloBtn.AutoSize = true;
-            this.EditarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.EditarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarVeiucloBtn.BackgroundImage")));
-            this.EditarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EditarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.EditarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditarVeiucloBtn.Location = new System.Drawing.Point(103, 3);
-            this.EditarVeiucloBtn.Name = "EditarVeiucloBtn";
-            this.EditarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.EditarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.EditarVeiucloBtn.TabIndex = 20;
-            this.EditarVeiucloBtn.UseVisualStyleBackColor = false;
+            this.PlacaCkbx.AutoSize = true;
+            this.PlacaCkbx.Depth = 0;
+            this.PlacaCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.PlacaCkbx.Location = new System.Drawing.Point(119, 62);
+            this.PlacaCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.PlacaCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.PlacaCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PlacaCkbx.Name = "PlacaCkbx";
+            this.PlacaCkbx.Ripple = true;
+            this.PlacaCkbx.Size = new System.Drawing.Size(64, 30);
+            this.PlacaCkbx.TabIndex = 25;
+            this.PlacaCkbx.Text = "Placa";
+            this.PlacaCkbx.UseVisualStyleBackColor = true;
             // 
-            // IncluirVeiucloBtn
+            // PesquisarLbl
             // 
-            this.IncluirVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IncluirVeiucloBtn.AutoSize = true;
-            this.IncluirVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.IncluirVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirVeiucloBtn.BackgroundImage")));
-            this.IncluirVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IncluirVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.IncluirVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IncluirVeiucloBtn.Location = new System.Drawing.Point(15, 3);
-            this.IncluirVeiucloBtn.Name = "IncluirVeiucloBtn";
-            this.IncluirVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.IncluirVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.IncluirVeiucloBtn.TabIndex = 15;
-            this.IncluirVeiucloBtn.UseVisualStyleBackColor = false;
-            this.IncluirVeiucloBtn.Click += new System.EventHandler(this.IncluirVeiucloBtn_Click);
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(222, 8);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 24;
+            this.PesquisarLbl.Text = "Pesquisar";
             // 
-            // GravarVeiucloBtn
+            // AnoCkbx
             // 
-            this.GravarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GravarVeiucloBtn.AutoSize = true;
-            this.GravarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.GravarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarVeiucloBtn.BackgroundImage")));
-            this.GravarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GravarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.GravarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GravarVeiucloBtn.Location = new System.Drawing.Point(61, 3);
-            this.GravarVeiucloBtn.Name = "GravarVeiucloBtn";
-            this.GravarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GravarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.GravarVeiucloBtn.TabIndex = 19;
-            this.GravarVeiucloBtn.UseVisualStyleBackColor = false;
+            this.AnoCkbx.AutoSize = true;
+            this.AnoCkbx.Depth = 0;
+            this.AnoCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.AnoCkbx.Location = new System.Drawing.Point(119, 32);
+            this.AnoCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.AnoCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.AnoCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.AnoCkbx.Name = "AnoCkbx";
+            this.AnoCkbx.Ripple = true;
+            this.AnoCkbx.Size = new System.Drawing.Size(55, 30);
+            this.AnoCkbx.TabIndex = 23;
+            this.AnoCkbx.Text = "Ano";
+            this.AnoCkbx.UseVisualStyleBackColor = true;
             // 
-            // PesquisarVeiucloBtn
+            // MarcaCkbx
             // 
-            this.PesquisarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PesquisarVeiucloBtn.AutoSize = true;
-            this.PesquisarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.PesquisarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarVeiucloBtn.BackgroundImage")));
-            this.PesquisarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarVeiucloBtn.Location = new System.Drawing.Point(222, 3);
-            this.PesquisarVeiucloBtn.Name = "PesquisarVeiucloBtn";
-            this.PesquisarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PesquisarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.PesquisarVeiucloBtn.TabIndex = 16;
-            this.PesquisarVeiucloBtn.UseVisualStyleBackColor = false;
-            this.PesquisarVeiucloBtn.Click += new System.EventHandler(this.PesquisarVeiucloBtn_Click);
+            this.MarcaCkbx.AutoSize = true;
+            this.MarcaCkbx.Depth = 0;
+            this.MarcaCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.MarcaCkbx.Location = new System.Drawing.Point(13, 62);
+            this.MarcaCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.MarcaCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.MarcaCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MarcaCkbx.Name = "MarcaCkbx";
+            this.MarcaCkbx.Ripple = true;
+            this.MarcaCkbx.Size = new System.Drawing.Size(69, 30);
+            this.MarcaCkbx.TabIndex = 22;
+            this.MarcaCkbx.Text = "Marca";
+            this.MarcaCkbx.UseVisualStyleBackColor = true;
             // 
-            // ExcluirVeiucloBtn
+            // CodigoCkbx
             // 
-            this.ExcluirVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExcluirVeiucloBtn.AutoSize = true;
-            this.ExcluirVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ExcluirVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirVeiucloBtn.BackgroundImage")));
-            this.ExcluirVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ExcluirVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.ExcluirVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcluirVeiucloBtn.Location = new System.Drawing.Point(181, 3);
-            this.ExcluirVeiucloBtn.Name = "ExcluirVeiucloBtn";
-            this.ExcluirVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ExcluirVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.ExcluirVeiucloBtn.TabIndex = 17;
-            this.ExcluirVeiucloBtn.UseVisualStyleBackColor = false;
+            this.CodigoCkbx.AutoSize = true;
+            this.CodigoCkbx.Depth = 0;
+            this.CodigoCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CodigoCkbx.Location = new System.Drawing.Point(13, 32);
+            this.CodigoCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.CodigoCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CodigoCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CodigoCkbx.Name = "CodigoCkbx";
+            this.CodigoCkbx.Ripple = true;
+            this.CodigoCkbx.Size = new System.Drawing.Size(74, 30);
+            this.CodigoCkbx.TabIndex = 21;
+            this.CodigoCkbx.Text = "Código";
+            this.CodigoCkbx.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarBtn
+            // 
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(173, 4);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 20;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(16, 7);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 18;
             // 
             // veiculoPnl
             // 
@@ -377,143 +375,170 @@
             this.MarcaVeiculolbl.TabIndex = 109;
             this.MarcaVeiculolbl.Text = "Marca:";
             // 
-            // veiculoPesquisarPnl
+            // BotaoCadastroPnl
             // 
-            this.veiculoPesquisarPnl.Controls.Add(this.dataGridViewVeiculo);
-            this.veiculoPesquisarPnl.Controls.Add(this.PlacaCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.veiculoPesquisarPnl.Controls.Add(this.AnoCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.MarcaCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.CodigoCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.veiculoPesquisarPnl.Location = new System.Drawing.Point(9, 11);
-            this.veiculoPesquisarPnl.Name = "veiculoPesquisarPnl";
-            this.veiculoPesquisarPnl.Size = new System.Drawing.Size(575, 279);
-            this.veiculoPesquisarPnl.TabIndex = 125;
+            this.BotaoCadastroPnl.Controls.Add(this.CancelarVeiucloBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.EditarVeiucloBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.IncluirVeiucloBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.GravarVeiucloBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.PesquisarVeiucloBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.ExcluirVeiucloBtn);
+            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
+            this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
+            this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
+            this.BotaoCadastroPnl.TabIndex = 24;
             // 
-            // PlacaCkbx
+            // CancelarVeiucloBtn
             // 
-            this.PlacaCkbx.AutoSize = true;
-            this.PlacaCkbx.Depth = 0;
-            this.PlacaCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.PlacaCkbx.Location = new System.Drawing.Point(119, 62);
-            this.PlacaCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.PlacaCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.PlacaCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PlacaCkbx.Name = "PlacaCkbx";
-            this.PlacaCkbx.Ripple = true;
-            this.PlacaCkbx.Size = new System.Drawing.Size(64, 30);
-            this.PlacaCkbx.TabIndex = 25;
-            this.PlacaCkbx.Text = "Placa";
-            this.PlacaCkbx.UseVisualStyleBackColor = true;
+            this.CancelarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelarVeiucloBtn.AutoSize = true;
+            this.CancelarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CancelarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarVeiucloBtn.BackgroundImage")));
+            this.CancelarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CancelarVeiucloBtn.FlatAppearance.BorderSize = 0;
+            this.CancelarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelarVeiucloBtn.Location = new System.Drawing.Point(142, 3);
+            this.CancelarVeiucloBtn.Name = "CancelarVeiucloBtn";
+            this.CancelarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CancelarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
+            this.CancelarVeiucloBtn.TabIndex = 18;
+            this.CancelarVeiucloBtn.UseVisualStyleBackColor = false;
+            this.CancelarVeiucloBtn.Click += new System.EventHandler(this.CancelarVeiucloBtn_Click);
             // 
-            // PesquisarLbl
+            // EditarVeiucloBtn
             // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(222, 8);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 24;
-            this.PesquisarLbl.Text = "Pesquisar";
+            this.EditarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditarVeiucloBtn.AutoSize = true;
+            this.EditarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
+            this.EditarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarVeiucloBtn.BackgroundImage")));
+            this.EditarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditarVeiucloBtn.FlatAppearance.BorderSize = 0;
+            this.EditarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarVeiucloBtn.Location = new System.Drawing.Point(103, 3);
+            this.EditarVeiucloBtn.Name = "EditarVeiucloBtn";
+            this.EditarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EditarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
+            this.EditarVeiucloBtn.TabIndex = 20;
+            this.EditarVeiucloBtn.UseVisualStyleBackColor = false;
             // 
-            // AnoCkbx
+            // IncluirVeiucloBtn
             // 
-            this.AnoCkbx.AutoSize = true;
-            this.AnoCkbx.Depth = 0;
-            this.AnoCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.AnoCkbx.Location = new System.Drawing.Point(119, 32);
-            this.AnoCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.AnoCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.AnoCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.AnoCkbx.Name = "AnoCkbx";
-            this.AnoCkbx.Ripple = true;
-            this.AnoCkbx.Size = new System.Drawing.Size(55, 30);
-            this.AnoCkbx.TabIndex = 23;
-            this.AnoCkbx.Text = "Ano";
-            this.AnoCkbx.UseVisualStyleBackColor = true;
+            this.IncluirVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IncluirVeiucloBtn.AutoSize = true;
+            this.IncluirVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
+            this.IncluirVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirVeiucloBtn.BackgroundImage")));
+            this.IncluirVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IncluirVeiucloBtn.FlatAppearance.BorderSize = 0;
+            this.IncluirVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IncluirVeiucloBtn.Location = new System.Drawing.Point(15, 3);
+            this.IncluirVeiucloBtn.Name = "IncluirVeiucloBtn";
+            this.IncluirVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.IncluirVeiucloBtn.Size = new System.Drawing.Size(26, 44);
+            this.IncluirVeiucloBtn.TabIndex = 15;
+            this.IncluirVeiucloBtn.UseVisualStyleBackColor = false;
+            this.IncluirVeiucloBtn.Click += new System.EventHandler(this.IncluirVeiucloBtn_Click);
             // 
-            // MarcaCkbx
+            // GravarVeiucloBtn
             // 
-            this.MarcaCkbx.AutoSize = true;
-            this.MarcaCkbx.Depth = 0;
-            this.MarcaCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.MarcaCkbx.Location = new System.Drawing.Point(13, 62);
-            this.MarcaCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.MarcaCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.MarcaCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MarcaCkbx.Name = "MarcaCkbx";
-            this.MarcaCkbx.Ripple = true;
-            this.MarcaCkbx.Size = new System.Drawing.Size(69, 30);
-            this.MarcaCkbx.TabIndex = 22;
-            this.MarcaCkbx.Text = "Marca";
-            this.MarcaCkbx.UseVisualStyleBackColor = true;
+            this.GravarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GravarVeiucloBtn.AutoSize = true;
+            this.GravarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
+            this.GravarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarVeiucloBtn.BackgroundImage")));
+            this.GravarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GravarVeiucloBtn.FlatAppearance.BorderSize = 0;
+            this.GravarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GravarVeiucloBtn.Location = new System.Drawing.Point(61, 3);
+            this.GravarVeiucloBtn.Name = "GravarVeiucloBtn";
+            this.GravarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.GravarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
+            this.GravarVeiucloBtn.TabIndex = 19;
+            this.GravarVeiucloBtn.UseVisualStyleBackColor = false;
             // 
-            // CodigoCkbx
+            // PesquisarVeiucloBtn
             // 
-            this.CodigoCkbx.AutoSize = true;
-            this.CodigoCkbx.Depth = 0;
-            this.CodigoCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CodigoCkbx.Location = new System.Drawing.Point(13, 32);
-            this.CodigoCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.CodigoCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CodigoCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CodigoCkbx.Name = "CodigoCkbx";
-            this.CodigoCkbx.Ripple = true;
-            this.CodigoCkbx.Size = new System.Drawing.Size(74, 30);
-            this.CodigoCkbx.TabIndex = 21;
-            this.CodigoCkbx.Text = "Código";
-            this.CodigoCkbx.UseVisualStyleBackColor = true;
+            this.PesquisarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PesquisarVeiucloBtn.AutoSize = true;
+            this.PesquisarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PesquisarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarVeiucloBtn.BackgroundImage")));
+            this.PesquisarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarVeiucloBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarVeiucloBtn.Location = new System.Drawing.Point(222, 3);
+            this.PesquisarVeiucloBtn.Name = "PesquisarVeiucloBtn";
+            this.PesquisarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PesquisarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
+            this.PesquisarVeiucloBtn.TabIndex = 16;
+            this.PesquisarVeiucloBtn.UseVisualStyleBackColor = false;
+            this.PesquisarVeiucloBtn.Click += new System.EventHandler(this.PesquisarVeiucloBtn_Click);
             // 
-            // PesquisarBtn
+            // ExcluirVeiucloBtn
             // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(173, 4);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 20;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            this.ExcluirVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExcluirVeiucloBtn.AutoSize = true;
+            this.ExcluirVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ExcluirVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirVeiucloBtn.BackgroundImage")));
+            this.ExcluirVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ExcluirVeiucloBtn.FlatAppearance.BorderSize = 0;
+            this.ExcluirVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcluirVeiucloBtn.Location = new System.Drawing.Point(181, 3);
+            this.ExcluirVeiucloBtn.Name = "ExcluirVeiucloBtn";
+            this.ExcluirVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ExcluirVeiucloBtn.Size = new System.Drawing.Size(26, 44);
+            this.ExcluirVeiucloBtn.TabIndex = 17;
+            this.ExcluirVeiucloBtn.UseVisualStyleBackColor = false;
             // 
-            // PesquisarTbx
+            // linhaVeiculoLbl
             // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(16, 7);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 18;
+            this.linhaVeiculoLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.linhaVeiculoLbl.Location = new System.Drawing.Point(-1, 47);
+            this.linhaVeiculoLbl.Name = "linhaVeiculoLbl";
+            this.linhaVeiculoLbl.Size = new System.Drawing.Size(598, 10);
+            this.linhaVeiculoLbl.TabIndex = 30;
             // 
-            // dataGridViewVeiculo
+            // veiculoLbl
             // 
-            this.dataGridViewVeiculo.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewVeiculo.Location = new System.Drawing.Point(13, 105);
-            this.dataGridViewVeiculo.Name = "dataGridViewVeiculo";
-            this.dataGridViewVeiculo.Size = new System.Drawing.Size(543, 150);
-            this.dataGridViewVeiculo.TabIndex = 26;
+            this.veiculoLbl.AutoSize = true;
+            this.veiculoLbl.BackColor = System.Drawing.Color.Transparent;
+            this.veiculoLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.veiculoLbl.ForeColor = System.Drawing.Color.GreenYellow;
+            this.veiculoLbl.Location = new System.Drawing.Point(459, 9);
+            this.veiculoLbl.Name = "veiculoLbl";
+            this.veiculoLbl.Size = new System.Drawing.Size(118, 31);
+            this.veiculoLbl.TabIndex = 29;
+            this.veiculoLbl.Text = "Veículo";
             // 
             // FrmCadIniVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
+            this.Controls.Add(this.linhaVeiculoLbl);
+            this.Controls.Add(this.veiculoLbl);
             this.Controls.Add(this.CadVeiculoIniPnl);
             this.Controls.Add(this.BotaoCadastroPnl);
             this.Name = "FrmCadIniVeiculo";
             this.Load += new System.EventHandler(this.FrmCadIniVeiculo_Load);
             this.CadVeiculoIniPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.PerformLayout();
-            this.veiculoPnl.ResumeLayout(false);
-            this.veiculoPnl.PerformLayout();
             this.veiculoPesquisarPnl.ResumeLayout(false);
             this.veiculoPesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).EndInit();
+            this.veiculoPnl.ResumeLayout(false);
+            this.veiculoPnl.PerformLayout();
+            this.BotaoCadastroPnl.ResumeLayout(false);
+            this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -553,5 +578,7 @@
         private MaterialSkin.Controls.MaterialCheckBox CodigoCkbx;
         private System.Windows.Forms.Button PesquisarBtn;
         private System.Windows.Forms.TextBox PesquisarTbx;
+        private System.Windows.Forms.Label linhaVeiculoLbl;
+        private System.Windows.Forms.Label veiculoLbl;
     }
 }

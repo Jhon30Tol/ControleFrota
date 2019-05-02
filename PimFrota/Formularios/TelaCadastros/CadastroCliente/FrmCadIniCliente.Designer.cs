@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniCliente));
             this.CadClienteIniPnl = new System.Windows.Forms.Panel();
-            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
-            this.CancelarClienteBtn = new System.Windows.Forms.Button();
-            this.EditarClienteBtn = new System.Windows.Forms.Button();
-            this.IncluirClienteBtn = new System.Windows.Forms.Button();
-            this.GravarClienteBtn = new System.Windows.Forms.Button();
-            this.PesquisarClienteBtn = new System.Windows.Forms.Button();
-            this.ExcluirClienteBtn = new System.Windows.Forms.Button();
+            this.ClientePesquisarPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
+            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.ClientePnl = new System.Windows.Forms.Panel();
             this.NumeroRuaClienteTbx = new System.Windows.Forms.TextBox();
             this.CidadeClienteTbx = new System.Windows.Forms.TextBox();
@@ -60,152 +60,116 @@
             this.CpfClieentelbl = new System.Windows.Forms.Label();
             this.RuaClientelbl = new System.Windows.Forms.Label();
             this.NomeClientelbl = new System.Windows.Forms.Label();
-            this.ClientePesquisarPnl = new System.Windows.Forms.Panel();
-            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
+            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
+            this.CancelarClienteBtn = new System.Windows.Forms.Button();
+            this.EditarClienteBtn = new System.Windows.Forms.Button();
+            this.IncluirClienteBtn = new System.Windows.Forms.Button();
+            this.GravarClienteBtn = new System.Windows.Forms.Button();
+            this.PesquisarClienteBtn = new System.Windows.Forms.Button();
+            this.ExcluirClienteBtn = new System.Windows.Forms.Button();
+            this.linhaClienteLbl = new System.Windows.Forms.Label();
+            this.clienteLbl = new System.Windows.Forms.Label();
             this.CadClienteIniPnl.SuspendLayout();
-            this.BotaoCadastroPnl.SuspendLayout();
-            this.ClientePnl.SuspendLayout();
             this.ClientePesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
+            this.ClientePnl.SuspendLayout();
+            this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadClienteIniPnl
             // 
             this.CadClienteIniPnl.Controls.Add(this.ClientePesquisarPnl);
             this.CadClienteIniPnl.Controls.Add(this.ClientePnl);
-            this.CadClienteIniPnl.Location = new System.Drawing.Point(1, 55);
+            this.CadClienteIniPnl.Location = new System.Drawing.Point(1, 75);
             this.CadClienteIniPnl.Name = "CadClienteIniPnl";
-            this.CadClienteIniPnl.Size = new System.Drawing.Size(594, 338);
+            this.CadClienteIniPnl.Size = new System.Drawing.Size(594, 317);
             this.CadClienteIniPnl.TabIndex = 27;
             // 
-            // BotaoCadastroPnl
+            // ClientePesquisarPnl
             // 
-            this.BotaoCadastroPnl.Controls.Add(this.CancelarClienteBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.EditarClienteBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.IncluirClienteBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.GravarClienteBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.PesquisarClienteBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.ExcluirClienteBtn);
-            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
-            this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
-            this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
-            this.BotaoCadastroPnl.TabIndex = 26;
+            this.ClientePesquisarPnl.Controls.Add(this.dataGridViewCliente);
+            this.ClientePesquisarPnl.Controls.Add(this.CpfCkbx);
+            this.ClientePesquisarPnl.Controls.Add(this.NomeCkbx);
+            this.ClientePesquisarPnl.Controls.Add(this.PesquisarLbl);
+            this.ClientePesquisarPnl.Controls.Add(this.PesquisarBtn);
+            this.ClientePesquisarPnl.Controls.Add(this.PesquisarTbx);
+            this.ClientePesquisarPnl.Location = new System.Drawing.Point(3, 13);
+            this.ClientePesquisarPnl.Name = "ClientePesquisarPnl";
+            this.ClientePesquisarPnl.Size = new System.Drawing.Size(581, 300);
+            this.ClientePesquisarPnl.TabIndex = 99;
             // 
-            // CancelarClienteBtn
+            // dataGridViewCliente
             // 
-            this.CancelarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelarClienteBtn.AutoSize = true;
-            this.CancelarClienteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CancelarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarClienteBtn.BackgroundImage")));
-            this.CancelarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CancelarClienteBtn.FlatAppearance.BorderSize = 0;
-            this.CancelarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelarClienteBtn.Location = new System.Drawing.Point(142, 3);
-            this.CancelarClienteBtn.Name = "CancelarClienteBtn";
-            this.CancelarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CancelarClienteBtn.Size = new System.Drawing.Size(26, 44);
-            this.CancelarClienteBtn.TabIndex = 18;
-            this.CancelarClienteBtn.UseVisualStyleBackColor = false;
-            this.CancelarClienteBtn.Click += new System.EventHandler(this.CancelarClienteBtn_Click);
+            this.dataGridViewCliente.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCliente.Location = new System.Drawing.Point(14, 93);
+            this.dataGridViewCliente.Name = "dataGridViewCliente";
+            this.dataGridViewCliente.Size = new System.Drawing.Size(552, 186);
+            this.dataGridViewCliente.TabIndex = 57;
             // 
-            // EditarClienteBtn
+            // CpfCkbx
             // 
-            this.EditarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditarClienteBtn.AutoSize = true;
-            this.EditarClienteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.EditarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarClienteBtn.BackgroundImage")));
-            this.EditarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EditarClienteBtn.FlatAppearance.BorderSize = 0;
-            this.EditarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditarClienteBtn.Location = new System.Drawing.Point(103, 3);
-            this.EditarClienteBtn.Name = "EditarClienteBtn";
-            this.EditarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.EditarClienteBtn.Size = new System.Drawing.Size(26, 44);
-            this.EditarClienteBtn.TabIndex = 20;
-            this.EditarClienteBtn.UseVisualStyleBackColor = false;
+            this.CpfCkbx.AutoSize = true;
+            this.CpfCkbx.Depth = 0;
+            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CpfCkbx.Location = new System.Drawing.Point(136, 44);
+            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CpfCkbx.Name = "CpfCkbx";
+            this.CpfCkbx.Ripple = true;
+            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
+            this.CpfCkbx.TabIndex = 56;
+            this.CpfCkbx.Text = "CPF";
+            this.CpfCkbx.UseVisualStyleBackColor = true;
             // 
-            // IncluirClienteBtn
+            // NomeCkbx
             // 
-            this.IncluirClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IncluirClienteBtn.AutoSize = true;
-            this.IncluirClienteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.IncluirClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirClienteBtn.BackgroundImage")));
-            this.IncluirClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IncluirClienteBtn.FlatAppearance.BorderSize = 0;
-            this.IncluirClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IncluirClienteBtn.Location = new System.Drawing.Point(15, 3);
-            this.IncluirClienteBtn.Name = "IncluirClienteBtn";
-            this.IncluirClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.IncluirClienteBtn.Size = new System.Drawing.Size(26, 44);
-            this.IncluirClienteBtn.TabIndex = 15;
-            this.IncluirClienteBtn.UseVisualStyleBackColor = false;
-            this.IncluirClienteBtn.Click += new System.EventHandler(this.IncluirClienteBtn_Click);
+            this.NomeCkbx.AutoSize = true;
+            this.NomeCkbx.Depth = 0;
+            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NomeCkbx.Location = new System.Drawing.Point(14, 44);
+            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NomeCkbx.Name = "NomeCkbx";
+            this.NomeCkbx.Ripple = true;
+            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
+            this.NomeCkbx.TabIndex = 55;
+            this.NomeCkbx.Text = "Nome";
+            this.NomeCkbx.UseVisualStyleBackColor = true;
             // 
-            // GravarClienteBtn
+            // PesquisarLbl
             // 
-            this.GravarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GravarClienteBtn.AutoSize = true;
-            this.GravarClienteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.GravarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarClienteBtn.BackgroundImage")));
-            this.GravarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GravarClienteBtn.FlatAppearance.BorderSize = 0;
-            this.GravarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GravarClienteBtn.Location = new System.Drawing.Point(61, 3);
-            this.GravarClienteBtn.Name = "GravarClienteBtn";
-            this.GravarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GravarClienteBtn.Size = new System.Drawing.Size(26, 44);
-            this.GravarClienteBtn.TabIndex = 19;
-            this.GravarClienteBtn.UseVisualStyleBackColor = false;
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(220, 16);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 54;
+            this.PesquisarLbl.Text = "Pesquisar";
             // 
-            // PesquisarClienteBtn
+            // PesquisarBtn
             // 
-            this.PesquisarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PesquisarClienteBtn.AutoSize = true;
-            this.PesquisarClienteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.PesquisarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarClienteBtn.BackgroundImage")));
-            this.PesquisarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarClienteBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarClienteBtn.Location = new System.Drawing.Point(222, 3);
-            this.PesquisarClienteBtn.Name = "PesquisarClienteBtn";
-            this.PesquisarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PesquisarClienteBtn.Size = new System.Drawing.Size(26, 44);
-            this.PesquisarClienteBtn.TabIndex = 16;
-            this.PesquisarClienteBtn.UseVisualStyleBackColor = false;
-            this.PesquisarClienteBtn.Click += new System.EventHandler(this.PesquisarClienteBtn_Click);
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(171, 12);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 53;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
             // 
-            // ExcluirClienteBtn
+            // PesquisarTbx
             // 
-            this.ExcluirClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExcluirClienteBtn.AutoSize = true;
-            this.ExcluirClienteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ExcluirClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirClienteBtn.BackgroundImage")));
-            this.ExcluirClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ExcluirClienteBtn.FlatAppearance.BorderSize = 0;
-            this.ExcluirClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcluirClienteBtn.Location = new System.Drawing.Point(181, 3);
-            this.ExcluirClienteBtn.Name = "ExcluirClienteBtn";
-            this.ExcluirClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ExcluirClienteBtn.Size = new System.Drawing.Size(26, 44);
-            this.ExcluirClienteBtn.TabIndex = 17;
-            this.ExcluirClienteBtn.UseVisualStyleBackColor = false;
+            this.PesquisarTbx.Location = new System.Drawing.Point(14, 15);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 51;
             // 
             // ClientePnl
             // 
@@ -434,109 +398,170 @@
             this.NomeClientelbl.TabIndex = 77;
             this.NomeClientelbl.Text = "Nome Completo:";
             // 
-            // ClientePesquisarPnl
+            // BotaoCadastroPnl
             // 
-            this.ClientePesquisarPnl.Controls.Add(this.dataGridViewCliente);
-            this.ClientePesquisarPnl.Controls.Add(this.CpfCkbx);
-            this.ClientePesquisarPnl.Controls.Add(this.NomeCkbx);
-            this.ClientePesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.ClientePesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.ClientePesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.ClientePesquisarPnl.Location = new System.Drawing.Point(3, 13);
-            this.ClientePesquisarPnl.Name = "ClientePesquisarPnl";
-            this.ClientePesquisarPnl.Size = new System.Drawing.Size(581, 300);
-            this.ClientePesquisarPnl.TabIndex = 99;
+            this.BotaoCadastroPnl.Controls.Add(this.CancelarClienteBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.EditarClienteBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.IncluirClienteBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.GravarClienteBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.PesquisarClienteBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.ExcluirClienteBtn);
+            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
+            this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
+            this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
+            this.BotaoCadastroPnl.TabIndex = 26;
             // 
-            // CpfCkbx
+            // CancelarClienteBtn
             // 
-            this.CpfCkbx.AutoSize = true;
-            this.CpfCkbx.Depth = 0;
-            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CpfCkbx.Location = new System.Drawing.Point(136, 44);
-            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CpfCkbx.Name = "CpfCkbx";
-            this.CpfCkbx.Ripple = true;
-            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
-            this.CpfCkbx.TabIndex = 56;
-            this.CpfCkbx.Text = "CPF";
-            this.CpfCkbx.UseVisualStyleBackColor = true;
+            this.CancelarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelarClienteBtn.AutoSize = true;
+            this.CancelarClienteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CancelarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarClienteBtn.BackgroundImage")));
+            this.CancelarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CancelarClienteBtn.FlatAppearance.BorderSize = 0;
+            this.CancelarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelarClienteBtn.Location = new System.Drawing.Point(142, 3);
+            this.CancelarClienteBtn.Name = "CancelarClienteBtn";
+            this.CancelarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CancelarClienteBtn.Size = new System.Drawing.Size(26, 44);
+            this.CancelarClienteBtn.TabIndex = 18;
+            this.CancelarClienteBtn.UseVisualStyleBackColor = false;
+            this.CancelarClienteBtn.Click += new System.EventHandler(this.CancelarClienteBtn_Click);
             // 
-            // NomeCkbx
+            // EditarClienteBtn
             // 
-            this.NomeCkbx.AutoSize = true;
-            this.NomeCkbx.Depth = 0;
-            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NomeCkbx.Location = new System.Drawing.Point(14, 44);
-            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NomeCkbx.Name = "NomeCkbx";
-            this.NomeCkbx.Ripple = true;
-            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
-            this.NomeCkbx.TabIndex = 55;
-            this.NomeCkbx.Text = "Nome";
-            this.NomeCkbx.UseVisualStyleBackColor = true;
+            this.EditarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditarClienteBtn.AutoSize = true;
+            this.EditarClienteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.EditarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarClienteBtn.BackgroundImage")));
+            this.EditarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditarClienteBtn.FlatAppearance.BorderSize = 0;
+            this.EditarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarClienteBtn.Location = new System.Drawing.Point(103, 3);
+            this.EditarClienteBtn.Name = "EditarClienteBtn";
+            this.EditarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EditarClienteBtn.Size = new System.Drawing.Size(26, 44);
+            this.EditarClienteBtn.TabIndex = 20;
+            this.EditarClienteBtn.UseVisualStyleBackColor = false;
             // 
-            // PesquisarLbl
+            // IncluirClienteBtn
             // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(220, 16);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 54;
-            this.PesquisarLbl.Text = "Pesquisar";
+            this.IncluirClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IncluirClienteBtn.AutoSize = true;
+            this.IncluirClienteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.IncluirClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirClienteBtn.BackgroundImage")));
+            this.IncluirClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IncluirClienteBtn.FlatAppearance.BorderSize = 0;
+            this.IncluirClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IncluirClienteBtn.Location = new System.Drawing.Point(15, 3);
+            this.IncluirClienteBtn.Name = "IncluirClienteBtn";
+            this.IncluirClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.IncluirClienteBtn.Size = new System.Drawing.Size(26, 44);
+            this.IncluirClienteBtn.TabIndex = 15;
+            this.IncluirClienteBtn.UseVisualStyleBackColor = false;
+            this.IncluirClienteBtn.Click += new System.EventHandler(this.IncluirClienteBtn_Click);
             // 
-            // PesquisarBtn
+            // GravarClienteBtn
             // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(171, 12);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 53;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            this.GravarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GravarClienteBtn.AutoSize = true;
+            this.GravarClienteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.GravarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarClienteBtn.BackgroundImage")));
+            this.GravarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GravarClienteBtn.FlatAppearance.BorderSize = 0;
+            this.GravarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GravarClienteBtn.Location = new System.Drawing.Point(61, 3);
+            this.GravarClienteBtn.Name = "GravarClienteBtn";
+            this.GravarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.GravarClienteBtn.Size = new System.Drawing.Size(26, 44);
+            this.GravarClienteBtn.TabIndex = 19;
+            this.GravarClienteBtn.UseVisualStyleBackColor = false;
             // 
-            // PesquisarTbx
+            // PesquisarClienteBtn
             // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(14, 15);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 51;
+            this.PesquisarClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PesquisarClienteBtn.AutoSize = true;
+            this.PesquisarClienteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PesquisarClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarClienteBtn.BackgroundImage")));
+            this.PesquisarClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarClienteBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarClienteBtn.Location = new System.Drawing.Point(222, 3);
+            this.PesquisarClienteBtn.Name = "PesquisarClienteBtn";
+            this.PesquisarClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PesquisarClienteBtn.Size = new System.Drawing.Size(26, 44);
+            this.PesquisarClienteBtn.TabIndex = 16;
+            this.PesquisarClienteBtn.UseVisualStyleBackColor = false;
+            this.PesquisarClienteBtn.Click += new System.EventHandler(this.PesquisarClienteBtn_Click);
             // 
-            // dataGridViewCliente
+            // ExcluirClienteBtn
             // 
-            this.dataGridViewCliente.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCliente.Location = new System.Drawing.Point(14, 93);
-            this.dataGridViewCliente.Name = "dataGridViewCliente";
-            this.dataGridViewCliente.Size = new System.Drawing.Size(552, 186);
-            this.dataGridViewCliente.TabIndex = 57;
+            this.ExcluirClienteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExcluirClienteBtn.AutoSize = true;
+            this.ExcluirClienteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ExcluirClienteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirClienteBtn.BackgroundImage")));
+            this.ExcluirClienteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ExcluirClienteBtn.FlatAppearance.BorderSize = 0;
+            this.ExcluirClienteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcluirClienteBtn.Location = new System.Drawing.Point(181, 3);
+            this.ExcluirClienteBtn.Name = "ExcluirClienteBtn";
+            this.ExcluirClienteBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ExcluirClienteBtn.Size = new System.Drawing.Size(26, 44);
+            this.ExcluirClienteBtn.TabIndex = 17;
+            this.ExcluirClienteBtn.UseVisualStyleBackColor = false;
+            // 
+            // linhaClienteLbl
+            // 
+            this.linhaClienteLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.linhaClienteLbl.Location = new System.Drawing.Point(-1, 56);
+            this.linhaClienteLbl.Name = "linhaClienteLbl";
+            this.linhaClienteLbl.Size = new System.Drawing.Size(598, 10);
+            this.linhaClienteLbl.TabIndex = 101;
+            // 
+            // clienteLbl
+            // 
+            this.clienteLbl.AutoSize = true;
+            this.clienteLbl.BackColor = System.Drawing.Color.Transparent;
+            this.clienteLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clienteLbl.ForeColor = System.Drawing.Color.GreenYellow;
+            this.clienteLbl.Location = new System.Drawing.Point(459, 18);
+            this.clienteLbl.Name = "clienteLbl";
+            this.clienteLbl.Size = new System.Drawing.Size(112, 31);
+            this.clienteLbl.TabIndex = 100;
+            this.clienteLbl.Text = "Cliente";
             // 
             // FrmCadIniCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
+            this.Controls.Add(this.linhaClienteLbl);
             this.Controls.Add(this.CadClienteIniPnl);
+            this.Controls.Add(this.clienteLbl);
             this.Controls.Add(this.BotaoCadastroPnl);
             this.Name = "FrmCadIniCliente";
             this.Load += new System.EventHandler(this.FrmCadIniCliente_Load);
             this.CadClienteIniPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.PerformLayout();
-            this.ClientePnl.ResumeLayout(false);
-            this.ClientePnl.PerformLayout();
             this.ClientePesquisarPnl.ResumeLayout(false);
             this.ClientePesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
+            this.ClientePnl.ResumeLayout(false);
+            this.ClientePnl.PerformLayout();
+            this.BotaoCadastroPnl.ResumeLayout(false);
+            this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -580,5 +605,7 @@
         private MaterialSkin.Controls.MaterialLabel PesquisarLbl;
         private System.Windows.Forms.Button PesquisarBtn;
         private System.Windows.Forms.TextBox PesquisarTbx;
+        private System.Windows.Forms.Label linhaClienteLbl;
+        private System.Windows.Forms.Label clienteLbl;
     }
 }

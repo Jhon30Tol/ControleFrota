@@ -271,6 +271,7 @@
             this.AtivoCkbx.TabIndex = 13;
             this.AtivoCkbx.Text = "Ativo";
             this.AtivoCkbx.UseVisualStyleBackColor = true;
+            this.AtivoCkbx.CheckedChanged += new System.EventHandler(this.AtivoCkbx_CheckedChanged);
             // 
             // PesquisarBtn
             // 

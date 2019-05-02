@@ -97,6 +97,7 @@
             this.Senhatxb.PasswordChar = '*';
             this.Senhatxb.Size = new System.Drawing.Size(171, 20);
             this.Senhatxb.TabIndex = 10;
+            this.Senhatxb.TextChanged += new System.EventHandler(this.Senhatxb_TextChanged);
             // 
             // Usuariolbl
             // 
@@ -138,6 +139,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogoLoginImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

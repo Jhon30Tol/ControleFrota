@@ -53,6 +53,7 @@
             this.GravarCidadeBtn = new System.Windows.Forms.Button();
             this.PesquisarCidadeBtn = new System.Windows.Forms.Button();
             this.ExcluirCidadeBtn = new System.Windows.Forms.Button();
+            this.linhaCidadeLbl = new System.Windows.Forms.Label();
             this.cidadeLbl = new System.Windows.Forms.Label();
             this.CadCidIniPnl.SuspendLayout();
             this.cidadePesquisarPnl.SuspendLayout();
@@ -65,9 +66,9 @@
             // 
             this.CadCidIniPnl.Controls.Add(this.cidadePesquisarPnl);
             this.CadCidIniPnl.Controls.Add(this.cidadePnl);
-            this.CadCidIniPnl.Location = new System.Drawing.Point(1, 55);
+            this.CadCidIniPnl.Location = new System.Drawing.Point(1, 77);
             this.CadCidIniPnl.Name = "CadCidIniPnl";
-            this.CadCidIniPnl.Size = new System.Drawing.Size(594, 338);
+            this.CadCidIniPnl.Size = new System.Drawing.Size(594, 314);
             this.CadCidIniPnl.TabIndex = 25;
             // 
             // cidadePesquisarPnl
@@ -80,7 +81,7 @@
             this.cidadePesquisarPnl.Controls.Add(this.PesquisarTbx);
             this.cidadePesquisarPnl.Location = new System.Drawing.Point(11, 16);
             this.cidadePesquisarPnl.Name = "cidadePesquisarPnl";
-            this.cidadePesquisarPnl.Size = new System.Drawing.Size(573, 312);
+            this.cidadePesquisarPnl.Size = new System.Drawing.Size(573, 293);
             this.cidadePesquisarPnl.TabIndex = 1;
             // 
             // dataGridViewCidade
@@ -91,7 +92,7 @@
             this.dataGridViewCidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCidade.Location = new System.Drawing.Point(11, 80);
             this.dataGridViewCidade.Name = "dataGridViewCidade";
-            this.dataGridViewCidade.Size = new System.Drawing.Size(547, 229);
+            this.dataGridViewCidade.Size = new System.Drawing.Size(547, 210);
             this.dataGridViewCidade.TabIndex = 62;
             // 
             // EstadoCkbx
@@ -371,22 +372,31 @@
             this.ExcluirCidadeBtn.TabIndex = 17;
             this.ExcluirCidadeBtn.UseVisualStyleBackColor = false;
             // 
+            // linhaCidadeLbl
+            // 
+            this.linhaCidadeLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.linhaCidadeLbl.Location = new System.Drawing.Point(1, 52);
+            this.linhaCidadeLbl.Name = "linhaCidadeLbl";
+            this.linhaCidadeLbl.Size = new System.Drawing.Size(598, 10);
+            this.linhaCidadeLbl.TabIndex = 30;
+            // 
             // cidadeLbl
             // 
             this.cidadeLbl.AutoSize = true;
             this.cidadeLbl.BackColor = System.Drawing.Color.Transparent;
             this.cidadeLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cidadeLbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.cidadeLbl.Location = new System.Drawing.Point(440, 9);
+            this.cidadeLbl.Location = new System.Drawing.Point(461, 14);
             this.cidadeLbl.Name = "cidadeLbl";
-            this.cidadeLbl.Size = new System.Drawing.Size(130, 31);
-            this.cidadeLbl.TabIndex = 26;
-            this.cidadeLbl.Text = "CIDADE";
+            this.cidadeLbl.Size = new System.Drawing.Size(110, 31);
+            this.cidadeLbl.TabIndex = 29;
+            this.cidadeLbl.Text = "Cidade";
             // 
             // FrmCadIniCidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
+            this.Controls.Add(this.linhaCidadeLbl);
             this.Controls.Add(this.cidadeLbl);
             this.Controls.Add(this.CadCidIniPnl);
             this.Controls.Add(this.BotaoCadastroPnl);
@@ -431,6 +441,7 @@
         private MaterialSkin.Controls.MaterialLabel PesquisarLbl;
         private System.Windows.Forms.Button PesquisarBtn;
         private System.Windows.Forms.TextBox PesquisarTbx;
+        private System.Windows.Forms.Label linhaCidadeLbl;
         private System.Windows.Forms.Label cidadeLbl;
     }
 }

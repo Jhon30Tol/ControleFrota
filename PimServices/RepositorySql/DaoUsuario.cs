@@ -12,15 +12,10 @@ using System.Data;
 namespace PimServices.RepositorySql
 {
 
-
-      //  FrmMensagemCadSucesso msgSucesso = new FrmMensagemCadSucesso();
-
- 
-
-
     public class DaoUsuario: ConexaoBancoMySQL
     {
-       // FrmCadIniusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+  
+
 
         public void SalvarUsuario(Usuario u)
         {
@@ -59,10 +54,6 @@ namespace PimServices.RepositorySql
             try
             {
 
-
-
-
-
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
                 String alteratDados = "UPDATE cadastro_usuario set nome_usuario = @nome, senha_usuario = @senha, ativo = @ativo where id_usuario = @id";
@@ -79,7 +70,7 @@ namespace PimServices.RepositorySql
 
                 conn.Close();
 
-                MessageBox.Show("Usuario salvo com sucesso!");
+                MessageBox.Show("Usuario Editado com sucesso!");
             }
             catch (Exception ex)
             {
@@ -93,11 +84,6 @@ namespace PimServices.RepositorySql
 
             try
             {
-
-
-
-
-
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
                 String alteratDados = "DELETE FROM cadastro_usuario where id_usuario = @id";
@@ -120,56 +106,6 @@ namespace PimServices.RepositorySql
 
             }
         }
-
-        /*
-              public static MUsuario PesquisaLogin(MUsuario usuario)
-              {
-                  SqlConnection conexao = new SqlConnection();
-                  conexao.ConnectionString = Conexao.ConnectionString;
-                  conexao.Open();
-
-                  SqlCommand comando = new SqlCommand();
-                  comando.Connection = conexao;
-                  comando.CommandText = "select * from usuario where login=@login and senha=@senha";
-
-                  SqlParameter param = new SqlParameter("@login", SqlDbType.VarChar);
-                  param.Value = usuario.login;
-                  comando.Parameters.Add(param);
-
-                  param = new SqlParameter("@senha", SqlDbType.VarChar);
-                  param.Value = MUsuario.Cripitografar(usuario.senha);
-                  comando.Parameters.Add(param);
-
-                  try
-                  {
-                      comando.Connection = conexao;
-                      SqlDataReader reader = comando.ExecuteReader();
-
-                      if (reader != null)
-                      {
-                          if (reader.Read())
-                          {
-                              usuario.id = (int)reader["id"];
-                              usuario.login = reader["login"].ToString();
-                              usuario.status = (int)reader["status"];
-                          }
-                          reader.Close();
-                      }
-                      conexao.Close();
-                  }
-                  catch (Exception ex)
-                  {
-                      conexao.Close();
-                  }
-
-                  return usuario;
-
-
-
-
-              }
-
-              */
 
     }
 

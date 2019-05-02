@@ -50,11 +50,13 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
         }
 
 
+
         public void IncluirBtn_Click(object sender, EventArgs e)
         {
             modoGravar();
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
+            IncluirUsuBtn.Enabled = false;
 
         }
 
@@ -68,60 +70,79 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
         private void GravarUsuBtn_Click(object sender, EventArgs e)
         {
 
-            if (modoEdit == false)
-            {
-
-                Usuario u = new Usuario();
-                DaoUsuario dao = new DaoUsuario();
-
-
-                FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
-                u.Nome = NomeUsuarioTbx.Text;
-                u.Senha = SenhaUsuarioTbx.Text;
-
-
-
-                switch (AtivoCbx.SelectedIndex)
-                {
-                    case 0:
-                        u.Ativo = "S";
-                        break;
-                    case 1:
-                        u.Ativo = "N";
-                        break;
-                }
-                dao.SalvarUsuario(u);
-            }
+            if (String.IsNullOrEmpty(CodUsuarioTbx.Text))
+                MessageBox.Show("Campo nome obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (String.IsNullOrEmpty(AtivoCbx.Text))
+                MessageBox.Show("Campo ativo obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (String.IsNullOrEmpty(NomeUsuarioTbx.Text))
+                MessageBox.Show("Campo login obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else if (String.IsNullOrEmpty(SenhaUsuarioTbx.Text))
+                MessageBox.Show("Campo senha obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-            {
-                FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
-                Usuario u = new Usuario();
-                DaoUsuario dao = new DaoUsuario();
+            { 
 
-                u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
-                u.Nome = NomeUsuarioTbx.Text;
-                u.Senha = SenhaUsuarioTbx.Text;
-                u.Ativo = AtivoCbx.Text;
-                dao.EditarrUsuario(u);
+                if
+                  (modoEdit == false)
+                {
+                    Usuario u = new Usuario();
+                    DaoUsuario dao = new DaoUsuario();
+                    FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+
+                    u.Nome = NomeUsuarioTbx.Text;
+                    u.Senha = SenhaUsuarioTbx.Text;
+
+                    switch (AtivoCbx.SelectedIndex)
+                    {
+                        case 0:
+                            u.Ativo = "S";
+                            break;
+                        case 1:
+                            u.Ativo = "N";
+                            break;
+                    }
+                    dao.SalvarUsuario(u);
+
+                }
+                else
+                {
+                    FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+                    Usuario u = new Usuario();
+                    DaoUsuario dao = new DaoUsuario();
+
+                    u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
+                    u.Nome = NomeUsuarioTbx.Text;
+                    u.Senha = SenhaUsuarioTbx.Text;
+                    u.Ativo = AtivoCbx.Text;
+                    dao.EditarrUsuario(u);
+                }
+
+                iniciaForm();
             }
-
-       
-            iniciaForm();
             
         }
 
         private void PesquisarUsuBtn_Click(object sender, EventArgs e)
         {
             FrmPesquisaUsuario pesquisa_usuario = new FrmPesquisaUsuario();
- 
+
+            dataGridViewUsuario.DataSource = null;
+            dataGridViewUsuario.Columns.Clear();
+            dataGridViewUsuario.Rows.Clear();
+            dataGridViewUsuario.Refresh();
+            PesquisarTbx.Enabled = true;
+
             usuarioPnl.Visible = false;
             usuarioPesquisaPnl.Visible = true;
-         
+            CancelarUsuBtn.Enabled = true;
+            GravarUsuBtn.Enabled = false;
+
+        
+
         }
 
         private void FrmCadIniUsuario_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void CadUsuIniPnl_Paint(object sender, PaintEventArgs e)
@@ -131,7 +152,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void PesquisarBtn_Click(object sender, EventArgs e)
         {
-
             string nome = PesquisarTbx.Text;
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             MySqlCommand cmd = new MySqlCommand();
@@ -212,6 +232,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             }
         }
 
+
+
         private void EditarUsuBtn_Click(object sender, EventArgs e)
         {
             modoEdit = true;
@@ -239,6 +261,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             CancelarUsuBtn.Enabled = true;
             EditarUsuBtn.Enabled = true;
             ExcluirUsuBtn.Enabled = true;
+            IncluirUsuBtn.Enabled = false;
 
         }
 
@@ -251,6 +274,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
  
             dao.ExcluirUsuario(u);
+            usuarioPnl.Visible = false;
+        }
+
+        private void AtivoCkbx_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

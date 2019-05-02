@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniMotorista));
             this.CadMotoristaIniPnl = new System.Windows.Forms.Panel();
-            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
-            this.CancelarMotoristaBtn = new System.Windows.Forms.Button();
-            this.EditarMotoristaBtn = new System.Windows.Forms.Button();
-            this.IncluirMotoristaBtn = new System.Windows.Forms.Button();
-            this.GravarMotoristaBtn = new System.Windows.Forms.Button();
-            this.PesquisarMotoristaBtn = new System.Windows.Forms.Button();
-            this.ExcluirMotoristaBtn = new System.Windows.Forms.Button();
+            this.motoristaPesquisarPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewMotorista = new System.Windows.Forms.DataGridView();
+            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.motoristaPnl = new System.Windows.Forms.Panel();
             this.DtVencCnhTbx = new System.Windows.Forms.TextBox();
             this.DtVencCnhLbl = new System.Windows.Forms.Label();
@@ -58,152 +58,116 @@
             this.CpfMotoristaLbl = new System.Windows.Forms.Label();
             this.RuaMotoristaLbl = new System.Windows.Forms.Label();
             this.NomeClientelbl = new System.Windows.Forms.Label();
-            this.motoristaPesquisarPnl = new System.Windows.Forms.Panel();
-            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.dataGridViewMotorista = new System.Windows.Forms.DataGridView();
+            this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
+            this.CancelarMotoristaBtn = new System.Windows.Forms.Button();
+            this.EditarMotoristaBtn = new System.Windows.Forms.Button();
+            this.IncluirMotoristaBtn = new System.Windows.Forms.Button();
+            this.GravarMotoristaBtn = new System.Windows.Forms.Button();
+            this.PesquisarMotoristaBtn = new System.Windows.Forms.Button();
+            this.ExcluirMotoristaBtn = new System.Windows.Forms.Button();
+            this.linhaMotoristaLbl = new System.Windows.Forms.Label();
+            this.motoristaLbl = new System.Windows.Forms.Label();
             this.CadMotoristaIniPnl.SuspendLayout();
-            this.BotaoCadastroPnl.SuspendLayout();
-            this.motoristaPnl.SuspendLayout();
             this.motoristaPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).BeginInit();
+            this.motoristaPnl.SuspendLayout();
+            this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadMotoristaIniPnl
             // 
             this.CadMotoristaIniPnl.Controls.Add(this.motoristaPesquisarPnl);
             this.CadMotoristaIniPnl.Controls.Add(this.motoristaPnl);
-            this.CadMotoristaIniPnl.Location = new System.Drawing.Point(1, 55);
+            this.CadMotoristaIniPnl.Location = new System.Drawing.Point(1, 72);
             this.CadMotoristaIniPnl.Name = "CadMotoristaIniPnl";
-            this.CadMotoristaIniPnl.Size = new System.Drawing.Size(594, 338);
+            this.CadMotoristaIniPnl.Size = new System.Drawing.Size(594, 316);
             this.CadMotoristaIniPnl.TabIndex = 27;
             // 
-            // BotaoCadastroPnl
+            // motoristaPesquisarPnl
             // 
-            this.BotaoCadastroPnl.Controls.Add(this.CancelarMotoristaBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.EditarMotoristaBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.IncluirMotoristaBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.GravarMotoristaBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.PesquisarMotoristaBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.ExcluirMotoristaBtn);
-            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
-            this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
-            this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
-            this.BotaoCadastroPnl.TabIndex = 26;
+            this.motoristaPesquisarPnl.Controls.Add(this.dataGridViewMotorista);
+            this.motoristaPesquisarPnl.Controls.Add(this.CpfCkbx);
+            this.motoristaPesquisarPnl.Controls.Add(this.NomeCkbx);
+            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarLbl);
+            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarBtn);
+            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
+            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(11, 7);
+            this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
+            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 291);
+            this.motoristaPesquisarPnl.TabIndex = 123;
             // 
-            // CancelarMotoristaBtn
+            // dataGridViewMotorista
             // 
-            this.CancelarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelarMotoristaBtn.AutoSize = true;
-            this.CancelarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CancelarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarMotoristaBtn.BackgroundImage")));
-            this.CancelarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CancelarMotoristaBtn.FlatAppearance.BorderSize = 0;
-            this.CancelarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelarMotoristaBtn.Location = new System.Drawing.Point(142, 3);
-            this.CancelarMotoristaBtn.Name = "CancelarMotoristaBtn";
-            this.CancelarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CancelarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
-            this.CancelarMotoristaBtn.TabIndex = 18;
-            this.CancelarMotoristaBtn.UseVisualStyleBackColor = false;
-            this.CancelarMotoristaBtn.Click += new System.EventHandler(this.CancelarMotoristaBtn_Click);
+            this.dataGridViewMotorista.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMotorista.Location = new System.Drawing.Point(12, 74);
+            this.dataGridViewMotorista.Name = "dataGridViewMotorista";
+            this.dataGridViewMotorista.Size = new System.Drawing.Size(486, 200);
+            this.dataGridViewMotorista.TabIndex = 51;
             // 
-            // EditarMotoristaBtn
+            // CpfCkbx
             // 
-            this.EditarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditarMotoristaBtn.AutoSize = true;
-            this.EditarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.EditarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarMotoristaBtn.BackgroundImage")));
-            this.EditarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EditarMotoristaBtn.FlatAppearance.BorderSize = 0;
-            this.EditarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditarMotoristaBtn.Location = new System.Drawing.Point(103, 3);
-            this.EditarMotoristaBtn.Name = "EditarMotoristaBtn";
-            this.EditarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.EditarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
-            this.EditarMotoristaBtn.TabIndex = 20;
-            this.EditarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.CpfCkbx.AutoSize = true;
+            this.CpfCkbx.Depth = 0;
+            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CpfCkbx.Location = new System.Drawing.Point(134, 35);
+            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CpfCkbx.Name = "CpfCkbx";
+            this.CpfCkbx.Ripple = true;
+            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
+            this.CpfCkbx.TabIndex = 50;
+            this.CpfCkbx.Text = "CPF";
+            this.CpfCkbx.UseVisualStyleBackColor = true;
             // 
-            // IncluirMotoristaBtn
+            // NomeCkbx
             // 
-            this.IncluirMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IncluirMotoristaBtn.AutoSize = true;
-            this.IncluirMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.IncluirMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirMotoristaBtn.BackgroundImage")));
-            this.IncluirMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IncluirMotoristaBtn.FlatAppearance.BorderSize = 0;
-            this.IncluirMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IncluirMotoristaBtn.Location = new System.Drawing.Point(15, 3);
-            this.IncluirMotoristaBtn.Name = "IncluirMotoristaBtn";
-            this.IncluirMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.IncluirMotoristaBtn.Size = new System.Drawing.Size(26, 44);
-            this.IncluirMotoristaBtn.TabIndex = 15;
-            this.IncluirMotoristaBtn.UseVisualStyleBackColor = false;
-            this.IncluirMotoristaBtn.Click += new System.EventHandler(this.IncluirMotoristaBtn_Click);
+            this.NomeCkbx.AutoSize = true;
+            this.NomeCkbx.Depth = 0;
+            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NomeCkbx.Location = new System.Drawing.Point(12, 35);
+            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NomeCkbx.Name = "NomeCkbx";
+            this.NomeCkbx.Ripple = true;
+            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
+            this.NomeCkbx.TabIndex = 49;
+            this.NomeCkbx.Text = "Nome";
+            this.NomeCkbx.UseVisualStyleBackColor = true;
             // 
-            // GravarMotoristaBtn
+            // PesquisarLbl
             // 
-            this.GravarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GravarMotoristaBtn.AutoSize = true;
-            this.GravarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.GravarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarMotoristaBtn.BackgroundImage")));
-            this.GravarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GravarMotoristaBtn.FlatAppearance.BorderSize = 0;
-            this.GravarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GravarMotoristaBtn.Location = new System.Drawing.Point(61, 3);
-            this.GravarMotoristaBtn.Name = "GravarMotoristaBtn";
-            this.GravarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GravarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
-            this.GravarMotoristaBtn.TabIndex = 19;
-            this.GravarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(218, 7);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 48;
+            this.PesquisarLbl.Text = "Pesquisar";
             // 
-            // PesquisarMotoristaBtn
+            // PesquisarBtn
             // 
-            this.PesquisarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PesquisarMotoristaBtn.AutoSize = true;
-            this.PesquisarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.PesquisarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarMotoristaBtn.BackgroundImage")));
-            this.PesquisarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarMotoristaBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarMotoristaBtn.Location = new System.Drawing.Point(222, 3);
-            this.PesquisarMotoristaBtn.Name = "PesquisarMotoristaBtn";
-            this.PesquisarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PesquisarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
-            this.PesquisarMotoristaBtn.TabIndex = 16;
-            this.PesquisarMotoristaBtn.UseVisualStyleBackColor = false;
-            this.PesquisarMotoristaBtn.Click += new System.EventHandler(this.PesquisarMotoristaBtn_Click);
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(169, 3);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 47;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
             // 
-            // ExcluirMotoristaBtn
+            // PesquisarTbx
             // 
-            this.ExcluirMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExcluirMotoristaBtn.AutoSize = true;
-            this.ExcluirMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ExcluirMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirMotoristaBtn.BackgroundImage")));
-            this.ExcluirMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ExcluirMotoristaBtn.FlatAppearance.BorderSize = 0;
-            this.ExcluirMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcluirMotoristaBtn.Location = new System.Drawing.Point(181, 3);
-            this.ExcluirMotoristaBtn.Name = "ExcluirMotoristaBtn";
-            this.ExcluirMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ExcluirMotoristaBtn.Size = new System.Drawing.Size(26, 44);
-            this.ExcluirMotoristaBtn.TabIndex = 17;
-            this.ExcluirMotoristaBtn.UseVisualStyleBackColor = false;
+            this.PesquisarTbx.Location = new System.Drawing.Point(12, 6);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 45;
             // 
             // motoristaPnl
             // 
@@ -412,109 +376,170 @@
             this.NomeClientelbl.TabIndex = 102;
             this.NomeClientelbl.Text = "Nome:";
             // 
-            // motoristaPesquisarPnl
+            // BotaoCadastroPnl
             // 
-            this.motoristaPesquisarPnl.Controls.Add(this.dataGridViewMotorista);
-            this.motoristaPesquisarPnl.Controls.Add(this.CpfCkbx);
-            this.motoristaPesquisarPnl.Controls.Add(this.NomeCkbx);
-            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(11, 7);
-            this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
-            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 291);
-            this.motoristaPesquisarPnl.TabIndex = 123;
+            this.BotaoCadastroPnl.Controls.Add(this.CancelarMotoristaBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.EditarMotoristaBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.IncluirMotoristaBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.GravarMotoristaBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.PesquisarMotoristaBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.ExcluirMotoristaBtn);
+            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
+            this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
+            this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
+            this.BotaoCadastroPnl.TabIndex = 26;
             // 
-            // CpfCkbx
+            // CancelarMotoristaBtn
             // 
-            this.CpfCkbx.AutoSize = true;
-            this.CpfCkbx.Depth = 0;
-            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CpfCkbx.Location = new System.Drawing.Point(134, 35);
-            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CpfCkbx.Name = "CpfCkbx";
-            this.CpfCkbx.Ripple = true;
-            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
-            this.CpfCkbx.TabIndex = 50;
-            this.CpfCkbx.Text = "CPF";
-            this.CpfCkbx.UseVisualStyleBackColor = true;
+            this.CancelarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelarMotoristaBtn.AutoSize = true;
+            this.CancelarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CancelarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarMotoristaBtn.BackgroundImage")));
+            this.CancelarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CancelarMotoristaBtn.FlatAppearance.BorderSize = 0;
+            this.CancelarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelarMotoristaBtn.Location = new System.Drawing.Point(142, 3);
+            this.CancelarMotoristaBtn.Name = "CancelarMotoristaBtn";
+            this.CancelarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CancelarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
+            this.CancelarMotoristaBtn.TabIndex = 18;
+            this.CancelarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.CancelarMotoristaBtn.Click += new System.EventHandler(this.CancelarMotoristaBtn_Click);
             // 
-            // NomeCkbx
+            // EditarMotoristaBtn
             // 
-            this.NomeCkbx.AutoSize = true;
-            this.NomeCkbx.Depth = 0;
-            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NomeCkbx.Location = new System.Drawing.Point(12, 35);
-            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NomeCkbx.Name = "NomeCkbx";
-            this.NomeCkbx.Ripple = true;
-            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
-            this.NomeCkbx.TabIndex = 49;
-            this.NomeCkbx.Text = "Nome";
-            this.NomeCkbx.UseVisualStyleBackColor = true;
+            this.EditarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditarMotoristaBtn.AutoSize = true;
+            this.EditarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.EditarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarMotoristaBtn.BackgroundImage")));
+            this.EditarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditarMotoristaBtn.FlatAppearance.BorderSize = 0;
+            this.EditarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarMotoristaBtn.Location = new System.Drawing.Point(103, 3);
+            this.EditarMotoristaBtn.Name = "EditarMotoristaBtn";
+            this.EditarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EditarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
+            this.EditarMotoristaBtn.TabIndex = 20;
+            this.EditarMotoristaBtn.UseVisualStyleBackColor = false;
             // 
-            // PesquisarLbl
+            // IncluirMotoristaBtn
             // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(218, 7);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 48;
-            this.PesquisarLbl.Text = "Pesquisar";
+            this.IncluirMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IncluirMotoristaBtn.AutoSize = true;
+            this.IncluirMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.IncluirMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirMotoristaBtn.BackgroundImage")));
+            this.IncluirMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IncluirMotoristaBtn.FlatAppearance.BorderSize = 0;
+            this.IncluirMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IncluirMotoristaBtn.Location = new System.Drawing.Point(15, 3);
+            this.IncluirMotoristaBtn.Name = "IncluirMotoristaBtn";
+            this.IncluirMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.IncluirMotoristaBtn.Size = new System.Drawing.Size(26, 44);
+            this.IncluirMotoristaBtn.TabIndex = 15;
+            this.IncluirMotoristaBtn.UseVisualStyleBackColor = false;
+            this.IncluirMotoristaBtn.Click += new System.EventHandler(this.IncluirMotoristaBtn_Click);
             // 
-            // PesquisarBtn
+            // GravarMotoristaBtn
             // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(169, 3);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 47;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            this.GravarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GravarMotoristaBtn.AutoSize = true;
+            this.GravarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.GravarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarMotoristaBtn.BackgroundImage")));
+            this.GravarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GravarMotoristaBtn.FlatAppearance.BorderSize = 0;
+            this.GravarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GravarMotoristaBtn.Location = new System.Drawing.Point(61, 3);
+            this.GravarMotoristaBtn.Name = "GravarMotoristaBtn";
+            this.GravarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.GravarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
+            this.GravarMotoristaBtn.TabIndex = 19;
+            this.GravarMotoristaBtn.UseVisualStyleBackColor = false;
             // 
-            // PesquisarTbx
+            // PesquisarMotoristaBtn
             // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(12, 6);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 45;
+            this.PesquisarMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PesquisarMotoristaBtn.AutoSize = true;
+            this.PesquisarMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PesquisarMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarMotoristaBtn.BackgroundImage")));
+            this.PesquisarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarMotoristaBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarMotoristaBtn.Location = new System.Drawing.Point(222, 3);
+            this.PesquisarMotoristaBtn.Name = "PesquisarMotoristaBtn";
+            this.PesquisarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PesquisarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
+            this.PesquisarMotoristaBtn.TabIndex = 16;
+            this.PesquisarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.PesquisarMotoristaBtn.Click += new System.EventHandler(this.PesquisarMotoristaBtn_Click);
             // 
-            // dataGridViewMotorista
+            // ExcluirMotoristaBtn
             // 
-            this.dataGridViewMotorista.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMotorista.Location = new System.Drawing.Point(12, 74);
-            this.dataGridViewMotorista.Name = "dataGridViewMotorista";
-            this.dataGridViewMotorista.Size = new System.Drawing.Size(486, 200);
-            this.dataGridViewMotorista.TabIndex = 51;
+            this.ExcluirMotoristaBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExcluirMotoristaBtn.AutoSize = true;
+            this.ExcluirMotoristaBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ExcluirMotoristaBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirMotoristaBtn.BackgroundImage")));
+            this.ExcluirMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ExcluirMotoristaBtn.FlatAppearance.BorderSize = 0;
+            this.ExcluirMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcluirMotoristaBtn.Location = new System.Drawing.Point(181, 3);
+            this.ExcluirMotoristaBtn.Name = "ExcluirMotoristaBtn";
+            this.ExcluirMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ExcluirMotoristaBtn.Size = new System.Drawing.Size(26, 44);
+            this.ExcluirMotoristaBtn.TabIndex = 17;
+            this.ExcluirMotoristaBtn.UseVisualStyleBackColor = false;
+            // 
+            // linhaMotoristaLbl
+            // 
+            this.linhaMotoristaLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.linhaMotoristaLbl.Location = new System.Drawing.Point(-1, 56);
+            this.linhaMotoristaLbl.Name = "linhaMotoristaLbl";
+            this.linhaMotoristaLbl.Size = new System.Drawing.Size(598, 10);
+            this.linhaMotoristaLbl.TabIndex = 125;
+            // 
+            // motoristaLbl
+            // 
+            this.motoristaLbl.AutoSize = true;
+            this.motoristaLbl.BackColor = System.Drawing.Color.Transparent;
+            this.motoristaLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motoristaLbl.ForeColor = System.Drawing.Color.GreenYellow;
+            this.motoristaLbl.Location = new System.Drawing.Point(444, 18);
+            this.motoristaLbl.Name = "motoristaLbl";
+            this.motoristaLbl.Size = new System.Drawing.Size(152, 31);
+            this.motoristaLbl.TabIndex = 124;
+            this.motoristaLbl.Text = "Motorista";
             // 
             // FrmCadIniMotorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
+            this.Controls.Add(this.linhaMotoristaLbl);
             this.Controls.Add(this.CadMotoristaIniPnl);
+            this.Controls.Add(this.motoristaLbl);
             this.Controls.Add(this.BotaoCadastroPnl);
             this.Name = "FrmCadIniMotorista";
             this.Load += new System.EventHandler(this.FrmCadIniMotorista_Load);
             this.CadMotoristaIniPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.ResumeLayout(false);
-            this.BotaoCadastroPnl.PerformLayout();
-            this.motoristaPnl.ResumeLayout(false);
-            this.motoristaPnl.PerformLayout();
             this.motoristaPesquisarPnl.ResumeLayout(false);
             this.motoristaPesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).EndInit();
+            this.motoristaPnl.ResumeLayout(false);
+            this.motoristaPnl.PerformLayout();
+            this.BotaoCadastroPnl.ResumeLayout(false);
+            this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -556,5 +581,7 @@
         private System.Windows.Forms.Button PesquisarBtn;
         private System.Windows.Forms.TextBox PesquisarTbx;
         private System.Windows.Forms.DataGridView dataGridViewMotorista;
+        private System.Windows.Forms.Label linhaMotoristaLbl;
+        private System.Windows.Forms.Label motoristaLbl;
     }
 }
