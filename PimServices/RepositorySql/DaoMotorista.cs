@@ -1,10 +1,23 @@
+<<<<<<< HEAD
+﻿using System;
+=======
 ﻿using MySql.Data.MySqlClient;
 using PimServices.Model;
 using System;
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+
+namespace PimServices.RepositorySql
+{
+    public class DaoMotorista
+    {
+
+    }
+=======
 using System.Windows.Forms;
 
 namespace PimServices.RepositorySql
@@ -13,7 +26,7 @@ namespace PimServices.RepositorySql
     {
         public void SalvarMotorista(Motorista m)
         {
-
+        /*
             try
             {
 
@@ -117,4 +130,5 @@ namespace PimServices.RepositorySql
         
     }
     
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
 }

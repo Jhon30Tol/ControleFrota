@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 {
+
     public partial class FrmCadIniMotorista : PimFrota.Formularios.Base.FrmBaseFundoCad
     {
 
+        /*
         Motorista u = new Motorista();
         bool modoEdit = false;
         DaoMotorista daoUsuario = new DaoMotorista();
@@ -59,6 +61,13 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         {
             
             /*
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
+>>>>>>> 19f463bf01623634d0ec42464146441ad48add2f
             if (String.IsNullOrEmpty(CodUsuarioTbx.Text))
                 MessageBox.Show("Campo nome obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (String.IsNullOrEmpty(AtivoCbx.Text))
@@ -68,7 +77,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             else if (String.IsNullOrEmpty(SenhaUsuarioTbx.Text))
                 MessageBox.Show("Campo senha obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-            */
+            
             {
 
                 if
@@ -77,10 +86,22 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     Motorista m = new Motorista();
                     Endereco e = new Endereco();
                     DaoMotorista dao = new DaoMotorista();
+                   // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
                     // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
 
                   //  m.nome = ;
                   //  m.
+
+                    m.nome = NomeMotoristaTbx.Text;
+                    m.cpf = Convert.ToInt32(CpfMotoristaTbx.Text);
+                    m.cnh = Convert.ToInt32(cnhMotoristaTbx.Text);
+                    m.dtaNascimento = DtNascimentoMotoristaTbx.Text;
+                    m.dtaVencimentoCnh = DtVencCnhTbx.Text;
+                  //  m.Motorista.nomeRua = RuaMotoristaTbx.Text;
+
+
+     
+
                     //  m.Motorista.nomeRua = RuaMotoristaTbx.Text;
 
 
@@ -89,9 +110,9 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
 
 
+        dao.SalvarUsuario(u);
                     dao.SalvarMotorista(m);
                     /*
-
                 }
                 else
                 {
@@ -110,8 +131,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             }
             */
 
-                }
-            }
         }
-    
+    }
 

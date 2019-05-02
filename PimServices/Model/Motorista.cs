@@ -22,6 +22,9 @@ namespace PimServices.Model
 
         public string dtaVencimentoCnh { get; set; }
 
+<<<<<<< HEAD
+
+=======
         /*
 
         private string _nome;
@@ -136,6 +139,7 @@ namespace PimServices.Model
         }
 
     */
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
 
     }
 }
