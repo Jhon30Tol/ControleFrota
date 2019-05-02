@@ -52,6 +52,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void GravarMotoristaBtn_Click(object sender, EventArgs e)
         {
             /*
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
             if (String.IsNullOrEmpty(CodUsuarioTbx.Text))
                 MessageBox.Show("Campo nome obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else if (String.IsNullOrEmpty(AtivoCbx.Text))
@@ -69,22 +73,38 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     Motorista m = new Motorista();
                     Endereco e = new Endereco();
                     DaoMotorista dao = new DaoMotorista();
+<<<<<<< HEAD
                    // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+=======
+                    // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
 
                     m.nome = NomeMotoristaTbx.Text;
                     m.cpf = Convert.ToInt32(CpfMotoristaTbx.Text);
                     m.cnh = Convert.ToInt32(cnhMotoristaTbx.Text);
                     m.dtaNascimento = DtNascimentoMotoristaTbx.Text;
                     m.dtaVencimentoCnh = DtVencCnhTbx.Text;
+<<<<<<< HEAD
                   //  m.Motorista.nomeRua = RuaMotoristaTbx.Text;
 
 
      
+=======
+                    //  m.Motorista.nomeRua = RuaMotoristaTbx.Text;
+
+
+
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
 
 
 
 
+<<<<<<< HEAD
         dao.SalvarUsuario(u);
+=======
+                    dao.SalvarMotorista(m);
+                    /*
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f
 
                 }
                 else
@@ -104,6 +124,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             }
             */
 
+<<<<<<< HEAD
         }
     }
 }
+=======
+                }
+            }
+        }
+    
+
+>>>>>>> fbf79a4e13891dcf9847967fc78d02dacb5b256f

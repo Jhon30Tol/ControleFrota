@@ -271,23 +271,11 @@
     <Compile Include="Formularios\TelaHome\FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaViagem\Retorno Viagem\CadRetornoViagem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\TelaViagem\Retorno Viagem\CadRetornoViagem.Designer.cs">
-      <DependentUpon>CadRetornoViagem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\TelaViagem\Retorno Viagem\FrmCadIniRetornoViagem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\TelaViagem\Retorno Viagem\FrmCadIniRetornoViagem.Designer.cs">
       <DependentUpon>FrmCadIniRetornoViagem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\TelaViagem\SaidaViagem\CadSaidaViagem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\TelaViagem\SaidaViagem\CadSaidaViagem.Designer.cs">
-      <DependentUpon>CadSaidaViagem.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TelaViagem\SaidaViagem\FrmCadIniSaidaViagem.cs">
       <SubType>Form</SubType>
@@ -401,14 +389,8 @@
     <EmbeddedResource Include="Formularios\TelaHome\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\TelaViagem\Retorno Viagem\CadRetornoViagem.resx">
-      <DependentUpon>CadRetornoViagem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaViagem\Retorno Viagem\FrmCadIniRetornoViagem.resx">
       <DependentUpon>FrmCadIniRetornoViagem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\TelaViagem\SaidaViagem\CadSaidaViagem.resx">
-      <DependentUpon>CadSaidaViagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaViagem\SaidaViagem\FrmCadIniSaidaViagem.resx">
       <DependentUpon>FrmCadIniSaidaViagem.cs</DependentUpon>
