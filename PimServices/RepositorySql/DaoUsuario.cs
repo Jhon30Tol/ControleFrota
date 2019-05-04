@@ -65,7 +65,6 @@ namespace PimServices.RepositorySql
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("ativo", u.Ativo));
 
                 cmd.Prepare();
-                MessageBox.Show(u.Senha, "");
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
@@ -93,7 +92,6 @@ namespace PimServices.RepositorySql
 
 
                 cmd.Prepare();
-                MessageBox.Show(u.Senha, "");
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
