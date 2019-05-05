@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PimServices.Model
+{
+    public class Viagem
+    {
+
+        public int Id_viagem { get; set; }
+
+        public int Id_motorista { get; set; }
+
+        public int Id_veiculo { get; set; }
+
+        public int Id_cidadeSaida { get; set; }
+
+        public int Id_cidadeDestino { get; set; }
+
+        public DateTime DtaSaida { get; set; }
+
+        public int Id_cidadeRetorno { get; set; }
+
+        public int KmSaida { get; set; }
+
+        public int KmRetorno { get; set; }
+
+        public string passageiro { get; set; }
+
+
+
+    }
+}
