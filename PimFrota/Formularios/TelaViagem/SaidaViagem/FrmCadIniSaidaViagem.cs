@@ -28,12 +28,14 @@ namespace PimFrota.Formularios.TelaViagem
             motoristaPesquisarPnl.Visible = false;
             veiculoPesquisarPnl.Visible = false;
             cidadePesquisarPnl.Visible = false;
+            saidaViagemPesquisaPnl.Visible = false;
+
 
         }
 
         private void IncluirViagemBtn_Click(object sender, EventArgs e)
         {
-            
+
             saidaViagemPnl.Visible = true;
 
         }
@@ -45,7 +47,7 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void FrmCadIniSaidaViagem_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void GravarViagemBtn_Click(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void PesquisarMotoristaBtn_Click(object sender, EventArgs e)
         {
-     
+
             motoristaPesquisarPnl.Visible = true;
             saidaViagemPnl.Visible = false;
 
@@ -82,7 +84,7 @@ namespace PimFrota.Formularios.TelaViagem
             saidaViagemPnl.Visible = true;
 
             MessageBox.Show(Convert.ToString(v.Id_motorista), "");
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -96,7 +98,7 @@ namespace PimFrota.Formularios.TelaViagem
             DataTable pesq3 = new DataTable();
             pesq1.Fill(pesq3);
             dataGridViewMotorista.DataSource = pesq3;
-            
+
         }
 
         private void NomeCkbx_CheckedChanged(object sender, EventArgs e)
@@ -207,14 +209,14 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             cidadePesquisarPnl.Visible = true;
             saidaViagemPnl.Visible = false;
         }
 
         private void KmSaidaTbx_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void materialLabel8_Click(object sender, EventArgs e)
@@ -224,7 +226,192 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void PesquisarViagemBtn_Click(object sender, EventArgs e)
         {
+            saidaViagemPesquisaPnl.Visible = true;
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string nome = pesquisaSaidaViagemTbx.Text;
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            MySqlCommand cmd = new MySqlCommand();
+            conn.Open();
+
+
+
+            if (pesquTodosCkbx.Checked == true)
+            {
+
+                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+                    "v.id_viagem as Codigo_Viagem," +
+                    "m.nome_motorista as Nome_Motorista, " +
+                    "a.modelo_veiculo as Modelo_Veiculo, " +
+                    "c.nome_cidade as Cidade_Saida, " +
+                    "b.nome_cidade as Cidade_Destino, " +
+                    "date(v.dta_saida) as Data_Saida " +
+                    "FROM viagem v " +
+                    "JOIN cadastro_motorista m " +
+                    "JOIN cadastro_veiculo a " +
+                    "JOIN cadastro_cidade c " +
+                    "JOIN cadastro_cidade b " +
+                    "ON v.id_motorista = m.id_motorista  " +
+                    "AND v.id_veiculo = a.id_veiculo " +
+                    "AND  v.id_cidade_origem = c.id_cidade " +
+                    "AND  v.id_cidade_destino = b.id_cidade " +
+                    "WHERE v.dta_retorno IS NULL ;", conn);
+                DataTable pesq3 = new DataTable();
+                pesq1.Fill(pesq3);
+                dataGridViewSaiViagem.DataSource = pesq3;
+
+            }
+            else if (pesqMotoristaCbx.Checked == true)
+            {
+                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+                   "v.id_viagem as Codigo_Viagem," +
+                   "m.nome_motorista as Nome_Motorista, " +
+                   "a.modelo_veiculo as Modelo_Veiculo, " +
+                   "c.nome_cidade as Cidade_Saida, " +
+                   "b.nome_cidade as Cidade_Destino, " +
+                   "date(v.dta_saida) as Data_Saida " +
+                   "FROM viagem v " +
+                   "JOIN cadastro_motorista m " +
+                   "JOIN cadastro_veiculo a " +
+                   "JOIN cadastro_cidade c " +
+                   "JOIN cadastro_cidade b " +
+                   "ON v.id_motorista = m.id_motorista  " +
+                   "AND v.id_veiculo = a.id_veiculo " +
+                   "AND  v.id_cidade_origem = c.id_cidade " +
+                   "AND  v.id_cidade_destino = b.id_cidade " +
+                   "WHERE v.dta_retorno IS NULL " +
+                   "and m.nome_motorista like '%" + @nome + "%'", conn);
+                DataTable pesq3 = new DataTable();
+                pesq1.Fill(pesq3);
+                dataGridViewSaiViagem.DataSource = pesq3;
+            }
+            else if (pesqVeiculoCbx.Checked == true)
+            {
+                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+                  "v.id_viagem as Codigo_Viagem," +
+                  "m.nome_motorista as Nome_Motorista, " +
+                  "a.modelo_veiculo as Modelo_Veiculo, " +
+                  "c.nome_cidade as Cidade_Saida, " +
+                  "b.nome_cidade as Cidade_Destino, " +
+                  "date(v.dta_saida) as Data_Saida " +
+                  "FROM viagem v " +
+                  "JOIN cadastro_motorista m " +
+                  "JOIN cadastro_veiculo a " +
+                  "JOIN cadastro_cidade c " +
+                  "JOIN cadastro_cidade b " +
+                  "ON v.id_motorista = m.id_motorista  " +
+                  "AND v.id_veiculo = a.id_veiculo " +
+                  "AND  v.id_cidade_origem = c.id_cidade " +
+                  "AND  v.id_cidade_destino = b.id_cidade " +
+                  "WHERE v.dta_retorno IS NULL " +
+                  "and a.modelo_veiculo like '%" + @nome + "%'", conn);
+                DataTable pesq3 = new DataTable();
+                pesq1.Fill(pesq3);
+                dataGridViewSaiViagem.DataSource = pesq3;
+            }
+        }
+
+        private void pesquTodosCkbx_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (pesquTodosCkbx.Checked == true)
+            {
+
+            pesqMotoristaCbx.Enabled = false;
+            pesqVeiculoCbx.Enabled = false;
+            pesquisaSaidaViagemTbx.Enabled = false;
+            PesquisarBtn.Enabled = false;
+            pesquisaSaidaViagemTbx.Text = "";
+
+
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            MySqlCommand cmd = new MySqlCommand();
+            conn.Open();
+            PesquisarTbx.Text = "";
+
+                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+                "v.id_viagem as Codigo_Viagem," +
+                "m.nome_motorista as Nome_Motorista, " +
+                "a.modelo_veiculo as Modelo_Veiculo, " +
+                "c.nome_cidade as Cidade_Saida, " +
+                "b.nome_cidade as Cidade_Destino, " +
+                "date(v.dta_saida) as Data_Saida " +
+                "FROM viagem v " +
+                "JOIN cadastro_motorista m " +
+                "JOIN cadastro_veiculo a " +
+                "JOIN cadastro_cidade c " +
+                "JOIN cadastro_cidade b " +
+                "ON v.id_motorista = m.id_motorista  " +
+                "AND v.id_veiculo = a.id_veiculo " +
+                "AND  v.id_cidade_origem = c.id_cidade " +
+                "AND  v.id_cidade_destino = b.id_cidade " +
+                "WHERE v.dta_retorno IS NULL ;", conn);
+            DataTable pesq3 = new DataTable();
+            pesq1.Fill(pesq3);
+            dataGridViewSaiViagem.DataSource = pesq3;
+            }
+            if (pesquTodosCkbx.Checked == false)
+            {
+                pesqMotoristaCbx.Enabled = true;
+                pesqVeiculoCbx.Enabled = true;
+                pesquisaSaidaViagemTbx.Enabled = true;
+                PesquisarBtn.Enabled = true;
+                dataGridViewSaiViagem.DataSource = null;
+                pesquisaSaidaViagemTbx.Text = "";
+                
+
+            }
+        }
+            
+
+private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pesqMotoristaCbx.Checked == true)
+            {
+                pesqVeiculoCbx.Enabled = false;
+                pesquTodosCkbx.Enabled = false;
+            }
+            if (pesqMotoristaCbx.Checked == false)
+            {
+                pesqVeiculoCbx.Enabled = true;
+                pesquTodosCkbx.Enabled = true;
+                dataGridViewSaiViagem.DataSource = null;
+                pesquisaSaidaViagemTbx.Text = "";
+            }
+        }
+
+        private void pesqVeiculoCbx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pesqVeiculoCbx.Checked == true)
+            {
+                pesqMotoristaCbx.Enabled = false;
+                pesquTodosCkbx.Enabled = false;
+            }
+
+            if (pesqVeiculoCbx.Checked == false)
+            {
+                pesqMotoristaCbx.Enabled = true;
+                pesquTodosCkbx.Enabled = true;
+                dataGridViewSaiViagem.DataSource = null;
+                pesquisaSaidaViagemTbx.Text = "";
+            }
+        }
+
+        private void dataGridViewRetViagem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CodSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[0].Value.ToString();
+            MotoristaSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[1].Value.ToString();
+            VeiculoSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[2].Value.ToString();
+            CidadeSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[3].Value.ToString();
+            CidadeDestSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[4].Value.ToString();
+            DtaSaidaDtm.Text = dataGridViewSaiViagem.CurrentRow.Cells[5].Value.ToString();
+            v.Id_viagem = Convert.ToInt32(CodSaidaViagTbx.Text);
+
+            saidaViagemPesquisaPnl.Visible = false;
         }
     }
 }
+ 
