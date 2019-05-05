@@ -231,6 +231,7 @@
             // 
             // motoristaPesquisarPnl
             // 
+            this.motoristaPesquisarPnl.Controls.Add(this.saidaViagemPnl);
             this.motoristaPesquisarPnl.Controls.Add(this.dataGridViewMotorista);
             this.motoristaPesquisarPnl.Controls.Add(this.NomeCkbx);
             this.motoristaPesquisarPnl.Controls.Add(this.materialLabel4);
@@ -420,7 +421,7 @@
             this.saidaViagemPnl.Controls.Add(this.VeiculoSaidaViagLbl);
             this.saidaViagemPnl.Controls.Add(this.MotoristaSaidaViagLbl);
             this.saidaViagemPnl.Controls.Add(this.CodSaidaViagemLbl);
-            this.saidaViagemPnl.Location = new System.Drawing.Point(1, 55);
+            this.saidaViagemPnl.Location = new System.Drawing.Point(84, 62);
             this.saidaViagemPnl.Name = "saidaViagemPnl";
             this.saidaViagemPnl.Size = new System.Drawing.Size(577, 325);
             this.saidaViagemPnl.TabIndex = 0;
@@ -823,7 +824,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 491);
-            this.Controls.Add(this.saidaViagemPnl);
             this.Controls.Add(this.motoristaPesquisarPnl);
             this.Controls.Add(this.cidadePesquisarPnl);
             this.Controls.Add(this.CadViagemIniPnl);

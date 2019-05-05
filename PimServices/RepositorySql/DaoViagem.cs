@@ -51,5 +51,37 @@ namespace PimServices.RepositorySql
             }
         }
 
+        public void GravarRetornoViagem(Viagem v)
+        {
+
+
+            try
+            {
+
+                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+                conn = new MySqlConnection(connectionString);
+                String alteratDados = "UPDATE viagem set dta_retorno = @dtaRetornoViagem where id_viagem = @id";
+                conn.Open();
+                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alteratDados, conn);
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dtaRetornoViagem", v.DtaRetorno));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", v.Id_viagem));
+
+
+
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+
+                MessageBox.Show("Retorno registrado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar o usuario, verifique a conexão com o banco de dados: " + ex.ToString());
+
+            }
+
+        }
+
     }
 }

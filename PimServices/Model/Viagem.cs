@@ -21,6 +21,9 @@ namespace PimServices.Model
 
         public DateTime DtaSaida { get; set; }
 
+        public DateTime DtaRetorno { get; set; }
+
+
         public int Id_cidadeRetorno { get; set; }
 
         public int KmSaida { get; set; }
