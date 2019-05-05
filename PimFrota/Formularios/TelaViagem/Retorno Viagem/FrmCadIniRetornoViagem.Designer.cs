@@ -33,6 +33,11 @@
             this.retViagemPesquisaPnl = new System.Windows.Forms.Panel();
             this.pesqVeiculoCbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.pesqMotoristaCbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.dataGridViewRetViagem = new System.Windows.Forms.DataGridView();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.retornoViagemPnl = new System.Windows.Forms.Panel();
             this.DtaRetornoDtm = new System.Windows.Forms.DateTimePicker();
             this.DtRetonoViagLbl = new MaterialSkin.Controls.MaterialLabel();
@@ -49,11 +54,6 @@
             this.VeiculoSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
             this.MotoristaSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
             this.CodViagemRLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.dataGridViewRetViagem = new System.Windows.Forms.DataGridView();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.BotaoRetornoPnl = new System.Windows.Forms.Panel();
             this.CancelarRetornoBtn = new System.Windows.Forms.Button();
             this.EditarRetornoBtn = new System.Windows.Forms.Button();
@@ -63,8 +63,8 @@
             this.ExcluirRetornoBtn = new System.Windows.Forms.Button();
             this.CadRetornoIniPnl.SuspendLayout();
             this.retViagemPesquisaPnl.SuspendLayout();
-            this.retornoViagemPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).BeginInit();
+            this.retornoViagemPnl.SuspendLayout();
             this.BotaoRetornoPnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +107,7 @@
             this.pesqVeiculoCbx.TabIndex = 19;
             this.pesqVeiculoCbx.Text = "Veiculo";
             this.pesqVeiculoCbx.UseVisualStyleBackColor = true;
+            this.pesqVeiculoCbx.CheckedChanged += new System.EventHandler(this.pesqVeiculoCbx_CheckedChanged);
             // 
             // pesqMotoristaCbx
             // 
@@ -123,6 +124,70 @@
             this.pesqMotoristaCbx.TabIndex = 18;
             this.pesqMotoristaCbx.Text = "Motorista";
             this.pesqMotoristaCbx.UseVisualStyleBackColor = true;
+            this.pesqMotoristaCbx.CheckedChanged += new System.EventHandler(this.pesqMotoristaCbx_CheckedChanged);
+            // 
+            // dataGridViewRetViagem
+            // 
+            this.dataGridViewRetViagem.AllowUserToAddRows = false;
+            this.dataGridViewRetViagem.AllowUserToDeleteRows = false;
+            this.dataGridViewRetViagem.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewRetViagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRetViagem.Location = new System.Drawing.Point(6, 69);
+            this.dataGridViewRetViagem.Name = "dataGridViewRetViagem";
+            this.dataGridViewRetViagem.ReadOnly = true;
+            this.dataGridViewRetViagem.Size = new System.Drawing.Size(582, 347);
+            this.dataGridViewRetViagem.TabIndex = 17;
+            this.dataGridViewRetViagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuario_CellContentClick);
+            // 
+            // PesquisarLbl
+            // 
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(215, 12);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 15;
+            this.PesquisarLbl.Text = "Pesquisar";
+            // 
+            // pesquTodosCkbx
+            // 
+            this.pesquTodosCkbx.AutoSize = true;
+            this.pesquTodosCkbx.Depth = 0;
+            this.pesquTodosCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.pesquTodosCkbx.Location = new System.Drawing.Point(6, 36);
+            this.pesquTodosCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.pesquTodosCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.pesquTodosCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pesquTodosCkbx.Name = "pesquTodosCkbx";
+            this.pesquTodosCkbx.Ripple = true;
+            this.pesquTodosCkbx.Size = new System.Drawing.Size(69, 30);
+            this.pesquTodosCkbx.TabIndex = 14;
+            this.pesquTodosCkbx.Text = "Todos";
+            this.pesquTodosCkbx.UseVisualStyleBackColor = true;
+            this.pesquTodosCkbx.CheckedChanged += new System.EventHandler(this.TodosCkbx_CheckedChanged);
+            // 
+            // PesquisarBtn
+            // 
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(166, 8);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 12;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click);
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(9, 11);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 11;
             // 
             // retornoViagemPnl
             // 
@@ -297,69 +362,6 @@
             this.CodViagemRLbl.TabIndex = 27;
             this.CodViagemRLbl.Text = "Código Viagem";
             // 
-            // dataGridViewRetViagem
-            // 
-            this.dataGridViewRetViagem.AllowUserToAddRows = false;
-            this.dataGridViewRetViagem.AllowUserToDeleteRows = false;
-            this.dataGridViewRetViagem.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewRetViagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRetViagem.Location = new System.Drawing.Point(6, 69);
-            this.dataGridViewRetViagem.Name = "dataGridViewRetViagem";
-            this.dataGridViewRetViagem.ReadOnly = true;
-            this.dataGridViewRetViagem.Size = new System.Drawing.Size(582, 347);
-            this.dataGridViewRetViagem.TabIndex = 17;
-            this.dataGridViewRetViagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuario_CellContentClick);
-            // 
-            // PesquisarLbl
-            // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(215, 12);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 15;
-            this.PesquisarLbl.Text = "Pesquisar";
-            // 
-            // pesquTodosCkbx
-            // 
-            this.pesquTodosCkbx.AutoSize = true;
-            this.pesquTodosCkbx.Depth = 0;
-            this.pesquTodosCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.pesquTodosCkbx.Location = new System.Drawing.Point(6, 36);
-            this.pesquTodosCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.pesquTodosCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.pesquTodosCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.pesquTodosCkbx.Name = "pesquTodosCkbx";
-            this.pesquTodosCkbx.Ripple = true;
-            this.pesquTodosCkbx.Size = new System.Drawing.Size(69, 30);
-            this.pesquTodosCkbx.TabIndex = 14;
-            this.pesquTodosCkbx.Text = "Todos";
-            this.pesquTodosCkbx.UseVisualStyleBackColor = true;
-            this.pesquTodosCkbx.CheckedChanged += new System.EventHandler(this.TodosCkbx_CheckedChanged);
-            // 
-            // PesquisarBtn
-            // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(166, 8);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 12;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
-            this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click);
-            // 
-            // PesquisarTbx
-            // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(9, 11);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 11;
-            // 
             // BotaoRetornoPnl
             // 
             this.BotaoRetornoPnl.Controls.Add(this.CancelarRetornoBtn);
@@ -497,9 +499,9 @@
             this.CadRetornoIniPnl.PerformLayout();
             this.retViagemPesquisaPnl.ResumeLayout(false);
             this.retViagemPesquisaPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).EndInit();
             this.retornoViagemPnl.ResumeLayout(false);
             this.retornoViagemPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).EndInit();
             this.BotaoRetornoPnl.ResumeLayout(false);
             this.BotaoRetornoPnl.PerformLayout();
             this.ResumeLayout(false);
