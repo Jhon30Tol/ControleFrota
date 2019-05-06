@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniRetornoViagem));
             this.CadRetornoIniPnl = new System.Windows.Forms.Panel();
+            this.retornoViagemPnl = new System.Windows.Forms.Panel();
+            this.kmRetornoTbx = new System.Windows.Forms.TextBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.retViagemPesquisaPnl = new System.Windows.Forms.Panel();
             this.pesqVeiculoCbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.pesqMotoristaCbx = new MaterialSkin.Controls.MaterialCheckBox();
@@ -38,7 +41,6 @@
             this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.retornoViagemPnl = new System.Windows.Forms.Panel();
             this.DtaRetornoDtm = new System.Windows.Forms.DateTimePicker();
             this.DtRetonoViagLbl = new MaterialSkin.Controls.MaterialLabel();
             this.LinhaLbl = new System.Windows.Forms.Label();
@@ -61,22 +63,66 @@
             this.GravarRetornoBtn = new System.Windows.Forms.Button();
             this.PesquisarRetornoBtn = new System.Windows.Forms.Button();
             this.ExcluirRetornoBtn = new System.Windows.Forms.Button();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.kmRetornoTbx = new System.Windows.Forms.TextBox();
             this.CadRetornoIniPnl.SuspendLayout();
+            this.retornoViagemPnl.SuspendLayout();
             this.retViagemPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).BeginInit();
-            this.retornoViagemPnl.SuspendLayout();
             this.BotaoRetornoPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadRetornoIniPnl
             // 
             this.CadRetornoIniPnl.Controls.Add(this.retornoViagemPnl);
+            this.CadRetornoIniPnl.Controls.Add(this.retViagemPesquisaPnl);
             this.CadRetornoIniPnl.Location = new System.Drawing.Point(1, 55);
             this.CadRetornoIniPnl.Name = "CadRetornoIniPnl";
             this.CadRetornoIniPnl.Size = new System.Drawing.Size(594, 442);
             this.CadRetornoIniPnl.TabIndex = 29;
+            // 
+            // retornoViagemPnl
+            // 
+            this.retornoViagemPnl.Controls.Add(this.kmRetornoTbx);
+            this.retornoViagemPnl.Controls.Add(this.materialLabel1);
+            this.retornoViagemPnl.Controls.Add(this.DtaRetornoDtm);
+            this.retornoViagemPnl.Controls.Add(this.DtRetonoViagLbl);
+            this.retornoViagemPnl.Controls.Add(this.LinhaLbl);
+            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CidadeDestSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CodSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CidadeDestRetornoViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CodViagemRLbl);
+            this.retornoViagemPnl.Location = new System.Drawing.Point(3, 3);
+            this.retornoViagemPnl.Name = "retornoViagemPnl";
+            this.retornoViagemPnl.Size = new System.Drawing.Size(577, 325);
+            this.retornoViagemPnl.TabIndex = 0;
+            this.retornoViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.retornoViagemPnl_Paint);
+            // 
+            // kmRetornoTbx
+            // 
+            this.kmRetornoTbx.Location = new System.Drawing.Point(139, 291);
+            this.kmRetornoTbx.Name = "kmRetornoTbx";
+            this.kmRetornoTbx.Size = new System.Drawing.Size(250, 20);
+            this.kmRetornoTbx.TabIndex = 45;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(34, 291);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(88, 19);
+            this.materialLabel1.TabIndex = 44;
+            this.materialLabel1.Text = "Km Retorno";
             // 
             // retViagemPesquisaPnl
             // 
@@ -88,7 +134,7 @@
             this.retViagemPesquisaPnl.Controls.Add(this.pesquTodosCkbx);
             this.retViagemPesquisaPnl.Controls.Add(this.PesquisarBtn);
             this.retViagemPesquisaPnl.Controls.Add(this.PesquisarTbx);
-            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(0, 0);
+            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(3, 24);
             this.retViagemPesquisaPnl.Name = "retViagemPesquisaPnl";
             this.retViagemPesquisaPnl.Size = new System.Drawing.Size(591, 429);
             this.retViagemPesquisaPnl.TabIndex = 2;
@@ -189,32 +235,6 @@
             this.PesquisarTbx.Name = "PesquisarTbx";
             this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
             this.PesquisarTbx.TabIndex = 11;
-            // 
-            // retornoViagemPnl
-            // 
-            this.retornoViagemPnl.Controls.Add(this.kmRetornoTbx);
-            this.retornoViagemPnl.Controls.Add(this.materialLabel1);
-            this.retornoViagemPnl.Controls.Add(this.retViagemPesquisaPnl);
-            this.retornoViagemPnl.Controls.Add(this.DtaRetornoDtm);
-            this.retornoViagemPnl.Controls.Add(this.DtRetonoViagLbl);
-            this.retornoViagemPnl.Controls.Add(this.LinhaLbl);
-            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.CidadeDestSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.CodSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.CidadeDestRetornoViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.CodViagemRLbl);
-            this.retornoViagemPnl.Location = new System.Drawing.Point(3, 3);
-            this.retornoViagemPnl.Name = "retornoViagemPnl";
-            this.retornoViagemPnl.Size = new System.Drawing.Size(577, 325);
-            this.retornoViagemPnl.TabIndex = 0;
-            this.retornoViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.retornoViagemPnl_Paint);
             // 
             // DtaRetornoDtm
             // 
@@ -491,26 +511,6 @@
             this.ExcluirRetornoBtn.TabIndex = 17;
             this.ExcluirRetornoBtn.UseVisualStyleBackColor = false;
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(34, 291);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(88, 19);
-            this.materialLabel1.TabIndex = 44;
-            this.materialLabel1.Text = "Km Retorno";
-            // 
-            // kmRetornoTbx
-            // 
-            this.kmRetornoTbx.Location = new System.Drawing.Point(139, 291);
-            this.kmRetornoTbx.Name = "kmRetornoTbx";
-            this.kmRetornoTbx.Size = new System.Drawing.Size(250, 20);
-            this.kmRetornoTbx.TabIndex = 45;
-            // 
             // FrmCadIniRetornoViagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,11 +520,12 @@
             this.Name = "FrmCadIniRetornoViagem";
             this.Load += new System.EventHandler(this.FrmCadIniRetornoViagem_Load);
             this.CadRetornoIniPnl.ResumeLayout(false);
+            this.CadRetornoIniPnl.PerformLayout();
+            this.retornoViagemPnl.ResumeLayout(false);
+            this.retornoViagemPnl.PerformLayout();
             this.retViagemPesquisaPnl.ResumeLayout(false);
             this.retViagemPesquisaPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).EndInit();
-            this.retornoViagemPnl.ResumeLayout(false);
-            this.retornoViagemPnl.PerformLayout();
             this.BotaoRetornoPnl.ResumeLayout(false);
             this.BotaoRetornoPnl.PerformLayout();
             this.ResumeLayout(false);

@@ -30,6 +30,19 @@ namespace PimFrota.Formularios.TelaViagem
             cidadePesquisarPnl.Visible = false;
             saidaViagemPesquisaPnl.Visible = false;
 
+            CodSaidaViagTbx.Enabled = false;
+            MotoristaSaidaViagTbx.Enabled = false;
+            VeiculoSaidaViagTbx.Enabled = false;
+            CidadeSaidaViagTbx.Enabled = false;
+            CidadeDestSaidaViagTbx.Enabled = false;
+            DtaSaidaDtm.Enabled = false;
+            DtaRetornoDtm.Enabled = false;
+            KmSaidaTbx.Enabled = false;
+            passageiroTbx.Enabled = false;
+            kmRetornoTbx.Enabled = false;
+
+
+
 
         }
 
@@ -248,7 +261,10 @@ namespace PimFrota.Formularios.TelaViagem
                     "a.modelo_veiculo as Modelo_Veiculo, " +
                     "c.nome_cidade as Cidade_Saida, " +
                     "b.nome_cidade as Cidade_Destino, " +
-                    "date(v.dta_saida) as Data_Saida " +
+                    "date(v.dta_saida) as Data_Saida, " +
+                    "v.km_cidade_origem as Km_saida, " +
+                    "v.passageiro_viagem as Passageiro, " +
+                    "v.km_cidade_retorno as Km_retorno" +
                     "FROM viagem v " +
                     "JOIN cadastro_motorista m " +
                     "JOIN cadastro_veiculo a " +
@@ -257,8 +273,7 @@ namespace PimFrota.Formularios.TelaViagem
                     "ON v.id_motorista = m.id_motorista  " +
                     "AND v.id_veiculo = a.id_veiculo " +
                     "AND  v.id_cidade_origem = c.id_cidade " +
-                    "AND  v.id_cidade_destino = b.id_cidade " +
-                    "WHERE v.dta_retorno IS NULL ;", conn);
+                    "AND  v.id_cidade_destino = b.id_cidade ;", conn);
                 DataTable pesq3 = new DataTable();
                 pesq1.Fill(pesq3);
                 dataGridViewSaiViagem.DataSource = pesq3;
@@ -272,7 +287,10 @@ namespace PimFrota.Formularios.TelaViagem
                    "a.modelo_veiculo as Modelo_Veiculo, " +
                    "c.nome_cidade as Cidade_Saida, " +
                    "b.nome_cidade as Cidade_Destino, " +
-                   "date(v.dta_saida) as Data_Saida " +
+                   "date(v.dta_saida) as Data_Saida, " +
+                   "v.km_cidade_origem as Km_saida, " +
+                   "v.passageiro_viagem as Passageiro, " +
+                   "v.km_cidade_retorno as Km_retorno " +
                    "FROM viagem v " +
                    "JOIN cadastro_motorista m " +
                    "JOIN cadastro_veiculo a " +
@@ -282,7 +300,6 @@ namespace PimFrota.Formularios.TelaViagem
                    "AND v.id_veiculo = a.id_veiculo " +
                    "AND  v.id_cidade_origem = c.id_cidade " +
                    "AND  v.id_cidade_destino = b.id_cidade " +
-                   "WHERE v.dta_retorno IS NULL " +
                    "and m.nome_motorista like '%" + @nome + "%'", conn);
                 DataTable pesq3 = new DataTable();
                 pesq1.Fill(pesq3);
@@ -296,7 +313,10 @@ namespace PimFrota.Formularios.TelaViagem
                   "a.modelo_veiculo as Modelo_Veiculo, " +
                   "c.nome_cidade as Cidade_Saida, " +
                   "b.nome_cidade as Cidade_Destino, " +
-                  "date(v.dta_saida) as Data_Saida " +
+                  "date(v.dta_saida) as Data_Saida, " +
+                  "v.km_cidade_origem as Km_saida, " +
+                  "v.passageiro_viagem as Passageiro, " +
+                  "v.km_cidade_retorno as Km_retorno " +
                   "FROM viagem v " +
                   "JOIN cadastro_motorista m " +
                   "JOIN cadastro_veiculo a " +
@@ -306,7 +326,6 @@ namespace PimFrota.Formularios.TelaViagem
                   "AND v.id_veiculo = a.id_veiculo " +
                   "AND  v.id_cidade_origem = c.id_cidade " +
                   "AND  v.id_cidade_destino = b.id_cidade " +
-                  "WHERE v.dta_retorno IS NULL " +
                   "and a.modelo_veiculo like '%" + @nome + "%'", conn);
                 DataTable pesq3 = new DataTable();
                 pesq1.Fill(pesq3);
@@ -338,7 +357,10 @@ namespace PimFrota.Formularios.TelaViagem
                 "a.modelo_veiculo as Modelo_Veiculo, " +
                 "c.nome_cidade as Cidade_Saida, " +
                 "b.nome_cidade as Cidade_Destino, " +
-                "date(v.dta_saida) as Data_Saida " +
+                "date(v.dta_saida) as Data_Saida, " +
+                "v.km_cidade_origem as Km_saida, " +
+                "v.passageiro_viagem as Passageiro, " +
+                "v.km_cidade_retorno as Km_retorno " +
                 "FROM viagem v " +
                 "JOIN cadastro_motorista m " +
                 "JOIN cadastro_veiculo a " +
@@ -347,8 +369,7 @@ namespace PimFrota.Formularios.TelaViagem
                 "ON v.id_motorista = m.id_motorista  " +
                 "AND v.id_veiculo = a.id_veiculo " +
                 "AND  v.id_cidade_origem = c.id_cidade " +
-                "AND  v.id_cidade_destino = b.id_cidade " +
-                "WHERE v.dta_retorno IS NULL ;", conn);
+                "AND  v.id_cidade_destino = b.id_cidade ;", conn);
             DataTable pesq3 = new DataTable();
             pesq1.Fill(pesq3);
             dataGridViewSaiViagem.DataSource = pesq3;
@@ -408,6 +429,11 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             CidadeSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[3].Value.ToString();
             CidadeDestSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[4].Value.ToString();
             DtaSaidaDtm.Text = dataGridViewSaiViagem.CurrentRow.Cells[5].Value.ToString();
+            KmSaidaTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[6].Value.ToString();
+            passageiroTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[7].Value.ToString();
+            kmRetornoTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[8].Value.ToString();
+
+
             v.Id_viagem = Convert.ToInt32(CodSaidaViagTbx.Text);
 
             saidaViagemPesquisaPnl.Visible = false;

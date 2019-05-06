@@ -60,11 +60,13 @@ namespace PimServices.RepositorySql
 
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
-                String alteratDados = "UPDATE viagem set dta_retorno = @dtaRetornoViagem where id_viagem = @id";
+                String alteratDados = "UPDATE viagem set dta_retorno = @dtaRetornoViagem, km_cidade_retorno = @kmRetorno where id_viagem = @id";
                 conn.Open();
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alteratDados, conn);
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dtaRetornoViagem", v.DtaRetorno));
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", v.Id_viagem));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("kmRetorno", v.KmRetorno));
+
 
 
 

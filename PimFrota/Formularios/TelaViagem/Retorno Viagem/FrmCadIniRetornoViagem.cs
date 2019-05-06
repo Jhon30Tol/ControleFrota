@@ -145,6 +145,7 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
             CidadeSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[3].Value.ToString();
             CidadeDestSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[4].Value.ToString();
             DtSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[5].Value.ToString();
+          //  kmRetornoTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[6].Value.ToString();
             v.Id_viagem = Convert.ToInt32(CodSaidaViagRTbx.Text);
 
 
@@ -172,6 +173,7 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
         {
             DaoViagem dao = new DaoViagem();
             v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
+            v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
 
             dao.GravarRetornoViagem(v);
             CadRetornoIniPnl.Visible = false;
