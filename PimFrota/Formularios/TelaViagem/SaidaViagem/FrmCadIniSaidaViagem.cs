@@ -41,6 +41,11 @@ namespace PimFrota.Formularios.TelaViagem
             passageiroTbx.Enabled = false;
             kmRetornoTbx.Enabled = false;
 
+            PesquisarMotoristaBtn.Enabled = false;
+            PesquisarBtn.Enabled = false;
+            pesquisaCidadeSaidaBtn.Enabled = false;
+            pesquisaCidadeDestinoBtn.Enabled = false;
+
 
 
 
@@ -50,6 +55,23 @@ namespace PimFrota.Formularios.TelaViagem
         {
 
             saidaViagemPnl.Visible = true;
+
+
+            CodSaidaViagTbx.Enabled = true;
+            MotoristaSaidaViagTbx.Enabled = true;
+            VeiculoSaidaViagTbx.Enabled = true;
+            CidadeSaidaViagTbx.Enabled = true;
+            CidadeDestSaidaViagTbx.Enabled = true;
+            DtaSaidaDtm.Enabled = true;
+            DtaRetornoDtm.Enabled = true;
+            KmSaidaTbx.Enabled = true;
+            passageiroTbx.Enabled = true;
+            kmRetornoTbx.Enabled = true;
+
+            PesquisarMotoristaBtn.Enabled = true;
+            PesquisarBtn.Enabled = true;
+            pesquisaCidadeSaidaBtn.Enabled = true;
+            pesquisaCidadeDestinoBtn.Enabled = true;
 
         }
 
@@ -77,7 +99,7 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void PesquisarMotoristaBtn_Click(object sender, EventArgs e)
         {
-
+            
             motoristaPesquisarPnl.Visible = true;
             saidaViagemPnl.Visible = false;
 
@@ -132,6 +154,7 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void PesquisarBtn_Click(object sender, EventArgs e)
         {
+            
             veiculoPesquisarPnl.Visible = true;
             saidaViagemPnl.Visible = false;
         }
@@ -215,6 +238,7 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             pesqCidade = true;
             cidadePesquisarPnl.Visible = true;
             saidaViagemPnl.Visible = false;
@@ -437,6 +461,16 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             v.Id_viagem = Convert.ToInt32(CodSaidaViagTbx.Text);
 
             saidaViagemPesquisaPnl.Visible = false;
+        }
+
+        private void saidaViagemPesquisaPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CadViagemIniPnl_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
