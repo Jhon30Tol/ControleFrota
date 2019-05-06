@@ -22,14 +22,8 @@ namespace PimFrota.Formularios.TelaViagem
         DaoViagem daoViagem = new DaoViagem();
         bool pesqCidade = false;
 
-        public FrmCadIniSaidaViagem()
+        public void iniarIncluir()
         {
-            InitializeComponent();
-            motoristaPesquisarPnl.Visible = false;
-            veiculoPesquisarPnl.Visible = false;
-            cidadePesquisarPnl.Visible = false;
-            saidaViagemPesquisaPnl.Visible = false;
-
             CodSaidaViagTbx.Enabled = false;
             MotoristaSaidaViagTbx.Enabled = false;
             VeiculoSaidaViagTbx.Enabled = false;
@@ -46,6 +40,21 @@ namespace PimFrota.Formularios.TelaViagem
             pesquisaCidadeSaidaBtn.Enabled = false;
             pesquisaCidadeDestinoBtn.Enabled = false;
 
+            EditarViagemBtn.Enabled = false;
+            ExcluirViagemBtn.Enabled = false;
+
+        }
+
+        public FrmCadIniSaidaViagem()
+        {
+            InitializeComponent();
+            motoristaPesquisarPnl.Visible = false;
+            veiculoPesquisarPnl.Visible = false;
+            cidadePesquisarPnl.Visible = false;
+            saidaViagemPesquisaPnl.Visible = false;
+
+            iniarIncluir();
+
 
 
 
@@ -57,16 +66,16 @@ namespace PimFrota.Formularios.TelaViagem
             saidaViagemPnl.Visible = true;
 
 
-            CodSaidaViagTbx.Enabled = true;
-            MotoristaSaidaViagTbx.Enabled = true;
-            VeiculoSaidaViagTbx.Enabled = true;
-            CidadeSaidaViagTbx.Enabled = true;
-            CidadeDestSaidaViagTbx.Enabled = true;
+            CodSaidaViagTbx.Enabled = false;
+            MotoristaSaidaViagTbx.Enabled = false;
+            VeiculoSaidaViagTbx.Enabled = false;
+            CidadeSaidaViagTbx.Enabled = false;
+            CidadeDestSaidaViagTbx.Enabled = false;
             DtaSaidaDtm.Enabled = true;
-            DtaRetornoDtm.Enabled = true;
+            DtaRetornoDtm.Enabled = false;
             KmSaidaTbx.Enabled = true;
             passageiroTbx.Enabled = true;
-            kmRetornoTbx.Enabled = true;
+            kmRetornoTbx.Enabled = false;
 
             PesquisarMotoristaBtn.Enabled = true;
             PesquisarBtn.Enabled = true;
@@ -94,6 +103,18 @@ namespace PimFrota.Formularios.TelaViagem
             v.passageiro = passageiroTbx.Text;
 
             dao.SalvarViagem(v);
+            //CadViagemIniPnl.Visible = false;
+
+            CodSaidaViagTbx.Text = " ";
+            MotoristaSaidaViagTbx.Text = " ";
+            VeiculoSaidaViagTbx.Text = " ";
+            CidadeSaidaViagTbx.Text = " ";
+            CidadeDestSaidaViagTbx.Text = " ";
+            DtaSaidaDtm.Text.Trim();
+            KmSaidaTbx.Text = " ";
+            passageiroTbx.Text = " ";
+
+            iniarIncluir();
 
         }
 
