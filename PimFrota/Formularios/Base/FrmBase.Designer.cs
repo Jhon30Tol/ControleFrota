@@ -35,6 +35,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.versaoLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.usuarioLogadoLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.BarraBasePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,14 +102,41 @@
             // 
             this.versaoLbl.AutoSize = true;
             this.versaoLbl.Depth = 0;
-            this.versaoLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.versaoLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.versaoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.versaoLbl.Location = new System.Drawing.Point(3, 431);
             this.versaoLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.versaoLbl.Name = "versaoLbl";
-            this.versaoLbl.Size = new System.Drawing.Size(78, 16);
+            this.versaoLbl.Size = new System.Drawing.Size(81, 19);
             this.versaoLbl.TabIndex = 3;
             this.versaoLbl.Text = "Versão 1.0";
+            this.versaoLbl.Click += new System.EventHandler(this.versaoLbl_Click);
+            // 
+            // usuarioLogadoLbl
+            // 
+            this.usuarioLogadoLbl.AutoSize = true;
+            this.usuarioLogadoLbl.Depth = 0;
+            this.usuarioLogadoLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.usuarioLogadoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.usuarioLogadoLbl.Location = new System.Drawing.Point(197, 431);
+            this.usuarioLogadoLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.usuarioLogadoLbl.Name = "usuarioLogadoLbl";
+            this.usuarioLogadoLbl.Size = new System.Drawing.Size(61, 19);
+            this.usuarioLogadoLbl.TabIndex = 4;
+            this.usuarioLogadoLbl.Text = "Usuario";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(122, 431);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(69, 19);
+            this.materialLabel1.TabIndex = 5;
+            this.materialLabel1.Text = "Usuario: ";
             // 
             // FrmBase
             // 
@@ -115,18 +144,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.usuarioLogadoLbl);
             this.Controls.Add(this.versaoLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraBasePnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmBase";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBase";
+            this.Load += new System.EventHandler(this.FrmBase_Load);
             this.BarraBasePnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -142,5 +173,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private MaterialSkin.Controls.MaterialLabel versaoLbl;
+        private MaterialSkin.Controls.MaterialLabel usuarioLogadoLbl;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

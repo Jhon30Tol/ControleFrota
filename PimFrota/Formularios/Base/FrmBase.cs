@@ -15,6 +15,7 @@ namespace PimFrota.Formularios.Base
         public FrmBase()
         {
             InitializeComponent();
+            usuarioLogadoLbl.Text = "Wagner Neves";
         }
 
         private void Fecharbtn_Click(object sender, EventArgs e)
@@ -25,6 +26,16 @@ namespace PimFrota.Formularios.Base
         private void MinimizeBtn_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void versaoLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmBase_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
