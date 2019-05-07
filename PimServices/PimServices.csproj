@@ -49,6 +49,7 @@
     <Compile Include="Model\Viagem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorySql\ConexaoBancoMySQL.cs" />
+    <Compile Include="RepositorySql\DaoLogin.cs" />
     <Compile Include="RepositorySql\DaoMotorista.cs" />
     <Compile Include="RepositorySql\DaoUsuario.cs" />
     <Compile Include="RepositorySql\DaoViagem.cs" />

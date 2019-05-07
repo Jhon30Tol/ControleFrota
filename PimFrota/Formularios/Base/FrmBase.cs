@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PimServices.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,21 @@ namespace PimFrota.Formularios.Base
 {
     public partial class FrmBase : Form
     {
+
+
+
+
         public FrmBase()
         {
             InitializeComponent();
-            usuarioLogadoLbl.Text = "Wagner Neves";
+            UsuarioLogado();
+
+        }
+
+        public void UsuarioLogado()
+        {
+            Usuario u = new Usuario();
+            usuarioLogadoLbl.Text = u.Nome ;
         }
 
         private void Fecharbtn_Click(object sender, EventArgs e)

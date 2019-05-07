@@ -46,6 +46,7 @@ namespace PimFrota.Formularios.Login
             {
                 FrmHome home = new FrmHome();
                 home.ShowDialog();
+                this.Close();
             }
             else
             {
