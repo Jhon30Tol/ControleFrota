@@ -524,9 +524,7 @@ F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFr
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroVeiculo.FrmCadVeiculo.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroVeiculo.FrmPesquisarVeiculo.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaHome.FrmHome.resources
-F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaViagem.Retorno_Viagem.CadRetornoViagem.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaViagem.Retorno_Viagem.FrmCadIniRetornoViagem.resources
-F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaViagem.SaidaViagem.CadSaidaViagem.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaViagem.FrmCadIniSaidaViagem.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Properties.Resources.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.csproj.GenerateResource.cache

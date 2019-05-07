@@ -493,6 +493,11 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void veiculoPesquisarPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
  

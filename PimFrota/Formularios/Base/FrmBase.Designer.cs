@@ -34,6 +34,7 @@
             this.BarraBasePnl = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.versaoLbl = new MaterialSkin.Controls.MaterialLabel();
             this.BarraBasePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,12 +96,26 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // versaoLbl
+            // 
+            this.versaoLbl.AutoSize = true;
+            this.versaoLbl.Depth = 0;
+            this.versaoLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.versaoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.versaoLbl.Location = new System.Drawing.Point(3, 431);
+            this.versaoLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.versaoLbl.Name = "versaoLbl";
+            this.versaoLbl.Size = new System.Drawing.Size(78, 16);
+            this.versaoLbl.TabIndex = 3;
+            this.versaoLbl.Text = "Versão 1.0";
+            // 
             // FrmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.versaoLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraBasePnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -115,6 +130,7 @@
             this.BarraBasePnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,5 +141,6 @@
         private System.Windows.Forms.Panel BarraBasePnl;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private MaterialSkin.Controls.MaterialLabel versaoLbl;
     }
 }
