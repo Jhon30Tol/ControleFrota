@@ -1,5 +1,4 @@
-﻿using PimFrota.Formularios.TelaCadastros.CadastroUsuario;
-using PimFrota.Formularios.TelaHome;
+
 using PimServices.Model;
 using MySql.Data.MySqlClient;
 using System;
@@ -9,32 +8,44 @@ namespace PimServices.RepositorySql
 {
     public class DaoLogin : ConexaoBancoMySQL
     {
-        public void AutenticarUsuario (Usuario u)
+
+        public bool  AutenticarUsuario (Usuario u)
+
         {
+            
             try
             {
 
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
-                String nome = ;
-                String senha = ;
-                String validarUsuario = "SELECT * FROM cadastro_usuario Where nome_usuario = '"+nome+"' and senha_usuario = '"+senha+"'; ";
+                String validarUsuario = "SELECT * FROM cadastro_usuario WHERE nome_usuario = @nome AND senha_usuario = MD5(@senha) AND ativo = 's';";
                 conn.Open();
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(validarUsuario, conn);
-               
-
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", u.Nome));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("senha", u.Senha));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("ativo", u.Ativo));
+                int retorno = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Open();
+ 
                 cmd.Prepare();
-
                 cmd.ExecuteNonQuery();
-
+                
                 conn.Close();
+               if (retorno > 0)
+                {
+                    return true;
+                }
+               else
+                {
+                    return false;
+                }
 
                 MessageBox.Show("Login efetuado com sucesso!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Dados incorretos, informe novamente! " + ex.ToString());
-
+                return false;
             }
         }
     }
