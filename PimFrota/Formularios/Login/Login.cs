@@ -1,31 +1,28 @@
-﻿using PimFrota.Formularios.TelaCadastros.CadastroUsuario;
+using MySql.Data.MySqlClient;
 using PimFrota.Formularios.TelaHome;
 using PimServices.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PimServices.RepositorySql;
+using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace PimFrota.Formularios.Login 
 {
     public partial class Login : Form
     {
-        public string ativo;
-       
-        public string nome;
-        public Login()
+        Usuario u = new Usuario();
+
+        public  Login()
         {
             InitializeComponent();
             Senhatxb.PasswordChar = '*';
         }
 
-        private void validarUsuario()
+        private void autenticaUsuario()
         {
+            
+
             if (Usuariotxb.Text.Equals("admin") && Senhatxb.Text.Equals("admin"))
             {
 
@@ -34,17 +31,27 @@ namespace PimFrota.Formularios.Login
                 home.ShowDialog();
                 this.Close();
             }
-            else
-            {
-                MessageBox.Show("Dados incorretos, informe novamente!");
-                Usuariotxb.Text = "";
-                Senhatxb.Text = "";
-                //Usuariotxb.Text.Focus();
-            }
+            
+           
         }
+          
         private void Entrarbtn_Click(object sender, EventArgs e)
         {
-            validarUsuario();
+            DaoLogin daoLogin = new DaoLogin();
+            u.Nome = Usuariotxb.Text;
+            u.Senha = Senhatxb.Text;
+            
+
+           if (daoLogin.AutenticarUsuario(u))
+            {
+                FrmHome home = new FrmHome();
+                home.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Dados Incorretos");
+                this.Close();
+            }           
 
         }
 
@@ -55,15 +62,15 @@ namespace PimFrota.Formularios.Login
         private void Senhatxb_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
-                validarUsuario();
+            {                
+                autenticaUsuario();
             }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+        
         }
-
         private void Senhatxb_TextChanged(object sender, EventArgs e)
         {
 
