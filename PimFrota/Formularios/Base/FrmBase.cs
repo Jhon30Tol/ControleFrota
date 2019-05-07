@@ -1,4 +1,5 @@
-﻿using PimServices.Model;
+﻿using PimFrota.Formularios.Login;
+using PimServices.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +27,9 @@ namespace PimFrota.Formularios.Base
 
         public void UsuarioLogado()
         {
-            Usuario u = new Usuario();
-            usuarioLogadoLbl.Text = u.Nome ;
+            
+            FrmLogin frmlogin = (FrmLogin)Application.OpenForms["FrmLogin"];
+            usuarioLogadoLbl.Text = frmlogin.Usuariotxb.Text;
         }
 
         private void Fecharbtn_Click(object sender, EventArgs e)

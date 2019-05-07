@@ -443,7 +443,6 @@ F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBase.resources
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBaseFundoCad.resources
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBaseViagem.resources
-F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Login.Login.resources
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Mensagens.FrmMensagemCadSucesso.resources
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Mensagens.FrmMensagemCampoObrigatorio.resources
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Mensagens.FrmMensagemErroCadastro.resources
@@ -585,3 +584,4 @@ C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.
 C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.csproj.CopyComplete
 C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.exe
 C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.pdb
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Login.FrmLogin.resources

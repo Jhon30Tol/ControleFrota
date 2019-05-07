@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 namespace PimFrota.Formularios.Login 
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
         Usuario u = new Usuario();
 
-        public  Login()
+        public  FrmLogin()
         {
             InitializeComponent();
             Senhatxb.PasswordChar = '*';

@@ -1,6 +1,6 @@
 ﻿namespace PimFrota.Formularios.Login
 {
-    partial class Login
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.LogoLoginImg = new System.Windows.Forms.PictureBox();
             this.BemVindoLbl = new System.Windows.Forms.Label();
             this.Entrarbtn = new System.Windows.Forms.Button();
@@ -119,7 +119,7 @@
             this.Usuariotxb.TabIndex = 8;
             this.Usuariotxb.Validating += new System.ComponentModel.CancelEventHandler(this.Usuariotxb_Validating);
             // 
-            // Login
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@
             this.Controls.Add(this.Usuariotxb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
-            this.Name = "Login";
+            this.Name = "FrmLogin";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
