@@ -406,7 +406,7 @@
             this.BotaoCadastroPnl.Controls.Add(this.GravarClienteBtn);
             this.BotaoCadastroPnl.Controls.Add(this.PesquisarClienteBtn);
             this.BotaoCadastroPnl.Controls.Add(this.ExcluirClienteBtn);
-            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
+            this.BotaoCadastroPnl.Location = new System.Drawing.Point(12, 6);
             this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
             this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
             this.BotaoCadastroPnl.TabIndex = 26;

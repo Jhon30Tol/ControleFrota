@@ -44,9 +44,13 @@ namespace PimFrota.Formularios.Login
 
            if (daoLogin.AutenticarUsuario(u))
             {
+               // FrmLogin  frmlog = new FrmLogin();
                 FrmHome home = new FrmHome();
                 home.ShowDialog();
                 this.Close();
+               // frmlog.Close();
+
+                
             }
             else
             {
@@ -75,6 +79,20 @@ namespace PimFrota.Formularios.Login
         private void Senhatxb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Entrarbtn_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                autenticaUsuario();
+            }
+
+        }
+
+        private void Entrarbtn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }

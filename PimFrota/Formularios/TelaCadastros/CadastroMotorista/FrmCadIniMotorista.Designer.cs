@@ -40,6 +40,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.motoristaPnl = new System.Windows.Forms.Panel();
+            this.cnhMotoristaTbx = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.DtVencCnhTbx = new System.Windows.Forms.TextBox();
             this.DtVencCnhLbl = new System.Windows.Forms.Label();
             this.NumeroRuaMotoristaTbx = new System.Windows.Forms.TextBox();
@@ -69,8 +71,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             this.ExcluirMotoristaBtn = new System.Windows.Forms.Button();
             this.linhaMotoristaLbl = new System.Windows.Forms.Label();
             this.motoristaLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cnhMotoristaTbx = new System.Windows.Forms.TextBox();
             this.CadMotoristaIniPnl.SuspendLayout();
             this.motoristaPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).BeginInit();
@@ -82,9 +82,9 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             // 
             this.CadMotoristaIniPnl.Controls.Add(this.motoristaPesquisarPnl);
             this.CadMotoristaIniPnl.Controls.Add(this.motoristaPnl);
-            this.CadMotoristaIniPnl.Location = new System.Drawing.Point(1, 72);
+            this.CadMotoristaIniPnl.Location = new System.Drawing.Point(12, 82);
             this.CadMotoristaIniPnl.Name = "CadMotoristaIniPnl";
-            this.CadMotoristaIniPnl.Size = new System.Drawing.Size(594, 316);
+            this.CadMotoristaIniPnl.Size = new System.Drawing.Size(560, 377);
             this.CadMotoristaIniPnl.TabIndex = 27;
             // 
             // motoristaPesquisarPnl
@@ -95,18 +95,16 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarLbl);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarBtn);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(11, 7);
-
-            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(503, 19);
+            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(26, 63);
             this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
-            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 291);
+            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 308);
             this.motoristaPesquisarPnl.TabIndex = 123;
             // 
             // dataGridViewMotorista
             // 
             this.dataGridViewMotorista.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridViewMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMotorista.Location = new System.Drawing.Point(12, 74);
+            this.dataGridViewMotorista.Location = new System.Drawing.Point(26, 70);
             this.dataGridViewMotorista.Name = "dataGridViewMotorista";
             this.dataGridViewMotorista.Size = new System.Drawing.Size(486, 200);
             this.dataGridViewMotorista.TabIndex = 51;
@@ -199,10 +197,28 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             this.motoristaPnl.Controls.Add(this.CpfMotoristaLbl);
             this.motoristaPnl.Controls.Add(this.RuaMotoristaLbl);
             this.motoristaPnl.Controls.Add(this.NomeClientelbl);
-            this.motoristaPnl.Location = new System.Drawing.Point(15, 19);
+            this.motoristaPnl.Location = new System.Drawing.Point(3, 21);
             this.motoristaPnl.Name = "motoristaPnl";
-            this.motoristaPnl.Size = new System.Drawing.Size(469, 282);
+            this.motoristaPnl.Size = new System.Drawing.Size(469, 289);
             this.motoristaPnl.TabIndex = 0;
+            // 
+            // cnhMotoristaTbx
+            // 
+            this.cnhMotoristaTbx.Location = new System.Drawing.Point(99, 95);
+            this.cnhMotoristaTbx.Name = "cnhMotoristaTbx";
+            this.cnhMotoristaTbx.Size = new System.Drawing.Size(167, 20);
+            this.cnhMotoristaTbx.TabIndex = 123;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 122;
+            this.label1.Text = "CNH:";
             // 
             // DtVencCnhTbx
             // 
@@ -392,7 +408,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             this.BotaoCadastroPnl.Controls.Add(this.GravarMotoristaBtn);
             this.BotaoCadastroPnl.Controls.Add(this.PesquisarMotoristaBtn);
             this.BotaoCadastroPnl.Controls.Add(this.ExcluirMotoristaBtn);
-            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
+            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 3);
             this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
             this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
             this.BotaoCadastroPnl.TabIndex = 26;
@@ -483,7 +499,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             this.PesquisarMotoristaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PesquisarMotoristaBtn.FlatAppearance.BorderSize = 0;
             this.PesquisarMotoristaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarMotoristaBtn.Location = new System.Drawing.Point(222, 3);
+            this.PesquisarMotoristaBtn.Location = new System.Drawing.Point(213, 3);
             this.PesquisarMotoristaBtn.Name = "PesquisarMotoristaBtn";
             this.PesquisarMotoristaBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PesquisarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
@@ -528,28 +544,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             this.motoristaLbl.Size = new System.Drawing.Size(152, 31);
             this.motoristaLbl.TabIndex = 124;
             this.motoristaLbl.Text = "Motorista";
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 122;
-            this.label1.Text = "CNH:";
-            // 
-            // cnhMotoristaTbx
-            // 
-            this.cnhMotoristaTbx.Location = new System.Drawing.Point(99, 95);
-            this.cnhMotoristaTbx.Name = "cnhMotoristaTbx";
-            this.cnhMotoristaTbx.Size = new System.Drawing.Size(167, 20);
-            this.cnhMotoristaTbx.TabIndex = 123;
             // 
             // FrmCadIniMotorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(597, 395);
+            this.ClientSize = new System.Drawing.Size(597, 491);
             this.Controls.Add(this.linhaMotoristaLbl);
             this.Controls.Add(this.CadMotoristaIniPnl);
             this.Controls.Add(this.motoristaLbl);

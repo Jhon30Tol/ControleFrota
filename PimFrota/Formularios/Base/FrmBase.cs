@@ -29,7 +29,14 @@ namespace PimFrota.Formularios.Base
         {
             
             FrmLogin frmlogin = (FrmLogin)Application.OpenForms["FrmLogin"];
+
+            
+            
             usuarioLogadoLbl.Text = frmlogin.Usuariotxb.Text;
+        //    usuarioLogadoLbl.SelectionFont = new Font("Roboto", 30, FontStyle.Bold);
+
+
+
         }
 
         private void Fecharbtn_Click(object sender, EventArgs e)
@@ -39,7 +46,7 @@ namespace PimFrota.Formularios.Base
 
         private void MinimizeBtn_Click(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void versaoLbl_Click(object sender, EventArgs e)

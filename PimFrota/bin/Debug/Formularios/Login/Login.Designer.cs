@@ -76,6 +76,8 @@
             this.Entrarbtn.Text = "Entrar";
             this.Entrarbtn.UseVisualStyleBackColor = false;
             this.Entrarbtn.Click += new System.EventHandler(this.Entrarbtn_Click);
+            this.Entrarbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Entrarbtn_KeyPress);
+            this.Entrarbtn.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Entrarbtn_KeyUp);
             // 
             // Senhalbl
             // 

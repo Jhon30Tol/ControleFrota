@@ -99,6 +99,7 @@ namespace PimFrota.Formularios.Base
             iniMotorista.FormBorderStyle = FormBorderStyle.None;
             this.BaseCadastroPnl.Controls.Add(iniMotorista);
             iniMotorista.Show();
+            
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -170,6 +171,11 @@ namespace PimFrota.Formularios.Base
         private void BaseCadastroPnl_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MinimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

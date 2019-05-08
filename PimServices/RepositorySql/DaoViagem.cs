@@ -2,6 +2,7 @@
 using PimServices.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,6 @@ namespace PimServices.RepositorySql
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("km_cidade_origem", v.KmSaida));
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("passageiro_viagem", v.passageiro));
 
-                MessageBox.Show(Convert.ToString(v.DtaSaida), "");
 
 
 
@@ -84,6 +84,42 @@ namespace PimServices.RepositorySql
             }
 
         }
+
+        public void PesqiosaTodasViagens()
+        {
+
+            /*
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            MySqlCommand cmd = new MySqlCommand();
+            conn.Open();
+            PesquisarTbx.Text = "";
+
+            MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+            "v.id_viagem as Codigo_Viagem," +
+            "m.nome_motorista as Nome_Motorista, " +
+            "a.modelo_veiculo as Modelo_Veiculo, " +
+            "c.nome_cidade as Cidade_Saida, " +
+            "b.nome_cidade as Cidade_Destino, " +
+            "date(v.dta_saida) as Data_Saida, " +
+            "v.km_cidade_origem as Km_saida, " +
+            "v.passageiro_viagem as Passageiro, " +
+            "v.km_cidade_retorno as Km_retorno " +
+            "FROM viagem v " +
+            "JOIN cadastro_motorista m " +
+            "JOIN cadastro_veiculo a " +
+            "JOIN cadastro_cidade c " +
+            "JOIN cadastro_cidade b " +
+            "ON v.id_motorista = m.id_motorista  " +
+            "AND v.id_veiculo = a.id_veiculo " +
+            "AND  v.id_cidade_origem = c.id_cidade " +
+            "AND  v.id_cidade_destino = b.id_cidade ;", conn);
+            DataTable pesq3 = new DataTable();
+            pesq1.Fill(pesq3);
+            dataGridViewSaiViagem.DataSource = pesq3;
+            */
+
+        }
+
 
     }
 }

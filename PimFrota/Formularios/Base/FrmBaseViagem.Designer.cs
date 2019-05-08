@@ -135,6 +135,7 @@
             this.MinimizeBtn.Size = new System.Drawing.Size(28, 28);
             this.MinimizeBtn.TabIndex = 2;
             this.MinimizeBtn.UseVisualStyleBackColor = false;
+            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
             // Fecharbtn
             // 

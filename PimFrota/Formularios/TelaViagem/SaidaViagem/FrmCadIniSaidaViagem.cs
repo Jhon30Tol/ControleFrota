@@ -103,7 +103,6 @@ namespace PimFrota.Formularios.TelaViagem
             v.passageiro = passageiroTbx.Text;
 
             dao.SalvarViagem(v);
-            //CadViagemIniPnl.Visible = false;
 
             CodSaidaViagTbx.Text = " ";
             MotoristaSaidaViagTbx.Text = " ";
@@ -263,6 +262,7 @@ namespace PimFrota.Formularios.TelaViagem
             pesqCidade = true;
             cidadePesquisarPnl.Visible = true;
             saidaViagemPnl.Visible = false;
+            saidaViagemPesquisaPnl.Location = new Point(3, 7);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -285,6 +285,7 @@ namespace PimFrota.Formularios.TelaViagem
         private void PesquisarViagemBtn_Click(object sender, EventArgs e)
         {
             saidaViagemPesquisaPnl.Visible = true;
+            saidaViagemPesquisaPnl.Location = new Point(0, 0);
 
         }
 
@@ -497,6 +498,11 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
         private void veiculoPesquisarPnl_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            saidaViagemPesquisaPnl.Location = new Point(0, 0);
         }
     }
 }

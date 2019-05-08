@@ -59,5 +59,10 @@ namespace PimFrota.Formularios.Base
             this.BaseIniViagemPnl.Controls.Add(iniRetornoViagem);
             iniRetornoViagem.Show();
         }
+
+        private void MinimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
