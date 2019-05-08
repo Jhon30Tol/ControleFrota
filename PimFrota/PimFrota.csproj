@@ -157,11 +157,11 @@
     <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.Designer.cs">
       <DependentUpon>FrmPesquisaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadIniMotorista.cs">
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadiniMotorista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadIniMotorista.Designer.cs">
-      <DependentUpon>FrmCadIniMotorista.cs</DependentUpon>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadiniMotorista.Designer.cs">
+      <DependentUpon>FrmCadiniMotorista.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.cs">
       <SubType>Form</SubType>
@@ -332,8 +332,8 @@
     <EmbeddedResource Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.resx">
       <DependentUpon>FrmPesquisaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadIniMotorista.resx">
-      <DependentUpon>FrmCadIniMotorista.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadiniMotorista.resx">
+      <DependentUpon>FrmCadiniMotorista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.resx">
       <DependentUpon>FrmCadMotorista.cs</DependentUpon>

@@ -56,7 +56,7 @@ namespace PimFrota.Formularios.Base
 
 
         FrmCadIniUsuario iniUsuario;
-        FrmCadIniMotorista iniMotorista;
+        FrmCadiniMotorista iniMotorista;
         FrmCadIniCidade iniCidade;
         FrmCadIniVeiculo iniVeiculo;
         FrmCadIniCliente iniCliente;
@@ -93,7 +93,7 @@ namespace PimFrota.Formularios.Base
         private void MotoristaBtn_Click(object sender, EventArgs e)
         {
             FechaForm();
-            iniMotorista = new FrmCadIniMotorista();
+            iniMotorista = new FrmCadiniMotorista();
             iniMotorista.TopLevel = false;
             iniMotorista.AutoScroll = true;
             iniMotorista.FormBorderStyle = FormBorderStyle.None;

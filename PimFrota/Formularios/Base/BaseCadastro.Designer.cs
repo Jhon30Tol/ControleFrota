@@ -182,7 +182,7 @@
             ProdutoBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             ProdutoBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ProdutoBtn.ForeColor = System.Drawing.Color.White;
-            ProdutoBtn.Location = new System.Drawing.Point(56, 296);
+            ProdutoBtn.Location = new System.Drawing.Point(57, 296);
             ProdutoBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             ProdutoBtn.MouseState = MaterialSkin.MouseState.HOVER;
             ProdutoBtn.Name = "ProdutoBtn";
@@ -222,7 +222,7 @@
             SeguroBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             SeguroBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             SeguroBtn.ForeColor = System.Drawing.Color.White;
-            SeguroBtn.Location = new System.Drawing.Point(56, 406);
+            SeguroBtn.Location = new System.Drawing.Point(57, 406);
             SeguroBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             SeguroBtn.MouseState = MaterialSkin.MouseState.HOVER;
             SeguroBtn.Name = "SeguroBtn";
@@ -323,7 +323,7 @@
             this.BaseCadastroMenuPnl.Controls.Add(this.usuarioPctbx);
             this.BaseCadastroMenuPnl.Location = new System.Drawing.Point(0, 48);
             this.BaseCadastroMenuPnl.Name = "BaseCadastroMenuPnl";
-            this.BaseCadastroMenuPnl.Size = new System.Drawing.Size(200, 550);
+            this.BaseCadastroMenuPnl.Size = new System.Drawing.Size(200, 561);
             this.BaseCadastroMenuPnl.TabIndex = 25;
             this.BaseCadastroMenuPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -331,7 +331,7 @@
             // 
             this.SeguroPctBx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SeguroPctBx.BackgroundImage")));
             this.SeguroPctBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SeguroPctBx.Location = new System.Drawing.Point(3, 400);
+            this.SeguroPctBx.Location = new System.Drawing.Point(5, 400);
             this.SeguroPctBx.Name = "SeguroPctBx";
             this.SeguroPctBx.Size = new System.Drawing.Size(47, 49);
             this.SeguroPctBx.TabIndex = 39;
@@ -341,7 +341,7 @@
             // 
             this.ServicoPctBx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ServicoPctBx.BackgroundImage")));
             this.ServicoPctBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ServicoPctBx.Location = new System.Drawing.Point(3, 345);
+            this.ServicoPctBx.Location = new System.Drawing.Point(5, 345);
             this.ServicoPctBx.Name = "ServicoPctBx";
             this.ServicoPctBx.Size = new System.Drawing.Size(47, 49);
             this.ServicoPctBx.TabIndex = 37;
@@ -351,7 +351,7 @@
             // 
             this.ProdutoPctBx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProdutoPctBx.BackgroundImage")));
             this.ProdutoPctBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ProdutoPctBx.Location = new System.Drawing.Point(3, 290);
+            this.ProdutoPctBx.Location = new System.Drawing.Point(5, 290);
             this.ProdutoPctBx.Name = "ProdutoPctBx";
             this.ProdutoPctBx.Size = new System.Drawing.Size(47, 49);
             this.ProdutoPctBx.TabIndex = 35;
@@ -361,7 +361,7 @@
             // 
             this.CidadePctBx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CidadePctBx.BackgroundImage")));
             this.CidadePctBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CidadePctBx.Location = new System.Drawing.Point(3, 235);
+            this.CidadePctBx.Location = new System.Drawing.Point(5, 235);
             this.CidadePctBx.Name = "CidadePctBx";
             this.CidadePctBx.Size = new System.Drawing.Size(47, 49);
             this.CidadePctBx.TabIndex = 34;
@@ -371,7 +371,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 180);
+            this.pictureBox2.Location = new System.Drawing.Point(5, 180);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 49);
             this.pictureBox2.TabIndex = 32;
@@ -381,7 +381,7 @@
             // 
             this.ClientePctBx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClientePctBx.BackgroundImage")));
             this.ClientePctBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientePctBx.Location = new System.Drawing.Point(3, 125);
+            this.ClientePctBx.Location = new System.Drawing.Point(5, 125);
             this.ClientePctBx.Name = "ClientePctBx";
             this.ClientePctBx.Size = new System.Drawing.Size(47, 49);
             this.ClientePctBx.TabIndex = 30;
@@ -391,7 +391,7 @@
             // 
             this.MotoristaPctBx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MotoristaPctBx.BackgroundImage")));
             this.MotoristaPctBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MotoristaPctBx.Location = new System.Drawing.Point(3, 70);
+            this.MotoristaPctBx.Location = new System.Drawing.Point(5, 70);
             this.MotoristaPctBx.Name = "MotoristaPctBx";
             this.MotoristaPctBx.Size = new System.Drawing.Size(47, 49);
             this.MotoristaPctBx.TabIndex = 28;
@@ -401,7 +401,7 @@
             // 
             this.usuarioPctbx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("usuarioPctbx.BackgroundImage")));
             this.usuarioPctbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.usuarioPctbx.Location = new System.Drawing.Point(3, 15);
+            this.usuarioPctbx.Location = new System.Drawing.Point(5, 15);
             this.usuarioPctbx.Name = "usuarioPctbx";
             this.usuarioPctbx.Size = new System.Drawing.Size(47, 49);
             this.usuarioPctbx.TabIndex = 26;

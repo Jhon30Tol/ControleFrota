@@ -385,7 +385,7 @@
             this.cidadeLbl.AutoSize = true;
             this.cidadeLbl.BackColor = System.Drawing.Color.Transparent;
             this.cidadeLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cidadeLbl.ForeColor = System.Drawing.Color.GreenYellow;
+            this.cidadeLbl.ForeColor = System.Drawing.Color.YellowGreen;
             this.cidadeLbl.Location = new System.Drawing.Point(461, 14);
             this.cidadeLbl.Name = "cidadeLbl";
             this.cidadeLbl.Size = new System.Drawing.Size(110, 31);

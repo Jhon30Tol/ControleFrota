@@ -164,14 +164,14 @@
             this.BaseViagemMenuPnl.Controls.Add(this.usuarioPctbx);
             this.BaseViagemMenuPnl.Location = new System.Drawing.Point(0, 48);
             this.BaseViagemMenuPnl.Name = "BaseViagemMenuPnl";
-            this.BaseViagemMenuPnl.Size = new System.Drawing.Size(200, 550);
+            this.BaseViagemMenuPnl.Size = new System.Drawing.Size(200, 557);
             this.BaseViagemMenuPnl.TabIndex = 26;
             // 
             // MotoristaPctBx
             // 
             this.MotoristaPctBx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MotoristaPctBx.BackgroundImage")));
             this.MotoristaPctBx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MotoristaPctBx.Location = new System.Drawing.Point(3, 70);
+            this.MotoristaPctBx.Location = new System.Drawing.Point(5, 70);
             this.MotoristaPctBx.Name = "MotoristaPctBx";
             this.MotoristaPctBx.Size = new System.Drawing.Size(47, 49);
             this.MotoristaPctBx.TabIndex = 28;
@@ -181,7 +181,7 @@
             // 
             this.usuarioPctbx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("usuarioPctbx.BackgroundImage")));
             this.usuarioPctbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.usuarioPctbx.Location = new System.Drawing.Point(3, 15);
+            this.usuarioPctbx.Location = new System.Drawing.Point(5, 15);
             this.usuarioPctbx.Name = "usuarioPctbx";
             this.usuarioPctbx.Size = new System.Drawing.Size(47, 49);
             this.usuarioPctbx.TabIndex = 26;

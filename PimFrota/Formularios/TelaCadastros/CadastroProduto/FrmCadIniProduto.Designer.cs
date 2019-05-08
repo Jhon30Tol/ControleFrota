@@ -446,7 +446,7 @@
             // linhaProdutoLbl
             // 
             this.linhaProdutoLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linhaProdutoLbl.Location = new System.Drawing.Point(-1, 56);
+            this.linhaProdutoLbl.Location = new System.Drawing.Point(1, 52);
             this.linhaProdutoLbl.Name = "linhaProdutoLbl";
             this.linhaProdutoLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaProdutoLbl.TabIndex = 30;
@@ -456,8 +456,8 @@
             this.produtoLbl.AutoSize = true;
             this.produtoLbl.BackColor = System.Drawing.Color.Transparent;
             this.produtoLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.produtoLbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.produtoLbl.Location = new System.Drawing.Point(459, 18);
+            this.produtoLbl.ForeColor = System.Drawing.Color.YellowGreen;
+            this.produtoLbl.Location = new System.Drawing.Point(461, 14);
             this.produtoLbl.Name = "produtoLbl";
             this.produtoLbl.Size = new System.Drawing.Size(128, 31);
             this.produtoLbl.TabIndex = 29;

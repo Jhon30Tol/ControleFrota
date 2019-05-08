@@ -502,7 +502,7 @@
             // linhaVeiculoLbl
             // 
             this.linhaVeiculoLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linhaVeiculoLbl.Location = new System.Drawing.Point(-1, 47);
+            this.linhaVeiculoLbl.Location = new System.Drawing.Point(1, 52);
             this.linhaVeiculoLbl.Name = "linhaVeiculoLbl";
             this.linhaVeiculoLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaVeiculoLbl.TabIndex = 30;
@@ -512,8 +512,8 @@
             this.veiculoLbl.AutoSize = true;
             this.veiculoLbl.BackColor = System.Drawing.Color.Transparent;
             this.veiculoLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.veiculoLbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.veiculoLbl.Location = new System.Drawing.Point(459, 9);
+            this.veiculoLbl.ForeColor = System.Drawing.Color.YellowGreen;
+            this.veiculoLbl.Location = new System.Drawing.Point(461, 14);
             this.veiculoLbl.Name = "veiculoLbl";
             this.veiculoLbl.Size = new System.Drawing.Size(118, 31);
             this.veiculoLbl.TabIndex = 29;

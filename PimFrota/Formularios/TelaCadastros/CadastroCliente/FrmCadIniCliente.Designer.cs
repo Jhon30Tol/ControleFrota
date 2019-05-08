@@ -406,7 +406,7 @@
             this.BotaoCadastroPnl.Controls.Add(this.GravarClienteBtn);
             this.BotaoCadastroPnl.Controls.Add(this.PesquisarClienteBtn);
             this.BotaoCadastroPnl.Controls.Add(this.ExcluirClienteBtn);
-            this.BotaoCadastroPnl.Location = new System.Drawing.Point(12, 6);
+            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
             this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
             this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
             this.BotaoCadastroPnl.TabIndex = 26;
@@ -525,7 +525,7 @@
             // linhaClienteLbl
             // 
             this.linhaClienteLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linhaClienteLbl.Location = new System.Drawing.Point(-1, 56);
+            this.linhaClienteLbl.Location = new System.Drawing.Point(1, 52);
             this.linhaClienteLbl.Name = "linhaClienteLbl";
             this.linhaClienteLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaClienteLbl.TabIndex = 101;
@@ -535,8 +535,8 @@
             this.clienteLbl.AutoSize = true;
             this.clienteLbl.BackColor = System.Drawing.Color.Transparent;
             this.clienteLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clienteLbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.clienteLbl.Location = new System.Drawing.Point(459, 18);
+            this.clienteLbl.ForeColor = System.Drawing.Color.YellowGreen;
+            this.clienteLbl.Location = new System.Drawing.Point(461, 14);
             this.clienteLbl.Name = "clienteLbl";
             this.clienteLbl.Size = new System.Drawing.Size(112, 31);
             this.clienteLbl.TabIndex = 100;

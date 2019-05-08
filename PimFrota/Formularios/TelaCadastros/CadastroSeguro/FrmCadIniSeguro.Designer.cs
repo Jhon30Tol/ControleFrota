@@ -500,7 +500,7 @@
             // linhaSeguroLbl
             // 
             this.linhaSeguroLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linhaSeguroLbl.Location = new System.Drawing.Point(-1, 56);
+            this.linhaSeguroLbl.Location = new System.Drawing.Point(1, 52);
             this.linhaSeguroLbl.Name = "linhaSeguroLbl";
             this.linhaSeguroLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaSeguroLbl.TabIndex = 30;
@@ -510,8 +510,8 @@
             this.seguroLbl.AutoSize = true;
             this.seguroLbl.BackColor = System.Drawing.Color.Transparent;
             this.seguroLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seguroLbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.seguroLbl.Location = new System.Drawing.Point(459, 18);
+            this.seguroLbl.ForeColor = System.Drawing.Color.YellowGreen;
+            this.seguroLbl.Location = new System.Drawing.Point(461, 14);
             this.seguroLbl.Name = "seguroLbl";
             this.seguroLbl.Size = new System.Drawing.Size(112, 31);
             this.seguroLbl.TabIndex = 29;

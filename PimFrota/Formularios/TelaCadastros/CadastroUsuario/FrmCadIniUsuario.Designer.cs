@@ -70,7 +70,7 @@
             this.BotaoCadastroPnl.Controls.Add(this.GravarUsuBtn);
             this.BotaoCadastroPnl.Controls.Add(this.PesquisarUsuBtn);
             this.BotaoCadastroPnl.Controls.Add(this.ExcluirUsuBtn);
-            this.BotaoCadastroPnl.Location = new System.Drawing.Point(2, 2);
+            this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
             this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
             this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
             this.BotaoCadastroPnl.TabIndex = 22;
@@ -391,8 +391,8 @@
             this.usuarioLbl.AutoSize = true;
             this.usuarioLbl.BackColor = System.Drawing.Color.Transparent;
             this.usuarioLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioLbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.usuarioLbl.Location = new System.Drawing.Point(459, 18);
+            this.usuarioLbl.ForeColor = System.Drawing.Color.YellowGreen;
+            this.usuarioLbl.Location = new System.Drawing.Point(461, 14);
             this.usuarioLbl.Name = "usuarioLbl";
             this.usuarioLbl.Size = new System.Drawing.Size(126, 31);
             this.usuarioLbl.TabIndex = 27;
@@ -401,7 +401,7 @@
             // linhaUsuarioLbl
             // 
             this.linhaUsuarioLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linhaUsuarioLbl.Location = new System.Drawing.Point(-1, 56);
+            this.linhaUsuarioLbl.Location = new System.Drawing.Point(1, 52);
             this.linhaUsuarioLbl.Name = "linhaUsuarioLbl";
             this.linhaUsuarioLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaUsuarioLbl.TabIndex = 28;

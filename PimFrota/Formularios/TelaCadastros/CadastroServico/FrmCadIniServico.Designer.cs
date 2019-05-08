@@ -383,7 +383,7 @@
             // linhaServicoLbl
             // 
             this.linhaServicoLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linhaServicoLbl.Location = new System.Drawing.Point(-1, 53);
+            this.linhaServicoLbl.Location = new System.Drawing.Point(1, 52);
             this.linhaServicoLbl.Name = "linhaServicoLbl";
             this.linhaServicoLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaServicoLbl.TabIndex = 30;
@@ -393,8 +393,8 @@
             this.servicoLbl.AutoSize = true;
             this.servicoLbl.BackColor = System.Drawing.Color.Transparent;
             this.servicoLbl.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.servicoLbl.ForeColor = System.Drawing.Color.GreenYellow;
-            this.servicoLbl.Location = new System.Drawing.Point(459, 9);
+            this.servicoLbl.ForeColor = System.Drawing.Color.YellowGreen;
+            this.servicoLbl.Location = new System.Drawing.Point(461, 14);
             this.servicoLbl.Name = "servicoLbl";
             this.servicoLbl.Size = new System.Drawing.Size(117, 31);
             this.servicoLbl.TabIndex = 29;
