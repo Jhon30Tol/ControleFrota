@@ -76,8 +76,8 @@
             this.Entrarbtn.Text = "Entrar";
             this.Entrarbtn.UseVisualStyleBackColor = false;
             this.Entrarbtn.Click += new System.EventHandler(this.Entrarbtn_Click);
-            this.Entrarbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Entrarbtn_KeyPress);
-            this.Entrarbtn.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Entrarbtn_KeyUp);
+            this.Entrarbtn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Entrarbtn_Click);
+            this.Entrarbtn.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Entrarbtn_Click);
             // 
             // Senhalbl
             // 
@@ -99,7 +99,7 @@
             this.Senhatxb.PasswordChar = '*';
             this.Senhatxb.Size = new System.Drawing.Size(171, 20);
             this.Senhatxb.TabIndex = 10;
-            this.Senhatxb.TextChanged += new System.EventHandler(this.Senhatxb_TextChanged);
+            this.Senhatxb.TextChanged += new System.EventHandler(this.Senhatxb_KeyDown);
             // 
             // Usuariolbl
             // 

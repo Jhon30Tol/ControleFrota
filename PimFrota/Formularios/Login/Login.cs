@@ -7,13 +7,13 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PimFrota.Formularios.Login 
+namespace PimFrota.Formularios.Login
 {
     public partial class FrmLogin : Form
     {
         Usuario u = new Usuario();
 
-        public  FrmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
             Senhatxb.PasswordChar = '*';
@@ -21,78 +21,62 @@ namespace PimFrota.Formularios.Login
 
         private void autenticaUsuario()
         {
-            
-
-            if (Usuariotxb.Text.Equals("admin") && Senhatxb.Text.Equals("admin"))
-            {
-
-                FrmHome home = new FrmHome();
-                MessageBox.Show("Login efetuado com sucesso!");
-                home.ShowDialog();
-                this.Close();
-            }
-            
-           
-        }
-          
-        private void Entrarbtn_Click(object sender, EventArgs e)
-        {
             DaoLogin daoLogin = new DaoLogin();
             u.Nome = Usuariotxb.Text;
             u.Senha = Senhatxb.Text;
+
             
 
-           if (daoLogin.AutenticarUsuario(u))
+            if (daoLogin.AutenticarUsuario(u))
             {
-               // FrmLogin  frmlog = new FrmLogin();
-                FrmHome home = new FrmHome();
+
+                FrmHome home = new FrmHome();                
                 home.ShowDialog();
                 this.Close();
-               // frmlog.Close();
-
-                
             }
             else
             {
                 MessageBox.Show("Dados Incorretos");
-                this.Close();
-            }           
+                Usuariotxb.Focus();
+                Usuariotxb.Clear();
+                Senhatxb.Clear();
+            }
+
+        }
+
+        private void Entrarbtn_Click(object sender, EventArgs e)
+        {
+            autenticaUsuario();
+            
 
         }
 
         private void Usuariotxb_Validating(object sender, CancelEventArgs e)
         {
-            
+
         }
         private void Senhatxb_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {                
-                autenticaUsuario();
-            }
+
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-        
-        }
-        private void Senhatxb_TextChanged(object sender, EventArgs e)
-        {
+
+
 
         }
-
-        private void Entrarbtn_KeyUp(object sender, KeyEventArgs e)
+        private void Senhatxb_KeyDown(object sender, EventArgs u)
         {
-            if (e.KeyCode == Keys.Enter)
+           /* if (u.KeyCode == Keys.Enter)
             {
-                autenticaUsuario();
-            }
-
+                validaUsuario();
+            }*/
         }
 
-        private void Entrarbtn_KeyPress(object sender, KeyPressEventArgs e)
+        private void Usuariotxb_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
