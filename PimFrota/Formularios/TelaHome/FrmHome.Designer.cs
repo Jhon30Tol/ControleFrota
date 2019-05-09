@@ -32,7 +32,7 @@
             this.EstoqueLbl = new MaterialSkin.Controls.MaterialLabel();
             this.ViagemLbl = new MaterialSkin.Controls.MaterialLabel();
             this.AvisoLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.FinanceiroLbl = new MaterialSkin.Controls.MaterialLabel();
+           // this.FinanceiroLbl = new MaterialSkin.Controls.MaterialLabel();
             this.Cadastroslbl = new MaterialSkin.Controls.MaterialLabel();
             this.EstoqueBtn = new System.Windows.Forms.Button();
             this.ViagemBtn = new System.Windows.Forms.Button();
@@ -81,7 +81,8 @@
             this.AvisoLbl.Text = "Avisos";
             // 
             // FinanceiroLbl
-            // 
+            //
+            /*
             this.FinanceiroLbl.AutoSize = true;
             this.FinanceiroLbl.Depth = 0;
             this.FinanceiroLbl.Font = new System.Drawing.Font("Roboto", 11F);
@@ -92,6 +93,7 @@
             this.FinanceiroLbl.Size = new System.Drawing.Size(79, 19);
             this.FinanceiroLbl.TabIndex = 20;
             this.FinanceiroLbl.Text = "Financeiro";
+            */
             // 
             // Cadastroslbl
             // 
@@ -206,7 +208,7 @@
             this.Controls.Add(this.EstoqueLbl);
             this.Controls.Add(this.ViagemLbl);
             this.Controls.Add(this.AvisoLbl);
-            this.Controls.Add(this.FinanceiroLbl);
+            // this.Controls.Add(this.FinanceiroLbl);
             this.Controls.Add(this.Cadastroslbl);
             this.Controls.Add(this.EstoqueBtn);
             this.Controls.Add(this.ViagemBtn);
@@ -220,7 +222,7 @@
             this.Controls.SetChildIndex(this.ViagemBtn, 0);
             this.Controls.SetChildIndex(this.EstoqueBtn, 0);
             this.Controls.SetChildIndex(this.Cadastroslbl, 0);
-            this.Controls.SetChildIndex(this.FinanceiroLbl, 0);
+            // this.Controls.SetChildIndex(this.FinanceiroLbl, 0);
             this.Controls.SetChildIndex(this.AvisoLbl, 0);
             this.Controls.SetChildIndex(this.ViagemLbl, 0);
             this.Controls.SetChildIndex(this.EstoqueLbl, 0);
@@ -234,7 +236,7 @@
         private MaterialSkin.Controls.MaterialLabel EstoqueLbl;
         private MaterialSkin.Controls.MaterialLabel ViagemLbl;
         private MaterialSkin.Controls.MaterialLabel AvisoLbl;
-        private MaterialSkin.Controls.MaterialLabel FinanceiroLbl;
+        // private MaterialSkin.Controls.MaterialLabel FinanceiroLbl;
         private MaterialSkin.Controls.MaterialLabel Cadastroslbl;
         private System.Windows.Forms.Button EstoqueBtn;
         private System.Windows.Forms.Button ViagemBtn;
