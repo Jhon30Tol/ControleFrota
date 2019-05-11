@@ -32,6 +32,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = false;
         }
+
+        
     }
     }
     

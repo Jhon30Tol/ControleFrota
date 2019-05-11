@@ -93,6 +93,7 @@
             this.CancelarUsuBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.CancelarUsuBtn.Size = new System.Drawing.Size(26, 44);
             this.CancelarUsuBtn.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.CancelarUsuBtn, "Sair");
             this.CancelarUsuBtn.UseVisualStyleBackColor = false;
             this.CancelarUsuBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
@@ -112,6 +113,7 @@
             this.EditarUsuBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.EditarUsuBtn.Size = new System.Drawing.Size(26, 44);
             this.EditarUsuBtn.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.EditarUsuBtn, "Editar");
             this.EditarUsuBtn.UseVisualStyleBackColor = false;
             this.EditarUsuBtn.Click += new System.EventHandler(this.EditarUsuBtn_Click);
             // 
@@ -131,9 +133,9 @@
             this.IncluirUsuBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.IncluirUsuBtn.Size = new System.Drawing.Size(26, 44);
             this.IncluirUsuBtn.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.IncluirUsuBtn, "Incluir Novo Registro");
             this.IncluirUsuBtn.UseVisualStyleBackColor = false;
             this.IncluirUsuBtn.Click += new System.EventHandler(this.IncluirBtn_Click);
-            this.IncluirUsuBtn.MouseHover += new System.EventHandler(this.IncluirUsuBtn_MouseHover);
             // 
             // GravarUsuBtn
             // 
@@ -151,6 +153,7 @@
             this.GravarUsuBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.GravarUsuBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarUsuBtn.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.GravarUsuBtn, "Salvar Dados");
             this.GravarUsuBtn.UseVisualStyleBackColor = false;
             this.GravarUsuBtn.Click += new System.EventHandler(this.GravarUsuBtn_Click);
             // 
@@ -170,6 +173,7 @@
             this.PesquisarUsuBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PesquisarUsuBtn.Size = new System.Drawing.Size(26, 44);
             this.PesquisarUsuBtn.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.PesquisarUsuBtn, "Pesquisar");
             this.PesquisarUsuBtn.UseVisualStyleBackColor = false;
             this.PesquisarUsuBtn.Click += new System.EventHandler(this.PesquisarUsuBtn_Click);
             // 
@@ -189,6 +193,7 @@
             this.ExcluirUsuBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ExcluirUsuBtn.Size = new System.Drawing.Size(26, 44);
             this.ExcluirUsuBtn.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.ExcluirUsuBtn, "Excluir");
             this.ExcluirUsuBtn.UseVisualStyleBackColor = false;
             this.ExcluirUsuBtn.Click += new System.EventHandler(this.ExcluirUsuBtn_Click);
             // 
@@ -411,7 +416,9 @@
             // 
             // toolTip1
             // 
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            this.toolTip1.BackColor = System.Drawing.Color.YellowGreen;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup_1);
             // 
             // FrmCadIniUsuario
             // 
