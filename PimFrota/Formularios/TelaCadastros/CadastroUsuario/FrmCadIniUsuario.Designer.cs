@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniUsuario));
             this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
             this.CancelarUsuBtn = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             this.NomeUsuarioLbl = new System.Windows.Forms.Label();
             this.usuarioLbl = new System.Windows.Forms.Label();
             this.linhaUsuarioLbl = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadUsuIniPnl.SuspendLayout();
             this.usuarioPesquisaPnl.SuspendLayout();
@@ -131,6 +133,7 @@
             this.IncluirUsuBtn.TabIndex = 15;
             this.IncluirUsuBtn.UseVisualStyleBackColor = false;
             this.IncluirUsuBtn.Click += new System.EventHandler(this.IncluirBtn_Click);
+            this.IncluirUsuBtn.MouseHover += new System.EventHandler(this.IncluirUsuBtn_MouseHover);
             // 
             // GravarUsuBtn
             // 
@@ -406,6 +409,10 @@
             this.linhaUsuarioLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaUsuarioLbl.TabIndex = 28;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // FrmCadIniUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,5 +465,6 @@
         private System.Windows.Forms.DataGridView dataGridViewUsuario;
         private System.Windows.Forms.Label usuarioLbl;
         private System.Windows.Forms.Label linhaUsuarioLbl;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
