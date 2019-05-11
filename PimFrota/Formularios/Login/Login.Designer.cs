@@ -66,6 +66,7 @@
             // 
             this.Entrarbtn.BackColor = System.Drawing.Color.OrangeRed;
             this.Entrarbtn.FlatAppearance.BorderSize = 0;
+            this.Entrarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Entrarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Entrarbtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Entrarbtn.Location = new System.Drawing.Point(189, 163);

@@ -19,5 +19,10 @@ namespace PimFrota.Formularios.Mensagens
         {
             this.Close();
         }
+
+        private void Fecharbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

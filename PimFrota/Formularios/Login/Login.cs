@@ -30,9 +30,11 @@ namespace PimFrota.Formularios.Login
             if (daoLogin.AutenticarUsuario(u))
             {
 
-                FrmHome home = new FrmHome();                
+                this.Hide();
+                FrmHome home = new FrmHome();
+                home.Closed += (s, args) => this.Close();
                 home.ShowDialog();
-                this.Close();
+
             }
             else
             {

@@ -63,17 +63,18 @@
             this.Fecharbtn.Size = new System.Drawing.Size(19, 15);
             this.Fecharbtn.TabIndex = 0;
             this.Fecharbtn.UseVisualStyleBackColor = false;
+            this.Fecharbtn.Click += new System.EventHandler(this.Fecharbtn_Click);
             // 
             // MsgErroLbl
             // 
             this.MsgErroLbl.AutoSize = true;
             this.MsgErroLbl.Depth = 0;
-            this.MsgErroLbl.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgErroLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.MsgErroLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.MsgErroLbl.Location = new System.Drawing.Point(43, 37);
             this.MsgErroLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.MsgErroLbl.Name = "MsgErroLbl";
-            this.MsgErroLbl.Size = new System.Drawing.Size(217, 18);
+            this.MsgErroLbl.Size = new System.Drawing.Size(166, 19);
             this.MsgErroLbl.TabIndex = 29;
             this.MsgErroLbl.Text = "Cadastro não efetuado.";
             // 

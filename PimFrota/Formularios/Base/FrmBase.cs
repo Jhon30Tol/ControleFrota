@@ -1,4 +1,5 @@
 ﻿using PimFrota.Formularios.Login;
+using PimFrota.Formularios.Mensagens;
 using PimServices.Model;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,9 @@ namespace PimFrota.Formularios.Base
 
         private void Fecharbtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FrmSairSistema sairSistema = new FrmSairSistema();
+            sairSistema.ShowDialog();
+            
         }
 
         private void MinimizeBtn_Click(object sender, EventArgs e)
