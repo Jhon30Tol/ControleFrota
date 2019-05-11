@@ -152,10 +152,19 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void PesquisarBtn_Click(object sender, EventArgs e)
         {
-            string nome = PesquisarTbx.Text;
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
+            /*
+             string nome = PesquisarTbx.Text;
+             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+             MySqlCommand cmd = new MySqlCommand();
+             conn.Open();
+
+              */
+
+
+            dataGridViewUsuario.DataSource = daoUsuario.BuscarTodosUsuarios(u);
+
+            /*
+            
 
             if (AtivoCkbx.Checked == true)
             {
@@ -172,7 +181,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 pesqAtivo.Fill(pesq3);
                 dataGridViewUsuario.DataSource = pesq3;
             }
-
+            */
         }
 
         private void dataGridViewUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)

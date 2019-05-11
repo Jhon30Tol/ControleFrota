@@ -12,17 +12,17 @@ using System.Data;
 namespace PimServices.RepositorySql
 {
 
-    public class DaoUsuario: ConexaoBancoMySQL
+    public class DaoUsuario : ConexaoBancoMySQL
     {
-  
-       
+
+
 
         public void SalvarUsuario(Usuario u)
         {
-      
+
             try
             {
-                
+
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
                 String insertDados = "INSERT INTO cadastro_usuario(nome_usuario, senha_usuario, ativo)" +
@@ -32,14 +32,14 @@ namespace PimServices.RepositorySql
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", u.Nome));
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("senha", u.Senha));
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("ativo", u.Ativo));
-      
+
                 cmd.Prepare();
-               
+
                 cmd.ExecuteNonQuery();
-                
+
                 conn.Close();
 
-                MessageBox.Show("Usuario salvo com sucesso!");   
+                MessageBox.Show("Usuario salvo com sucesso!");
             }
             catch (Exception ex)
             {
@@ -105,6 +105,42 @@ namespace PimServices.RepositorySql
             }
         }
 
+        public List<Usuario> BuscarTodosUsuarios(Usuario u)
+        {
+            List<Usuario> todosUsuarios = new List<Usuario>();
+            MySqlDataReader reader;
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            MySqlCommand cmd = new MySqlCommand();
+            conn.Open();
+            // MySqlDataAdapter pesq = new MySqlDataAdapter("select id_usuario, nome_usuario, ativo from cadastro_usuario ", conn);
+
+            cmd.CommandText = "select id_usuario, nome_usuario, ativo from cadastro_usuario ";
+
+            try
+            {
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Usuario novo = new Usuario();
+
+                    novo.Id = (int)reader["@id"];
+                    novo.Nome = reader["@nome"].ToString();
+                    todosUsuarios.Add(novo);
+
+
+                }
+
+                conn.Close();
+                //reader.Close();
+                return todosUsuarios;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 
 }
