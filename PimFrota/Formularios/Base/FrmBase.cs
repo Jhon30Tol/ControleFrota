@@ -21,23 +21,11 @@ namespace PimFrota.Formularios.Base
         public FrmBase()
         {
             InitializeComponent();
-            UsuarioLogado();
+          
 
         }
 
-        public void UsuarioLogado()
-        {
-            
-            FrmLogin frmlogin = (FrmLogin)Application.OpenForms["FrmLogin"];
-
-            
-            
-            usuarioLogadoLbl.Text = frmlogin.Usuariotxb.Text;
-        //    usuarioLogadoLbl.SelectionFont = new Font("Roboto", 30, FontStyle.Bold);
-
-
-
-        }
+        
 
         private void Fecharbtn_Click(object sender, EventArgs e)
         {

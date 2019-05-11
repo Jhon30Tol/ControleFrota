@@ -27,5 +27,10 @@ namespace PimFrota.Formularios.TelaHome
             FrmBaseViagem viagem = new FrmBaseViagem();
             viagem.ShowDialog();
         }
+
+        private void FinanceiroBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

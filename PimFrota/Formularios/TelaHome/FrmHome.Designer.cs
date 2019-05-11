@@ -32,7 +32,6 @@
             this.EstoqueLbl = new MaterialSkin.Controls.MaterialLabel();
             this.ViagemLbl = new MaterialSkin.Controls.MaterialLabel();
             this.AvisoLbl = new MaterialSkin.Controls.MaterialLabel();
-           // this.FinanceiroLbl = new MaterialSkin.Controls.MaterialLabel();
             this.Cadastroslbl = new MaterialSkin.Controls.MaterialLabel();
             this.EstoqueBtn = new System.Windows.Forms.Button();
             this.ViagemBtn = new System.Windows.Forms.Button();
@@ -79,21 +78,6 @@
             this.AvisoLbl.Size = new System.Drawing.Size(55, 19);
             this.AvisoLbl.TabIndex = 21;
             this.AvisoLbl.Text = "Avisos";
-            // 
-            // FinanceiroLbl
-            //
-            /*
-            this.FinanceiroLbl.AutoSize = true;
-            this.FinanceiroLbl.Depth = 0;
-            this.FinanceiroLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.FinanceiroLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.FinanceiroLbl.Location = new System.Drawing.Point(207, 263);
-            this.FinanceiroLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.FinanceiroLbl.Name = "FinanceiroLbl";
-            this.FinanceiroLbl.Size = new System.Drawing.Size(79, 19);
-            this.FinanceiroLbl.TabIndex = 20;
-            this.FinanceiroLbl.Text = "Financeiro";
-            */
             // 
             // Cadastroslbl
             // 
@@ -180,6 +164,7 @@
             this.FinanceiroBtn.Size = new System.Drawing.Size(76, 101);
             this.FinanceiroBtn.TabIndex = 15;
             this.FinanceiroBtn.UseVisualStyleBackColor = false;
+            this.FinanceiroBtn.Click += new System.EventHandler(this.FinanceiroBtn_Click);
             // 
             // CadastroBtn
             // 
@@ -208,7 +193,6 @@
             this.Controls.Add(this.EstoqueLbl);
             this.Controls.Add(this.ViagemLbl);
             this.Controls.Add(this.AvisoLbl);
-            // this.Controls.Add(this.FinanceiroLbl);
             this.Controls.Add(this.Cadastroslbl);
             this.Controls.Add(this.EstoqueBtn);
             this.Controls.Add(this.ViagemBtn);
@@ -222,7 +206,6 @@
             this.Controls.SetChildIndex(this.ViagemBtn, 0);
             this.Controls.SetChildIndex(this.EstoqueBtn, 0);
             this.Controls.SetChildIndex(this.Cadastroslbl, 0);
-            // this.Controls.SetChildIndex(this.FinanceiroLbl, 0);
             this.Controls.SetChildIndex(this.AvisoLbl, 0);
             this.Controls.SetChildIndex(this.ViagemLbl, 0);
             this.Controls.SetChildIndex(this.EstoqueLbl, 0);
