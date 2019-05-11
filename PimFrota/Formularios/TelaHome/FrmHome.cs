@@ -32,5 +32,10 @@ namespace PimFrota.Formularios.TelaHome
         {
 
         }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

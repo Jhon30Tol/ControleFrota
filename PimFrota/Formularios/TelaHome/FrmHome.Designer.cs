@@ -38,6 +38,7 @@
             this.AvisoBtn = new System.Windows.Forms.Button();
             this.FinanceiroBtn = new System.Windows.Forms.Button();
             this.CadastroBtn = new System.Windows.Forms.Button();
+            this.FinanceiroLbl = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // EstoqueLbl
@@ -185,11 +186,26 @@
             this.CadastroBtn.UseVisualStyleBackColor = false;
             this.CadastroBtn.Click += new System.EventHandler(this.CadastroBtn_Click);
             // 
+            // FinanceiroLbl
+            // 
+            this.FinanceiroLbl.AutoSize = true;
+            this.FinanceiroLbl.Depth = 0;
+            this.FinanceiroLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.FinanceiroLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.FinanceiroLbl.Location = new System.Drawing.Point(207, 263);
+            this.FinanceiroLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.FinanceiroLbl.Name = "FinanceiroLbl";
+            this.FinanceiroLbl.Size = new System.Drawing.Size(79, 19);
+            this.FinanceiroLbl.TabIndex = 24;
+            this.FinanceiroLbl.Text = "Financeiro";
+            this.FinanceiroLbl.Click += new System.EventHandler(this.materialLabel2_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.FinanceiroLbl);
             this.Controls.Add(this.EstoqueLbl);
             this.Controls.Add(this.ViagemLbl);
             this.Controls.Add(this.AvisoLbl);
@@ -209,6 +225,7 @@
             this.Controls.SetChildIndex(this.AvisoLbl, 0);
             this.Controls.SetChildIndex(this.ViagemLbl, 0);
             this.Controls.SetChildIndex(this.EstoqueLbl, 0);
+            this.Controls.SetChildIndex(this.FinanceiroLbl, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,12 +236,12 @@
         private MaterialSkin.Controls.MaterialLabel EstoqueLbl;
         private MaterialSkin.Controls.MaterialLabel ViagemLbl;
         private MaterialSkin.Controls.MaterialLabel AvisoLbl;
-        // private MaterialSkin.Controls.MaterialLabel FinanceiroLbl;
         private MaterialSkin.Controls.MaterialLabel Cadastroslbl;
         private System.Windows.Forms.Button EstoqueBtn;
         private System.Windows.Forms.Button ViagemBtn;
         private System.Windows.Forms.Button AvisoBtn;
         private System.Windows.Forms.Button FinanceiroBtn;
         private System.Windows.Forms.Button CadastroBtn;
+        private MaterialSkin.Controls.MaterialLabel FinanceiroLbl;
     }
 }

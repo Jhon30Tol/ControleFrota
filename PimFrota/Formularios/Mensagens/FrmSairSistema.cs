@@ -40,5 +40,15 @@ namespace PimFrota.Formularios.Mensagens
             this.Close();
 
         }
+
+        private void Fecharbtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void NaoSairSistemaBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
