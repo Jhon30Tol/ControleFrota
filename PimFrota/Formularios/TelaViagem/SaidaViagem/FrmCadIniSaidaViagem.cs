@@ -315,10 +315,10 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-          //  DaoViagem daoViagem = new DaoViagem();
-            //dataGridViewSaiViagem.DataSource = daoViagem.PesquisarTodasViagens(v);
+            DaoViagem daoViagem = new DaoViagem();
+            dataGridViewSaiViagem.DataSource = daoViagem.PesquisarTodasViagens(v);
 
-           
+           /*
             
             string nome = pesquisaSaidaViagemTbx.Text;
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
@@ -408,7 +408,7 @@ namespace PimFrota.Formularios.TelaViagem
                 pesq1.Fill(pesq3);
                 dataGridViewSaiViagem.DataSource = pesq3;
             }
-            
+            */
         }
 
         private void pesquTodosCkbx_CheckedChanged(object sender, EventArgs e)

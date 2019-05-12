@@ -162,7 +162,7 @@ namespace PimServices.RepositorySql
             }
 
         }
-        /*
+        
              public List<Viagem> PesquisarTodasViagens(Viagem v)
              {
                 List<Viagem> pesquisarTodasViagens = new List<Viagem>();
@@ -202,7 +202,7 @@ namespace PimServices.RepositorySql
                     {
                        Viagem novo = new Viagem();
 
-                        novo.Id_viagem = (int)reader["v.Id_viagem"];
+                        novo.Id_viagem = (int)reader["Id_viagem"];
                       //  novo.Id_motorista = (int)reader["Id_motorista"];
                         //novo.Id_veiculo = (int)reader["Id_veiculo"];
                         pesquisarTodasViagens.Add(novo);
@@ -248,9 +248,9 @@ namespace PimServices.RepositorySql
             pesq1.Fill(pesq3);
             dataGridViewSaiViagem.DataSource = pesq3;
             
-
+    */
         }
-        */
+        
 
     }
 }
