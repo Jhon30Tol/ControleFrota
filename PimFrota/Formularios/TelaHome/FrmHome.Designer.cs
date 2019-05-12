@@ -216,6 +216,7 @@
             this.Controls.Add(this.FinanceiroBtn);
             this.Controls.Add(this.CadastroBtn);
             this.Name = "FrmHome";
+            this.Load += new System.EventHandler(this.FrmHome_Load);
             this.Controls.SetChildIndex(this.CadastroBtn, 0);
             this.Controls.SetChildIndex(this.FinanceiroBtn, 0);
             this.Controls.SetChildIndex(this.AvisoBtn, 0);

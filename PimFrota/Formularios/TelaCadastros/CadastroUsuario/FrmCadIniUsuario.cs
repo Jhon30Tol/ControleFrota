@@ -102,6 +102,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                     }
                     dao.SalvarUsuario(u);
 
+                    FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
+
+                    msgCadastroSucesso.ShowDialog();
+
                 }
                 else
                 {
@@ -152,36 +156,23 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void PesquisarBtn_Click(object sender, EventArgs e)
         {
-            /*
-             string nome = PesquisarTbx.Text;
-             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-             MySqlCommand cmd = new MySqlCommand();
-             conn.Open();
-
-              */
-
-
             dataGridViewUsuario.DataSource = daoUsuario.BuscarTodosUsuarios(u);
-
-            /*
-            
+            string nome = PesquisarTbx.Text;
+        
 
             if (AtivoCkbx.Checked == true)
             {
-
-                MySqlDataAdapter pesqAtivo = new MySqlDataAdapter("select id_usuario, nome_usuario, ativo from cadastro_usuario where ativo = 's' and nome_usuario like '%" + @nome + "%'", conn);
-                DataTable pesq2 = new DataTable();
-                pesqAtivo.Fill(pesq2);
-                dataGridViewUsuario.DataSource = pesq2;
+                DaoUsuario daoUsuario = new DaoUsuario();
+                dataGridViewUsuario.DataSource = daoUsuario.BuscarPorNomeAtivo(nome);
+                
             }
             else
             {
-                MySqlDataAdapter pesqAtivo = new MySqlDataAdapter("select id_usuario, nome_usuario, ativo from cadastro_usuario where ativo = 'n' and nome_usuario like '%" + @nome + "%'", conn);
-                DataTable pesq3 = new DataTable();
-                pesqAtivo.Fill(pesq3);
-                dataGridViewUsuario.DataSource = pesq3;
+                DaoUsuario daoUsuario = new DaoUsuario();
+                dataGridViewUsuario.DataSource = daoUsuario.BuscarPorNomeInativo(nome);
+               
             }
-            */
+            
         }
 
         private void dataGridViewUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -218,19 +209,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             if (TodosCkbx.Checked == true)
             {
 
-                string nome = PesquisarTbx.Text;
-                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-                MySqlCommand cmd = new MySqlCommand();
-                conn.Open();
+                dataGridViewUsuario.DataSource = daoUsuario.BuscarTodosUsuarios(u);
                 AtivoCkbx.Enabled = false;
                 PesquisarTbx.Text = "";
-
                 PesquisarTbx.Enabled = false;
-                MySqlDataAdapter pesq = new MySqlDataAdapter("select id_usuario, nome_usuario, ativo from cadastro_usuario ", conn);
-                cmd.Parameters.AddWithValue("@nome", nome);
-                DataTable pesq1 = new DataTable();
-                pesq.Fill(pesq1);
-                dataGridViewUsuario.DataSource = pesq1;
+ 
             }
             else
             {

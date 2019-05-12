@@ -37,5 +37,10 @@ namespace PimFrota.Formularios.TelaHome
         {
 
         }
+
+        private void FrmHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

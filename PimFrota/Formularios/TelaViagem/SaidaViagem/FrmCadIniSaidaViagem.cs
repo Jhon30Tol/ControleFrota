@@ -97,23 +97,47 @@ namespace PimFrota.Formularios.TelaViagem
         private void GravarViagemBtn_Click(object sender, EventArgs e)
         {
 
-            DaoViagem dao = new DaoViagem();
-            v.DtaSaida = Convert.ToDateTime(DtaSaidaDtm.Text);
-            v.KmSaida = Convert.ToInt32(KmSaidaTbx.Text);
-            v.passageiro = passageiroTbx.Text;
 
-            dao.SalvarViagem(v);
+            if
+                  (modoEdit == false)
+            {
+                DaoViagem dao = new DaoViagem();
+                v.DtaSaida = Convert.ToDateTime(DtaSaidaDtm.Text);
+                v.KmSaida = Convert.ToInt32(KmSaidaTbx.Text);
+                v.passageiro = passageiroTbx.Text;
 
-            CodSaidaViagTbx.Text = " ";
-            MotoristaSaidaViagTbx.Text = " ";
-            VeiculoSaidaViagTbx.Text = " ";
-            CidadeSaidaViagTbx.Text = " ";
-            CidadeDestSaidaViagTbx.Text = " ";
-            DtaSaidaDtm.Text.Trim();
-            KmSaidaTbx.Text = " ";
-            passageiroTbx.Text = " ";
+                dao.SalvarViagem(v);
 
-            iniarIncluir();
+                CodSaidaViagTbx.Text = " ";
+                MotoristaSaidaViagTbx.Text = " ";
+                VeiculoSaidaViagTbx.Text = " ";
+                CidadeSaidaViagTbx.Text = " ";
+                CidadeDestSaidaViagTbx.Text = " ";
+                DtaSaidaDtm.Text.Trim();
+                KmSaidaTbx.Text = " ";
+                passageiroTbx.Text = " ";
+
+                iniarIncluir();
+
+            }
+            else
+            {
+               // Viagem v = new Viagem();
+                DaoViagem dao = new DaoViagem();
+
+                MessageBox.Show(Convert.ToString(v.Id_motorista));
+                v.KmSaida = Convert.ToInt32(KmSaidaTbx.Text);
+                v.passageiro = passageiroTbx.Text;
+                v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
+                v.DtaSaida = Convert.ToDateTime(DtaSaidaDtm.Text);
+                v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
+                MessageBox.Show(Convert.ToString(v.KmRetorno));
+                
+                dao.EditarViagem(v);
+
+
+
+            }
 
         }
 
@@ -291,10 +315,17 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+          //  DaoViagem daoViagem = new DaoViagem();
+            //dataGridViewSaiViagem.DataSource = daoViagem.PesquisarTodasViagens(v);
+
+           
+            
             string nome = pesquisaSaidaViagemTbx.Text;
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             MySqlCommand cmd = new MySqlCommand();
             conn.Open();
+
+
 
 
 
@@ -377,6 +408,7 @@ namespace PimFrota.Formularios.TelaViagem
                 pesq1.Fill(pesq3);
                 dataGridViewSaiViagem.DataSource = pesq3;
             }
+            
         }
 
         private void pesquTodosCkbx_CheckedChanged(object sender, EventArgs e)
@@ -481,8 +513,14 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
 
 
             v.Id_viagem = Convert.ToInt32(CodSaidaViagTbx.Text);
+            //  v.Id_viagem = Convert.ToInt32(MotoristaSaidaViagTbx.Text);
+            IncluirViagemBtn.Enabled = false;
+            ExcluirViagemBtn.Enabled = true;
+            
+
 
             saidaViagemPesquisaPnl.Visible = false;
+            EditarViagemBtn.Enabled = true;
         }
 
         private void saidaViagemPesquisaPnl_Paint(object sender, PaintEventArgs e)
@@ -503,6 +541,36 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
         private void button1_Click_2(object sender, EventArgs e)
         {
             saidaViagemPesquisaPnl.Location = new Point(0, 0);
+        }
+
+        private void EditarViagemBtn_Click(object sender, EventArgs e)
+        {
+            modoEdit = true;
+            MotoristaSaidaViagTbx.Enabled = false;
+            VeiculoSaidaViagTbx.Enabled = false;
+            CidadeSaidaViagTbx.Enabled = false;
+            CidadeDestSaidaViagTbx.Enabled = false;
+            DtaSaidaDtm.Enabled = true;
+            DtaRetornoDtm.Enabled = true;
+            KmSaidaTbx.Enabled = true;
+            passageiroTbx.Enabled = true;
+            kmRetornoTbx.Enabled = true;
+
+            PesquisarMotoristaBtn.Enabled = true;
+            PesquisarBtn.Enabled = true;
+            pesquisaCidadeSaidaBtn.Enabled = true;
+            pesquisaCidadeDestinoBtn.Enabled = true;
+
+            EditarViagemBtn.Enabled = false;
+            ExcluirViagemBtn.Enabled = false;
+
+        }
+
+        private void ExcluirViagemBtn_Click(object sender, EventArgs e)
+        {
+            DaoViagem dao = new DaoViagem();
+            dao.ExcluirViagem(v);
+            this.Close();
         }
     }
 }

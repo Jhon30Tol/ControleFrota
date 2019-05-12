@@ -38,7 +38,6 @@ namespace PimServices.RepositorySql
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
-
                 MessageBox.Show("Usuario salvo com sucesso!");
             }
             catch (Exception ex)
@@ -108,32 +107,31 @@ namespace PimServices.RepositorySql
         public List<Usuario> BuscarTodosUsuarios(Usuario u)
         {
             List<Usuario> todosUsuarios = new List<Usuario>();
-            MySqlDataReader reader;
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
+            conn = new MySqlConnection(connectionString);
+            String selecionaTodos = "select id_usuario, nome_usuario, ativo from cadastro_usuario ";
             conn.Open();
-            // MySqlDataAdapter pesq = new MySqlDataAdapter("select id_usuario, nome_usuario, ativo from cadastro_usuario ", conn);
-
-            cmd.CommandText = "select id_usuario, nome_usuario, ativo from cadastro_usuario ";
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
 
             try
             {
 
-                reader = cmd.ExecuteReader();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
 
                 while (reader.Read())
                 {
                     Usuario novo = new Usuario();
 
-                    novo.Id = (int)reader["@id"];
-                    novo.Nome = reader["@nome"].ToString();
+                    novo.Id = (int)reader["id_usuario"];
+                    novo.Nome = reader["nome_usuario"].ToString();
+                    novo.Ativo = reader["ativo"].ToString();
                     todosUsuarios.Add(novo);
 
 
                 }
 
                 conn.Close();
-                //reader.Close();
                 return todosUsuarios;
             }
             finally
@@ -141,7 +139,84 @@ namespace PimServices.RepositorySql
                 conn.Close();
             }
         }
-    }
 
+        public List<Usuario> BuscarPorNomeAtivo(String nome)
+        {
+            List<Usuario> BuscarPorNomeAtivo = new List<Usuario>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+            String selecionaPorNome = "select id_usuario, nome_usuario, ativo from cadastro_usuario where ativo = 's' and nome_usuario like '%" + @nome + "%'";
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaPorNome, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Usuario novo = new Usuario();
+
+                    novo.Id = (int)reader["id_usuario"];
+                    novo.Nome = reader["nome_usuario"].ToString();
+                    novo.Ativo = reader["ativo"].ToString();
+                    BuscarPorNomeAtivo.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return BuscarPorNomeAtivo;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        public List<Usuario> BuscarPorNomeInativo(String nome)
+        {
+            List<Usuario> BuscarPorNomeInativo = new List<Usuario>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+            String selecionaPorNome = "select id_usuario, nome_usuario, ativo from cadastro_usuario where ativo = 'n' and nome_usuario like '%" + @nome + "%'";
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaPorNome, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Usuario novo = new Usuario();
+
+                    novo.Id = (int)reader["id_usuario"];
+                    novo.Nome = reader["nome_usuario"].ToString();
+                    novo.Ativo = reader["ativo"].ToString();
+                    BuscarPorNomeInativo.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return BuscarPorNomeInativo;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+    }
 }
 

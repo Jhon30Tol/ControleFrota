@@ -130,7 +130,7 @@
             this.saidaViagemPesquisaPnl.Controls.Add(this.pesquisaSaidaViagemTbx);
             this.saidaViagemPesquisaPnl.Location = new System.Drawing.Point(4, 11);
             this.saidaViagemPesquisaPnl.Name = "saidaViagemPesquisaPnl";
-            this.saidaViagemPesquisaPnl.Size = new System.Drawing.Size(601, 433);
+            this.saidaViagemPesquisaPnl.Size = new System.Drawing.Size(584, 433);
             this.saidaViagemPesquisaPnl.TabIndex = 128;
             this.saidaViagemPesquisaPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.saidaViagemPesquisaPnl_Paint);
             // 
@@ -177,7 +177,7 @@
             this.dataGridViewSaiViagem.Location = new System.Drawing.Point(6, 69);
             this.dataGridViewSaiViagem.Name = "dataGridViewSaiViagem";
             this.dataGridViewSaiViagem.ReadOnly = true;
-            this.dataGridViewSaiViagem.Size = new System.Drawing.Size(582, 352);
+            this.dataGridViewSaiViagem.Size = new System.Drawing.Size(564, 352);
             this.dataGridViewSaiViagem.TabIndex = 17;
             this.dataGridViewSaiViagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRetViagem_CellContentClick);
             // 
@@ -862,6 +862,7 @@
             this.EditarViagemBtn.Size = new System.Drawing.Size(26, 44);
             this.EditarViagemBtn.TabIndex = 20;
             this.EditarViagemBtn.UseVisualStyleBackColor = false;
+            this.EditarViagemBtn.Click += new System.EventHandler(this.EditarViagemBtn_Click);
             // 
             // IncluirViagemBtn
             // 
@@ -937,6 +938,7 @@
             this.ExcluirViagemBtn.Size = new System.Drawing.Size(26, 44);
             this.ExcluirViagemBtn.TabIndex = 17;
             this.ExcluirViagemBtn.UseVisualStyleBackColor = false;
+            this.ExcluirViagemBtn.Click += new System.EventHandler(this.ExcluirViagemBtn_Click);
             // 
             // FrmCadIniSaidaViagem
             // 
