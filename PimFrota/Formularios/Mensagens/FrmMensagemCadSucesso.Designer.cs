@@ -44,7 +44,7 @@
             this.MensagemOkBtn.FlatAppearance.BorderSize = 0;
             this.MensagemOkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MensagemOkBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemOkBtn.Location = new System.Drawing.Point(117, 87);
+            this.MensagemOkBtn.Location = new System.Drawing.Point(118, 83);
             this.MensagemOkBtn.Name = "MensagemOkBtn";
             this.MensagemOkBtn.Size = new System.Drawing.Size(75, 23);
             this.MensagemOkBtn.TabIndex = 25;
