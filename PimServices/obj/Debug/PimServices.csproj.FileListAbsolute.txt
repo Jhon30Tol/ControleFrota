@@ -111,3 +111,10 @@ F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Mi
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.pdb
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.dll
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\DocsBr.dll
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.pdb

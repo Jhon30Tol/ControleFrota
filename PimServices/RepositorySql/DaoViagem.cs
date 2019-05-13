@@ -176,6 +176,7 @@ namespace PimServices.RepositorySql
                                         "c.nome_cidade as Cidade_Saida, " +
                                         "b.nome_cidade as Cidade_Destino, " +
                                         "date(v.dta_saida) as Data_Saida, " +
+                                        "DATE(v.dta_retorno) AS data_Retorno," +
                                         "v.km_cidade_origem as Km_saida, " +
                                         "v.passageiro_viagem as Passageiro, " +
                                         "v.km_cidade_retorno as Km_retorno " +
@@ -202,10 +203,20 @@ namespace PimServices.RepositorySql
                     {
                        Viagem novo = new Viagem();
 
-                        novo.Id_viagem = (int)reader["Id_viagem"];
-                      //  novo.Id_motorista = (int)reader["Id_motorista"];
-                        //novo.Id_veiculo = (int)reader["Id_veiculo"];
-                        pesquisarTodasViagens.Add(novo);
+
+                    novo.Id_viagem = (int)reader["Codigo_Viagem"];
+                    novo.Id_motorista_pesquisa = Convert.ToString(reader["Nome_Motorista"]);
+                    novo.Id_veiculo_pesquisa = Convert.ToString(reader["Modelo_Veiculo"]);
+                    novo.Id_cidadeSaida_pesquisa = Convert.ToString(reader["Cidade_Saida"]);
+                    novo.Id_cidadeDestino_pesquisa = Convert.ToString(reader["Cidade_Destino"]);
+                    novo.DtaSaida = Convert.ToDateTime(reader["Data_Saida"]);
+                    novo.KmSaida = (int)reader["Km_saida"];
+                    novo.DtaRetorno = Convert.ToDateTime(reader["Data_Retorno"]);
+                    novo.passageiro = Convert.ToString(reader["Passageiro"]);
+                    novo.KmRetorno = (int)reader["Km_retorno"];
+
+
+                    pesquisarTodasViagens.Add(novo);
 
 
                     }

@@ -507,9 +507,9 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             CidadeSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[3].Value.ToString();
             CidadeDestSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[4].Value.ToString();
             DtaSaidaDtm.Text = dataGridViewSaiViagem.CurrentRow.Cells[5].Value.ToString();
-            KmSaidaTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[6].Value.ToString();
+          //  KmSaidaTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[6].Value.ToString();
             passageiroTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[7].Value.ToString();
-            kmRetornoTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[8].Value.ToString();
+           // kmRetornoTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[8].Value.ToString();
 
 
             v.Id_viagem = Convert.ToInt32(CodSaidaViagTbx.Text);

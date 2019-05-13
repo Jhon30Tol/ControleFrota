@@ -13,11 +13,19 @@ namespace PimServices.Model
 
         public int Id_motorista { get; set; }
 
+        public String Id_motorista_pesquisa { get; set; }
+
         public int Id_veiculo { get; set; }
+
+        public String Id_veiculo_pesquisa { get; set; }
 
         public int Id_cidadeSaida { get; set; }
 
+        public String Id_cidadeSaida_pesquisa { get; set; }
+
         public int Id_cidadeDestino { get; set; }
+
+        public String Id_cidadeDestino_pesquisa { get; set; }
 
         public DateTime DtaSaida { get; set; }
 

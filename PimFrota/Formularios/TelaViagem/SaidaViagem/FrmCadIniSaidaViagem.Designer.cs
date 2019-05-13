@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniSaidaViagem));
             this.CadViagemIniPnl = new System.Windows.Forms.Panel();
             this.saidaViagemPesquisaPnl = new System.Windows.Forms.Panel();
             this.pesqVeiculoCbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.pesqMotoristaCbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.dataGridViewSaiViagem = new System.Windows.Forms.DataGridView();
+            this.syslogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.syslogDataSet = new PimFrota.syslogDataSet();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.pesquisaSaidaViagemBtn = new System.Windows.Forms.Button();
@@ -92,9 +95,20 @@
             this.GravarViagemBtn = new System.Windows.Forms.Button();
             this.PesquisarViagemBtn = new System.Windows.Forms.Button();
             this.ExcluirViagemBtn = new System.Windows.Forms.Button();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CadViagemIniPnl.SuspendLayout();
             this.saidaViagemPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaiViagem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).BeginInit();
             this.motoristaPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).BeginInit();
             this.cidadePesquisarPnl.SuspendLayout();
@@ -130,7 +144,7 @@
             this.saidaViagemPesquisaPnl.Controls.Add(this.pesquisaSaidaViagemTbx);
             this.saidaViagemPesquisaPnl.Location = new System.Drawing.Point(4, 11);
             this.saidaViagemPesquisaPnl.Name = "saidaViagemPesquisaPnl";
-            this.saidaViagemPesquisaPnl.Size = new System.Drawing.Size(584, 433);
+            this.saidaViagemPesquisaPnl.Size = new System.Drawing.Size(587, 433);
             this.saidaViagemPesquisaPnl.TabIndex = 128;
             this.saidaViagemPesquisaPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.saidaViagemPesquisaPnl_Paint);
             // 
@@ -172,14 +186,36 @@
             // 
             this.dataGridViewSaiViagem.AllowUserToAddRows = false;
             this.dataGridViewSaiViagem.AllowUserToDeleteRows = false;
+            this.dataGridViewSaiViagem.AutoGenerateColumns = false;
             this.dataGridViewSaiViagem.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridViewSaiViagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSaiViagem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column7,
+            this.Column6,
+            this.Column8});
+            this.dataGridViewSaiViagem.DataSource = this.syslogDataSetBindingSource;
             this.dataGridViewSaiViagem.Location = new System.Drawing.Point(6, 69);
             this.dataGridViewSaiViagem.Name = "dataGridViewSaiViagem";
             this.dataGridViewSaiViagem.ReadOnly = true;
-            this.dataGridViewSaiViagem.Size = new System.Drawing.Size(564, 352);
+            this.dataGridViewSaiViagem.Size = new System.Drawing.Size(578, 352);
             this.dataGridViewSaiViagem.TabIndex = 17;
             this.dataGridViewSaiViagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRetViagem_CellContentClick);
+            // 
+            // syslogDataSetBindingSource
+            // 
+            this.syslogDataSetBindingSource.DataSource = this.syslogDataSet;
+            this.syslogDataSetBindingSource.Position = 0;
+            // 
+            // syslogDataSet
+            // 
+            this.syslogDataSet.DataSetName = "syslogDataSet";
+            this.syslogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // materialLabel10
             // 
@@ -940,6 +976,69 @@
             this.ExcluirViagemBtn.UseVisualStyleBackColor = false;
             this.ExcluirViagemBtn.Click += new System.EventHandler(this.ExcluirViagemBtn_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "id_viagem";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id_motorista_pesquisa";
+            this.Column1.HeaderText = "Motorista";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Id_veiculo_pesquisa";
+            this.Column2.HeaderText = "Veiculo";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Id_cidadeSaida_pesquisa";
+            this.Column3.HeaderText = "Cidade Saida";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Id_cidadeDestino_pesquisa";
+            this.Column4.HeaderText = "Cidade Retorno";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "DtaSaida";
+            this.Column5.HeaderText = "Data Saida";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Km_saida";
+            this.Column7.HeaderText = "Km Saida";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "DtaRetorno";
+            this.Column6.HeaderText = "Data Retorno";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Km_retorno";
+            this.Column8.HeaderText = "Km Retorno";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
             // FrmCadIniSaidaViagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,6 +1052,8 @@
             this.saidaViagemPesquisaPnl.ResumeLayout(false);
             this.saidaViagemPesquisaPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaiViagem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).EndInit();
             this.motoristaPesquisarPnl.ResumeLayout(false);
             this.motoristaPesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).EndInit();
@@ -1035,5 +1136,16 @@
         public System.Windows.Forms.TextBox pesquisaSaidaViagemTbx;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
         public System.Windows.Forms.TextBox kmRetornoTbx;
+        private System.Windows.Forms.BindingSource syslogDataSetBindingSource;
+        private syslogDataSet syslogDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
