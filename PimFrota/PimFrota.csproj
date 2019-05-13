@@ -79,6 +79,7 @@
     <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -151,9 +152,7 @@
     <Compile Include="Formularios\TelaCadastros\CadastroCidade\FrmCadIniCidade.Designer.cs">
       <DependentUpon>FrmCadIniCidade.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadCliente.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadCliente.Designer.cs">
       <DependentUpon>FrmCadCliente.cs</DependentUpon>
     </Compile>
@@ -163,9 +162,7 @@
     <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmCadIniCliente.Designer.cs">
       <DependentUpon>FrmCadIniCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroCliente\FrmPesquisaCliente.Designer.cs">
       <DependentUpon>FrmPesquisaCliente.cs</DependentUpon>
     </Compile>
@@ -175,15 +172,11 @@
     <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadiniMotorista.Designer.cs">
       <DependentUpon>FrmCadiniMotorista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadMotorista.Designer.cs">
       <DependentUpon>FrmCadMotorista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmPesquisaMotorista.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmPesquisaMotorista.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmPesquisaMotorista.Designer.cs">
       <DependentUpon>FrmPesquisaMotorista.cs</DependentUpon>
     </Compile>
@@ -193,15 +186,11 @@
     <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadIniProduto.Designer.cs">
       <DependentUpon>FrmCadIniProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadProduto.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadProduto.Designer.cs">
       <DependentUpon>FrmCadProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmPesquisaProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmPesquisaProduto.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmPesquisaProduto.Designer.cs">
       <DependentUpon>FrmPesquisaProduto.cs</DependentUpon>
     </Compile>
@@ -211,15 +200,11 @@
     <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadIniSeguro.Designer.cs">
       <DependentUpon>FrmCadIniSeguro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadSeguro.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadSeguro.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmCadSeguro.Designer.cs">
       <DependentUpon>FrmCadSeguro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmPesquisarSeguro.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmPesquisarSeguro.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroSeguro\FrmPesquisarSeguro.Designer.cs">
       <DependentUpon>FrmPesquisarSeguro.cs</DependentUpon>
     </Compile>
@@ -229,15 +214,11 @@
     <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadIniServico.Designer.cs">
       <DependentUpon>FrmCadIniServico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadServico.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadServico.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmCadServico.Designer.cs">
       <DependentUpon>FrmCadServico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmPesquisarServico.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmPesquisarServico.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroServico\FrmPesquisarServico.Designer.cs">
       <DependentUpon>FrmPesquisarServico.cs</DependentUpon>
     </Compile>
@@ -247,15 +228,11 @@
     <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadIniUsuario.Designer.cs">
       <DependentUpon>FrmCadIniUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadusuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadusuario.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmCadusuario.Designer.cs">
       <DependentUpon>FrmCadusuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmPesquisaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmPesquisaUsuario.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroUsuario\FrmPesquisaUsuario.Designer.cs">
       <DependentUpon>FrmPesquisaUsuario.cs</DependentUpon>
     </Compile>
@@ -265,15 +242,11 @@
     <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadIniVeiculo.Designer.cs">
       <DependentUpon>FrmCadIniVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadVeiculo.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadVeiculo.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadVeiculo.Designer.cs">
       <DependentUpon>FrmCadVeiculo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmPesquisarVeiculo.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmPesquisarVeiculo.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmPesquisarVeiculo.Designer.cs">
       <DependentUpon>FrmPesquisarVeiculo.cs</DependentUpon>
     </Compile>

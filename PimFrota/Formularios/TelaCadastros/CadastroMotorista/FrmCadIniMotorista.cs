@@ -9,6 +9,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
     public partial class FrmCadiniMotorista : PimFrota.Formularios.Base.FrmBaseFundoCad
         {
         Motorista m = new Motorista();
+        DaoMotorista daoMotorista = new DaoMotorista();
 
         public FrmCadiniMotorista()
             {
@@ -24,7 +25,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void IncluirMotoristaBtn_Click(object sender, EventArgs e)
             {
 
-            SalvarMotorista();
+            daoMotorista.SalvarMotorista(m);
 
             }
 
@@ -85,13 +86,13 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             }
         public void SalvarMotorista()
             {
-            DaoMotorista motorista = new DaoMotorista();
-
+           
+            
 
             motoristaPesquisarPnl.Visible = false;
             CadMotoristaIniPnl.Visible = true;
 
-
+            
             m.nome = NomeMotoristaTbx.Text;
             m.cpf = CpfMotoristaTbx.Text;
             m.cnh = cnhMotoristaTbx.Text;

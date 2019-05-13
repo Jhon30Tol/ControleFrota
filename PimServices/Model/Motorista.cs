@@ -20,6 +20,7 @@ namespace PimServices.Model
         public string estado { get; set; }
         public DateTime dtaEmissaoCnh { get; set; }
         public DateTime dtaVencimentoCnh { get; set; }
+        public int id_motorista { get; set; }
 
         public int telefoneFixo { get; set; }
         public int celular { get; set; }
