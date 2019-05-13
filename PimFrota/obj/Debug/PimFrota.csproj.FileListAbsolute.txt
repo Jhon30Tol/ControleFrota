@@ -642,3 +642,10 @@ F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Mensagens.FrmSairSistema.resources
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\RdlCompile.cache
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\RdlCompile.compiled
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Correios.Net.dll
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\DocsBr.dll
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Correios.Net.pdb
