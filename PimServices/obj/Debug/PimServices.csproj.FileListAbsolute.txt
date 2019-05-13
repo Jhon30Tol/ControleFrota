@@ -97,3 +97,10 @@ F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\obj\Debug\Pim
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csproj.CopyComplete
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.dll
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.pdb
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.dll
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\DocsBr.dll
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.pdb

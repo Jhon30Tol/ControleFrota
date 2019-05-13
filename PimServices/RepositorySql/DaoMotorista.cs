@@ -17,7 +17,7 @@ namespace PimServices.RepositorySql
         {
             public void SalvarMotorista(Motorista m)
             {
-                /*
+                
                     try
                     {
 
@@ -33,7 +33,7 @@ namespace PimServices.RepositorySql
                         MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(insertDados, conn);
                         cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_rua_motorista", m.nomeRua));
                         cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("endereco_numero_motorista", m.numeroRua));
-                        cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cep_motorista", m.cep));
+                        cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cep_motorista", m.Cep));
                         cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id_cidade", m.idCidade));
                         cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cnh_motorista", m.cnh));
                         cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_motorista", m.nome));
@@ -60,7 +60,7 @@ namespace PimServices.RepositorySql
 
                 public void EditarrUsuario(Usuario u)
                 {
-                    /*
+                    
 
                     try
                     {
@@ -116,7 +116,7 @@ namespace PimServices.RepositorySql
                         MessageBox.Show("Erro ao cadastrar o usuario, verifique a conexão com o banco de dados: " + ex.ToString());
 
                     }
-                    */
+                    
             }
 
         }

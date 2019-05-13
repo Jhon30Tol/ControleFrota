@@ -43,7 +43,7 @@ namespace PimServices.RepositorySql
                     return false;
                 }
 
-                MessageBox.Show("Login efetuado com sucesso!");
+               
             }
             catch (Exception ex)
             {
