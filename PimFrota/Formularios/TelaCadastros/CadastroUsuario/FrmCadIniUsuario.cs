@@ -18,7 +18,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
         Usuario u = new Usuario();
         bool modoEdit = false;
         DaoUsuario daoUsuario = new DaoUsuario();
-        FrmCadusuario novo_usuario = new FrmCadusuario();
+        //FrmCadusuario novo_usuario = new FrmCadusuario();
         
 
 
@@ -86,7 +86,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 {
                     Usuario u = new Usuario();
                     DaoUsuario dao = new DaoUsuario();
-                    FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+                   // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
 
                     u.Nome = NomeUsuarioTbx.Text;
                     u.Senha = SenhaUsuarioTbx.Text;
@@ -109,7 +109,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 }
                 else
                 {
-                    FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+                    //FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
                     Usuario u = new Usuario();
                     DaoUsuario dao = new DaoUsuario();
 
@@ -127,7 +127,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void PesquisarUsuBtn_Click(object sender, EventArgs e)
         {
-            FrmPesquisaUsuario pesquisa_usuario = new FrmPesquisaUsuario();
+            //FrmPesquisaUsuario pesquisa_usuario = new FrmPesquisaUsuario();
 
             dataGridViewUsuario.DataSource = null;
             dataGridViewUsuario.Columns.Clear();
@@ -258,7 +258,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void ExcluirUsuBtn_Click(object sender, EventArgs e)
         {
-            FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
+            //FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
             Usuario u = new Usuario();
             DaoUsuario dao = new DaoUsuario();
 

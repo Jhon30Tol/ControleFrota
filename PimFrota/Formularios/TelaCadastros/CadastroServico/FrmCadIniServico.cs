@@ -17,12 +17,13 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroServico
 
         private void IncluirServicoBtn_Click(object sender, EventArgs e)
         {
-            FrmCadServico novo_servico = new FrmCadServico();
+            /*FrmCadServico novo_servico = new FrmCadServico();
             novo_servico.TopLevel = false;
             novo_servico.AutoScroll = true;
             novo_servico.FormBorderStyle = FormBorderStyle.None;
             this.CadServicoIniPnl.Controls.Add(novo_servico);
             novo_servico.Show();
+            */
         }
 
         private void CancelarServicoBtn_Click(object sender, EventArgs e)
