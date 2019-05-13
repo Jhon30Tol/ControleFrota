@@ -497,9 +497,7 @@ F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFr
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Mensagens.FrmMensagemCadSucesso.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Mensagens.FrmMensagemCampoObrigatorio.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Mensagens.FrmMensagemErroCadastro.resources
-F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroCidade.FrmCadCidade.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroCidade.FrmCadIniCidade.resources
-F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroCidade.FrmPesquisaCidade.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroCliente.FrmCadCliente.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroCliente.FrmCadIniCliente.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaCadastros.CadastroCliente.FrmPesquisaCliente.resources
@@ -649,3 +647,4 @@ F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Micro
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Correios.Net.pdb
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Relatorios.RptrRelatorio.resources
