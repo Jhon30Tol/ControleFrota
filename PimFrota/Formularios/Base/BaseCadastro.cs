@@ -24,6 +24,9 @@ namespace PimFrota.Formularios.Base
         public BaseCadastro()
         {
             InitializeComponent();
+
+            
+
         }
 
         public void FechaForm()
@@ -176,6 +179,11 @@ namespace PimFrota.Formularios.Base
         private void MinimizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BaseCadastroMenuFecharPnl_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

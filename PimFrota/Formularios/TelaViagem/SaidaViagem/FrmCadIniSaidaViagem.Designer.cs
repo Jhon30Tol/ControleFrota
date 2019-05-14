@@ -101,9 +101,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.km_cidade_origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CadViagemIniPnl.SuspendLayout();
             this.saidaViagemPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaiViagem)).BeginInit();
@@ -196,9 +197,10 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column7,
+            this.km_cidade_origem,
             this.Column6,
-            this.Column8});
+            this.Column8,
+            this.Column9});
             this.dataGridViewSaiViagem.DataSource = this.syslogDataSetBindingSource;
             this.dataGridViewSaiViagem.Location = new System.Drawing.Point(6, 69);
             this.dataGridViewSaiViagem.Name = "dataGridViewSaiViagem";
@@ -1018,12 +1020,12 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // Column7
+            // km_cidade_origem
             // 
-            this.Column7.DataPropertyName = "Km_saida";
-            this.Column7.HeaderText = "Km Saida";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            this.km_cidade_origem.DataPropertyName = "KmSaida";
+            this.km_cidade_origem.HeaderText = "Km Saida";
+            this.km_cidade_origem.Name = "km_cidade_origem";
+            this.km_cidade_origem.ReadOnly = true;
             // 
             // Column6
             // 
@@ -1034,10 +1036,17 @@
             // 
             // Column8
             // 
-            this.Column8.DataPropertyName = "Km_retorno";
+            this.Column8.DataPropertyName = "KmRetorno";
             this.Column8.HeaderText = "Km Retorno";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "passageiro";
+            this.Column9.HeaderText = "Passageiro";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // FrmCadIniSaidaViagem
             // 
@@ -1144,8 +1153,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn km_cidade_origem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
     }
 }

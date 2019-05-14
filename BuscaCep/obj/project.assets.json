@@ -179,23 +179,23 @@
     ]
   },
   "packageFolders": {
-    "F:\\Users\\paluan.batista\\.nuget\\packages\\": {},
+    "F:\\Users\\wagner.neves\\.nuget\\packages\\": {},
     "F:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Users\\paluan.batista\\Documents\\GitHub\\ControleFrota\\BuscaCep\\BuscaCep.csproj",
+      "projectUniqueName": "F:\\Users\\wagner.neves\\Documents\\GitHub\\ControleFrota\\BuscaCep\\BuscaCep.csproj",
       "projectName": "BuscaCep",
-      "projectPath": "F:\\Users\\paluan.batista\\Documents\\GitHub\\ControleFrota\\BuscaCep\\BuscaCep.csproj",
-      "packagesPath": "F:\\Users\\paluan.batista\\.nuget\\packages\\",
-      "outputPath": "F:\\Users\\paluan.batista\\Documents\\GitHub\\ControleFrota\\BuscaCep\\obj\\",
+      "projectPath": "F:\\Users\\wagner.neves\\Documents\\GitHub\\ControleFrota\\BuscaCep\\BuscaCep.csproj",
+      "packagesPath": "F:\\Users\\wagner.neves\\.nuget\\packages\\",
+      "outputPath": "F:\\Users\\wagner.neves\\Documents\\GitHub\\ControleFrota\\BuscaCep\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "F:\\Users\\paluan.batista\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "F:\\Users\\wagner.neves\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "F:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

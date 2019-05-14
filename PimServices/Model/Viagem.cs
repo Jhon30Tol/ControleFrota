@@ -31,14 +31,15 @@ namespace PimServices.Model
 
         public DateTime DtaRetorno { get; set; }
 
-
         public int Id_cidadeRetorno { get; set; }
 
         public int KmSaida { get; set; }
 
+        public int KmSaidaTeste { get; set; }
+
         public int KmRetorno { get; set; }
 
-        public string passageiro { get; set; }
+        public String passageiro { get; set; }
 
 
 

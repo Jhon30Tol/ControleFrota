@@ -244,6 +244,7 @@
             this.BaseCadastroMenuFecharPnl.Name = "BaseCadastroMenuFecharPnl";
             this.BaseCadastroMenuFecharPnl.Size = new System.Drawing.Size(800, 48);
             this.BaseCadastroMenuFecharPnl.TabIndex = 23;
+            this.BaseCadastroMenuFecharPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.BaseCadastroMenuFecharPnl_Paint);
             // 
             // CadaastroLbl
             // 

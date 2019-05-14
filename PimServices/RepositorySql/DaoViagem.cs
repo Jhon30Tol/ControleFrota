@@ -68,7 +68,7 @@ namespace PimServices.RepositorySql
                                       "passageiro_viagem = @passageiro, " +
                                       "dta_retorno = @DtaRetorno, " +
                                       "dta_saida = @DtaSaida " +
-                                     // "km_cidade_retorno = @KmRetorno" +
+                                      // "km_cidade_retorno = @KmRetorno" +
                                       "WHERE id_viagem = @id_viagem";
                 conn.Open();
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alteratDados, conn);
@@ -162,46 +162,46 @@ namespace PimServices.RepositorySql
             }
 
         }
-        
-             public List<Viagem> PesquisarTodasViagens(Viagem v)
-             {
-                List<Viagem> pesquisarTodasViagens = new List<Viagem>();
-                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-                conn = new MySqlConnection(connectionString);
 
-                String selecionaTodos = "SELECT " +
-                                        "v.id_viagem as Codigo_Viagem," +
-                                        "m.nome_motorista as Nome_Motorista, " +
-                                        "a.modelo_veiculo as Modelo_Veiculo, " +
-                                        "c.nome_cidade as Cidade_Saida, " +
-                                        "b.nome_cidade as Cidade_Destino, " +
-                                        "date(v.dta_saida) as Data_Saida, " +
-                                        "DATE(v.dta_retorno) AS data_Retorno," +
-                                        "v.km_cidade_origem as Km_saida, " +
-                                        "v.passageiro_viagem as Passageiro, " +
-                                        "v.km_cidade_retorno as Km_retorno " +
-                                        "FROM viagem v " +
-                                        "JOIN cadastro_motorista m " +
-                                        "JOIN cadastro_veiculo a " +
-                                        "JOIN cadastro_cidade c " +
-                                        "JOIN cadastro_cidade b " +
-                                        "ON v.id_motorista = m.id_motorista  " +
-                                        "AND v.id_veiculo = a.id_veiculo " +
-                                        "AND  v.id_cidade_origem = c.id_cidade " +
-                                        "AND  v.id_cidade_destino = b.id_cidade ;";
+        public List<Viagem> PesquisarTodasViagens(Viagem v)
+        {
+            List<Viagem> pesquisarTodasViagens = new List<Viagem>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
 
-                conn.Open();
-                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
+            String selecionaTodos = "SELECT " +
+                                    "v.id_viagem as Codigo_Viagem," +
+                                    "m.nome_motorista as Nome_Motorista, " +
+                                    "a.modelo_veiculo as Modelo_Veiculo, " +
+                                    "c.nome_cidade as Cidade_Saida, " +
+                                    "b.nome_cidade as Cidade_Destino, " +
+                                    "v.km_cidade_retorno as Km_retorno, " +
+                                    "date(v.dta_saida) as Data_Saida, " +
+                                    "DATE(v.dta_retorno) AS data_Retorno," +
+                                    "v.km_cidade_origem as Km_saida, " +
+                                    "v.passageiro_viagem as Passageiro " +
+                                    "FROM viagem v " +
+                                    "JOIN cadastro_motorista m " +
+                                    "JOIN cadastro_veiculo a " +
+                                    "JOIN cadastro_cidade c " +
+                                    "JOIN cadastro_cidade b " +
+                                    "ON v.id_motorista = m.id_motorista  " +
+                                    "AND v.id_veiculo = a.id_veiculo " +
+                                    "AND  v.id_cidade_origem = c.id_cidade " +
+                                    "AND  v.id_cidade_destino = b.id_cidade ;";
 
-                try
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
                 {
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-
-                    while (reader.Read())
-                    {
-                       Viagem novo = new Viagem();
+                    Viagem novo = new Viagem();
 
 
                     novo.Id_viagem = (int)reader["Codigo_Viagem"];
@@ -210,8 +210,8 @@ namespace PimServices.RepositorySql
                     novo.Id_cidadeSaida_pesquisa = Convert.ToString(reader["Cidade_Saida"]);
                     novo.Id_cidadeDestino_pesquisa = Convert.ToString(reader["Cidade_Destino"]);
                     novo.DtaSaida = Convert.ToDateTime(reader["Data_Saida"]);
-                    novo.KmSaida = (int)reader["Km_saida"];
                     novo.DtaRetorno = Convert.ToDateTime(reader["Data_Retorno"]);
+                    novo.KmSaida = (int)reader["Km_saida"];
                     novo.passageiro = Convert.ToString(reader["Passageiro"]);
                     novo.KmRetorno = (int)reader["Km_retorno"];
 
@@ -219,49 +219,55 @@ namespace PimServices.RepositorySql
                     pesquisarTodasViagens.Add(novo);
 
 
-                    }
-
-                    conn.Close();
-                    return pesquisarTodasViagens;
                 }
-                finally
-                {
-                    conn.Close();
-                }
-            
 
-            /*
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
-            PesquisarTbx.Text = "";
+                conn.Close();
+                return pesquisarTodasViagens;
+            }
+            finally
+            {
+                conn.Close();
+            }
 
-            MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-            "v.id_viagem as Codigo_Viagem," +
-            "m.nome_motorista as Nome_Motorista, " +
-            "a.modelo_veiculo as Modelo_Veiculo, " +
-            "c.nome_cidade as Cidade_Saida, " +
-            "b.nome_cidade as Cidade_Destino, " +
-            "date(v.dta_saida) as Data_Saida, " +
-            "v.km_cidade_origem as Km_saida, " +
-            "v.passageiro_viagem as Passageiro, " +
-            "v.km_cidade_retorno as Km_retorno " +
-            "FROM viagem v " +
-            "JOIN cadastro_motorista m " +
-            "JOIN cadastro_veiculo a " +
-            "JOIN cadastro_cidade c " +
-            "JOIN cadastro_cidade b " +
-            "ON v.id_motorista = m.id_motorista  " +
-            "AND v.id_veiculo = a.id_veiculo " +
-            "AND  v.id_cidade_origem = c.id_cidade " +
-            "AND  v.id_cidade_destino = b.id_cidade ;", conn);
-            DataTable pesq3 = new DataTable();
-            pesq1.Fill(pesq3);
-            dataGridViewSaiViagem.DataSource = pesq3;
-            
-    */
         }
-        
 
+
+
+        public void traduzPesquisa(Viagem v)
+        {
+
+            try
+            {
+
+                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+                conn = new MySqlConnection(connectionString);
+                String traduzPesquisa = "SELECT " +
+                                                     "id_viagem, " +
+                                                     "id_motorista, " +
+                                                     "id_veiculo, " +
+                                                     "id_cidade_origem, " +
+                                                     "id_cidade_destino, " +
+                                                     "km_cidade_retorno, " +
+                                                     "dta_saida, dta_retorno, " +
+                                                     "km_cidade_origem, " +
+                                                     "passageiro_viagem " +
+                                                     "FROM viagem " +
+                                                     "WHERE id_viagem = '@id';"; conn.Open();
+                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(traduzPesquisa, conn);
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", v.Id_viagem));
+
+                MessageBox.Show(Convert.ToString(v.Id_viagem));
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+            }
+
+            catch
+            {
+                
+            }
+
+        }
+
+         
     }
 }
