@@ -101,6 +101,7 @@
             this.Senhatxb.Size = new System.Drawing.Size(171, 20);
             this.Senhatxb.TabIndex = 10;
             this.Senhatxb.TextChanged += new System.EventHandler(this.Senhatxb_KeyDown);
+            this.Senhatxb.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Senhatxb_KeyUp);
             // 
             // Usuariolbl
             // 
@@ -143,6 +144,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.LogoLoginImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

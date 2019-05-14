@@ -342,7 +342,7 @@
             this.motoristaPnl.Controls.Add(this.CpfMotoristaLbl);
             this.motoristaPnl.Controls.Add(this.RuaMotoristaLbl);
             this.motoristaPnl.Controls.Add(this.NomeClientelbl);
-            this.motoristaPnl.Location = new System.Drawing.Point(3, 0);
+            this.motoristaPnl.Location = new System.Drawing.Point(7, 3);
             this.motoristaPnl.Name = "motoristaPnl";
             this.motoristaPnl.Size = new System.Drawing.Size(469, 317);
             this.motoristaPnl.TabIndex = 0;

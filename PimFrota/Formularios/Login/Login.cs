@@ -80,5 +80,21 @@ namespace PimFrota.Formularios.Login
         {
 
         }
-    }
+
+        private void FrmLogin_KeyUp(object sender, KeyEventArgs e)
+            {
+            if (e.KeyCode == Keys.Enter)
+                {
+                autenticaUsuario();
+                }
+            }
+
+        private void Senhatxb_KeyUp(object sender, KeyEventArgs e)
+            {
+            if (e.KeyCode == Keys.Enter)
+                {
+                autenticaUsuario();
+                }
+            }
+        }
 }
