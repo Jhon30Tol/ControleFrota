@@ -129,7 +129,7 @@
             this.panel1.Controls.Add(this.Senhalbl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(365, 245);
+            this.panel1.Size = new System.Drawing.Size(365, 246);
             this.panel1.TabIndex = 14;
             // 
             // MsgFecharPnl
@@ -158,6 +158,7 @@
             this.Fecharbtn.Size = new System.Drawing.Size(31, 26);
             this.Fecharbtn.TabIndex = 0;
             this.Fecharbtn.UseVisualStyleBackColor = false;
+            this.Fecharbtn.Click += new System.EventHandler(this.Fecharbtn_Click);
             // 
             // pictureBox1
             // 
