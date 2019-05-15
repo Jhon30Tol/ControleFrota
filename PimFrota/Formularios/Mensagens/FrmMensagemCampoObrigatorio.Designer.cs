@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMensagemCampoObrigatorio));
             this.MensagemOkBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MensagemCampoObrigatorioLbl = new System.Windows.Forms.Label();
             this.MsgFecharPnl = new System.Windows.Forms.Panel();
             this.Fecharbtn = new System.Windows.Forms.Button();
-            this.MensagemCampoObrigatorioLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.MsgFecharPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // MensagemOkBtn
             // 
-            this.MensagemOkBtn.BackColor = System.Drawing.Color.Yellow;
+            this.MensagemOkBtn.BackColor = System.Drawing.Color.YellowGreen;
             this.MensagemOkBtn.FlatAppearance.BorderSize = 0;
             this.MensagemOkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MensagemOkBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -56,14 +56,24 @@
             this.panel1.Controls.Add(this.MensagemCampoObrigatorioLbl);
             this.panel1.Controls.Add(this.MsgFecharPnl);
             this.panel1.Controls.Add(this.MensagemOkBtn);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(1, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(316, 112);
+            this.panel1.Size = new System.Drawing.Size(316, 119);
             this.panel1.TabIndex = 29;
+            // 
+            // MensagemCampoObrigatorioLbl
+            // 
+            this.MensagemCampoObrigatorioLbl.AutoSize = true;
+            this.MensagemCampoObrigatorioLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(32, 46);
+            this.MensagemCampoObrigatorioLbl.Name = "MensagemCampoObrigatorioLbl";
+            this.MensagemCampoObrigatorioLbl.Size = new System.Drawing.Size(257, 16);
+            this.MensagemCampoObrigatorioLbl.TabIndex = 30;
+            this.MensagemCampoObrigatorioLbl.Text = "Preencha os campos Obrigatórios.";
             // 
             // MsgFecharPnl
             // 
-            this.MsgFecharPnl.BackColor = System.Drawing.Color.Yellow;
+            this.MsgFecharPnl.BackColor = System.Drawing.Color.YellowGreen;
             this.MsgFecharPnl.Controls.Add(this.Fecharbtn);
             this.MsgFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MsgFecharPnl.Location = new System.Drawing.Point(0, 0);
@@ -88,20 +98,10 @@
             this.Fecharbtn.TabIndex = 0;
             this.Fecharbtn.UseVisualStyleBackColor = false;
             // 
-            // MensagemCampoObrigatorioLbl
-            // 
-            this.MensagemCampoObrigatorioLbl.AutoSize = true;
-            this.MensagemCampoObrigatorioLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(32, 46);
-            this.MensagemCampoObrigatorioLbl.Name = "MensagemCampoObrigatorioLbl";
-            this.MensagemCampoObrigatorioLbl.Size = new System.Drawing.Size(257, 16);
-            this.MensagemCampoObrigatorioLbl.TabIndex = 30;
-            this.MensagemCampoObrigatorioLbl.Text = "Preencha os campos Obrigatórios.";
-            // 
             // FrmMensagemCampoObrigatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(320, 117);
+            this.ClientSize = new System.Drawing.Size(318, 117);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMensagemCampoObrigatorio";
             this.panel1.ResumeLayout(false);
