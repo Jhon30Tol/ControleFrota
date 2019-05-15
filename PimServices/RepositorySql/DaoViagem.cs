@@ -171,9 +171,13 @@ namespace PimServices.RepositorySql
 
             String selecionaTodos = "SELECT " +
                                     "v.id_viagem as Codigo_Viagem," +
+                                    "m.id_motorista, " +
                                     "m.nome_motorista as Nome_Motorista, " +
+                                    "a.id_veiculo, " +
                                     "a.modelo_veiculo as Modelo_Veiculo, " +
+                                    "c.id_cidade as id_Cidade_Saida, " +
                                     "c.nome_cidade as Cidade_Saida, " +
+                                    "b.id_cidade as id_Cidade_Destino, " +
                                     "b.nome_cidade as Cidade_Destino, " +
                                     "v.km_cidade_retorno as Km_retorno, " +
                                     "date(v.dta_saida) as Data_Saida, " +
@@ -216,6 +220,13 @@ namespace PimServices.RepositorySql
                     novo.KmRetorno = (int)reader["Km_retorno"];
 
 
+                    novo.Id_motorista = (int)reader["id_motorista"];
+                    novo.Id_veiculo= (int)reader["id_veiculo"];
+                    novo.Id_cidadeSaida = (int)reader["id_Cidade_Saida"];
+                    novo.Id_cidadeRetorno = (int)reader["id_Cidade_Destino"];
+
+
+
                     pesquisarTodasViagens.Add(novo);
 
 
@@ -233,40 +244,8 @@ namespace PimServices.RepositorySql
 
 
 
-        public void traduzPesquisa(Viagem v)
-        {
-
-            try
-            {
-
-                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-                conn = new MySqlConnection(connectionString);
-                String traduzPesquisa = "SELECT " +
-                                                     "id_viagem, " +
-                                                     "id_motorista, " +
-                                                     "id_veiculo, " +
-                                                     "id_cidade_origem, " +
-                                                     "id_cidade_destino, " +
-                                                     "km_cidade_retorno, " +
-                                                     "dta_saida, dta_retorno, " +
-                                                     "km_cidade_origem, " +
-                                                     "passageiro_viagem " +
-                                                     "FROM viagem " +
-                                                     "WHERE id_viagem = '@id';"; conn.Open();
-                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(traduzPesquisa, conn);
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", v.Id_viagem));
-
-                MessageBox.Show(Convert.ToString(v.Id_viagem));
-                cmd.Prepare();
-                cmd.ExecuteNonQuery();
-            }
-
-            catch
-            {
-                
-            }
-
-        }
+       
+        
 
          
     }

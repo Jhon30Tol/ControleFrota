@@ -52,6 +52,8 @@ namespace PimFrota.Formularios.TelaViagem
             veiculoPesquisarPnl.Visible = false;
             cidadePesquisarPnl.Visible = false;
             saidaViagemPesquisaPnl.Visible = false;
+            msgNaoRetornouLbl.Visible = false;
+
 
             iniarIncluir();
 
@@ -310,6 +312,7 @@ namespace PimFrota.Formularios.TelaViagem
         {
             saidaViagemPesquisaPnl.Visible = true;
             saidaViagemPesquisaPnl.Location = new Point(0, 0);
+            DtaRetornoDtm.Visible = true;
 
         }
 
@@ -503,8 +506,8 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
         {
             DaoViagem dao = new DaoViagem();
 
-            CodSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[0].Value.ToString();
-            MotoristaSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[1].Value.ToString();
+            CodSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[1].Value.ToString();
+            MotoristaSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[0].Value.ToString();
             VeiculoSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[2].Value.ToString();
             CidadeSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[3].Value.ToString();
             CidadeDestSaidaViagTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[4].Value.ToString();
@@ -514,9 +517,31 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             kmRetornoTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[8].Value.ToString();
             passageiroTbx.Text = dataGridViewSaiViagem.CurrentRow.Cells[9].Value.ToString();
 
+            v.Id_viagem = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[1].Value.ToString());
+            v.Id_motorista = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[10].Value.ToString());
+            v.Id_veiculo = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[11].Value.ToString());
+            v.Id_cidadeSaida = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[12].Value.ToString());
+            v.Id_cidadeDestino = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[13].Value.ToString());
+
+            MessageBox.Show(Convert.ToString(v.Id_viagem), "Id_viagem");
+            MessageBox.Show(Convert.ToString(v.Id_motorista), "Id_motorista");
+            MessageBox.Show(Convert.ToString(v.Id_veiculo), "Id_veiculo");
+            MessageBox.Show(Convert.ToString(v.Id_cidadeSaida), "Id_cidadeSaida");
+            MessageBox.Show(Convert.ToString(v.Id_cidadeDestino), "Id_cidadeDestino");
+
+            MessageBox.Show(DtaRetornoDtm.Text);
+
+            if (DtaRetornoDtm.Text == "01/01/1900")
+            {
+                DtaRetornoDtm.Visible = false;
+                KmRetornoLlbl.Visible = false;
+                DtRetornoLbl.Visible = false;
+                kmRetornoTbx.Visible = false;
+                msgNaoRetornouLbl.Visible = true;
+            }
+
 
             v.Id_viagem = Convert.ToInt32(CodSaidaViagTbx.Text);
-            dao.traduzPesquisa(v);
 
             IncluirViagemBtn.Enabled = false;
             ExcluirViagemBtn.Enabled = true;
