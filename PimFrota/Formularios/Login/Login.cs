@@ -96,5 +96,10 @@ namespace PimFrota.Formularios.Login
                 autenticaUsuario();
                 }
             }
+
+        private void Fecharbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
+    }
 }

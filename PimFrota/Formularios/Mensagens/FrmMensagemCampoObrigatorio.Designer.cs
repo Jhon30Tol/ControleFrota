@@ -40,7 +40,7 @@
             // 
             // MensagemOkBtn
             // 
-            this.MensagemOkBtn.BackColor = System.Drawing.Color.Yellow;
+            this.MensagemOkBtn.BackColor = System.Drawing.Color.YellowGreen;
             this.MensagemOkBtn.FlatAppearance.BorderSize = 0;
             this.MensagemOkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MensagemOkBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -54,12 +54,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.MensagemCampoObrigatorioLbl);
             this.panel1.Controls.Add(this.MsgFecharPnl);
+            this.panel1.Controls.Add(this.MensagemCampoObrigatorioLbl);
             this.panel1.Controls.Add(this.MensagemOkBtn);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(316, 112);
+            this.panel1.Size = new System.Drawing.Size(322, 118);
             this.panel1.TabIndex = 29;
             // 
             // MensagemCampoObrigatorioLbl
@@ -74,18 +74,18 @@
             // 
             // MsgFecharPnl
             // 
-            this.MsgFecharPnl.BackColor = System.Drawing.Color.Yellow;
+            this.MsgFecharPnl.BackColor = System.Drawing.Color.YellowGreen;
             this.MsgFecharPnl.Controls.Add(this.Fecharbtn);
             this.MsgFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MsgFecharPnl.Location = new System.Drawing.Point(0, 0);
             this.MsgFecharPnl.Name = "MsgFecharPnl";
-            this.MsgFecharPnl.Size = new System.Drawing.Size(316, 20);
-            this.MsgFecharPnl.TabIndex = 29;
+            this.MsgFecharPnl.Size = new System.Drawing.Size(322, 20);
+            this.MsgFecharPnl.TabIndex = 31;
             // 
             // Fecharbtn
             // 
             this.Fecharbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Fecharbtn.BackColor = System.Drawing.Color.Crimson;
+            this.Fecharbtn.BackColor = System.Drawing.Color.YellowGreen;
             this.Fecharbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fecharbtn.BackgroundImage")));
             this.Fecharbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Fecharbtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -93,11 +93,12 @@
             this.Fecharbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Fecharbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Fecharbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fecharbtn.Location = new System.Drawing.Point(294, 3);
+            this.Fecharbtn.Location = new System.Drawing.Point(300, 3);
             this.Fecharbtn.Name = "Fecharbtn";
             this.Fecharbtn.Size = new System.Drawing.Size(19, 15);
             this.Fecharbtn.TabIndex = 0;
             this.Fecharbtn.UseVisualStyleBackColor = false;
+            this.Fecharbtn.Click += new System.EventHandler(this.Fecharbtn_Click);
             // 
             // FrmMensagemCampoObrigatorio
             // 
@@ -116,8 +117,8 @@
 
         private System.Windows.Forms.Button MensagemOkBtn;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label MensagemCampoObrigatorioLbl;
         private System.Windows.Forms.Panel MsgFecharPnl;
         private System.Windows.Forms.Button Fecharbtn;
-        public System.Windows.Forms.Label MensagemCampoObrigatorioLbl;
     }
 }

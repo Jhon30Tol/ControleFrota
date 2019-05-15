@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMensagemErroCadastro));
             this.ErroPctbx = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MEnsagemErroLbl = new System.Windows.Forms.Label();
             this.MsgFecharPnl = new System.Windows.Forms.Panel();
             this.Fecharbtn = new System.Windows.Forms.Button();
-            this.MEnsagemErroLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ErroPctbx)).BeginInit();
             this.panel1.SuspendLayout();
             this.MsgFecharPnl.SuspendLayout();
@@ -52,28 +52,38 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.MEnsagemErroLbl);
             this.panel1.Controls.Add(this.MsgFecharPnl);
+            this.panel1.Controls.Add(this.MEnsagemErroLbl);
             this.panel1.Controls.Add(this.ErroPctbx);
-            this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(319, 114);
+            this.panel1.Size = new System.Drawing.Size(319, 120);
             this.panel1.TabIndex = 32;
+            // 
+            // MEnsagemErroLbl
+            // 
+            this.MEnsagemErroLbl.AutoSize = true;
+            this.MEnsagemErroLbl.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MEnsagemErroLbl.Location = new System.Drawing.Point(128, 42);
+            this.MEnsagemErroLbl.Name = "MEnsagemErroLbl";
+            this.MEnsagemErroLbl.Size = new System.Drawing.Size(42, 18);
+            this.MEnsagemErroLbl.TabIndex = 33;
+            this.MEnsagemErroLbl.Text = "Erro";
             // 
             // MsgFecharPnl
             // 
-            this.MsgFecharPnl.BackColor = System.Drawing.Color.Yellow;
+            this.MsgFecharPnl.BackColor = System.Drawing.Color.YellowGreen;
             this.MsgFecharPnl.Controls.Add(this.Fecharbtn);
             this.MsgFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MsgFecharPnl.Location = new System.Drawing.Point(0, 0);
             this.MsgFecharPnl.Name = "MsgFecharPnl";
             this.MsgFecharPnl.Size = new System.Drawing.Size(319, 20);
-            this.MsgFecharPnl.TabIndex = 32;
+            this.MsgFecharPnl.TabIndex = 34;
             // 
             // Fecharbtn
             // 
             this.Fecharbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Fecharbtn.BackColor = System.Drawing.Color.Crimson;
+            this.Fecharbtn.BackColor = System.Drawing.Color.YellowGreen;
             this.Fecharbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fecharbtn.BackgroundImage")));
             this.Fecharbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Fecharbtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -86,16 +96,7 @@
             this.Fecharbtn.Size = new System.Drawing.Size(19, 15);
             this.Fecharbtn.TabIndex = 0;
             this.Fecharbtn.UseVisualStyleBackColor = false;
-            // 
-            // MEnsagemErroLbl
-            // 
-            this.MEnsagemErroLbl.AutoSize = true;
-            this.MEnsagemErroLbl.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MEnsagemErroLbl.Location = new System.Drawing.Point(128, 42);
-            this.MEnsagemErroLbl.Name = "MEnsagemErroLbl";
-            this.MEnsagemErroLbl.Size = new System.Drawing.Size(42, 18);
-            this.MEnsagemErroLbl.TabIndex = 33;
-            this.MEnsagemErroLbl.Text = "Erro";
+            this.Fecharbtn.Click += new System.EventHandler(this.Fecharbtn_Click_1);
             // 
             // FrmMensagemErroCadastro
             // 
