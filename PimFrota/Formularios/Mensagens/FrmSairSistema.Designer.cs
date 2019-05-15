@@ -90,7 +90,7 @@
             // 
             // MsgFecharPnl
             // 
-            this.MsgFecharPnl.BackColor = System.Drawing.Color.Yellow;
+            this.MsgFecharPnl.BackColor = System.Drawing.Color.YellowGreen;
             this.MsgFecharPnl.Controls.Add(this.Fecharbtn);
             this.MsgFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MsgFecharPnl.Location = new System.Drawing.Point(0, 0);
