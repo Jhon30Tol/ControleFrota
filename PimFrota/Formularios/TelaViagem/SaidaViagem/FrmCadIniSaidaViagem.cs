@@ -45,15 +45,31 @@ namespace PimFrota.Formularios.TelaViagem
 
         }
 
-        public FrmCadIniSaidaViagem()
+
+        public void PosGravar()
         {
-            InitializeComponent();
+            CadViagemIniPnl.Visible = false;
+            IniciaForm();
+
+
+
+
+        }
+
+        public void IniciaForm()
+        {
             motoristaPesquisarPnl.Visible = false;
             veiculoPesquisarPnl.Visible = false;
             cidadePesquisarPnl.Visible = false;
             saidaViagemPesquisaPnl.Visible = false;
             msgNaoRetornouLbl.Visible = false;
 
+        }
+
+        public FrmCadIniSaidaViagem()
+        {
+            InitializeComponent();
+            IniciaForm();
 
             iniarIncluir();
 
@@ -119,12 +135,10 @@ namespace PimFrota.Formularios.TelaViagem
                 KmSaidaTbx.Text = " ";
                 passageiroTbx.Text = " ";
 
-                iniarIncluir();
-
+                PosGravar();
             }
             else
             {
-               // Viagem v = new Viagem();
                 DaoViagem dao = new DaoViagem();
 
                 MessageBox.Show(Convert.ToString(v.Id_motorista));
@@ -136,8 +150,7 @@ namespace PimFrota.Formularios.TelaViagem
                 MessageBox.Show(Convert.ToString(v.KmRetorno));
                 
                 dao.EditarViagem(v);
-
-
+                PosGravar();
 
             }
 
@@ -313,6 +326,7 @@ namespace PimFrota.Formularios.TelaViagem
             saidaViagemPesquisaPnl.Visible = true;
             saidaViagemPesquisaPnl.Location = new Point(0, 0);
             DtaRetornoDtm.Visible = true;
+            GravarViagemBtn.Enabled = false;
 
         }
 

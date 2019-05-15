@@ -14,5 +14,10 @@ namespace PimFrota.Formularios.Mensagens
         {
             InitializeComponent();
         }
+
+        private void MensagemOkBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

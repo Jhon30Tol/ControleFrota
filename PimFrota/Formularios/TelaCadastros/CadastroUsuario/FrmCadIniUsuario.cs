@@ -69,15 +69,32 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void GravarUsuBtn_Click(object sender, EventArgs e)
         {
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorio = (FrmMensagemCampoObrigatorio)Application.OpenForms["FrmMensagemCampoObrigatorio"];
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorioMsg = new FrmMensagemCampoObrigatorio();
 
-            if (String.IsNullOrEmpty(CodUsuarioTbx.Text))
-                MessageBox.Show("Campo nome obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else if (String.IsNullOrEmpty(AtivoCbx.Text))
-                MessageBox.Show("Campo ativo obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (String.IsNullOrEmpty(AtivoCbx.Text))
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Ativo é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.AtivoCbx.Focus();
+            }
+                
+
             else if (String.IsNullOrEmpty(NomeUsuarioTbx.Text))
-                MessageBox.Show("Campo login obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Nome é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.NomeUsuarioTbx.Focus();
+            }
+
             else if (String.IsNullOrEmpty(SenhaUsuarioTbx.Text))
-                MessageBox.Show("Campo senha obrigatório", "Informações", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Senha é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.SenhaUsuarioTbx.Focus();
+            }
+
             else
             { 
 
@@ -86,7 +103,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 {
                     Usuario u = new Usuario();
                     DaoUsuario dao = new DaoUsuario();
-                   // FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
 
                     u.Nome = NomeUsuarioTbx.Text;
                     u.Senha = SenhaUsuarioTbx.Text;
@@ -109,7 +125,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 }
                 else
                 {
-                    //FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
                     Usuario u = new Usuario();
                     DaoUsuario dao = new DaoUsuario();
 
@@ -127,7 +142,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void PesquisarUsuBtn_Click(object sender, EventArgs e)
         {
-            //FrmPesquisaUsuario pesquisa_usuario = new FrmPesquisaUsuario();
 
             dataGridViewUsuario.DataSource = null;
             dataGridViewUsuario.Columns.Clear();
@@ -139,6 +153,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             usuarioPesquisaPnl.Visible = true;
             CancelarUsuBtn.Enabled = true;
             GravarUsuBtn.Enabled = false;
+            
 
         
 

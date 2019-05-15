@@ -50,7 +50,8 @@ namespace PimServices.RepositorySql
 
             }
         }
-
+        /*
+        
         public void EditarViagem(Viagem v)
         {
 
@@ -96,7 +97,7 @@ namespace PimServices.RepositorySql
 
             }
         }
-
+        */
 
 
 
@@ -123,6 +124,54 @@ namespace PimServices.RepositorySql
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao Excluir viagem, verifique a conexão com o banco de dados: " + ex.ToString());
+
+            }
+        }
+
+        public void EditarViagem(Viagem v)
+        {
+
+            try
+            {
+
+                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+                conn = new MySqlConnection(connectionString);
+                String alteratDados = "UPDATE viagem " +
+                                      "SET id_motorista = @Id_motorista, " +
+                                      "id_veiculo = @Id_veiculo, " +
+                                      "id_cidade_destino = @Id_cidadeDestino, " +
+                                      "id_cidade_origem = @Id_cidadeSaida, " +
+                                      "km_cidade_origem = @KmSaida, " +
+                                      "passageiro_viagem = @passageiro, " +
+                                      "dta_retorno = @DtaRetorno, " +
+                                      "dta_saida = @DtaSaida, " +
+                                      "km_cidade_retorno = @KmRetorno " +
+                                      "WHERE id_viagem = @id_viagem;";
+                conn.Open();
+                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alteratDados, conn);
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id_viagem", v.Id_viagem));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("Id_motorista", v.Id_motorista));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("Id_veiculo", v.Id_veiculo));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("Id_cidadeDestino", v.Id_cidadeDestino));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("Id_cidadeSaida", v.Id_cidadeSaida));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("KmSaida", v.KmSaida));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("passageiro", v.passageiro));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("DtaRetorno", v.DtaRetorno));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("DtaSaida", v.DtaSaida));
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("KmRetorno", v.KmRetorno));
+
+
+
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+
+                MessageBox.Show("Viagem Editada com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao cadastrar o usuario, verifique a conexão com o banco de dados: " + ex.ToString());
 
             }
         }

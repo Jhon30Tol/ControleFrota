@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMensagemCampoObrigatorio));
             this.MensagemOkBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MensagemCampoObrigatorioLbl = new System.Windows.Forms.Label();
             this.MsgFecharPnl = new System.Windows.Forms.Panel();
             this.Fecharbtn = new System.Windows.Forms.Button();
-            this.MensagemCampoObrigatorioLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.MsgFecharPnl.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.MensagemOkBtn.TabIndex = 28;
             this.MensagemOkBtn.Text = "OK";
             this.MensagemOkBtn.UseVisualStyleBackColor = false;
+            this.MensagemOkBtn.Click += new System.EventHandler(this.MensagemOkBtn_Click);
             // 
             // panel1
             // 
@@ -60,6 +61,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(316, 112);
             this.panel1.TabIndex = 29;
+            // 
+            // MensagemCampoObrigatorioLbl
+            // 
+            this.MensagemCampoObrigatorioLbl.AutoSize = true;
+            this.MensagemCampoObrigatorioLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(32, 46);
+            this.MensagemCampoObrigatorioLbl.Name = "MensagemCampoObrigatorioLbl";
+            this.MensagemCampoObrigatorioLbl.Size = new System.Drawing.Size(257, 16);
+            this.MensagemCampoObrigatorioLbl.TabIndex = 30;
+            this.MensagemCampoObrigatorioLbl.Text = "Preencha os campos Obrigatórios.";
             // 
             // MsgFecharPnl
             // 
@@ -88,16 +99,6 @@
             this.Fecharbtn.TabIndex = 0;
             this.Fecharbtn.UseVisualStyleBackColor = false;
             // 
-            // MensagemCampoObrigatorioLbl
-            // 
-            this.MensagemCampoObrigatorioLbl.AutoSize = true;
-            this.MensagemCampoObrigatorioLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(32, 46);
-            this.MensagemCampoObrigatorioLbl.Name = "MensagemCampoObrigatorioLbl";
-            this.MensagemCampoObrigatorioLbl.Size = new System.Drawing.Size(257, 16);
-            this.MensagemCampoObrigatorioLbl.TabIndex = 30;
-            this.MensagemCampoObrigatorioLbl.Text = "Preencha os campos Obrigatórios.";
-            // 
             // FrmMensagemCampoObrigatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,8 +116,8 @@
 
         private System.Windows.Forms.Button MensagemOkBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label MensagemCampoObrigatorioLbl;
         private System.Windows.Forms.Panel MsgFecharPnl;
         private System.Windows.Forms.Button Fecharbtn;
+        public System.Windows.Forms.Label MensagemCampoObrigatorioLbl;
     }
 }

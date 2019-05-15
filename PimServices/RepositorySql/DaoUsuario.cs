@@ -38,7 +38,6 @@ namespace PimServices.RepositorySql
                 cmd.ExecuteNonQuery();
 
                 conn.Close();
-                MessageBox.Show("Usuario salvo com sucesso!");
             }
             catch (Exception ex)
             {
