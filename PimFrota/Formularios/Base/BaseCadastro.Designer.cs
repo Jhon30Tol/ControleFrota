@@ -119,6 +119,7 @@
             ClienteBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             ClienteBtn.BackColor = System.Drawing.Color.Ivory;
             ClienteBtn.Depth = 0;
+            ClienteBtn.Enabled = false;
             ClienteBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             ClienteBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ClienteBtn.ForeColor = System.Drawing.Color.White;
@@ -139,6 +140,7 @@
             VeiculoBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             VeiculoBtn.BackColor = System.Drawing.Color.Ivory;
             VeiculoBtn.Depth = 0;
+            VeiculoBtn.Enabled = false;
             VeiculoBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             VeiculoBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             VeiculoBtn.ForeColor = System.Drawing.Color.White;
@@ -159,6 +161,7 @@
             CidadeBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             CidadeBtn.BackColor = System.Drawing.Color.Ivory;
             CidadeBtn.Depth = 0;
+            CidadeBtn.Enabled = false;
             CidadeBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             CidadeBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             CidadeBtn.ForeColor = System.Drawing.Color.White;
@@ -179,6 +182,7 @@
             ProdutoBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             ProdutoBtn.BackColor = System.Drawing.Color.Ivory;
             ProdutoBtn.Depth = 0;
+            ProdutoBtn.Enabled = false;
             ProdutoBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             ProdutoBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ProdutoBtn.ForeColor = System.Drawing.Color.White;
@@ -199,6 +203,7 @@
             ServicoBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             ServicoBtn.BackColor = System.Drawing.Color.Ivory;
             ServicoBtn.Depth = 0;
+            ServicoBtn.Enabled = false;
             ServicoBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             ServicoBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ServicoBtn.ForeColor = System.Drawing.Color.White;
@@ -219,6 +224,7 @@
             SeguroBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             SeguroBtn.BackColor = System.Drawing.Color.Ivory;
             SeguroBtn.Depth = 0;
+            SeguroBtn.Enabled = false;
             SeguroBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             SeguroBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             SeguroBtn.ForeColor = System.Drawing.Color.White;

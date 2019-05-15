@@ -199,7 +199,6 @@
             // 
             // CadUsuIniPnl
             // 
-            this.CadUsuIniPnl.Controls.Add(this.usuarioPesquisaPnl);
             this.CadUsuIniPnl.Controls.Add(this.usuarioPnl);
             this.CadUsuIniPnl.Location = new System.Drawing.Point(2, 69);
             this.CadUsuIniPnl.Name = "CadUsuIniPnl";
@@ -216,7 +215,7 @@
             this.usuarioPesquisaPnl.Controls.Add(this.AtivoCkbx);
             this.usuarioPesquisaPnl.Controls.Add(this.PesquisarBtn);
             this.usuarioPesquisaPnl.Controls.Add(this.PesquisarTbx);
-            this.usuarioPesquisaPnl.Location = new System.Drawing.Point(15, 17);
+            this.usuarioPesquisaPnl.Location = new System.Drawing.Point(5, 65);
             this.usuarioPesquisaPnl.Name = "usuarioPesquisaPnl";
             this.usuarioPesquisaPnl.Size = new System.Drawing.Size(543, 399);
             this.usuarioPesquisaPnl.TabIndex = 1;
@@ -342,6 +341,7 @@
             // 
             this.SenhaUsuarioTbx.Location = new System.Drawing.Point(88, 123);
             this.SenhaUsuarioTbx.Name = "SenhaUsuarioTbx";
+            this.SenhaUsuarioTbx.PasswordChar = '*';
             this.SenhaUsuarioTbx.Size = new System.Drawing.Size(189, 20);
             this.SenhaUsuarioTbx.TabIndex = 114;
             // 
@@ -424,6 +424,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 495);
+            this.Controls.Add(this.usuarioPesquisaPnl);
             this.Controls.Add(this.linhaUsuarioLbl);
             this.Controls.Add(this.usuarioLbl);
             this.Controls.Add(this.CadUsuIniPnl);
@@ -433,7 +434,6 @@
             this.BotaoCadastroPnl.ResumeLayout(false);
             this.BotaoCadastroPnl.PerformLayout();
             this.CadUsuIniPnl.ResumeLayout(false);
-            this.CadUsuIniPnl.PerformLayout();
             this.usuarioPesquisaPnl.ResumeLayout(false);
             this.usuarioPesquisaPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).EndInit();

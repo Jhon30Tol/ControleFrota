@@ -64,5 +64,10 @@ namespace PimFrota.Formularios.Base
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void BaseIniViagemPnl_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

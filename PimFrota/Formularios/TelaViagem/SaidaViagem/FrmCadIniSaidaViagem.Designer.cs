@@ -1026,6 +1026,7 @@
             this.km_cidade_origem.HeaderText = "Km Saida";
             this.km_cidade_origem.Name = "km_cidade_origem";
             this.km_cidade_origem.ReadOnly = true;
+            this.km_cidade_origem.Visible = false;
             // 
             // Column6
             // 
@@ -1033,6 +1034,7 @@
             this.Column6.HeaderText = "Data Retorno";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
             // 
             // Column8
             // 
@@ -1040,6 +1042,7 @@
             this.Column8.HeaderText = "Km Retorno";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
             // 
             // Column9
             // 
@@ -1047,6 +1050,7 @@
             this.Column9.HeaderText = "Passageiro";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
             // 
             // FrmCadIniSaidaViagem
             // 

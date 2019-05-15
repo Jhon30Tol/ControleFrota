@@ -95,7 +95,6 @@ namespace PimServices.RepositorySql
 
                 conn.Close();
 
-                MessageBox.Show("Usuario Excluido com sucesso!");
             }
             catch (Exception ex)
             {

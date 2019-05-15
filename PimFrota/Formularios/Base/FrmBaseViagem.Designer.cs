@@ -193,6 +193,7 @@
             this.BaseIniViagemPnl.Name = "BaseIniViagemPnl";
             this.BaseIniViagemPnl.Size = new System.Drawing.Size(597, 500);
             this.BaseIniViagemPnl.TabIndex = 28;
+            this.BaseIniViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.BaseIniViagemPnl_Paint);
             // 
             // FrmBaseViagem
             // 
