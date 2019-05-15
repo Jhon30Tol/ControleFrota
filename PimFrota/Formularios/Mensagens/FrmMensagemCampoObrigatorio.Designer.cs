@@ -58,9 +58,9 @@
             this.panel1.Controls.Add(this.MsgFecharPnl);
             this.panel1.Controls.Add(this.MensagemCampoObrigatorioLbl);
             this.panel1.Controls.Add(this.MensagemOkBtn);
-            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 118);
+            this.panel1.Size = new System.Drawing.Size(318, 115);
             this.panel1.TabIndex = 29;
             // 
             // MsgFecharPnl
@@ -70,7 +70,7 @@
             this.MsgFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MsgFecharPnl.Location = new System.Drawing.Point(0, 0);
             this.MsgFecharPnl.Name = "MsgFecharPnl";
-            this.MsgFecharPnl.Size = new System.Drawing.Size(320, 20);
+            this.MsgFecharPnl.Size = new System.Drawing.Size(316, 20);
             this.MsgFecharPnl.TabIndex = 31;
             // 
             // Fecharbtn
@@ -84,7 +84,7 @@
             this.Fecharbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Fecharbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Fecharbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fecharbtn.Location = new System.Drawing.Point(298, 3);
+            this.Fecharbtn.Location = new System.Drawing.Point(294, 3);
             this.Fecharbtn.Name = "Fecharbtn";
             this.Fecharbtn.Size = new System.Drawing.Size(19, 15);
             this.Fecharbtn.TabIndex = 0;

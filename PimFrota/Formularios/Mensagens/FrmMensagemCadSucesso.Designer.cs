@@ -44,7 +44,7 @@
             this.MensagemOkBtn.FlatAppearance.BorderSize = 0;
             this.MensagemOkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MensagemOkBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemOkBtn.Location = new System.Drawing.Point(118, 83);
+            this.MensagemOkBtn.Location = new System.Drawing.Point(118, 76);
             this.MensagemOkBtn.Name = "MensagemOkBtn";
             this.MensagemOkBtn.Size = new System.Drawing.Size(75, 23);
             this.MensagemOkBtn.TabIndex = 25;
@@ -58,16 +58,16 @@
             this.panel1.Controls.Add(this.MensagemSucessoLbl);
             this.panel1.Controls.Add(this.MsgFecharPnl);
             this.panel1.Controls.Add(this.MensagemOkBtn);
-            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 118);
+            this.panel1.Size = new System.Drawing.Size(318, 111);
             this.panel1.TabIndex = 26;
             // 
             // MensagemSucessoLbl
             // 
             this.MensagemSucessoLbl.AutoSize = true;
             this.MensagemSucessoLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemSucessoLbl.Location = new System.Drawing.Point(35, 50);
+            this.MensagemSucessoLbl.Location = new System.Drawing.Point(35, 43);
             this.MensagemSucessoLbl.Name = "MensagemSucessoLbl";
             this.MensagemSucessoLbl.Size = new System.Drawing.Size(248, 16);
             this.MensagemSucessoLbl.TabIndex = 27;
@@ -80,7 +80,7 @@
             this.MsgFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MsgFecharPnl.Location = new System.Drawing.Point(0, 0);
             this.MsgFecharPnl.Name = "MsgFecharPnl";
-            this.MsgFecharPnl.Size = new System.Drawing.Size(318, 20);
+            this.MsgFecharPnl.Size = new System.Drawing.Size(316, 20);
             this.MsgFecharPnl.TabIndex = 26;
             // 
             // Fecharbtn
@@ -94,7 +94,7 @@
             this.Fecharbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Fecharbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Fecharbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fecharbtn.Location = new System.Drawing.Point(296, 3);
+            this.Fecharbtn.Location = new System.Drawing.Point(294, 3);
             this.Fecharbtn.Name = "Fecharbtn";
             this.Fecharbtn.Size = new System.Drawing.Size(19, 15);
             this.Fecharbtn.TabIndex = 0;
@@ -103,7 +103,7 @@
             // FrmMensagemCadSucesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(320, 116);
+            this.ClientSize = new System.Drawing.Size(320, 113);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMensagemCadSucesso";
             this.panel1.ResumeLayout(false);
