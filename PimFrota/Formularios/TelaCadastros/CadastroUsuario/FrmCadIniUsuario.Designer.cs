@@ -38,13 +38,6 @@
             this.PesquisarUsuBtn = new System.Windows.Forms.Button();
             this.ExcluirUsuBtn = new System.Windows.Forms.Button();
             this.CadUsuIniPnl = new System.Windows.Forms.Panel();
-            this.usuarioPesquisaPnl = new System.Windows.Forms.Panel();
-            this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.TodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.AtivoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.usuarioPnl = new System.Windows.Forms.Panel();
             this.AtivoCbx = new System.Windows.Forms.ComboBox();
             this.AtvoLbl = new System.Windows.Forms.Label();
@@ -54,14 +47,21 @@
             this.SenhaUsuarioLbl = new System.Windows.Forms.Label();
             this.Codusuariobl = new System.Windows.Forms.Label();
             this.NomeUsuarioLbl = new System.Windows.Forms.Label();
+            this.usuarioPesquisaPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.TodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.AtivoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.usuarioLbl = new System.Windows.Forms.Label();
             this.linhaUsuarioLbl = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadUsuIniPnl.SuspendLayout();
+            this.usuarioPnl.SuspendLayout();
             this.usuarioPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).BeginInit();
-            this.usuarioPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // BotaoCadastroPnl
@@ -199,12 +199,108 @@
             // 
             // CadUsuIniPnl
             // 
+            this.CadUsuIniPnl.Controls.Add(this.usuarioPesquisaPnl);
             this.CadUsuIniPnl.Controls.Add(this.usuarioPnl);
             this.CadUsuIniPnl.Location = new System.Drawing.Point(2, 69);
             this.CadUsuIniPnl.Name = "CadUsuIniPnl";
             this.CadUsuIniPnl.Size = new System.Drawing.Size(594, 414);
             this.CadUsuIniPnl.TabIndex = 23;
             this.CadUsuIniPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.CadUsuIniPnl_Paint);
+            // 
+            // usuarioPnl
+            // 
+            this.usuarioPnl.Controls.Add(this.AtivoCbx);
+            this.usuarioPnl.Controls.Add(this.AtvoLbl);
+            this.usuarioPnl.Controls.Add(this.SenhaUsuarioTbx);
+            this.usuarioPnl.Controls.Add(this.NomeUsuarioTbx);
+            this.usuarioPnl.Controls.Add(this.CodUsuarioTbx);
+            this.usuarioPnl.Controls.Add(this.SenhaUsuarioLbl);
+            this.usuarioPnl.Controls.Add(this.Codusuariobl);
+            this.usuarioPnl.Controls.Add(this.NomeUsuarioLbl);
+            this.usuarioPnl.Location = new System.Drawing.Point(15, 17);
+            this.usuarioPnl.Name = "usuarioPnl";
+            this.usuarioPnl.Size = new System.Drawing.Size(328, 171);
+            this.usuarioPnl.TabIndex = 0;
+            // 
+            // AtivoCbx
+            // 
+            this.AtivoCbx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AtivoCbx.FormattingEnabled = true;
+            this.AtivoCbx.Items.AddRange(new object[] {
+            "S",
+            "N"});
+            this.AtivoCbx.Location = new System.Drawing.Point(88, 47);
+            this.AtivoCbx.Name = "AtivoCbx";
+            this.AtivoCbx.Size = new System.Drawing.Size(76, 21);
+            this.AtivoCbx.TabIndex = 116;
+            // 
+            // AtvoLbl
+            // 
+            this.AtvoLbl.AutoSize = true;
+            this.AtvoLbl.BackColor = System.Drawing.Color.Transparent;
+            this.AtvoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AtvoLbl.Location = new System.Drawing.Point(23, 51);
+            this.AtvoLbl.Name = "AtvoLbl";
+            this.AtvoLbl.Size = new System.Drawing.Size(49, 17);
+            this.AtvoLbl.TabIndex = 115;
+            this.AtvoLbl.Text = "Ativo:";
+            // 
+            // SenhaUsuarioTbx
+            // 
+            this.SenhaUsuarioTbx.Location = new System.Drawing.Point(88, 123);
+            this.SenhaUsuarioTbx.Name = "SenhaUsuarioTbx";
+            this.SenhaUsuarioTbx.PasswordChar = '*';
+            this.SenhaUsuarioTbx.Size = new System.Drawing.Size(189, 20);
+            this.SenhaUsuarioTbx.TabIndex = 114;
+            // 
+            // NomeUsuarioTbx
+            // 
+            this.NomeUsuarioTbx.Location = new System.Drawing.Point(88, 88);
+            this.NomeUsuarioTbx.Name = "NomeUsuarioTbx";
+            this.NomeUsuarioTbx.Size = new System.Drawing.Size(189, 20);
+            this.NomeUsuarioTbx.TabIndex = 113;
+            // 
+            // CodUsuarioTbx
+            // 
+            this.CodUsuarioTbx.Enabled = false;
+            this.CodUsuarioTbx.Location = new System.Drawing.Point(88, 11);
+            this.CodUsuarioTbx.Name = "CodUsuarioTbx";
+            this.CodUsuarioTbx.Size = new System.Drawing.Size(76, 20);
+            this.CodUsuarioTbx.TabIndex = 112;
+            this.CodUsuarioTbx.Text = "Automatico";
+            // 
+            // SenhaUsuarioLbl
+            // 
+            this.SenhaUsuarioLbl.AutoSize = true;
+            this.SenhaUsuarioLbl.BackColor = System.Drawing.Color.Transparent;
+            this.SenhaUsuarioLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SenhaUsuarioLbl.Location = new System.Drawing.Point(18, 126);
+            this.SenhaUsuarioLbl.Name = "SenhaUsuarioLbl";
+            this.SenhaUsuarioLbl.Size = new System.Drawing.Size(59, 17);
+            this.SenhaUsuarioLbl.TabIndex = 111;
+            this.SenhaUsuarioLbl.Text = "Senha:";
+            // 
+            // Codusuariobl
+            // 
+            this.Codusuariobl.AutoSize = true;
+            this.Codusuariobl.BackColor = System.Drawing.Color.Transparent;
+            this.Codusuariobl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Codusuariobl.Location = new System.Drawing.Point(18, 14);
+            this.Codusuariobl.Name = "Codusuariobl";
+            this.Codusuariobl.Size = new System.Drawing.Size(63, 17);
+            this.Codusuariobl.TabIndex = 110;
+            this.Codusuariobl.Text = "Código:";
+            // 
+            // NomeUsuarioLbl
+            // 
+            this.NomeUsuarioLbl.AutoSize = true;
+            this.NomeUsuarioLbl.BackColor = System.Drawing.Color.Transparent;
+            this.NomeUsuarioLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomeUsuarioLbl.Location = new System.Drawing.Point(18, 91);
+            this.NomeUsuarioLbl.Name = "NomeUsuarioLbl";
+            this.NomeUsuarioLbl.Size = new System.Drawing.Size(54, 17);
+            this.NomeUsuarioLbl.TabIndex = 109;
+            this.NomeUsuarioLbl.Text = "Nome:";
             // 
             // usuarioPesquisaPnl
             // 
@@ -215,7 +311,7 @@
             this.usuarioPesquisaPnl.Controls.Add(this.AtivoCkbx);
             this.usuarioPesquisaPnl.Controls.Add(this.PesquisarBtn);
             this.usuarioPesquisaPnl.Controls.Add(this.PesquisarTbx);
-            this.usuarioPesquisaPnl.Location = new System.Drawing.Point(5, 65);
+            this.usuarioPesquisaPnl.Location = new System.Drawing.Point(3, 3);
             this.usuarioPesquisaPnl.Name = "usuarioPesquisaPnl";
             this.usuarioPesquisaPnl.Size = new System.Drawing.Size(543, 399);
             this.usuarioPesquisaPnl.TabIndex = 1;
@@ -300,100 +396,6 @@
             this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
             this.PesquisarTbx.TabIndex = 11;
             // 
-            // usuarioPnl
-            // 
-            this.usuarioPnl.Controls.Add(this.AtivoCbx);
-            this.usuarioPnl.Controls.Add(this.AtvoLbl);
-            this.usuarioPnl.Controls.Add(this.SenhaUsuarioTbx);
-            this.usuarioPnl.Controls.Add(this.NomeUsuarioTbx);
-            this.usuarioPnl.Controls.Add(this.CodUsuarioTbx);
-            this.usuarioPnl.Controls.Add(this.SenhaUsuarioLbl);
-            this.usuarioPnl.Controls.Add(this.Codusuariobl);
-            this.usuarioPnl.Controls.Add(this.NomeUsuarioLbl);
-            this.usuarioPnl.Location = new System.Drawing.Point(15, 17);
-            this.usuarioPnl.Name = "usuarioPnl";
-            this.usuarioPnl.Size = new System.Drawing.Size(328, 171);
-            this.usuarioPnl.TabIndex = 0;
-            // 
-            // AtivoCbx
-            // 
-            this.AtivoCbx.FormattingEnabled = true;
-            this.AtivoCbx.Items.AddRange(new object[] {
-            "S",
-            "N"});
-            this.AtivoCbx.Location = new System.Drawing.Point(88, 47);
-            this.AtivoCbx.Name = "AtivoCbx";
-            this.AtivoCbx.Size = new System.Drawing.Size(76, 21);
-            this.AtivoCbx.TabIndex = 116;
-            // 
-            // AtvoLbl
-            // 
-            this.AtvoLbl.AutoSize = true;
-            this.AtvoLbl.BackColor = System.Drawing.Color.Transparent;
-            this.AtvoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AtvoLbl.Location = new System.Drawing.Point(23, 51);
-            this.AtvoLbl.Name = "AtvoLbl";
-            this.AtvoLbl.Size = new System.Drawing.Size(49, 17);
-            this.AtvoLbl.TabIndex = 115;
-            this.AtvoLbl.Text = "Ativo:";
-            // 
-            // SenhaUsuarioTbx
-            // 
-            this.SenhaUsuarioTbx.Location = new System.Drawing.Point(88, 123);
-            this.SenhaUsuarioTbx.Name = "SenhaUsuarioTbx";
-            this.SenhaUsuarioTbx.PasswordChar = '*';
-            this.SenhaUsuarioTbx.Size = new System.Drawing.Size(189, 20);
-            this.SenhaUsuarioTbx.TabIndex = 114;
-            // 
-            // NomeUsuarioTbx
-            // 
-            this.NomeUsuarioTbx.Location = new System.Drawing.Point(88, 88);
-            this.NomeUsuarioTbx.Name = "NomeUsuarioTbx";
-            this.NomeUsuarioTbx.Size = new System.Drawing.Size(189, 20);
-            this.NomeUsuarioTbx.TabIndex = 113;
-            // 
-            // CodUsuarioTbx
-            // 
-            this.CodUsuarioTbx.Enabled = false;
-            this.CodUsuarioTbx.Location = new System.Drawing.Point(88, 11);
-            this.CodUsuarioTbx.Name = "CodUsuarioTbx";
-            this.CodUsuarioTbx.Size = new System.Drawing.Size(76, 20);
-            this.CodUsuarioTbx.TabIndex = 112;
-            this.CodUsuarioTbx.Text = "Automatico";
-            // 
-            // SenhaUsuarioLbl
-            // 
-            this.SenhaUsuarioLbl.AutoSize = true;
-            this.SenhaUsuarioLbl.BackColor = System.Drawing.Color.Transparent;
-            this.SenhaUsuarioLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SenhaUsuarioLbl.Location = new System.Drawing.Point(18, 126);
-            this.SenhaUsuarioLbl.Name = "SenhaUsuarioLbl";
-            this.SenhaUsuarioLbl.Size = new System.Drawing.Size(59, 17);
-            this.SenhaUsuarioLbl.TabIndex = 111;
-            this.SenhaUsuarioLbl.Text = "Senha:";
-            // 
-            // Codusuariobl
-            // 
-            this.Codusuariobl.AutoSize = true;
-            this.Codusuariobl.BackColor = System.Drawing.Color.Transparent;
-            this.Codusuariobl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codusuariobl.Location = new System.Drawing.Point(18, 14);
-            this.Codusuariobl.Name = "Codusuariobl";
-            this.Codusuariobl.Size = new System.Drawing.Size(63, 17);
-            this.Codusuariobl.TabIndex = 110;
-            this.Codusuariobl.Text = "Código:";
-            // 
-            // NomeUsuarioLbl
-            // 
-            this.NomeUsuarioLbl.AutoSize = true;
-            this.NomeUsuarioLbl.BackColor = System.Drawing.Color.Transparent;
-            this.NomeUsuarioLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeUsuarioLbl.Location = new System.Drawing.Point(18, 91);
-            this.NomeUsuarioLbl.Name = "NomeUsuarioLbl";
-            this.NomeUsuarioLbl.Size = new System.Drawing.Size(54, 17);
-            this.NomeUsuarioLbl.TabIndex = 109;
-            this.NomeUsuarioLbl.Text = "Nome:";
-            // 
             // usuarioLbl
             // 
             this.usuarioLbl.AutoSize = true;
@@ -424,7 +426,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 495);
-            this.Controls.Add(this.usuarioPesquisaPnl);
             this.Controls.Add(this.linhaUsuarioLbl);
             this.Controls.Add(this.usuarioLbl);
             this.Controls.Add(this.CadUsuIniPnl);
@@ -434,11 +435,12 @@
             this.BotaoCadastroPnl.ResumeLayout(false);
             this.BotaoCadastroPnl.PerformLayout();
             this.CadUsuIniPnl.ResumeLayout(false);
+            this.CadUsuIniPnl.PerformLayout();
+            this.usuarioPnl.ResumeLayout(false);
+            this.usuarioPnl.PerformLayout();
             this.usuarioPesquisaPnl.ResumeLayout(false);
             this.usuarioPesquisaPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).EndInit();
-            this.usuarioPnl.ResumeLayout(false);
-            this.usuarioPnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

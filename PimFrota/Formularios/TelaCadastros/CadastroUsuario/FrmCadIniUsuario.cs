@@ -57,6 +57,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
             IncluirUsuBtn.Enabled = false;
+            AtivoCbx.Text = "S";
 
         }
 
