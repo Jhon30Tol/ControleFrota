@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniSaidaViagem));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CadViagemIniPnl = new System.Windows.Forms.Panel();
             this.saidaViagemPnl = new System.Windows.Forms.Panel();
             this.msgNaoRetornouLbl = new System.Windows.Forms.Label();
@@ -442,7 +443,7 @@
             this.motoristaPesquisarPnl.Controls.Add(this.materialLabel4);
             this.motoristaPesquisarPnl.Controls.Add(this.pesquisaMotoristaTbx);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(1, 60);
+            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(1, 55);
             this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
             this.motoristaPesquisarPnl.Size = new System.Drawing.Size(581, 367);
             this.motoristaPesquisarPnl.TabIndex = 125;
@@ -518,7 +519,7 @@
             this.cidadePesquisarPnl.Controls.Add(this.materialLabel7);
             this.cidadePesquisarPnl.Controls.Add(this.pesquisaCidadeTbx);
             this.cidadePesquisarPnl.Controls.Add(this.textBox2);
-            this.cidadePesquisarPnl.Location = new System.Drawing.Point(4, 55);
+            this.cidadePesquisarPnl.Location = new System.Drawing.Point(1, 62);
             this.cidadePesquisarPnl.Name = "cidadePesquisarPnl";
             this.cidadePesquisarPnl.Size = new System.Drawing.Size(593, 429);
             this.cidadePesquisarPnl.TabIndex = 126;
@@ -781,6 +782,8 @@
             // 
             this.dataGridViewSaiViagem.AllowUserToAddRows = false;
             this.dataGridViewSaiViagem.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewSaiViagem.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewSaiViagem.AutoGenerateColumns = false;
             this.dataGridViewSaiViagem.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridViewSaiViagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -803,6 +806,7 @@
             this.dataGridViewSaiViagem.Location = new System.Drawing.Point(6, 69);
             this.dataGridViewSaiViagem.Name = "dataGridViewSaiViagem";
             this.dataGridViewSaiViagem.ReadOnly = true;
+            this.dataGridViewSaiViagem.RowHeadersVisible = false;
             this.dataGridViewSaiViagem.Size = new System.Drawing.Size(578, 352);
             this.dataGridViewSaiViagem.TabIndex = 17;
             this.dataGridViewSaiViagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRetViagem_CellContentClick);
@@ -921,7 +925,7 @@
             // 
             // syslogDataSet
             // 
-            this.syslogDataSet.DataSetName = "syslogDataSet";
+            this.syslogDataSet.DataSetName = "C";
             this.syslogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // materialLabel10

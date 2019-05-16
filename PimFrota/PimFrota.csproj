@@ -220,6 +220,16 @@
     <Compile Include="Relatorios\RptrRelatorio.Designer.cs">
       <DependentUpon>RptrRelatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="sislogDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sislogDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sislogDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sislogDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="syslogDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -307,6 +317,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sislogDataSet.xsc">
+      <DependentUpon>sislogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sislogDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sislogDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sislogDataSet.xss">
+      <DependentUpon>sislogDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sislogDataSet1.xsc">
+      <DependentUpon>sislogDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sislogDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sislogDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sislogDataSet1.xss">
+      <DependentUpon>sislogDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="syslogDataSet.xsc">
       <DependentUpon>syslogDataSet.xsd</DependentUpon>
     </None>

@@ -104,7 +104,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 if
                   (modoEdit == false)
                 {
-                    Usuario u = new Usuario();
                     DaoUsuario dao = new DaoUsuario();
 
                     u.Nome = NomeUsuarioTbx.Text;
@@ -129,10 +128,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 }
                 else
                 {
-                    Usuario u = new Usuario();
                     DaoUsuario dao = new DaoUsuario();
 
-                    u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
                     u.Nome = NomeUsuarioTbx.Text;
                     u.Senha = SenhaUsuarioTbx.Text;
                     u.Ativo = AtivoCbx.Text;
@@ -256,10 +253,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void dataGridViewUsuario_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
+            u.Id = Convert.ToInt32(dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString());
+
+            AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
             NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
-            u.Senha =  dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
-            u.Id = Convert.ToInt32(dataGridViewUsuario.CurrentRow.Cells[3].Value.ToString());
+            u.Senha =  dataGridViewUsuario.CurrentRow.Cells[3].Value.ToString();
 
 
             MessageBox.Show(Convert.ToString(u.Id));
@@ -316,6 +314,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                 frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Nome deve conter mais que 3 Letras";
                 frmMsgCampoObrigatorioMsg.ShowDialog();
             }
+        }
+
+        private void usuarioPesquisaPnl_Paint(object sender, PaintEventArgs e)
+        {
+            //dataGridViewUsuario.AutoGenerateColumns = false;
         }
     }
     

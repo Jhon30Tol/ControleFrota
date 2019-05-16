@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sislogDataSet1" targetNamespace="http://tempuri.org/sislogDataSet1.xsd" xmlns:mstns="http://tempuri.org/sislogDataSet1.xsd" xmlns="http://tempuri.org/sislogDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sislogConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sislogConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PimFrota.Properties.Settings.GlobalReference.Default.sislogConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cadastro_bairroTableAdapter" GeneratorDataComponentClassName="cadastro_bairroTableAdapter" Name="cadastro_bairro" UserDataComponentName="cadastro_bairroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sislogConnectionString (Settings)" DbObjectName="sislog.cadastro_bairro" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_bairro`, `id_uf`, `id_cidade`, `nome` FROM `cadastro_bairro`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cadastro_cidadeTableAdapter" GeneratorDataComponentClassName="cadastro_cidadeTableAdapter" Name="cadastro_cidade" UserDataComponentName="cadastro_cidadeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sislogConnectionString (Settings)" DbObjectName="sislog.cadastro_cidade" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_cidade`, `nome_cidade`, `cod_ibge`, `uf_estado` FROM `cadastro_cidade`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cadastro_enderecoTableAdapter" GeneratorDataComponentClassName="cadastro_enderecoTableAdapter" Name="cadastro_endereco" UserDataComponentName="cadastro_enderecoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sislogConnectionString (Settings)" DbObjectName="sislog.cadastro_endereco" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_endereco`, `cep`, `id_uf`, `id_cidade`, `id_bairro`, `nome` FROM `cadastro_endereco`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cadastro_motoristaTableAdapter" GeneratorDataComponentClassName="cadastro_motoristaTableAdapter" Name="cadastro_motorista" UserDataComponentName="cadastro_motoristaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sislogConnectionString (Settings)" DbObjectName="sislog.cadastro_motorista" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_motorista`, `nome_rua_motorista`, `endereco_numero_motorista`, `cep_motorista`, `id_cidade`, `cnh_motorista`, `nome_motorista`, `bairro_motorista`, `dta_nascimento_motorista`, `cpf_motorista`, `endereco_complementar_motorista`, `dta_vencimento_cnh_motorista` FROM `cadastro_motorista`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cadastro_usuarioTableAdapter" GeneratorDataComponentClassName="cadastro_usuarioTableAdapter" Name="cadastro_usuario" UserDataComponentName="cadastro_usuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sislogConnectionString (Settings)" DbObjectName="sislog.cadastro_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_usuario`, `ativo`, `nome_usuario`, `senha_usuario` FROM `cadastro_usuario`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cadastro_veiculoTableAdapter" GeneratorDataComponentClassName="cadastro_veiculoTableAdapter" Name="cadastro_veiculo" UserDataComponentName="cadastro_veiculoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sislogConnectionString (Settings)" DbObjectName="sislog.cadastro_veiculo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_veiculo`, `marca_veiculo`, `tipo_combustivel`, `placa_veiculo`, `ano_modelo`, `cor_veiculo`, `chassi_veiculo`, `modelo_veiculo` FROM `cadastro_veiculo`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viagemTableAdapter" GeneratorDataComponentClassName="viagemTableAdapter" Name="viagem" UserDataComponentName="viagemTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sislogConnectionString (Settings)" DbObjectName="sislog.viagem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_viagem`, `id_motorista`, `id_veiculo`, `id_cidade_destino`, `id_cidade_origem`, `km_cidade_origem`, `passageiro_viagem`, `dta_retorno`, `dta_saida`, `km_cidade_retorno` FROM `viagem`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sislogDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sislogDataSet1" msprop:Generator_UserDSName="sislogDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cadastro_bairro" msprop:Generator_TableClassName="cadastro_bairroDataTable" msprop:Generator_TableVarName="tablecadastro_bairro" msprop:Generator_TablePropName="cadastro_bairro" msprop:Generator_RowDeletingName="cadastro_bairroRowDeleting" msprop:Generator_RowChangingName="cadastro_bairroRowChanging" msprop:Generator_RowEvHandlerName="cadastro_bairroRowChangeEventHandler" msprop:Generator_RowDeletedName="cadastro_bairroRowDeleted" msprop:Generator_UserTableName="cadastro_bairro" msprop:Generator_RowChangedName="cadastro_bairroRowChanged" msprop:Generator_RowEvArgName="cadastro_bairroRowChangeEvent" msprop:Generator_RowClassName="cadastro_bairroRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cadastro_cidade" msprop:Generator_TableClassName="cadastro_cidadeDataTable" msprop:Generator_TableVarName="tablecadastro_cidade" msprop:Generator_TablePropName="cadastro_cidade" msprop:Generator_RowDeletingName="cadastro_cidadeRowDeleting" msprop:Generator_RowChangingName="cadastro_cidadeRowChanging" msprop:Generator_RowEvHandlerName="cadastro_cidadeRowChangeEventHandler" msprop:Generator_RowDeletedName="cadastro_cidadeRowDeleted" msprop:Generator_UserTableName="cadastro_cidade" msprop:Generator_RowChangedName="cadastro_cidadeRowChanged" msprop:Generator_RowEvArgName="cadastro_cidadeRowChangeEvent" msprop:Generator_RowClassName="cadastro_cidadeRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cadastro_endereco" msprop:Generator_TableClassName="cadastro_enderecoDataTable" msprop:Generator_TableVarName="tablecadastro_endereco" msprop:Generator_TablePropName="cadastro_endereco" msprop:Generator_RowDeletingName="cadastro_enderecoRowDeleting" msprop:Generator_RowChangingName="cadastro_enderecoRowChanging" msprop:Generator_RowEvHandlerName="cadastro_enderecoRowChangeEventHandler" msprop:Generator_RowDeletedName="cadastro_enderecoRowDeleted" msprop:Generator_UserTableName="cadastro_endereco" msprop:Generator_RowChangedName="cadastro_enderecoRowChanged" msprop:Generator_RowEvArgName="cadastro_enderecoRowChangeEvent" msprop:Generator_RowClassName="cadastro_enderecoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cadastro_motorista" msprop:Generator_TableClassName="cadastro_motoristaDataTable" msprop:Generator_TableVarName="tablecadastro_motorista" msprop:Generator_TablePropName="cadastro_motorista" msprop:Generator_RowDeletingName="cadastro_motoristaRowDeleting" msprop:Generator_RowChangingName="cadastro_motoristaRowChanging" msprop:Generator_RowEvHandlerName="cadastro_motoristaRowChangeEventHandler" msprop:Generator_RowDeletedName="cadastro_motoristaRowDeleted" msprop:Generator_UserTableName="cadastro_motorista" msprop:Generator_RowChangedName="cadastro_motoristaRowChanged" msprop:Generator_RowEvArgName="cadastro_motoristaRowChangeEvent" msprop:Generator_RowClassName="cadastro_motoristaRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cadastro_usuario" msprop:Generator_TableClassName="cadastro_usuarioDataTable" msprop:Generator_TableVarName="tablecadastro_usuario" msprop:Generator_TablePropName="cadastro_usuario" msprop:Generator_RowDeletingName="cadastro_usuarioRowDeleting" msprop:Generator_RowChangingName="cadastro_usuarioRowChanging" msprop:Generator_RowEvHandlerName="cadastro_usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="cadastro_usuarioRowDeleted" msprop:Generator_UserTableName="cadastro_usuario" msprop:Generator_RowChangedName="cadastro_usuarioRowChanged" msprop:Generator_RowEvArgName="cadastro_usuarioRowChangeEvent" msprop:Generator_RowClassName="cadastro_usuarioRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cadastro_veiculo" msprop:Generator_TableClassName="cadastro_veiculoDataTable" msprop:Generator_TableVarName="tablecadastro_veiculo" msprop:Generator_TablePropName="cadastro_veiculo" msprop:Generator_RowDeletingName="cadastro_veiculoRowDeleting" msprop:Generator_RowChangingName="cadastro_veiculoRowChanging" msprop:Generator_RowEvHandlerName="cadastro_veiculoRowChangeEventHandler" msprop:Generator_RowDeletedName="cadastro_veiculoRowDeleted" msprop:Generator_UserTableName="cadastro_veiculo" msprop:Generator_RowChangedName="cadastro_veiculoRowChanged" msprop:Generator_RowEvArgName="cadastro_veiculoRowChangeEvent" msprop:Generator_RowClassName="cadastro_veiculoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="viagem" msprop:Generator_TableClassName="viagemDataTable" msprop:Generator_TableVarName="tableviagem" msprop:Generator_TablePropName="viagem" msprop:Generator_RowDeletingName="viagemRowDeleting" msprop:Generator_RowChangingName="viagemRowChanging" msprop:Generator_RowEvHandlerName="viagemRowChangeEventHandler" msprop:Generator_RowDeletedName="viagemRowDeleted" msprop:Generator_UserTableName="viagem" msprop:Generator_RowChangedName="viagemRowChanged" msprop:Generator_RowEvArgName="viagemRowChangeEvent" msprop:Generator_RowClassName="viagemRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

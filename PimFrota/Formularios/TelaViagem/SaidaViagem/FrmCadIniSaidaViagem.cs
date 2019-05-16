@@ -606,6 +606,7 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
 
             EditarViagemBtn.Enabled = false;
             ExcluirViagemBtn.Enabled = false;
+            GravarViagemBtn.Enabled = true;
 
         }
 
