@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using PimFrota.Formularios.Mensagens;
@@ -37,6 +38,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             EditarUsuBtn.Enabled = false;
             CancelarUsuBtn.Enabled = false;
             ExcluirUsuBtn.Enabled = false;
+            IncluirUsuBtn.Enabled = true;
 
         }
 
@@ -119,6 +121,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                     }
                     dao.SalvarUsuario(u);
 
+
                     FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
 
                     msgCadastroSucesso.ShowDialog();
@@ -136,6 +139,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                     dao.EditarrUsuario(u);
                 }
 
+               // InitializeComponent();
                 iniciaForm();
             }
             
@@ -154,9 +158,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             usuarioPesquisaPnl.Visible = true;
             CancelarUsuBtn.Enabled = true;
             GravarUsuBtn.Enabled = false;
-            
-
-        
 
         }
 
@@ -255,10 +256,16 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void dataGridViewUsuario_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            CodUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
-            NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
-            AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
-            u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
+            AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
+            NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
+            u.Senha =  dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
+            u.Id = Convert.ToInt32(dataGridViewUsuario.CurrentRow.Cells[3].Value.ToString());
+
+
+            MessageBox.Show(Convert.ToString(u.Id));
+
+
+            // u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
 
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
@@ -294,7 +301,22 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         }
 
-   
+        private void NomeUsuarioTbx_Validating(object sender, CancelEventArgs e)
+        {
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorio = (FrmMensagemCampoObrigatorio)Application.OpenForms["FrmMensagemCampoObrigatorio"];
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorioMsg = new FrmMensagemCampoObrigatorio();
+
+            if (!Regex.IsMatch(NomeUsuarioTbx.Text, @"^[a-zA-Z]+$"))
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Nome deve conter somente Letras";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+            }
+            else if (NomeUsuarioTbx.TextLength < 3)
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Nome deve conter mais que 3 Letras";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+            }
+        }
     }
     
 }

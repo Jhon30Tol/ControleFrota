@@ -107,7 +107,7 @@ namespace PimServices.RepositorySql
             List<Usuario> todosUsuarios = new List<Usuario>();
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             conn = new MySqlConnection(connectionString);
-            String selecionaTodos = "select id_usuario, nome_usuario, ativo from cadastro_usuario ";
+            String selecionaTodos = "select id_usuario, nome_usuario, ativo, senha_usuario from cadastro_usuario ";
             conn.Open();
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
 
@@ -123,6 +123,7 @@ namespace PimServices.RepositorySql
 
                     novo.Id = (int)reader["id_usuario"];
                     novo.Nome = reader["nome_usuario"].ToString();
+                    novo.Senha = reader["senha_usuario"].ToString();
                     novo.Ativo = reader["ativo"].ToString();
                     todosUsuarios.Add(novo);
 
@@ -143,7 +144,7 @@ namespace PimServices.RepositorySql
             List<Usuario> BuscarPorNomeAtivo = new List<Usuario>();
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             conn = new MySqlConnection(connectionString);
-            String selecionaPorNome = "select id_usuario, nome_usuario, ativo from cadastro_usuario where ativo = 's' and nome_usuario like '%" + @nome + "%'";
+            String selecionaPorNome = "select id_usuario, nome_usuario, ativo, senha_usuario from cadastro_usuario where ativo = 's' and nome_usuario like '%" + @nome + "%'";
             conn.Open();
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaPorNome, conn);
             cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
@@ -161,6 +162,7 @@ namespace PimServices.RepositorySql
 
                     novo.Id = (int)reader["id_usuario"];
                     novo.Nome = reader["nome_usuario"].ToString();
+                    novo.Senha = reader["senha_usuario"].ToString();
                     novo.Ativo = reader["ativo"].ToString();
                     BuscarPorNomeAtivo.Add(novo);
 
@@ -182,7 +184,7 @@ namespace PimServices.RepositorySql
             List<Usuario> BuscarPorNomeInativo = new List<Usuario>();
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             conn = new MySqlConnection(connectionString);
-            String selecionaPorNome = "select id_usuario, nome_usuario, ativo from cadastro_usuario where ativo = 'n' and nome_usuario like '%" + @nome + "%'";
+            String selecionaPorNome = "select id_usuario, nome_usuario, ativo, senha_usuario from cadastro_usuario where ativo = 'n' and nome_usuario like '%" + @nome + "%'";
             conn.Open();
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaPorNome, conn);
             cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
@@ -200,6 +202,7 @@ namespace PimServices.RepositorySql
 
                     novo.Id = (int)reader["id_usuario"];
                     novo.Nome = reader["nome_usuario"].ToString();
+                    novo.Senha = reader["senha_usuario"].ToString();
                     novo.Ativo = reader["ativo"].ToString();
                     BuscarPorNomeInativo.Add(novo);
 

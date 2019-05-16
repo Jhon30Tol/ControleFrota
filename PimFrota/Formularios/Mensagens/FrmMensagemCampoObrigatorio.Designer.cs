@@ -44,7 +44,7 @@
             this.MensagemOkBtn.FlatAppearance.BorderSize = 0;
             this.MensagemOkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MensagemOkBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemOkBtn.Location = new System.Drawing.Point(119, 80);
+            this.MensagemOkBtn.Location = new System.Drawing.Point(149, 80);
             this.MensagemOkBtn.Name = "MensagemOkBtn";
             this.MensagemOkBtn.Size = new System.Drawing.Size(75, 23);
             this.MensagemOkBtn.TabIndex = 28;
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.MensagemOkBtn);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 115);
+            this.panel1.Size = new System.Drawing.Size(384, 115);
             this.panel1.TabIndex = 29;
             // 
             // MsgFecharPnl
@@ -70,7 +70,7 @@
             this.MsgFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.MsgFecharPnl.Location = new System.Drawing.Point(0, 0);
             this.MsgFecharPnl.Name = "MsgFecharPnl";
-            this.MsgFecharPnl.Size = new System.Drawing.Size(316, 20);
+            this.MsgFecharPnl.Size = new System.Drawing.Size(382, 20);
             this.MsgFecharPnl.TabIndex = 31;
             // 
             // Fecharbtn
@@ -84,7 +84,7 @@
             this.Fecharbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Fecharbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.Fecharbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fecharbtn.Location = new System.Drawing.Point(294, 3);
+            this.Fecharbtn.Location = new System.Drawing.Point(360, 3);
             this.Fecharbtn.Name = "Fecharbtn";
             this.Fecharbtn.Size = new System.Drawing.Size(19, 15);
             this.Fecharbtn.TabIndex = 0;
@@ -95,7 +95,7 @@
             // 
             this.MensagemCampoObrigatorioLbl.AutoSize = true;
             this.MensagemCampoObrigatorioLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(32, 46);
+            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(47, 49);
             this.MensagemCampoObrigatorioLbl.Name = "MensagemCampoObrigatorioLbl";
             this.MensagemCampoObrigatorioLbl.Size = new System.Drawing.Size(257, 16);
             this.MensagemCampoObrigatorioLbl.TabIndex = 30;
@@ -104,7 +104,7 @@
             // FrmMensagemCampoObrigatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(320, 117);
+            this.ClientSize = new System.Drawing.Size(387, 117);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMensagemCampoObrigatorio";
             this.panel1.ResumeLayout(false);
