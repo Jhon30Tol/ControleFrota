@@ -558,7 +558,6 @@ F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimFro
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimFrota.exe
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimFrota.pdb
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\MaterialSkin.dll
-F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\MySql.Data.dll
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimServices.dll
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Google.Protobuf.dll
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimServices.pdb

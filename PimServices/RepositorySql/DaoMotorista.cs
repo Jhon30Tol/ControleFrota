@@ -92,6 +92,41 @@ namespace PimServices.RepositorySql
 
                     }
                 }
+            public bool buscaCep(Motorista m)
+                {
+                try
+                    {
+                    MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+                    conn = new MySqlConnection(connectionString);
+                    String buscaCepNoBanco = "SELECT nome_cidade,cod_ibge,uf_estado FROM cadastro_cidade;";
+                    conn.Open();
+                    MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(buscaCepNoBanco, conn);
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_cidade", m.Cidade));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cod_ibge", m.Cep));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("uf_estado", m.Uf));
+                    int retorno = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    cmd.Prepare();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                    if (retorno > 0)
+                        {
+                        return true;
+                        }
+                    else
+                        {
+                        return false;
+                        }
+
+
+                    }
+                catch (Exception ex)
+                    {
+                    MessageBox.Show("CEP Invalido! " + ex.ToString());
+                    return false;
+                    }
+
+                }
 
             public void ExcluirMotorista(Motorista m)
                 {

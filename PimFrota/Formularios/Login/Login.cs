@@ -70,10 +70,7 @@ namespace PimFrota.Formularios.Login
         }
         private void Senhatxb_KeyDown(object sender, EventArgs u)
         {
-           /* if (u.KeyCode == Keys.Enter)
-            {
-                validaUsuario();
-            }*/
+          
         }
 
         private void Usuariotxb_TextChanged(object sender, EventArgs e)

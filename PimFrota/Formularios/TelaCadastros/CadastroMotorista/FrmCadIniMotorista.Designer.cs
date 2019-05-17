@@ -47,6 +47,10 @@
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.motoristaPnl = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ufMotoristaTbx = new System.Windows.Forms.TextBox();
+            this.cidadeMotoristaTbx = new System.Windows.Forms.TextBox();
             this.Buscar = new System.Windows.Forms.Label();
             this.buscarCepTbx = new System.Windows.Forms.Button();
             this.CepMotoristaTbx = new System.Windows.Forms.MaskedTextBox();
@@ -126,6 +130,7 @@
             this.EditarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
             this.EditarMotoristaBtn.TabIndex = 20;
             this.EditarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.EditarMotoristaBtn.Click += new System.EventHandler(this.EditarMotoristaBtn_Click);
             // 
             // IncluirMotoristaBtn
             // 
@@ -163,6 +168,7 @@
             this.GravarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarMotoristaBtn.TabIndex = 19;
             this.GravarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.GravarMotoristaBtn.Click += new System.EventHandler(this.GravarMotoristaBtn_Click);
             // 
             // PesquisarMotoristaBtn
             // 
@@ -308,6 +314,7 @@
             this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
             this.PesquisarBtn.TabIndex = 47;
             this.PesquisarBtn.UseVisualStyleBackColor = true;
+            this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click);
             // 
             // PesquisarTbx
             // 
@@ -318,6 +325,10 @@
             // 
             // motoristaPnl
             // 
+            this.motoristaPnl.Controls.Add(this.label3);
+            this.motoristaPnl.Controls.Add(this.label2);
+            this.motoristaPnl.Controls.Add(this.ufMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.cidadeMotoristaTbx);
             this.motoristaPnl.Controls.Add(this.Buscar);
             this.motoristaPnl.Controls.Add(this.buscarCepTbx);
             this.motoristaPnl.Controls.Add(this.CepMotoristaTbx);
@@ -346,6 +357,42 @@
             this.motoristaPnl.Name = "motoristaPnl";
             this.motoristaPnl.Size = new System.Drawing.Size(469, 317);
             this.motoristaPnl.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(201, 283);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 17);
+            this.label3.TabIndex = 137;
+            this.label3.Text = "UF:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(28, 281);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.TabIndex = 136;
+            this.label2.Text = "Cidade:";
+            // 
+            // ufMotoristaTbx
+            // 
+            this.ufMotoristaTbx.Location = new System.Drawing.Point(240, 282);
+            this.ufMotoristaTbx.Name = "ufMotoristaTbx";
+            this.ufMotoristaTbx.ReadOnly = true;
+            this.ufMotoristaTbx.Size = new System.Drawing.Size(100, 20);
+            this.ufMotoristaTbx.TabIndex = 135;
+            // 
+            // cidadeMotoristaTbx
+            // 
+            this.cidadeMotoristaTbx.Location = new System.Drawing.Point(95, 280);
+            this.cidadeMotoristaTbx.Name = "cidadeMotoristaTbx";
+            this.cidadeMotoristaTbx.ReadOnly = true;
+            this.cidadeMotoristaTbx.Size = new System.Drawing.Size(100, 20);
+            this.cidadeMotoristaTbx.TabIndex = 134;
             // 
             // Buscar
             // 
@@ -477,6 +524,7 @@
             // 
             this.RuaMotoristaTbx.Location = new System.Drawing.Point(94, 227);
             this.RuaMotoristaTbx.Name = "RuaMotoristaTbx";
+            this.RuaMotoristaTbx.ReadOnly = true;
             this.RuaMotoristaTbx.Size = new System.Drawing.Size(348, 20);
             this.RuaMotoristaTbx.TabIndex = 118;
             // 
@@ -484,6 +532,7 @@
             // 
             this.BairroMotoristaTbx.Location = new System.Drawing.Point(219, 253);
             this.BairroMotoristaTbx.Name = "BairroMotoristaTbx";
+            this.BairroMotoristaTbx.ReadOnly = true;
             this.BairroMotoristaTbx.Size = new System.Drawing.Size(227, 20);
             this.BairroMotoristaTbx.TabIndex = 115;
             // 
@@ -649,5 +698,9 @@
         private System.Windows.Forms.Label Buscar;
         private System.Windows.Forms.Button buscarCepTbx;
         private System.Windows.Forms.MaskedTextBox CepMotoristaTbx;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox ufMotoristaTbx;
+        private System.Windows.Forms.TextBox cidadeMotoristaTbx;
         }
 }

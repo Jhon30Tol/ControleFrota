@@ -1,4 +1,5 @@
 ﻿using Correios.Net;
+using PimFrota.Formularios.Mensagens;
 using PimServices.Model;
 using PimServices.RepositorySql.PimServices.RepositorySql;
 using System;
@@ -10,6 +11,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         {
         Motorista m = new Motorista();
         DaoMotorista daoMotorista = new DaoMotorista();
+        
 
         public FrmCadiniMotorista()
             {
@@ -25,7 +27,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void IncluirMotoristaBtn_Click(object sender, EventArgs e)
             {
 
-            daoMotorista.SalvarMotorista(m);
+            motoristaPesquisarPnl.Visible = false;
+            CadMotoristaIniPnl.Visible = true;
 
             }
 
@@ -37,37 +40,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             CadMotoristaIniPnl.Visible = false;
             }
 
-        private void LocalizarCEP()
-            {
-            Address endereco = new Address();
-
-            if (!string.IsNullOrWhiteSpace(CepMotoristaTbx.Text))
-                {
-
-                endereco = SearchZip.GetAddress(CepMotoristaTbx.Text);
-
-
-                if (endereco != null)
-                    {
-
-                    RuaMotoristaTbx.Text = endereco.Street;
-                    BairroMotoristaTbx.Text = endereco.District;
-
-
-                    }
-                else
-                    {
-                    MessageBox.Show("Cep não localizado !");
-                    RuaMotoristaTbx.Clear();
-                    BairroMotoristaTbx.Clear();
-
-                    }
-                }
-            else
-                {
-                MessageBox.Show("Por favor, informe um CEP válido");
-                }
-            }
+        
 
         private void CepMotoristaTbx_TextChanged(object sender, EventArgs e)
             {
@@ -83,24 +56,77 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void pesquisarCepTbx_Click(object sender, EventArgs e)
             {
             LocalizarCEP();
+
             }
-        public void SalvarMotorista()
+        public void salvarMotorista(Motorista m)
             {
-           
-            
-
-            motoristaPesquisarPnl.Visible = false;
-            CadMotoristaIniPnl.Visible = true;
-
-            
             m.nome = NomeMotoristaTbx.Text;
             m.cpf = CpfMotoristaTbx.Text;
+            m.dtaNascimento = Convert.ToDateTime(DtNascimentoMotoristaTbx.Text);
             m.cnh = cnhMotoristaTbx.Text;
             m.dtaVencimentoCnh = Convert.ToDateTime(DtVencCnhTbx.Text);
             m.telefoneFixo = Convert.ToInt32(telefoneMotoristaTbx.Text);
             m.celular = Convert.ToInt32(celularMotoristaTbx.Text);
             LocalizarCEP();
-            m.dtaNascimento = Convert.ToDateTime(DtNascimentoMotoristaTbx.Text);
+            FrmMensagemCadSucesso sucesso = new FrmMensagemCadSucesso();
+            sucesso.Show();
+
+            }
+        private void LocalizarCEP()
+            {
+
+            if (daoMotorista.buscaCep(m)) {
+
+                m.Cep = Convert.ToInt32(CepMotoristaTbx.Text);
+                m.rua = RuaMotoristaTbx.Text;
+                m.numero = Convert.ToInt32(NumeroRuaMotoristaTbx.Text);
+                m.Cidade = cidadeMotoristaTbx.Text;
+                m.Uf = ufMotoristaTbx.Text;
+                limparDados();
+                
+                }
+            else
+                {
+                MessageBox.Show("CEP Invalido !");
+               
+                }
+
+            }
+        public void limparDados()
+            {
+            NomeMotoristaTbx.Clear();
+            CpfMotoristaTbx.Clear();
+            DtNascimentoMotoristaTbx.Clear();
+            cnhMotoristaTbx.Clear();
+            DtVencCnhTbx.Clear();
+            telefoneMotoristaTbx.Clear();
+            celularMotoristaTbx.Clear();
+            celularMotoristaTbx.Clear();
+            RuaMotoristaTbx.Clear();
+            NumeroRuaMotoristaTbx.Clear();
+            cidadeMotoristaTbx.Clear();
+            ufMotoristaTbx.Clear();
+
+            }
+        public void editarMotorista()
+            {
+            FrmCadiniMotorista frmCadiniMotorista = new FrmCadiniMotorista();
+
+
+            }
+
+        private void GravarMotoristaBtn_Click(object sender, EventArgs e)
+            {
+            salvarMotorista(m);
+            }
+
+        private void EditarMotoristaBtn_Click(object sender, EventArgs e)
+            {
+            
+            }
+
+        private void PesquisarBtn_Click(object sender, EventArgs e)
+            {
 
             }
         }

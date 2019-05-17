@@ -89,7 +89,6 @@ C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimSer
 C:\Users\TI01.OXFORD\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.pdb
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\PimServices.dll
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\PimServices.pdb
-F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\MySql.Data.dll
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Google.Protobuf.dll
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\bin\Debug\MySql.Data.xml
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csprojAssemblyReference.cache
