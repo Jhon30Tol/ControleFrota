@@ -433,7 +433,6 @@ F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimFrota
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimFrota.exe
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimFrota.pdb
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\MaterialSkin.dll
-F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\MySql.Data.dll
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimServices.dll
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\Google.Protobuf.dll
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\bin\Debug\PimServices.pdb

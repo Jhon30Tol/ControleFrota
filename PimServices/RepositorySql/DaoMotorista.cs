@@ -98,7 +98,16 @@ namespace PimServices.RepositorySql
                     {
                     MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                     conn = new MySqlConnection(connectionString);
-                    String buscaCepNoBanco = "SELECT nome_cidade,cod_ibge,uf_estado FROM cadastro_cidade;";
+                    String buscaCepNoBanco = "SELECT c.nome, " +
+                                             "b.nome , " +
+                                             "a.nome_cidade, " +
+                                             "c.id_uf " +
+                                             "FROM cadastro_endereco c " +
+                                             "JOIN cadastro_bairro b " +
+                                             "JOIN cadastro_cidade a " +
+                                             "ON c.id_bairro = b.id_bairro " +
+                                             "AND c.id_cidade = a.id_cidade" +
+                                             "where c.cep = @cep;";
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(buscaCepNoBanco, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_cidade", m.Cidade));

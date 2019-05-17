@@ -229,7 +229,6 @@
             // 
             // CadMotoristaIniPnl
             // 
-            this.CadMotoristaIniPnl.Controls.Add(this.motoristaPesquisarPnl);
             this.CadMotoristaIniPnl.Controls.Add(this.motoristaPnl);
             this.CadMotoristaIniPnl.Location = new System.Drawing.Point(5, 67);
             this.CadMotoristaIniPnl.Name = "CadMotoristaIniPnl";
@@ -244,7 +243,7 @@
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarLbl);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarBtn);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(15, 58);
+            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(31, 26);
             this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
             this.motoristaPesquisarPnl.Size = new System.Drawing.Size(522, 291);
             this.motoristaPesquisarPnl.TabIndex = 123;
@@ -325,6 +324,7 @@
             // 
             // motoristaPnl
             // 
+            this.motoristaPnl.Controls.Add(this.motoristaPesquisarPnl);
             this.motoristaPnl.Controls.Add(this.label3);
             this.motoristaPnl.Controls.Add(this.label2);
             this.motoristaPnl.Controls.Add(this.ufMotoristaTbx);
