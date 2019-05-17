@@ -106,6 +106,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             NumeroRuaMotoristaTbx.Clear();
             cidadeMotoristaTbx.Clear();
             ufMotoristaTbx.Clear();
+            CepMotoristaTbx.Clear();m
 
             }
         public void editarMotorista()

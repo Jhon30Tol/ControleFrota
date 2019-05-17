@@ -94,8 +94,10 @@ namespace PimServices.RepositorySql
                 }
             public bool buscaCep(Motorista m)
                 {
+
                 try
                     {
+
                     MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                     conn = new MySqlConnection(connectionString);
                     String buscaCepNoBanco = "SELECT c.nome, " +
@@ -115,9 +117,11 @@ namespace PimServices.RepositorySql
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("uf_estado", m.Uf));
                     int retorno = Convert.ToInt32(cmd.ExecuteScalar());
 
-                    cmd.Prepare();
+                    cmd.Prepare();                   
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("cheguei aqui");
                     conn.Close();
+                     
                     if (retorno > 0)
                         {
                         return true;
