@@ -66,6 +66,7 @@
     <Compile Include="Model\Endereco.cs" />
     <Compile Include="Model\Motorista.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Model\Veiculo.cs" />
     <Compile Include="Model\Viagem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorySql\ConexaoBancoMySQL.cs" />

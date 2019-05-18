@@ -659,18 +659,108 @@ namespace PimServices.RepositorySql
         }
 
 
+        public List<Veiculo> PesquisarTodosVeiculos(Veiculo veiculo)
+        {
+            List<Veiculo> pesquisarTodosVeiculos = new List<Veiculo>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+
+            String selecionaVeiculo = "select id_veiculo," +
+                                      " modelo_veiculo," +
+                                      "marca_veiculo, " +
+                                      "cor_veiculo, " +
+                                      "ano_modelo, " +
+                                      "placa_veiculo " +
+                                      "from cadastro_veiculo";
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaVeiculo, conn);
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Veiculo novo = new Veiculo();
+
+
+                    novo.id_veiculo = (int)reader["id_veiculo"];
+                    novo.modelo_veiculo = Convert.ToString(reader["modelo_veiculo"]);
 
 
 
 
+                    pesquisarTodosVeiculos.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return pesquisarTodosVeiculos;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
+        public List<Veiculo> PesquisarModeloVeiculos(String nome)
+        {
+            List<Veiculo> PesquisarModeloVeiculos = new List<Veiculo>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+
+            String selecionaVeiculo = "select id_veiculo, " +
+                                      "modelo_veiculo," +
+                                      "marca_veiculo, " +
+                                      "cor_veiculo, " +
+                                      "ano_modelo, " +
+                                      "placa_veiculo " +
+                                      "from cadastro_veiculo " +
+                                      "where modelo_veiculo like '%" + @nome + "%'";
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaVeiculo, conn);
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Veiculo novo = new Veiculo();
+
+
+                    novo.id_veiculo = (int)reader["id_veiculo"];
+                    novo.modelo_veiculo = Convert.ToString(reader["modelo_veiculo"]);
 
 
 
 
+                    PesquisarModeloVeiculos.Add(novo);
 
 
+                }
 
+                conn.Close();
+                return PesquisarModeloVeiculos;
+            }
+            finally
+            {
+                conn.Close();
+            }
 
+        }
 
 
 

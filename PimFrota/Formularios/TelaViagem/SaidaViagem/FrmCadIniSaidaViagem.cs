@@ -20,6 +20,7 @@ namespace PimFrota.Formularios.TelaViagem
         Viagem v = new Viagem();
         Cidade c = new Cidade();
         Motorista m = new Motorista();
+        Veiculo veiculo = new Veiculo();
         bool modoEdit = false;
         DaoViagem daoViagem = new DaoViagem();
         bool pesqCidade = false;
@@ -232,8 +233,8 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void dataGridViewVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            v.Id_veiculo = Convert.ToInt32(dataGridViewVeiculo.CurrentRow.Cells[0].Value.ToString());
-            VeiculoSaidaViagTbx.Text = dataGridViewVeiculo.CurrentRow.Cells[1].Value.ToString();
+            VeiculoSaidaViagTbx.Text = dataGridViewVeiculo.CurrentRow.Cells[0].Value.ToString();
+            v.Id_veiculo = Convert.ToInt32(dataGridViewVeiculo.CurrentRow.Cells[1].Value.ToString());
 
             veiculoPesquisarPnl.Visible = false;
             saidaViagemPnl.Visible = true;
@@ -241,29 +242,43 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string nome = PesquisarMotoristaTbx.Text;
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
+            string nome = pesquisarVeiculoTbx.Text;
+            
+            if (ModeloVeiculoCkb.Checked == true)
+            {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewVeiculo.DataSource = daoViagem.PesquisarModeloVeiculos(nome);
+                TodosVeiculosCkbx.Enabled = false;
 
-            MySqlDataAdapter pesq1 = new MySqlDataAdapter("select id_veiculo, modelo_veiculo,marca_veiculo, cor_veiculo, ano_modelo, placa_veiculo from cadastro_veiculo where modelo_veiculo like '%" + @nome + "%'", conn);
-            DataTable pesq3 = new DataTable();
-            pesq1.Fill(pesq3);
-            dataGridViewVeiculo.DataSource = pesq3;
+            }
+            else if (ModeloVeiculoCkb.Checked == false)
+            {
+                TodosVeiculosCkbx.Enabled = true;
+                pesquisarVeiculoTbx.Text = "";
+
+            }
         }
 
         private void TodosVeiculosCkbx_CheckedChanged(object sender, EventArgs e)
         {
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
-            PesquisarMotoristaTbx.Text = "";
+            if (TodosVeiculosCkbx.Checked == true)
+            {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewVeiculo.DataSource = daoViagem.PesquisarTodosVeiculos(veiculo);
+                ModeloVeiculoCkb.Enabled = false;
+                pesquisaVeiculoBtn.Enabled = false;
+                pesquisarVeiculoTbx.Enabled = false;
+                pesquisarVeiculoTbx.Text = "";
+            }
+            else if (TodosVeiculosCkbx.Checked == false)
+            {
+                ModeloVeiculoCkb.Enabled = true;
+                pesquisaVeiculoBtn.Enabled = true;
+                pesquisarVeiculoTbx.Enabled = true;
+                pesquisarVeiculoTbx.Text = "";
+            }
 
-            PesquisarMotoristaTbx.Enabled = false;
-            MySqlDataAdapter pesq = new MySqlDataAdapter("select id_veiculo, modelo_veiculo,marca_veiculo, cor_veiculo, ano_modelo, placa_veiculo from cadastro_veiculo", conn);
-            DataTable pesq1 = new DataTable();
-            pesq.Fill(pesq1);
-            dataGridViewVeiculo.DataSource = pesq1;
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -679,6 +694,20 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
                 pesquisaMotoristaBtn.Enabled = true;
                 PesquisarMotoristaTbx.Enabled = true;
                 PesquisarMotoristaTbx.Text = "";
+
+            }
+        }
+
+        private void ModeloVeiculoCkb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ModeloVeiculoCkb.Checked == true)
+            {
+                TodosVeiculosCkbx.Enabled = false;
+            }
+            else if (ModeloVeiculoCkb.Checked == false)
+            {
+                TodosVeiculosCkbx.Enabled = true;
+                pesquisarVeiculoTbx.Text = "";
 
             }
         }
