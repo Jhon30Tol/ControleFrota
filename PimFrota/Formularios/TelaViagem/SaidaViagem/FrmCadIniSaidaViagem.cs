@@ -332,24 +332,66 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            DaoViagem daoViagem = new DaoViagem();
-            dataGridViewSaiViagem.DataSource = daoViagem.PesquisarTodasViagens(v);
-
-           /*
-            
             string nome = pesquisaSaidaViagemTbx.Text;
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
 
 
-
-
-
-            if (pesquTodosCkbx.Checked == true)
+            if (pesqMotoristaCbx.Checked == true)
             {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewSaiViagem.DataSource = daoViagem.PesquisarMotoristaViagens(nome);
 
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+            }
+            else if (pesqVeiculoCbx.Checked == true)
+            {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewSaiViagem.DataSource = daoViagem.PesquisarVeiculoViagens(nome);
+            }
+
+
+          //  dataGridViewSaiViagem.DataSource = daoViagem.PesquisarTodasViagens(v);
+
+
+            /*
+
+             string nome = pesquisaSaidaViagemTbx.Text;
+             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+             MySqlCommand cmd = new MySqlCommand();
+             conn.Open();
+
+
+
+
+
+             if (pesquTodosCkbx.Checked == true)
+             {
+
+                 MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+                     "v.id_viagem as Codigo_Viagem," +
+                     "m.nome_motorista as Nome_Motorista, " +
+                     "a.modelo_veiculo as Modelo_Veiculo, " +
+                     "c.nome_cidade as Cidade_Saida, " +
+                     "b.nome_cidade as Cidade_Destino, " +
+                     "date(v.dta_saida) as Data_Saida, " +
+                     "v.km_cidade_origem as Km_saida, " +
+                     "v.passageiro_viagem as Passageiro, " +
+                     "v.km_cidade_retorno as Km_retorno" +
+                     "FROM viagem v " +
+                     "JOIN cadastro_motorista m " +
+                     "JOIN cadastro_veiculo a " +
+                     "JOIN cadastro_cidade c " +
+                     "JOIN cadastro_cidade b " +
+                     "ON v.id_motorista = m.id_motorista  " +
+                     "AND v.id_veiculo = a.id_veiculo " +
+                     "AND  v.id_cidade_origem = c.id_cidade " +
+                     "AND  v.id_cidade_destino = b.id_cidade ;", conn);
+                 DataTable pesq3 = new DataTable();
+                 pesq1.Fill(pesq3);
+                 dataGridViewSaiViagem.DataSource = pesq3;
+
+             }
+             else if (pesqMotoristaCbx.Checked == true)
+             {
+                 MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
                     "v.id_viagem as Codigo_Viagem," +
                     "m.nome_motorista as Nome_Motorista, " +
                     "a.modelo_veiculo as Modelo_Veiculo, " +
@@ -358,7 +400,7 @@ namespace PimFrota.Formularios.TelaViagem
                     "date(v.dta_saida) as Data_Saida, " +
                     "v.km_cidade_origem as Km_saida, " +
                     "v.passageiro_viagem as Passageiro, " +
-                    "v.km_cidade_retorno as Km_retorno" +
+                    "v.km_cidade_retorno as Km_retorno " +
                     "FROM viagem v " +
                     "JOIN cadastro_motorista m " +
                     "JOIN cadastro_veiculo a " +
@@ -367,15 +409,15 @@ namespace PimFrota.Formularios.TelaViagem
                     "ON v.id_motorista = m.id_motorista  " +
                     "AND v.id_veiculo = a.id_veiculo " +
                     "AND  v.id_cidade_origem = c.id_cidade " +
-                    "AND  v.id_cidade_destino = b.id_cidade ;", conn);
-                DataTable pesq3 = new DataTable();
-                pesq1.Fill(pesq3);
-                dataGridViewSaiViagem.DataSource = pesq3;
-
-            }
-            else if (pesqMotoristaCbx.Checked == true)
-            {
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
+                    "AND  v.id_cidade_destino = b.id_cidade " +
+                    "and m.nome_motorista like '%" + @nome + "%'", conn);
+                 DataTable pesq3 = new DataTable();
+                 pesq1.Fill(pesq3);
+                 dataGridViewSaiViagem.DataSource = pesq3;
+             }
+             else if (pesqVeiculoCbx.Checked == true)
+             {
+                 MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
                    "v.id_viagem as Codigo_Viagem," +
                    "m.nome_motorista as Nome_Motorista, " +
                    "a.modelo_veiculo as Modelo_Veiculo, " +
@@ -394,38 +436,12 @@ namespace PimFrota.Formularios.TelaViagem
                    "AND v.id_veiculo = a.id_veiculo " +
                    "AND  v.id_cidade_origem = c.id_cidade " +
                    "AND  v.id_cidade_destino = b.id_cidade " +
-                   "and m.nome_motorista like '%" + @nome + "%'", conn);
-                DataTable pesq3 = new DataTable();
-                pesq1.Fill(pesq3);
-                dataGridViewSaiViagem.DataSource = pesq3;
-            }
-            else if (pesqVeiculoCbx.Checked == true)
-            {
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                  "v.id_viagem as Codigo_Viagem," +
-                  "m.nome_motorista as Nome_Motorista, " +
-                  "a.modelo_veiculo as Modelo_Veiculo, " +
-                  "c.nome_cidade as Cidade_Saida, " +
-                  "b.nome_cidade as Cidade_Destino, " +
-                  "date(v.dta_saida) as Data_Saida, " +
-                  "v.km_cidade_origem as Km_saida, " +
-                  "v.passageiro_viagem as Passageiro, " +
-                  "v.km_cidade_retorno as Km_retorno " +
-                  "FROM viagem v " +
-                  "JOIN cadastro_motorista m " +
-                  "JOIN cadastro_veiculo a " +
-                  "JOIN cadastro_cidade c " +
-                  "JOIN cadastro_cidade b " +
-                  "ON v.id_motorista = m.id_motorista  " +
-                  "AND v.id_veiculo = a.id_veiculo " +
-                  "AND  v.id_cidade_origem = c.id_cidade " +
-                  "AND  v.id_cidade_destino = b.id_cidade " +
-                  "and a.modelo_veiculo like '%" + @nome + "%'", conn);
-                DataTable pesq3 = new DataTable();
-                pesq1.Fill(pesq3);
-                dataGridViewSaiViagem.DataSource = pesq3;
-            }
-            */
+                   "and a.modelo_veiculo like '%" + @nome + "%'", conn);
+                 DataTable pesq3 = new DataTable();
+                 pesq1.Fill(pesq3);
+                 dataGridViewSaiViagem.DataSource = pesq3;
+             }
+             */
         }
 
         private void pesquTodosCkbx_CheckedChanged(object sender, EventArgs e)
@@ -440,34 +456,10 @@ namespace PimFrota.Formularios.TelaViagem
             PesquisarBtn.Enabled = false;
             pesquisaSaidaViagemTbx.Text = "";
 
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewSaiViagem.DataSource = daoViagem.PesquisarTodasViagens(v);
 
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
-            PesquisarTbx.Text = "";
-
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                "v.id_viagem as Codigo_Viagem," +
-                "m.nome_motorista as Nome_Motorista, " +
-                "a.modelo_veiculo as Modelo_Veiculo, " +
-                "c.nome_cidade as Cidade_Saida, " +
-                "b.nome_cidade as Cidade_Destino, " +
-                "date(v.dta_saida) as Data_Saida, " +
-                "v.km_cidade_origem as Km_saida, " +
-                "v.passageiro_viagem as Passageiro, " +
-                "v.km_cidade_retorno as Km_retorno " +
-                "FROM viagem v " +
-                "JOIN cadastro_motorista m " +
-                "JOIN cadastro_veiculo a " +
-                "JOIN cadastro_cidade c " +
-                "JOIN cadastro_cidade b " +
-                "ON v.id_motorista = m.id_motorista  " +
-                "AND v.id_veiculo = a.id_veiculo " +
-                "AND  v.id_cidade_origem = c.id_cidade " +
-                "AND  v.id_cidade_destino = b.id_cidade ;", conn);
-            DataTable pesq3 = new DataTable();
-            pesq1.Fill(pesq3);
-            dataGridViewSaiViagem.DataSource = pesq3;
+                
             }
             if (pesquTodosCkbx.Checked == false)
             {
@@ -489,6 +481,8 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             {
                 pesqVeiculoCbx.Enabled = false;
                 pesquTodosCkbx.Enabled = false;
+                string nome = PesquisarTbx.Text;
+
             }
             if (pesqMotoristaCbx.Checked == false)
             {

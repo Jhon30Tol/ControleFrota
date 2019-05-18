@@ -263,7 +263,7 @@ namespace PimServices.RepositorySql
                     novo.Id_cidadeSaida_pesquisa = Convert.ToString(reader["Cidade_Saida"]);
                     novo.Id_cidadeDestino_pesquisa = Convert.ToString(reader["Cidade_Destino"]);
                     novo.DtaSaida = Convert.ToDateTime(reader["Data_Saida"]);
-                    novo.DtaRetorno = Convert.ToDateTime(reader["Data_Retorno"]);
+                    novo.DtaRetorno = Convert.ToDateTime(reader["data_Retorno"]);
                     novo.KmSaida = (int)reader["Km_saida"];
                     novo.passageiro = Convert.ToString(reader["Passageiro"]);
                     novo.KmRetorno = (int)reader["Km_retorno"];
@@ -293,9 +293,178 @@ namespace PimServices.RepositorySql
 
 
 
-       
-        
+        public List<Viagem> PesquisarMotoristaViagens(String nome)
+        {
+            List<Viagem> pesquisarTodasViagens = new List<Viagem>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
 
-         
+            String selecionaMototrista = "SELECT " +
+                                    "v.id_viagem as Codigo_Viagem," +
+                                    "m.id_motorista, " +
+                                    "m.nome_motorista as Nome_Motorista, " +
+                                    "a.id_veiculo, " +
+                                    "a.modelo_veiculo as Modelo_Veiculo, " +
+                                    "c.id_cidade as id_Cidade_Saida, " +
+                                    "c.nome_cidade as Cidade_Saida, " +
+                                    "b.id_cidade as id_Cidade_Destino, " +
+                                    "b.nome_cidade as Cidade_Destino, " +
+                                    "v.km_cidade_retorno as Km_retorno, " +
+                                    "date(v.dta_saida) as Data_Saida, " +
+                                    "DATE(v.dta_retorno) AS data_Retorno," +
+                                    "v.km_cidade_origem as Km_saida, " +
+                                    "v.passageiro_viagem as Passageiro " +
+                                    "FROM viagem v " +
+                                    "JOIN cadastro_motorista m " +
+                                    "JOIN cadastro_veiculo a " +
+                                    "JOIN cadastro_cidade c " +
+                                    "JOIN cadastro_cidade b " +
+                                    "ON v.id_motorista = m.id_motorista  " +
+                                    "AND v.id_veiculo = a.id_veiculo " +
+                                    "AND  v.id_cidade_origem = c.id_cidade " +
+                                    "AND  v.id_cidade_destino = b.id_cidade where m.nome_motorista  like '%" + @nome + "%'";
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaMototrista, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Viagem novo = new Viagem();
+
+
+                    novo.Id_viagem = (int)reader["Codigo_Viagem"];
+                    novo.Id_motorista_pesquisa = Convert.ToString(reader["Nome_Motorista"]);
+                    novo.Id_veiculo_pesquisa = Convert.ToString(reader["Modelo_Veiculo"]);
+                    novo.Id_cidadeSaida_pesquisa = Convert.ToString(reader["Cidade_Saida"]);
+                    novo.Id_cidadeDestino_pesquisa = Convert.ToString(reader["Cidade_Destino"]);
+                    novo.DtaSaida = Convert.ToDateTime(reader["Data_Saida"]);
+                    novo.DtaRetorno = Convert.ToDateTime(reader["data_Retorno"]);
+                    novo.KmSaida = (int)reader["Km_saida"];
+                    novo.passageiro = Convert.ToString(reader["Passageiro"]);
+                    novo.KmRetorno = (int)reader["Km_retorno"];
+
+
+                    novo.Id_motorista = (int)reader["id_motorista"];
+                    novo.Id_veiculo = (int)reader["id_veiculo"];
+                    novo.Id_cidadeSaida = (int)reader["id_Cidade_Saida"];
+                    novo.Id_cidadeRetorno = (int)reader["id_Cidade_Destino"];
+
+
+
+                    pesquisarTodasViagens.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return pesquisarTodasViagens;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
+        public List<Viagem> PesquisarVeiculoViagens(String nome)
+        {
+            List<Viagem> pesquisarTodasViagens = new List<Viagem>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+
+            String selecionaVeiculo = "SELECT " +
+                                    "v.id_viagem as Codigo_Viagem," +
+                                    "m.id_motorista, " +
+                                    "m.nome_motorista as Nome_Motorista, " +
+                                    "a.id_veiculo, " +
+                                    "a.modelo_veiculo as Modelo_Veiculo, " +
+                                    "c.id_cidade as id_Cidade_Saida, " +
+                                    "c.nome_cidade as Cidade_Saida, " +
+                                    "b.id_cidade as id_Cidade_Destino, " +
+                                    "b.nome_cidade as Cidade_Destino, " +
+                                    "v.km_cidade_retorno as Km_retorno, " +
+                                    "date(v.dta_saida) as Data_Saida, " +
+                                    "DATE(v.dta_retorno) AS data_Retorno," +
+                                    "v.km_cidade_origem as Km_saida, " +
+                                    "v.passageiro_viagem as Passageiro " +
+                                    "FROM viagem v " +
+                                    "JOIN cadastro_motorista m " +
+                                    "JOIN cadastro_veiculo a " +
+                                    "JOIN cadastro_cidade c " +
+                                    "JOIN cadastro_cidade b " +
+                                    "ON v.id_motorista = m.id_motorista  " +
+                                    "AND v.id_veiculo = a.id_veiculo " +
+                                    "AND  v.id_cidade_origem = c.id_cidade " +
+                                    "AND  v.id_cidade_destino = b.id_cidade where a.modelo_veiculo  like '%" + @nome + "%'";
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaVeiculo, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Viagem novo = new Viagem();
+
+
+                    novo.Id_viagem = (int)reader["Codigo_Viagem"];
+                    novo.Id_motorista_pesquisa = Convert.ToString(reader["Nome_Motorista"]);
+                    novo.Id_veiculo_pesquisa = Convert.ToString(reader["Modelo_Veiculo"]);
+                    novo.Id_cidadeSaida_pesquisa = Convert.ToString(reader["Cidade_Saida"]);
+                    novo.Id_cidadeDestino_pesquisa = Convert.ToString(reader["Cidade_Destino"]);
+                    novo.DtaSaida = Convert.ToDateTime(reader["Data_Saida"]);
+                    novo.DtaRetorno = Convert.ToDateTime(reader["data_Retorno"]);
+                    novo.KmSaida = (int)reader["Km_saida"];
+                    novo.passageiro = Convert.ToString(reader["Passageiro"]);
+                    novo.KmRetorno = (int)reader["Km_retorno"];
+
+
+                    novo.Id_motorista = (int)reader["id_motorista"];
+                    novo.Id_veiculo = (int)reader["id_veiculo"];
+                    novo.Id_cidadeSaida = (int)reader["id_Cidade_Saida"];
+                    novo.Id_cidadeRetorno = (int)reader["id_Cidade_Destino"];
+
+
+
+                    pesquisarTodasViagens.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return pesquisarTodasViagens;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }
