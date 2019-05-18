@@ -458,6 +458,111 @@ namespace PimServices.RepositorySql
         }
 
 
+        public List<Cidade> PesquisarCidadeDestino(String nome)
+        {
+            List<Cidade> PesquisarCidadeDestino = new List<Cidade>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+
+            String selecionaCidadeDestino = "select  id_cidade, " +
+                                      "nome_cidade, " +
+                                      "uf_estado " +
+                                      "FROM cadastro_cidade " +
+                                      "where nome_cidade like '%" + @nome + "%'";
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaCidadeDestino, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+
+
+                    Cidade novo = new Cidade();
+
+                    novo.id_cidade = (int)reader["id_cidade"];
+                    novo.id_cidade_pesquisa = Convert.ToString(reader["nome_cidade"]);
+                    novo.nome_cidade = Convert.ToString(reader["nome_cidade"]);
+                    novo.uf_estado = Convert.ToString(reader["uf_estado"]);
+
+
+
+
+
+
+                    PesquisarCidadeDestino.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return PesquisarCidadeDestino;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        public List<Cidade> PesquisarTodosDestino(Cidade c)
+        {
+            List<Cidade> PesquisarTodosDestino = new List<Cidade>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+
+            String PesquisarTDestino = "select  id_cidade, " +
+                                      "nome_cidade, " +
+                                      "uf_estado " +
+                                      "FROM cadastro_cidade ";                              
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(PesquisarTDestino, conn);
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Cidade novo = new Cidade();
+
+                    novo.id_cidade = (int)reader["id_cidade"];
+                    novo.id_cidade_pesquisa = Convert.ToString(reader["nome_cidade"]);
+                    novo.nome_cidade = Convert.ToString(reader["nome_cidade"]);
+                    novo.uf_estado = Convert.ToString(reader["uf_estado"]);
+
+
+
+
+                    PesquisarTodosDestino.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return PesquisarTodosDestino;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
+
 
 
 

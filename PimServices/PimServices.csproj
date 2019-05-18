@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Cidade.cs" />
     <Compile Include="Model\Endereco.cs" />
     <Compile Include="Model\Motorista.cs" />
     <Compile Include="Model\Usuario.cs" />

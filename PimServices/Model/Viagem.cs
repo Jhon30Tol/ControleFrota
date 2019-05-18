@@ -21,6 +21,8 @@ namespace PimServices.Model
 
         public int Id_cidadeSaida { get; set; }
 
+        public String uf_cidade { get; set; }
+
         public String Id_cidadeSaida_pesquisa { get; set; }
 
         public int Id_cidadeDestino { get; set; }

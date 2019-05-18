@@ -18,6 +18,7 @@ namespace PimFrota.Formularios.TelaViagem
     public partial class FrmCadIniSaidaViagem : PimFrota.Formularios.Base.FrmBaseFundoCad
     {
         Viagem v = new Viagem();
+        Cidade c = new Cidade();
         bool modoEdit = false;
         DaoViagem daoViagem = new DaoViagem();
         bool pesqCidade = false;
@@ -256,16 +257,21 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            string nome = PesquisarTbx.Text;
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
 
-            MySqlDataAdapter pesq11 = new MySqlDataAdapter("select  id_cidade, nome_cidade, uf_estado FROM cadastro_cidade where nome_cidade like '%" + @nome + "%'", conn);
-            DataTable pesq3 = new DataTable();
-            pesq11.Fill(pesq3);
-            dataGridViewCidade.DataSource = pesq3;
+            string nome = pesquisaCidadeTbx.Text;
 
+            if (CidadeCkbx.Checked == true)
+            {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewCidade.DataSource = daoViagem.PesquisarCidadeDestino(nome);
+                TodasCidadesCbx.Enabled = false;
+
+            }
+            else if (CidadeCkbx.Checked == false)
+            {
+                TodasCidadesCbx.Enabled = true;
+
+            }
         }
 
         private void dataGridViewCidade_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -273,9 +279,8 @@ namespace PimFrota.Formularios.TelaViagem
 
             if (pesqCidade == true)
             {
-
-                v.Id_cidadeSaida = Convert.ToInt32(dataGridViewCidade.CurrentRow.Cells[0].Value.ToString());
-                CidadeSaidaViagTbx.Text = dataGridViewCidade.CurrentRow.Cells[1].Value.ToString();
+                CidadeSaidaViagTbx.Text = dataGridViewCidade.CurrentRow.Cells[0].Value.ToString();
+                v.Id_cidadeSaida = Convert.ToInt32(dataGridViewCidade.CurrentRow.Cells[2].Value.ToString());
 
                 cidadePesquisarPnl.Visible = false;
                 saidaViagemPnl.Visible = true;
@@ -531,11 +536,7 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             v.Id_cidadeSaida = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[12].Value.ToString());
             v.Id_cidadeDestino = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[13].Value.ToString());
 
-            MessageBox.Show(Convert.ToString(v.Id_viagem), "Id_viagem");
-            MessageBox.Show(Convert.ToString(v.Id_motorista), "Id_motorista");
-            MessageBox.Show(Convert.ToString(v.Id_veiculo), "Id_veiculo");
-            MessageBox.Show(Convert.ToString(v.Id_cidadeSaida), "Id_cidadeSaida");
-            MessageBox.Show(Convert.ToString(v.Id_cidadeDestino), "Id_cidadeDestino");
+          
 
             MessageBox.Show(DtaRetornoDtm.Text);
 
@@ -609,6 +610,46 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             DaoViagem dao = new DaoViagem();
             dao.ExcluirViagem(v);
             this.Close();
+        }
+
+        private void CidadeCkbx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CidadeCkbx.Checked == true)
+            {
+                
+                TodasCidadesCbx.Enabled = false;
+
+            }
+            else if (CidadeCkbx.Checked == false)
+            {
+                TodasCidadesCbx.Enabled = true;
+                pesquisaCidadeTbx.Text = "";
+
+            }
+        }
+
+        private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (TodasCidadesCbx.Checked == true)
+            {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewCidade.DataSource = daoViagem.PesquisarTodosDestino(c);
+                CidadeCkbx.Enabled = false;
+                pesquisaCidadeBtn.Enabled = false;
+                pesquisaCidadeTbx.Enabled = false;
+                pesquisaCidadeTbx.Text = "";
+
+            }
+
+            else if (TodasCidadesCbx.Checked == false)
+            {
+                CidadeCkbx.Enabled = true;
+                pesquisaCidadeBtn.Enabled = true;
+                pesquisaCidadeTbx.Enabled = true;
+                pesquisaCidadeTbx.Text = "";
+
+
+            }
         }
     }
 }

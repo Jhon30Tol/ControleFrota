@@ -65,12 +65,17 @@
             this.pesquisaMotoristaTbx = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.cidadePesquisarPnl = new System.Windows.Forms.Panel();
+            this.TodasCidadesCbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.dataGridViewCidade = new System.Windows.Forms.DataGridView();
-            this.EstadoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.syslogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.syslogDataSet = new PimFrota.syslogDataSet();
             this.CidadeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.pesquisaCidadeTbx = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pesquisaCidadeBtn = new System.Windows.Forms.Button();
+            this.pesquisaCidadeTbx = new System.Windows.Forms.TextBox();
             this.veiculoPesquisarPnl = new System.Windows.Forms.Panel();
             this.dataGridViewVeiculo = new System.Windows.Forms.DataGridView();
             this.PlacaCkbx = new MaterialSkin.Controls.MaterialCheckBox();
@@ -98,8 +103,6 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.syslogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.syslogDataSet = new PimFrota.syslogDataSet();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.pesquisaSaidaViagemBtn = new System.Windows.Forms.Button();
@@ -117,12 +120,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).BeginInit();
             this.cidadePesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).BeginInit();
             this.veiculoPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).BeginInit();
             this.saidaViagemPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaiViagem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).BeginInit();
             this.BotaoViagemPnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -443,7 +446,7 @@
             this.motoristaPesquisarPnl.Controls.Add(this.materialLabel4);
             this.motoristaPesquisarPnl.Controls.Add(this.pesquisaMotoristaTbx);
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(380, 31);
+            this.motoristaPesquisarPnl.Location = new System.Drawing.Point(655, 24);
             this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
             this.motoristaPesquisarPnl.Size = new System.Drawing.Size(581, 367);
             this.motoristaPesquisarPnl.TabIndex = 125;
@@ -513,51 +516,91 @@
             // 
             // cidadePesquisarPnl
             // 
+            this.cidadePesquisarPnl.Controls.Add(this.TodasCidadesCbx);
             this.cidadePesquisarPnl.Controls.Add(this.dataGridViewCidade);
-            this.cidadePesquisarPnl.Controls.Add(this.EstadoCkbx);
             this.cidadePesquisarPnl.Controls.Add(this.CidadeCkbx);
             this.cidadePesquisarPnl.Controls.Add(this.materialLabel7);
+            this.cidadePesquisarPnl.Controls.Add(this.pesquisaCidadeBtn);
             this.cidadePesquisarPnl.Controls.Add(this.pesquisaCidadeTbx);
-            this.cidadePesquisarPnl.Controls.Add(this.textBox2);
-            this.cidadePesquisarPnl.Location = new System.Drawing.Point(334, 34);
+            this.cidadePesquisarPnl.Location = new System.Drawing.Point(1, 55);
             this.cidadePesquisarPnl.Name = "cidadePesquisarPnl";
             this.cidadePesquisarPnl.Size = new System.Drawing.Size(593, 429);
             this.cidadePesquisarPnl.TabIndex = 126;
+            // 
+            // TodasCidadesCbx
+            // 
+            this.TodasCidadesCbx.AutoSize = true;
+            this.TodasCidadesCbx.Depth = 0;
+            this.TodasCidadesCbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.TodasCidadesCbx.Location = new System.Drawing.Point(12, 44);
+            this.TodasCidadesCbx.Margin = new System.Windows.Forms.Padding(0);
+            this.TodasCidadesCbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.TodasCidadesCbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TodasCidadesCbx.Name = "TodasCidadesCbx";
+            this.TodasCidadesCbx.Ripple = true;
+            this.TodasCidadesCbx.Size = new System.Drawing.Size(69, 30);
+            this.TodasCidadesCbx.TabIndex = 126;
+            this.TodasCidadesCbx.Text = "Todos";
+            this.TodasCidadesCbx.UseVisualStyleBackColor = true;
+            this.TodasCidadesCbx.CheckedChanged += new System.EventHandler(this.materialCheckBox1_CheckedChanged);
             // 
             // dataGridViewCidade
             // 
             this.dataGridViewCidade.AllowUserToAddRows = false;
             this.dataGridViewCidade.AllowUserToDeleteRows = false;
+            this.dataGridViewCidade.AutoGenerateColumns = false;
             this.dataGridViewCidade.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridViewCidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column14,
+            this.Column13,
+            this.Column15});
+            this.dataGridViewCidade.DataSource = this.syslogDataSetBindingSource;
             this.dataGridViewCidade.Location = new System.Drawing.Point(11, 80);
             this.dataGridViewCidade.Name = "dataGridViewCidade";
+            this.dataGridViewCidade.ReadOnly = true;
             this.dataGridViewCidade.Size = new System.Drawing.Size(569, 256);
             this.dataGridViewCidade.TabIndex = 62;
             this.dataGridViewCidade.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCidade_CellContentClick);
             // 
-            // EstadoCkbx
+            // Column14
             // 
-            this.EstadoCkbx.AutoSize = true;
-            this.EstadoCkbx.Depth = 0;
-            this.EstadoCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.EstadoCkbx.Location = new System.Drawing.Point(133, 41);
-            this.EstadoCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.EstadoCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.EstadoCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.EstadoCkbx.Name = "EstadoCkbx";
-            this.EstadoCkbx.Ripple = true;
-            this.EstadoCkbx.Size = new System.Drawing.Size(72, 30);
-            this.EstadoCkbx.TabIndex = 61;
-            this.EstadoCkbx.Text = "Estado";
-            this.EstadoCkbx.UseVisualStyleBackColor = true;
+            this.Column14.DataPropertyName = "nome_cidade";
+            this.Column14.HeaderText = "Nome Cidade";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "uf_estado";
+            this.Column13.HeaderText = "Estado";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "id_cidade";
+            this.Column15.HeaderText = "Id Cidade";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Visible = false;
+            // 
+            // syslogDataSetBindingSource
+            // 
+            this.syslogDataSetBindingSource.DataSource = this.syslogDataSet;
+            this.syslogDataSetBindingSource.Position = 0;
+            // 
+            // syslogDataSet
+            // 
+            this.syslogDataSet.DataSetName = "C";
+            this.syslogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CidadeCkbx
             // 
             this.CidadeCkbx.AutoSize = true;
             this.CidadeCkbx.Depth = 0;
             this.CidadeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CidadeCkbx.Location = new System.Drawing.Point(11, 41);
+            this.CidadeCkbx.Location = new System.Drawing.Point(94, 45);
             this.CidadeCkbx.Margin = new System.Windows.Forms.Padding(0);
             this.CidadeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
             this.CidadeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
@@ -567,6 +610,7 @@
             this.CidadeCkbx.TabIndex = 60;
             this.CidadeCkbx.Text = "Cidade";
             this.CidadeCkbx.UseVisualStyleBackColor = true;
+            this.CidadeCkbx.CheckedChanged += new System.EventHandler(this.CidadeCkbx_CheckedChanged);
             // 
             // materialLabel7
             // 
@@ -581,25 +625,25 @@
             this.materialLabel7.TabIndex = 59;
             this.materialLabel7.Text = "Pesquisar";
             // 
+            // pesquisaCidadeBtn
+            // 
+            this.pesquisaCidadeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pesquisaCidadeBtn.BackgroundImage")));
+            this.pesquisaCidadeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pesquisaCidadeBtn.FlatAppearance.BorderSize = 0;
+            this.pesquisaCidadeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pesquisaCidadeBtn.Location = new System.Drawing.Point(168, 9);
+            this.pesquisaCidadeBtn.Name = "pesquisaCidadeBtn";
+            this.pesquisaCidadeBtn.Size = new System.Drawing.Size(43, 25);
+            this.pesquisaCidadeBtn.TabIndex = 58;
+            this.pesquisaCidadeBtn.UseVisualStyleBackColor = true;
+            this.pesquisaCidadeBtn.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // pesquisaCidadeTbx
             // 
-            this.pesquisaCidadeTbx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pesquisaCidadeTbx.BackgroundImage")));
-            this.pesquisaCidadeTbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pesquisaCidadeTbx.FlatAppearance.BorderSize = 0;
-            this.pesquisaCidadeTbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pesquisaCidadeTbx.Location = new System.Drawing.Point(168, 9);
+            this.pesquisaCidadeTbx.Location = new System.Drawing.Point(11, 12);
             this.pesquisaCidadeTbx.Name = "pesquisaCidadeTbx";
-            this.pesquisaCidadeTbx.Size = new System.Drawing.Size(43, 25);
-            this.pesquisaCidadeTbx.TabIndex = 58;
-            this.pesquisaCidadeTbx.UseVisualStyleBackColor = true;
-            this.pesquisaCidadeTbx.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(11, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 20);
-            this.textBox2.TabIndex = 57;
+            this.pesquisaCidadeTbx.Size = new System.Drawing.Size(151, 20);
+            this.pesquisaCidadeTbx.TabIndex = 57;
             // 
             // veiculoPesquisarPnl
             // 
@@ -740,7 +784,7 @@
             this.saidaViagemPesquisaPnl.Controls.Add(this.pesquisaSaidaViagemTbx);
             this.saidaViagemPesquisaPnl.Location = new System.Drawing.Point(4, 55);
             this.saidaViagemPesquisaPnl.Name = "saidaViagemPesquisaPnl";
-            this.saidaViagemPesquisaPnl.Size = new System.Drawing.Size(617, 645);
+            this.saidaViagemPesquisaPnl.Size = new System.Drawing.Size(683, 645);
             this.saidaViagemPesquisaPnl.TabIndex = 128;
             this.saidaViagemPesquisaPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.saidaViagemPesquisaPnl_Paint);
             // 
@@ -917,16 +961,6 @@
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             this.Column12.Visible = false;
-            // 
-            // syslogDataSetBindingSource
-            // 
-            this.syslogDataSetBindingSource.DataSource = this.syslogDataSet;
-            this.syslogDataSetBindingSource.Position = 0;
-            // 
-            // syslogDataSet
-            // 
-            this.syslogDataSet.DataSetName = "C";
-            this.syslogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // materialLabel10
             // 
@@ -1109,8 +1143,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1302, 547);
-            this.Controls.Add(this.motoristaPesquisarPnl);
             this.Controls.Add(this.cidadePesquisarPnl);
+            this.Controls.Add(this.motoristaPesquisarPnl);
             this.Controls.Add(this.saidaViagemPesquisaPnl);
             this.Controls.Add(this.veiculoPesquisarPnl);
             this.Controls.Add(this.CadViagemIniPnl);
@@ -1126,14 +1160,14 @@
             this.cidadePesquisarPnl.ResumeLayout(false);
             this.cidadePesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).EndInit();
             this.veiculoPesquisarPnl.ResumeLayout(false);
             this.veiculoPesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).EndInit();
             this.saidaViagemPesquisaPnl.ResumeLayout(false);
             this.saidaViagemPesquisaPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSaiViagem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).EndInit();
             this.BotaoViagemPnl.ResumeLayout(false);
             this.BotaoViagemPnl.PerformLayout();
             this.ResumeLayout(false);
@@ -1186,11 +1220,9 @@
         private System.Windows.Forms.Button pesquisaVeiculoTbx;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridViewCidade;
-        private MaterialSkin.Controls.MaterialCheckBox EstadoCkbx;
-        private MaterialSkin.Controls.MaterialCheckBox CidadeCkbx;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private System.Windows.Forms.Button pesquisaCidadeTbx;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button pesquisaCidadeBtn;
+        private System.Windows.Forms.TextBox pesquisaCidadeTbx;
         public System.Windows.Forms.Panel cidadePesquisarPnl;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         public System.Windows.Forms.TextBox passageiroTbx;
@@ -1223,5 +1255,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.Label msgNaoRetornouLbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        public MaterialSkin.Controls.MaterialCheckBox CidadeCkbx;
+        public MaterialSkin.Controls.MaterialCheckBox TodasCidadesCbx;
     }
 }
