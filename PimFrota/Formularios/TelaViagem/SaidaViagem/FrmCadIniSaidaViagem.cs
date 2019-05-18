@@ -19,6 +19,7 @@ namespace PimFrota.Formularios.TelaViagem
     {
         Viagem v = new Viagem();
         Cidade c = new Cidade();
+        Motorista m = new Motorista();
         bool modoEdit = false;
         DaoViagem daoViagem = new DaoViagem();
         bool pesqCidade = false;
@@ -81,6 +82,12 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void IncluirViagemBtn_Click(object sender, EventArgs e)
         {
+
+            MotoristaSaidaViagTbx.Text = "<-- Clique para incluir o motorista";
+            VeiculoSaidaViagTbx.Text = "<-- Clique para incluir o veeiculo";
+            CidadeSaidaViagTbx.Text = "<-- Clique para incluir a cidade de saida";
+            CidadeDestSaidaViagTbx.Text = "<-- Clique para incluir a cidade de destino";
+
 
             saidaViagemPnl.Visible = true;
 
@@ -172,44 +179,48 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void dataGridViewMotorista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            v.Id_motorista = Convert.ToInt32(dataGridViewMotorista.CurrentRow.Cells[0].Value.ToString());
-            MotoristaSaidaViagTbx.Text = dataGridViewMotorista.CurrentRow.Cells[1].Value.ToString();
+            MotoristaSaidaViagTbx.Text = dataGridViewMotorista.CurrentRow.Cells[0].Value.ToString();
+            v.Id_motorista = Convert.ToInt32(dataGridViewMotorista.CurrentRow.Cells[1].Value.ToString());
 
             motoristaPesquisarPnl.Visible = false;
             saidaViagemPnl.Visible = true;
-
-            MessageBox.Show(Convert.ToString(v.Id_motorista), "");
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string nome = PesquisarTbx.Text;
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
+            string nome = PesquisarMotoristaTbx.Text;
 
-            MySqlDataAdapter pesq1 = new MySqlDataAdapter("select id_motorista, nome_motorista, cpf_motorista, dta_vencimento_cnh_motorista from cadastro_motorista where nome_motorista like '%" + @nome + "%'", conn);
-            DataTable pesq3 = new DataTable();
-            pesq1.Fill(pesq3);
-            dataGridViewMotorista.DataSource = pesq3;
+            if (PesquisaNomeMotoristaCkbx.Checked == true)
+            {
+
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewMotorista.DataSource = daoViagem.PesquisarNomeMotoristas(nome);
+                PesquisaTodosMotoristasCkb.Enabled = false;
+            }
+            else if (PesquisaNomeMotoristaCkbx.Checked == false)
+            {
+                PesquisaTodosMotoristasCkb.Enabled = true;
+                PesquisarMotoristaTbx.Text = "";
+
+            }
 
         }
 
         private void NomeCkbx_CheckedChanged(object sender, EventArgs e)
         {
-            string nome = PesquisarTbx.Text;
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
-            PesquisarTbx.Text = "";
+            if (PesquisaNomeMotoristaCkbx.Checked == true)
+            {
+         
+                PesquisaTodosMotoristasCkb.Enabled = false;
+            }
+            else if (PesquisaNomeMotoristaCkbx.Checked == false)
+            {
+                PesquisaTodosMotoristasCkb.Enabled = true;
+                PesquisarMotoristaTbx.Text = "";
 
-            PesquisarTbx.Enabled = false;
-            MySqlDataAdapter pesq = new MySqlDataAdapter("select id_motorista, nome_motorista, cpf_motorista, dta_vencimento_cnh_motorista from cadastro_motorista ", conn);
-            cmd.Parameters.AddWithValue("@nome", nome);
-            DataTable pesq1 = new DataTable();
-            pesq.Fill(pesq1);
-            dataGridViewMotorista.DataSource = pesq1;
+            }
+
         }
 
         private void PesquisarBtn_Click(object sender, EventArgs e)
@@ -230,7 +241,7 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string nome = PesquisarTbx.Text;
+            string nome = PesquisarMotoristaTbx.Text;
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             MySqlCommand cmd = new MySqlCommand();
             conn.Open();
@@ -246,9 +257,9 @@ namespace PimFrota.Formularios.TelaViagem
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             MySqlCommand cmd = new MySqlCommand();
             conn.Open();
-            PesquisarTbx.Text = "";
+            PesquisarMotoristaTbx.Text = "";
 
-            PesquisarTbx.Enabled = false;
+            PesquisarMotoristaTbx.Enabled = false;
             MySqlDataAdapter pesq = new MySqlDataAdapter("select id_veiculo, modelo_veiculo,marca_veiculo, cor_veiculo, ano_modelo, placa_veiculo from cadastro_veiculo", conn);
             DataTable pesq1 = new DataTable();
             pesq.Fill(pesq1);
@@ -288,8 +299,8 @@ namespace PimFrota.Formularios.TelaViagem
             }
             else
             {
-                v.Id_cidadeDestino = Convert.ToInt32(dataGridViewCidade.CurrentRow.Cells[0].Value.ToString());
-                CidadeDestSaidaViagTbx.Text = dataGridViewCidade.CurrentRow.Cells[1].Value.ToString();
+                CidadeDestSaidaViagTbx.Text = dataGridViewCidade.CurrentRow.Cells[0].Value.ToString();
+                v.Id_cidadeDestino = Convert.ToInt32(dataGridViewCidade.CurrentRow.Cells[2].Value.ToString());
 
                 cidadePesquisarPnl.Visible = false;
                 saidaViagemPnl.Visible = true;
@@ -486,7 +497,7 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             {
                 pesqVeiculoCbx.Enabled = false;
                 pesquTodosCkbx.Enabled = false;
-                string nome = PesquisarTbx.Text;
+                string nome = PesquisarMotoristaTbx.Text;
 
             }
             if (pesqMotoristaCbx.Checked == false)
@@ -540,7 +551,7 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
 
             MessageBox.Show(DtaRetornoDtm.Text);
 
-            if (DtaRetornoDtm.Text == "01/01/1900")
+            if (DtaRetornoDtm.Text == "01/01/2000")
             {
                 DtaRetornoDtm.Visible = false;
                 KmRetornoLlbl.Visible = false;
@@ -648,6 +659,26 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
                 pesquisaCidadeTbx.Enabled = true;
                 pesquisaCidadeTbx.Text = "";
 
+
+            }
+        }
+
+        private void PesquisaTodosMotoristasCkb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PesquisaTodosMotoristasCkb.Checked == true)
+            {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewMotorista.DataSource = daoViagem.PesquisarTodosMotoristas(m);
+                PesquisaNomeMotoristaCkbx.Enabled = false;
+                pesquisaMotoristaBtn.Enabled = false;
+                PesquisarMotoristaTbx.Enabled = false;
+            }
+            else if (PesquisaTodosMotoristasCkb.Checked == false)
+            {
+                PesquisaNomeMotoristaCkbx.Enabled = true;
+                pesquisaMotoristaBtn.Enabled = true;
+                PesquisarMotoristaTbx.Enabled = true;
+                PesquisarMotoristaTbx.Text = "";
 
             }
         }

@@ -221,7 +221,7 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
                     "AND v.id_veiculo = a.id_veiculo " +
                     "AND  v.id_cidade_origem = c.id_cidade " +
                     "AND  v.id_cidade_destino = b.id_cidade " +
-                    "WHERE v.dta_retorno = '1900-01-01 00:00:00' ;", conn);
+                    "WHERE v.dta_retorno = '2000-01-01' ;", conn);
                 DataTable pesq3 = new DataTable();
                 pesq1.Fill(pesq3);
                 dataGridViewRetViagem.DataSource = pesq3;

@@ -39,6 +39,7 @@
             this.linhaMotoristaLbl = new System.Windows.Forms.Label();
             this.motoristaLbl = new System.Windows.Forms.Label();
             this.CadMotoristaIniPnl = new System.Windows.Forms.Panel();
+            this.motoristaPnl = new System.Windows.Forms.Panel();
             this.motoristaPesquisarPnl = new System.Windows.Forms.Panel();
             this.dataGridViewMotorista = new System.Windows.Forms.DataGridView();
             this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
@@ -46,7 +47,6 @@
             this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.motoristaPnl = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ufMotoristaTbx = new System.Windows.Forms.TextBox();
@@ -77,9 +77,9 @@
             this.NomeClientelbl = new System.Windows.Forms.Label();
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadMotoristaIniPnl.SuspendLayout();
+            this.motoristaPnl.SuspendLayout();
             this.motoristaPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).BeginInit();
-            this.motoristaPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // BotaoCadastroPnl
@@ -235,6 +235,42 @@
             this.CadMotoristaIniPnl.Size = new System.Drawing.Size(594, 316);
             this.CadMotoristaIniPnl.TabIndex = 128;
             // 
+            // motoristaPnl
+            // 
+            this.motoristaPnl.Controls.Add(this.motoristaPesquisarPnl);
+            this.motoristaPnl.Controls.Add(this.label3);
+            this.motoristaPnl.Controls.Add(this.label2);
+            this.motoristaPnl.Controls.Add(this.ufMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.cidadeMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.Buscar);
+            this.motoristaPnl.Controls.Add(this.buscarCepTbx);
+            this.motoristaPnl.Controls.Add(this.CepMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.celularMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.telefoneMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.DtVencCnhTbx);
+            this.motoristaPnl.Controls.Add(this.DtNascimentoMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.CpfMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.CepMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.cnhMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.label1);
+            this.motoristaPnl.Controls.Add(this.DtVencCnhLbl);
+            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.RuaMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.BairroMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.NomeMotoristaTbx);
+            this.motoristaPnl.Controls.Add(this.DtNascMotoristalbl);
+            this.motoristaPnl.Controls.Add(this.CelularClientelbl);
+            this.motoristaPnl.Controls.Add(this.TelefoneClientelbl);
+            this.motoristaPnl.Controls.Add(this.BairroMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.CpfMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.RuaMotoristaLbl);
+            this.motoristaPnl.Controls.Add(this.NomeClientelbl);
+            this.motoristaPnl.Location = new System.Drawing.Point(7, 3);
+            this.motoristaPnl.Name = "motoristaPnl";
+            this.motoristaPnl.Size = new System.Drawing.Size(469, 317);
+            this.motoristaPnl.TabIndex = 0;
+            // 
             // motoristaPesquisarPnl
             // 
             this.motoristaPesquisarPnl.Controls.Add(this.dataGridViewMotorista);
@@ -321,42 +357,6 @@
             this.PesquisarTbx.Name = "PesquisarTbx";
             this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
             this.PesquisarTbx.TabIndex = 45;
-            // 
-            // motoristaPnl
-            // 
-            this.motoristaPnl.Controls.Add(this.motoristaPesquisarPnl);
-            this.motoristaPnl.Controls.Add(this.label3);
-            this.motoristaPnl.Controls.Add(this.label2);
-            this.motoristaPnl.Controls.Add(this.ufMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.cidadeMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.Buscar);
-            this.motoristaPnl.Controls.Add(this.buscarCepTbx);
-            this.motoristaPnl.Controls.Add(this.CepMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.celularMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.telefoneMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.DtVencCnhTbx);
-            this.motoristaPnl.Controls.Add(this.DtNascimentoMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.CpfMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.CepMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.cnhMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.label1);
-            this.motoristaPnl.Controls.Add(this.DtVencCnhLbl);
-            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.RuaMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.BairroMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.NomeMotoristaTbx);
-            this.motoristaPnl.Controls.Add(this.DtNascMotoristalbl);
-            this.motoristaPnl.Controls.Add(this.CelularClientelbl);
-            this.motoristaPnl.Controls.Add(this.TelefoneClientelbl);
-            this.motoristaPnl.Controls.Add(this.BairroMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.NumeroRuaMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.CpfMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.RuaMotoristaLbl);
-            this.motoristaPnl.Controls.Add(this.NomeClientelbl);
-            this.motoristaPnl.Location = new System.Drawing.Point(7, 3);
-            this.motoristaPnl.Name = "motoristaPnl";
-            this.motoristaPnl.Size = new System.Drawing.Size(469, 317);
-            this.motoristaPnl.TabIndex = 0;
             // 
             // label3
             // 
@@ -644,11 +644,11 @@
             this.BotaoCadastroPnl.ResumeLayout(false);
             this.BotaoCadastroPnl.PerformLayout();
             this.CadMotoristaIniPnl.ResumeLayout(false);
+            this.motoristaPnl.ResumeLayout(false);
+            this.motoristaPnl.PerformLayout();
             this.motoristaPesquisarPnl.ResumeLayout(false);
             this.motoristaPesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMotorista)).EndInit();
-            this.motoristaPnl.ResumeLayout(false);
-            this.motoristaPnl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

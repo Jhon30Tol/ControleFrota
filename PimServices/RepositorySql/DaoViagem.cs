@@ -561,6 +561,109 @@ namespace PimServices.RepositorySql
         }
 
 
+        public List<Motorista> PesquisarTodosMotoristas(Motorista m)
+        {
+            List<Motorista> PesquisarTdsMotoristas = new List<Motorista>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+
+            String PesquisarTDestino =  "select id_motorista, " +
+                                       "nome_motorista,    " +
+                                       "cpf_motorista, " +
+                                       "dta_vencimento_cnh_motorista " +
+                                       "from cadastro_motorista ";
+
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(PesquisarTDestino, conn);
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Motorista novo = new Motorista();
+
+                    novo.id_motorista = (int)reader["id_motorista"];
+                    novo.nome = Convert.ToString(reader["nome_motorista"]);
+
+
+
+                    PesquisarTdsMotoristas.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return PesquisarTdsMotoristas;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        public List<Motorista> PesquisarNomeMotoristas(String nome)
+        {
+            List<Motorista> PesquisarNmMotoristas = new List<Motorista>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+
+            String PesquisarTDestino = "select id_motorista, " +
+                                       "nome_motorista, " +
+                                       "cpf_motorista, " +
+                                       "dta_vencimento_cnh_motorista " +
+                                       "from cadastro_motorista " +
+                                       "where nome_motorista like '%" + @nome + "%'";
+
+
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(PesquisarTDestino, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
+
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Motorista novo = new Motorista();
+
+                    novo.id_motorista = (int)reader["id_motorista"];
+                    novo.nome = Convert.ToString(reader["nome_motorista"]);
+
+
+
+                    PesquisarNmMotoristas.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return PesquisarNmMotoristas;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
+
+
+
+
 
 
 
