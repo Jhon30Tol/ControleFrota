@@ -11,7 +11,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         {
         Motorista m = new Motorista();
         DaoMotorista daoMotorista = new DaoMotorista();
-        
+        Endereco endereco = new Endereco();
+
 
         public FrmCadiniMotorista()
             {
@@ -55,7 +56,20 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void pesquisarCepTbx_Click(object sender, EventArgs e)
             {
-            LocalizarCEP();
+            using (var ws = new WsCorreios.AtendeClienteClient())
+                try
+                    {
+                    var resultado = ws.consultaCEP(CepMotoristaTbx.Text);
+                    RuaMotoristaTbx.Text = resultado.end;
+                    BairroMotoristaTbx.Text = resultado.bairro;
+                    cidadeMotoristaTbx.Text = resultado.cidade;
+                    ufMotoristaTbx.Text = resultado.uf;
+
+                    }
+                catch (System.Exception ex)
+                    {
+                    MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
             }
         public void salvarMotorista(Motorista m)
@@ -67,31 +81,22 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             m.dtaVencimentoCnh = Convert.ToDateTime(DtVencCnhTbx.Text);
             m.telefoneFixo = Convert.ToInt32(telefoneMotoristaTbx.Text);
             m.celular = Convert.ToInt32(celularMotoristaTbx.Text);
-            LocalizarCEP();
-            FrmMensagemCadSucesso sucesso = new FrmMensagemCadSucesso();
-            sucesso.Show();
+
+            var ws = new WsCorreios.AtendeClienteClient();
+            var resultado = ws.consultaCEP(CepMotoristaTbx.Text);
+            RuaMotoristaTbx.Text = resultado.end;
+            m.nomeRua = resultado.end;
+            BairroMotoristaTbx.Text = resultado.bairro;
+            m.bairro = resultado.bairro;
+            cidadeMotoristaTbx.Text = resultado.cidade;
+            m.Cidade = resultado.cidade;
+            ufMotoristaTbx.Text = resultado.uf;
+            m.Uf = resultado.uf;
+
+            daoMotorista.SalvarMotorista(m);
 
             }
-        private void LocalizarCEP()
-            {
-
-            if (daoMotorista.buscaCep(m)) {
-
-                m.Cep = Convert.ToInt32(CepMotoristaTbx.Text);
-                m.rua = RuaMotoristaTbx.Text;
-                m.numero = Convert.ToInt32(NumeroRuaMotoristaTbx.Text);
-                m.Cidade = cidadeMotoristaTbx.Text;
-                m.Uf = ufMotoristaTbx.Text;
-                limparDados();
-                
-                }
-            else
-                {
-                MessageBox.Show("CEP Invalido !");
-               
-                }
-
-            }
+       
         public void limparDados()
             {
             NomeMotoristaTbx.Clear();

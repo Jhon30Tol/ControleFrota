@@ -92,54 +92,7 @@ namespace PimServices.RepositorySql
 
                     }
                 }
-            public bool buscaCep(Motorista m)
-                {
-
-                try
-                    {
-
-                    MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-                    conn = new MySqlConnection(connectionString);
-                    String buscaCepNoBanco = "SELECT c.nome, " +
-                                             "b.nome , " +
-                                             "a.nome_cidade, " +
-                                             "c.id_uf " +
-                                             "FROM cadastro_endereco c " +
-                                             "JOIN cadastro_bairro b " +
-                                             "JOIN cadastro_cidade a " +
-                                             "ON c.id_bairro = b.id_bairro " +
-                                             "AND c.id_cidade = a.id_cidade" +
-                                             "where c.cep = @cep;";
-                    conn.Open();
-                    MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(buscaCepNoBanco, conn);
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_cidade", m.Cidade));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cod_ibge", m.Cep));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("uf_estado", m.Uf));
-                    int retorno = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    cmd.Prepare();                   
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("cheguei aqui");
-                    conn.Close();
-                     
-                    if (retorno > 0)
-                        {
-                        return true;
-                        }
-                    else
-                        {
-                        return false;
-                        }
-
-
-                    }
-                catch (Exception ex)
-                    {
-                    MessageBox.Show("CEP Invalido! " + ex.ToString());
-                    return false;
-                    }
-
-                }
+          
 
             public void ExcluirMotorista(Motorista m)
                 {
@@ -167,7 +120,7 @@ namespace PimServices.RepositorySql
                     }
                 }
 
-            public List<Motorista> buscarMotoristas(Motorista m)
+          /*  public List<Motorista> buscarMotoristas(Motorista m)
                 {
                 List<Motorista> todosMotoristas = new List<Motorista>();
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
@@ -213,7 +166,7 @@ namespace PimServices.RepositorySql
                     {
                     conn.Close();
                     }
-                }
+                //}*/
 
             }
 
