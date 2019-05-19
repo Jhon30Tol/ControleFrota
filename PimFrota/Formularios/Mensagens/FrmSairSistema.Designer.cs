@@ -87,6 +87,7 @@
             this.SairSistemaPnl.Name = "SairSistemaPnl";
             this.SairSistemaPnl.Size = new System.Drawing.Size(298, 134);
             this.SairSistemaPnl.TabIndex = 35;
+            this.SairSistemaPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.SairSistemaPnl_Paint);
             // 
             // MsgFecharPnl
             // 

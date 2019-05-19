@@ -62,6 +62,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 115);
             this.panel1.TabIndex = 29;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // MsgFecharPnl
             // 
@@ -95,11 +96,12 @@
             // 
             this.MensagemCampoObrigatorioLbl.AutoSize = true;
             this.MensagemCampoObrigatorioLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(47, 49);
+            this.MensagemCampoObrigatorioLbl.Location = new System.Drawing.Point(55, 47);
             this.MensagemCampoObrigatorioLbl.Name = "MensagemCampoObrigatorioLbl";
             this.MensagemCampoObrigatorioLbl.Size = new System.Drawing.Size(257, 16);
             this.MensagemCampoObrigatorioLbl.TabIndex = 30;
             this.MensagemCampoObrigatorioLbl.Text = "Preencha os campos Obrigatórios.";
+            this.MensagemCampoObrigatorioLbl.Resize += new System.EventHandler(this.MensagemCampoObrigatorioLbl_Resize);
             // 
             // FrmMensagemCampoObrigatorio
             // 

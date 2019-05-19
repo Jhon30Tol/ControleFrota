@@ -153,7 +153,6 @@ namespace PimServices.RepositorySql
 
                 conn.Close();
 
-                MessageBox.Show("Retorno registrado com sucesso!");
             }
             catch (Exception ex)
             {

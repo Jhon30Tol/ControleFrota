@@ -29,5 +29,24 @@ namespace PimFrota.Formularios.Mensagens
         {
             this.Close();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void CentralizaLabel()
+        {
+            int x = (panel1.Size.Width - MEnsagemErroLbl.Width) / 2;
+            int y = (panel1.Size.Height - MEnsagemErroLbl.Height) / 2;
+
+            MEnsagemErroLbl.Location = new Point(x, y);
+        }
+
+        private void panel1_Resize(object sender, EventArgs e)
+        {
+            CentralizaLabel();
+
+        }
     }
 }

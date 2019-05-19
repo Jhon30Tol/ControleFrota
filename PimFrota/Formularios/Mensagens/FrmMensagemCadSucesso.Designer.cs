@@ -29,28 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMensagemCadSucesso));
-            this.MensagemOkBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MensagemSucessoLbl = new System.Windows.Forms.Label();
             this.MsgFecharPnl = new System.Windows.Forms.Panel();
             this.Fecharbtn = new System.Windows.Forms.Button();
+            this.MensagemOkBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.MsgFecharPnl.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // MensagemOkBtn
-            // 
-            this.MensagemOkBtn.BackColor = System.Drawing.Color.YellowGreen;
-            this.MensagemOkBtn.FlatAppearance.BorderSize = 0;
-            this.MensagemOkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MensagemOkBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemOkBtn.Location = new System.Drawing.Point(118, 76);
-            this.MensagemOkBtn.Name = "MensagemOkBtn";
-            this.MensagemOkBtn.Size = new System.Drawing.Size(75, 23);
-            this.MensagemOkBtn.TabIndex = 25;
-            this.MensagemOkBtn.Text = "OK";
-            this.MensagemOkBtn.UseVisualStyleBackColor = false;
-            this.MensagemOkBtn.Click += new System.EventHandler(this.MensagemOkBtn_Click);
             // 
             // panel1
             // 
@@ -62,16 +48,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 111);
             this.panel1.TabIndex = 26;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // MensagemSucessoLbl
             // 
             this.MensagemSucessoLbl.AutoSize = true;
             this.MensagemSucessoLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemSucessoLbl.Location = new System.Drawing.Point(35, 43);
+            this.MensagemSucessoLbl.Location = new System.Drawing.Point(10, 23);
             this.MensagemSucessoLbl.Name = "MensagemSucessoLbl";
             this.MensagemSucessoLbl.Size = new System.Drawing.Size(248, 16);
             this.MensagemSucessoLbl.TabIndex = 27;
             this.MensagemSucessoLbl.Text = "Cadastro Efetuado com Sucesso!";
+            this.MensagemSucessoLbl.Resize += new System.EventHandler(this.MensagemSucessoLbl_Resize);
             // 
             // MsgFecharPnl
             // 
@@ -100,6 +88,20 @@
             this.Fecharbtn.TabIndex = 0;
             this.Fecharbtn.UseVisualStyleBackColor = false;
             // 
+            // MensagemOkBtn
+            // 
+            this.MensagemOkBtn.BackColor = System.Drawing.Color.YellowGreen;
+            this.MensagemOkBtn.FlatAppearance.BorderSize = 0;
+            this.MensagemOkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MensagemOkBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MensagemOkBtn.Location = new System.Drawing.Point(118, 76);
+            this.MensagemOkBtn.Name = "MensagemOkBtn";
+            this.MensagemOkBtn.Size = new System.Drawing.Size(75, 23);
+            this.MensagemOkBtn.TabIndex = 25;
+            this.MensagemOkBtn.Text = "OK";
+            this.MensagemOkBtn.UseVisualStyleBackColor = false;
+            this.MensagemOkBtn.Click += new System.EventHandler(this.MensagemOkBtn_Click);
+            // 
             // FrmMensagemCadSucesso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,8 +118,8 @@
         #endregion
         private System.Windows.Forms.Button MensagemOkBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label MensagemSucessoLbl;
         private System.Windows.Forms.Panel MsgFecharPnl;
         private System.Windows.Forms.Button Fecharbtn;
+        public System.Windows.Forms.Label MensagemSucessoLbl;
     }
 }

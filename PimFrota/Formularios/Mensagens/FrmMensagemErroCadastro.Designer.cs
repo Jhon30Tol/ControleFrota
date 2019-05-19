@@ -29,26 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMensagemErroCadastro));
-            this.ErroPctbx = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MsgFecharPnl = new System.Windows.Forms.Panel();
             this.Fecharbtn = new System.Windows.Forms.Button();
             this.MEnsagemErroLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ErroPctbx)).BeginInit();
+            this.ErroPctbx = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.MsgFecharPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ErroPctbx)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ErroPctbx
-            // 
-            this.ErroPctbx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ErroPctbx.BackgroundImage")));
-            this.ErroPctbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ErroPctbx.Location = new System.Drawing.Point(119, 74);
-            this.ErroPctbx.Name = "ErroPctbx";
-            this.ErroPctbx.Size = new System.Drawing.Size(64, 29);
-            this.ErroPctbx.TabIndex = 31;
-            this.ErroPctbx.TabStop = false;
-            this.ErroPctbx.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -60,6 +49,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 115);
             this.panel1.TabIndex = 32;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Resize += new System.EventHandler(this.panel1_Resize);
             // 
             // MsgFecharPnl
             // 
@@ -99,16 +90,27 @@
             this.MEnsagemErroLbl.TabIndex = 33;
             this.MEnsagemErroLbl.Text = "Erro";
             // 
+            // ErroPctbx
+            // 
+            this.ErroPctbx.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ErroPctbx.BackgroundImage")));
+            this.ErroPctbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ErroPctbx.Location = new System.Drawing.Point(119, 74);
+            this.ErroPctbx.Name = "ErroPctbx";
+            this.ErroPctbx.Size = new System.Drawing.Size(64, 29);
+            this.ErroPctbx.TabIndex = 31;
+            this.ErroPctbx.TabStop = false;
+            this.ErroPctbx.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FrmMensagemErroCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(320, 117);
             this.Controls.Add(this.panel1);
             this.Name = "FrmMensagemErroCadastro";
-            ((System.ComponentModel.ISupportInitialize)(this.ErroPctbx)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.MsgFecharPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ErroPctbx)).EndInit();
             this.ResumeLayout(false);
 
         }

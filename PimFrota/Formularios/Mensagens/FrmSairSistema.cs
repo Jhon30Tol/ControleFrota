@@ -50,5 +50,10 @@ namespace PimFrota.Formularios.Mensagens
         {
             this.Close();
         }
+
+        private void SairSistemaPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,5 +31,24 @@ namespace PimFrota.Formularios.Mensagens
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        public void CentralizaLabel()
+        {
+            int x = (panel1.Size.Width - MensagemSucessoLbl.Width) / 2;
+            int y = (panel1.Size.Height - MensagemSucessoLbl.Height) / 2;
+
+            MensagemSucessoLbl.Location = new Point(x, y);
+        }
+
+        private void MensagemSucessoLbl_Resize(object sender, EventArgs e)
+        {
+            CentralizaLabel();
+
+        }
     }
 }

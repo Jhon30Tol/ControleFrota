@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using PimFrota.Formularios.Mensagens;
 using PimServices.Model;
 using PimServices.RepositorySql;
 using System;
@@ -119,16 +120,39 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
 
         private void GravarRetornoBtn_Click(object sender, EventArgs e)
         {
-            DaoViagem dao = new DaoViagem();
-            v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
-            v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
-            v.Id_viagem = Convert.ToInt32(CodSaidaViagRTbx.Text);
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorio = (FrmMensagemCampoObrigatorio)Application.OpenForms["FrmMensagemCampoObrigatorio"];
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorioMsg = new FrmMensagemCampoObrigatorio();
 
-            dao.GravarRetornoViagem(v);
-            CadRetornoIniPnl.Visible = false;
-            CancelarRetornoBtn.Visible = false;
-            PesquisarRetornoBtn.Visible = false;
-            GravarRetornoBtn.Visible = false;
+            FrmMensagemCadSucesso frmMsgSucesso = (FrmMensagemCadSucesso)Application.OpenForms["FrmMensagemCadSucesso"];
+            FrmMensagemCadSucesso frmMsgSucessomsg = new FrmMensagemCadSucesso();
+
+
+            if (String.IsNullOrEmpty(kmRetornoTbx.Text))
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Km Retorno é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.kmRetornoTbx.Focus();
+            }
+            else
+            {
+                DaoViagem dao = new DaoViagem();
+                v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
+                v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
+                v.Id_viagem = Convert.ToInt32(CodSaidaViagRTbx.Text);
+
+                dao.GravarRetornoViagem(v);
+                CadRetornoIniPnl.Visible = false;
+                CancelarRetornoBtn.Visible = false;
+                PesquisarRetornoBtn.Visible = false;
+                GravarRetornoBtn.Visible = false;
+
+                frmMsgSucessomsg.MensagemSucessoLbl.Text = "Retorno Efetuado com Sucesso !";
+                frmMsgSucessomsg.ShowDialog();
+            }
+
+
+
+            
         }
 
         private void TodosCkbx_CheckedChanged(object sender, EventArgs e)
