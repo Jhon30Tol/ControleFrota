@@ -56,84 +56,26 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
         private void PesquisarBtn_Click(object sender, EventArgs e)
         {
             string nome = PesquisarTbx.Text;
-            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-            MySqlCommand cmd = new MySqlCommand();
-            conn.Open();
+            
 
 
 
             if (pesquTodosCkbx.Checked == true)
             {
 
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                    "v.id_viagem as Codigo_Viagem," +
-                    "m.nome_motorista as Nome_Motorista, " +
-                    "a.modelo_veiculo as Modelo_Veiculo, " +
-                    "c.nome_cidade as Cidade_Saida, " +
-                    "b.nome_cidade as Cidade_Destino, " +
-                    "date(v.dta_saida) as Data_Saida " +
-                    "FROM viagem v " +
-                    "JOIN cadastro_motorista m " +
-                    "JOIN cadastro_veiculo a " +
-                    "JOIN cadastro_cidade c " +
-                    "JOIN cadastro_cidade b " +
-                    "ON v.id_motorista = m.id_motorista  " +
-                    "AND v.id_veiculo = a.id_veiculo " +
-                    "AND  v.id_cidade_origem = c.id_cidade " +
-                    "AND  v.id_cidade_destino = b.id_cidade " +
-                    "WHERE v.dta_retorno = '1900-01-01 00:00:00' ;", conn);
-                DataTable pesq3 = new DataTable();
-                pesq1.Fill(pesq3);
-                dataGridViewRetViagem.DataSource = pesq3;
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewRetViagem.DataSource = daoViagem.PesquisarTodasRetorno(v);
 
             }
             else if(pesqMotoristaCbx.Checked == true)
             {
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                   "v.id_viagem as Codigo_Viagem," +
-                   "m.nome_motorista as Nome_Motorista, " +
-                   "a.modelo_veiculo as Modelo_Veiculo, " +
-                   "c.nome_cidade as Cidade_Saida, " +
-                   "b.nome_cidade as Cidade_Destino, " +
-                   "date(v.dta_saida) as Data_Saida " +
-                   "FROM viagem v " +
-                   "JOIN cadastro_motorista m " +
-                   "JOIN cadastro_veiculo a " +
-                   "JOIN cadastro_cidade c " +
-                   "JOIN cadastro_cidade b " +
-                   "ON v.id_motorista = m.id_motorista  " +
-                   "AND v.id_veiculo = a.id_veiculo " +
-                   "AND  v.id_cidade_origem = c.id_cidade " +
-                   "AND  v.id_cidade_destino = b.id_cidade " +
-                   "WHERE v.dta_retorno IS NULL " +
-                   "and m.nome_motorista like '%" + @nome + "%'", conn);
-                DataTable pesq3 = new DataTable();
-                pesq1.Fill(pesq3);
-                dataGridViewRetViagem.DataSource = pesq3;
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewRetViagem.DataSource = daoViagem.PesquisarMotoristaRetorno(nome);
             }
             else if(pesqVeiculoCbx.Checked == true)
             {
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                  "v.id_viagem as Codigo_Viagem," +
-                  "m.nome_motorista as Nome_Motorista, " +
-                  "a.modelo_veiculo as Modelo_Veiculo, " +
-                  "c.nome_cidade as Cidade_Saida, " +
-                  "b.nome_cidade as Cidade_Destino, " +
-                  "date(v.dta_saida) as Data_Saida " +
-                  "FROM viagem v " +
-                  "JOIN cadastro_motorista m " +
-                  "JOIN cadastro_veiculo a " +
-                  "JOIN cadastro_cidade c " +
-                  "JOIN cadastro_cidade b " +
-                  "ON v.id_motorista = m.id_motorista  " +
-                  "AND v.id_veiculo = a.id_veiculo " +
-                  "AND  v.id_cidade_origem = c.id_cidade " +
-                  "AND  v.id_cidade_destino = b.id_cidade " +
-                  "WHERE v.dta_retorno IS NULL " +
-                  "and a.modelo_veiculo like '%" + @nome + "%'", conn);
-                DataTable pesq3 = new DataTable();
-                pesq1.Fill(pesq3);
-                dataGridViewRetViagem.DataSource = pesq3;
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewRetViagem.DataSource = daoViagem.PesquisarVeiculoRetorno(nome);
             }
 
 
@@ -142,14 +84,12 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
         private void dataGridViewUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            CodSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[0].Value.ToString();
-            MotoristaSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[1].Value.ToString();
+            MotoristaSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[0].Value.ToString();
+            CodSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[1].Value.ToString();
             VeiculoSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[2].Value.ToString();
             CidadeSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[3].Value.ToString();
             CidadeDestSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[4].Value.ToString();
             DtSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[5].Value.ToString();
-          //  kmRetornoTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[6].Value.ToString();
-            v.Id_viagem = Convert.ToInt32(CodSaidaViagRTbx.Text);
 
 
             CodSaidaViagRTbx.Enabled = false;
@@ -173,6 +113,7 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
         {
             retornoViagemPnl.Visible = false;
             retViagemPesquisaPnl.Visible = true;
+            informativoIniciarPesquisaLbl.Visible = false;
 
         }
 
@@ -181,6 +122,7 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
             DaoViagem dao = new DaoViagem();
             v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
             v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
+            v.Id_viagem = Convert.ToInt32(CodSaidaViagRTbx.Text);
 
             dao.GravarRetornoViagem(v);
             CadRetornoIniPnl.Visible = false;
@@ -194,37 +136,17 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
 
             if (pesquTodosCkbx.Checked == true)
             {
+                DaoViagem daoViagem = new DaoViagem();
+                dataGridViewRetViagem.DataSource = daoViagem.PesquisarTodasRetorno(v);
 
                 pesqMotoristaCbx.Enabled = false;
                 pesqVeiculoCbx.Enabled = false;
                 PesquisarTbx.Enabled = false;
                 PesquisarBtn.Enabled = false;
-                MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-                MySqlCommand cmd = new MySqlCommand();
-                conn.Open();
                 PesquisarTbx.Text = "";
 
 
-                MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                    "v.id_viagem as Codigo_Viagem," +
-                    "m.nome_motorista as Nome_Motorista, " +
-                    "a.modelo_veiculo as Modelo_Veiculo, " +
-                    "c.nome_cidade as Cidade_Saida, " +
-                    "b.nome_cidade as Cidade_Destino, " +
-                    "date(v.dta_saida) as Data_Saida " +
-                    "FROM viagem v " +
-                    "JOIN cadastro_motorista m " +
-                    "JOIN cadastro_veiculo a " +
-                    "JOIN cadastro_cidade c " +
-                    "JOIN cadastro_cidade b " +
-                    "ON v.id_motorista = m.id_motorista  " +
-                    "AND v.id_veiculo = a.id_veiculo " +
-                    "AND  v.id_cidade_origem = c.id_cidade " +
-                    "AND  v.id_cidade_destino = b.id_cidade " +
-                    "WHERE v.dta_retorno = '2000-01-01' ;", conn);
-                DataTable pesq3 = new DataTable();
-                pesq1.Fill(pesq3);
-                dataGridViewRetViagem.DataSource = pesq3;
+              
             }
             if (pesquTodosCkbx.Checked == false)
             {

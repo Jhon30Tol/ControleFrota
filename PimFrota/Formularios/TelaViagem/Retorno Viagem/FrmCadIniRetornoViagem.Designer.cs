@@ -28,8 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniRetornoViagem));
             this.CadRetornoIniPnl = new System.Windows.Forms.Panel();
+            this.retViagemPesquisaPnl = new System.Windows.Forms.Panel();
+            this.pesqVeiculoCbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.pesqMotoristaCbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.dataGridViewRetViagem = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.syslogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.syslogDataSet = new PimFrota.syslogDataSet();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.retornoViagemPnl = new System.Windows.Forms.Panel();
             this.kmRetornoTbx = new System.Windows.Forms.TextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -48,14 +73,6 @@
             this.VeiculoSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
             this.MotoristaSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
             this.CodViagemRLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.retViagemPesquisaPnl = new System.Windows.Forms.Panel();
-            this.pesqVeiculoCbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.pesqMotoristaCbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.dataGridViewRetViagem = new System.Windows.Forms.DataGridView();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.BotaoRetornoPnl = new System.Windows.Forms.Panel();
             this.CancelarRetornoBtn = new System.Windows.Forms.Button();
             this.EditarRetornoBtn = new System.Windows.Forms.Button();
@@ -63,23 +80,271 @@
             this.GravarRetornoBtn = new System.Windows.Forms.Button();
             this.PesquisarRetornoBtn = new System.Windows.Forms.Button();
             this.ExcluirRetornoBtn = new System.Windows.Forms.Button();
-            this.informativoIniciarPesquisaLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.informativoIniciarPesquisaLbl = new System.Windows.Forms.Label();
             this.CadRetornoIniPnl.SuspendLayout();
-            this.retornoViagemPnl.SuspendLayout();
             this.retViagemPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).BeginInit();
+            this.retornoViagemPnl.SuspendLayout();
             this.BotaoRetornoPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadRetornoIniPnl
             // 
             this.CadRetornoIniPnl.Controls.Add(this.retViagemPesquisaPnl);
-            this.CadRetornoIniPnl.Controls.Add(this.retornoViagemPnl);
             this.CadRetornoIniPnl.Controls.Add(this.informativoIniciarPesquisaLbl);
+            this.CadRetornoIniPnl.Controls.Add(this.retornoViagemPnl);
             this.CadRetornoIniPnl.Location = new System.Drawing.Point(1, 55);
             this.CadRetornoIniPnl.Name = "CadRetornoIniPnl";
             this.CadRetornoIniPnl.Size = new System.Drawing.Size(594, 442);
             this.CadRetornoIniPnl.TabIndex = 29;
+            // 
+            // retViagemPesquisaPnl
+            // 
+            this.retViagemPesquisaPnl.AutoSize = true;
+            this.retViagemPesquisaPnl.Controls.Add(this.pesqVeiculoCbx);
+            this.retViagemPesquisaPnl.Controls.Add(this.pesqMotoristaCbx);
+            this.retViagemPesquisaPnl.Controls.Add(this.dataGridViewRetViagem);
+            this.retViagemPesquisaPnl.Controls.Add(this.PesquisarLbl);
+            this.retViagemPesquisaPnl.Controls.Add(this.pesquTodosCkbx);
+            this.retViagemPesquisaPnl.Controls.Add(this.PesquisarBtn);
+            this.retViagemPesquisaPnl.Controls.Add(this.PesquisarTbx);
+            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(0, 4);
+            this.retViagemPesquisaPnl.Name = "retViagemPesquisaPnl";
+            this.retViagemPesquisaPnl.Size = new System.Drawing.Size(591, 429);
+            this.retViagemPesquisaPnl.TabIndex = 2;
+            // 
+            // pesqVeiculoCbx
+            // 
+            this.pesqVeiculoCbx.AutoSize = true;
+            this.pesqVeiculoCbx.Depth = 0;
+            this.pesqVeiculoCbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.pesqVeiculoCbx.Location = new System.Drawing.Point(231, 36);
+            this.pesqVeiculoCbx.Margin = new System.Windows.Forms.Padding(0);
+            this.pesqVeiculoCbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.pesqVeiculoCbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pesqVeiculoCbx.Name = "pesqVeiculoCbx";
+            this.pesqVeiculoCbx.Ripple = true;
+            this.pesqVeiculoCbx.Size = new System.Drawing.Size(76, 30);
+            this.pesqVeiculoCbx.TabIndex = 19;
+            this.pesqVeiculoCbx.Text = "Veiculo";
+            this.pesqVeiculoCbx.UseVisualStyleBackColor = true;
+            this.pesqVeiculoCbx.CheckedChanged += new System.EventHandler(this.pesqVeiculoCbx_CheckedChanged);
+            // 
+            // pesqMotoristaCbx
+            // 
+            this.pesqMotoristaCbx.AutoSize = true;
+            this.pesqMotoristaCbx.Depth = 0;
+            this.pesqMotoristaCbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.pesqMotoristaCbx.Location = new System.Drawing.Point(114, 36);
+            this.pesqMotoristaCbx.Margin = new System.Windows.Forms.Padding(0);
+            this.pesqMotoristaCbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.pesqMotoristaCbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pesqMotoristaCbx.Name = "pesqMotoristaCbx";
+            this.pesqMotoristaCbx.Ripple = true;
+            this.pesqMotoristaCbx.Size = new System.Drawing.Size(90, 30);
+            this.pesqMotoristaCbx.TabIndex = 18;
+            this.pesqMotoristaCbx.Text = "Motorista";
+            this.pesqMotoristaCbx.UseVisualStyleBackColor = true;
+            this.pesqMotoristaCbx.CheckedChanged += new System.EventHandler(this.pesqMotoristaCbx_CheckedChanged);
+            // 
+            // dataGridViewRetViagem
+            // 
+            this.dataGridViewRetViagem.AllowUserToAddRows = false;
+            this.dataGridViewRetViagem.AllowUserToDeleteRows = false;
+            this.dataGridViewRetViagem.AutoGenerateColumns = false;
+            this.dataGridViewRetViagem.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewRetViagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRetViagem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14});
+            this.dataGridViewRetViagem.DataSource = this.syslogDataSetBindingSource;
+            this.dataGridViewRetViagem.Location = new System.Drawing.Point(6, 69);
+            this.dataGridViewRetViagem.Name = "dataGridViewRetViagem";
+            this.dataGridViewRetViagem.ReadOnly = true;
+            this.dataGridViewRetViagem.Size = new System.Drawing.Size(582, 347);
+            this.dataGridViewRetViagem.TabIndex = 17;
+            this.dataGridViewRetViagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuario_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id_motorista_pesquisa";
+            this.Column1.HeaderText = "Motorista";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Id_viagem";
+            this.Column2.HeaderText = "Codigo";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Id_veiculo_pesquisa";
+            this.Column3.HeaderText = "Veiculo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Id_cidadeSaida_pesquisa";
+            this.Column4.HeaderText = "Cidade Saida";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Id_cidadeDestino_pesquisa";
+            this.Column5.HeaderText = "Cidade Retorno";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "DtaSaida";
+            this.Column6.HeaderText = "Data Saida";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "KmSaida";
+            this.Column7.HeaderText = "Km Saida";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "passageiro";
+            this.Column8.HeaderText = "Passageiro";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "DtaRetorno";
+            this.Column9.HeaderText = "Data Retorno";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "KmRetorno";
+            this.Column10.HeaderText = "Km Retotno";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "Id_motorista";
+            this.Column11.HeaderText = "Id Motorista";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "Id_veiculo";
+            this.Column12.HeaderText = "id_veiculo";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Visible = false;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "Id_cidadeSaida";
+            this.Column13.HeaderText = "id_cidadeSaida";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Visible = false;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "Id_cidadeRetorno";
+            this.Column14.HeaderText = "id_cidadeRetorno";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Visible = false;
+            // 
+            // syslogDataSetBindingSource
+            // 
+            this.syslogDataSetBindingSource.DataSource = this.syslogDataSet;
+            this.syslogDataSetBindingSource.Position = 0;
+            // 
+            // syslogDataSet
+            // 
+            this.syslogDataSet.DataSetName = "syslogDataSet";
+            this.syslogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // PesquisarLbl
+            // 
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(215, 12);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 15;
+            this.PesquisarLbl.Text = "Pesquisar";
+            // 
+            // pesquTodosCkbx
+            // 
+            this.pesquTodosCkbx.AutoSize = true;
+            this.pesquTodosCkbx.Depth = 0;
+            this.pesquTodosCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.pesquTodosCkbx.Location = new System.Drawing.Point(6, 36);
+            this.pesquTodosCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.pesquTodosCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.pesquTodosCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.pesquTodosCkbx.Name = "pesquTodosCkbx";
+            this.pesquTodosCkbx.Ripple = true;
+            this.pesquTodosCkbx.Size = new System.Drawing.Size(69, 30);
+            this.pesquTodosCkbx.TabIndex = 14;
+            this.pesquTodosCkbx.Text = "Todos";
+            this.pesquTodosCkbx.UseVisualStyleBackColor = true;
+            this.pesquTodosCkbx.CheckedChanged += new System.EventHandler(this.TodosCkbx_CheckedChanged);
+            // 
+            // PesquisarBtn
+            // 
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(166, 8);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 12;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click);
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(9, 11);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 11;
             // 
             // retornoViagemPnl
             // 
@@ -100,7 +365,7 @@
             this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRLbl);
             this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRLbl);
             this.retornoViagemPnl.Controls.Add(this.CodViagemRLbl);
-            this.retornoViagemPnl.Location = new System.Drawing.Point(3, 3);
+            this.retornoViagemPnl.Location = new System.Drawing.Point(3, 24);
             this.retornoViagemPnl.Name = "retornoViagemPnl";
             this.retornoViagemPnl.Size = new System.Drawing.Size(577, 325);
             this.retornoViagemPnl.TabIndex = 0;
@@ -276,118 +541,6 @@
             this.CodViagemRLbl.TabIndex = 27;
             this.CodViagemRLbl.Text = "Código Viagem";
             // 
-            // retViagemPesquisaPnl
-            // 
-            this.retViagemPesquisaPnl.AutoSize = true;
-            this.retViagemPesquisaPnl.Controls.Add(this.pesqVeiculoCbx);
-            this.retViagemPesquisaPnl.Controls.Add(this.pesqMotoristaCbx);
-            this.retViagemPesquisaPnl.Controls.Add(this.dataGridViewRetViagem);
-            this.retViagemPesquisaPnl.Controls.Add(this.PesquisarLbl);
-            this.retViagemPesquisaPnl.Controls.Add(this.pesquTodosCkbx);
-            this.retViagemPesquisaPnl.Controls.Add(this.PesquisarBtn);
-            this.retViagemPesquisaPnl.Controls.Add(this.PesquisarTbx);
-            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(0, 4);
-            this.retViagemPesquisaPnl.Name = "retViagemPesquisaPnl";
-            this.retViagemPesquisaPnl.Size = new System.Drawing.Size(591, 429);
-            this.retViagemPesquisaPnl.TabIndex = 2;
-            // 
-            // pesqVeiculoCbx
-            // 
-            this.pesqVeiculoCbx.AutoSize = true;
-            this.pesqVeiculoCbx.Depth = 0;
-            this.pesqVeiculoCbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.pesqVeiculoCbx.Location = new System.Drawing.Point(231, 36);
-            this.pesqVeiculoCbx.Margin = new System.Windows.Forms.Padding(0);
-            this.pesqVeiculoCbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.pesqVeiculoCbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.pesqVeiculoCbx.Name = "pesqVeiculoCbx";
-            this.pesqVeiculoCbx.Ripple = true;
-            this.pesqVeiculoCbx.Size = new System.Drawing.Size(76, 30);
-            this.pesqVeiculoCbx.TabIndex = 19;
-            this.pesqVeiculoCbx.Text = "Veiculo";
-            this.pesqVeiculoCbx.UseVisualStyleBackColor = true;
-            this.pesqVeiculoCbx.CheckedChanged += new System.EventHandler(this.pesqVeiculoCbx_CheckedChanged);
-            // 
-            // pesqMotoristaCbx
-            // 
-            this.pesqMotoristaCbx.AutoSize = true;
-            this.pesqMotoristaCbx.Depth = 0;
-            this.pesqMotoristaCbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.pesqMotoristaCbx.Location = new System.Drawing.Point(114, 36);
-            this.pesqMotoristaCbx.Margin = new System.Windows.Forms.Padding(0);
-            this.pesqMotoristaCbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.pesqMotoristaCbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.pesqMotoristaCbx.Name = "pesqMotoristaCbx";
-            this.pesqMotoristaCbx.Ripple = true;
-            this.pesqMotoristaCbx.Size = new System.Drawing.Size(90, 30);
-            this.pesqMotoristaCbx.TabIndex = 18;
-            this.pesqMotoristaCbx.Text = "Motorista";
-            this.pesqMotoristaCbx.UseVisualStyleBackColor = true;
-            this.pesqMotoristaCbx.CheckedChanged += new System.EventHandler(this.pesqMotoristaCbx_CheckedChanged);
-            // 
-            // dataGridViewRetViagem
-            // 
-            this.dataGridViewRetViagem.AllowUserToAddRows = false;
-            this.dataGridViewRetViagem.AllowUserToDeleteRows = false;
-            this.dataGridViewRetViagem.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewRetViagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRetViagem.Location = new System.Drawing.Point(6, 69);
-            this.dataGridViewRetViagem.Name = "dataGridViewRetViagem";
-            this.dataGridViewRetViagem.ReadOnly = true;
-            this.dataGridViewRetViagem.Size = new System.Drawing.Size(582, 347);
-            this.dataGridViewRetViagem.TabIndex = 17;
-            this.dataGridViewRetViagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuario_CellContentClick);
-            // 
-            // PesquisarLbl
-            // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(215, 12);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 15;
-            this.PesquisarLbl.Text = "Pesquisar";
-            // 
-            // pesquTodosCkbx
-            // 
-            this.pesquTodosCkbx.AutoSize = true;
-            this.pesquTodosCkbx.Depth = 0;
-            this.pesquTodosCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.pesquTodosCkbx.Location = new System.Drawing.Point(6, 36);
-            this.pesquTodosCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.pesquTodosCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.pesquTodosCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.pesquTodosCkbx.Name = "pesquTodosCkbx";
-            this.pesquTodosCkbx.Ripple = true;
-            this.pesquTodosCkbx.Size = new System.Drawing.Size(69, 30);
-            this.pesquTodosCkbx.TabIndex = 14;
-            this.pesquTodosCkbx.Text = "Todos";
-            this.pesquTodosCkbx.UseVisualStyleBackColor = true;
-            this.pesquTodosCkbx.CheckedChanged += new System.EventHandler(this.TodosCkbx_CheckedChanged);
-            // 
-            // PesquisarBtn
-            // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(166, 8);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 12;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
-            this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click);
-            // 
-            // PesquisarTbx
-            // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(9, 11);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 11;
-            // 
             // BotaoRetornoPnl
             // 
             this.BotaoRetornoPnl.Controls.Add(this.CancelarRetornoBtn);
@@ -516,14 +669,11 @@
             // informativoIniciarPesquisaLbl
             // 
             this.informativoIniciarPesquisaLbl.AutoSize = true;
-            this.informativoIniciarPesquisaLbl.Depth = 0;
-            this.informativoIniciarPesquisaLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.informativoIniciarPesquisaLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.informativoIniciarPesquisaLbl.Location = new System.Drawing.Point(138, 212);
-            this.informativoIniciarPesquisaLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.informativoIniciarPesquisaLbl.Font = new System.Drawing.Font("Miriam Libre", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informativoIniciarPesquisaLbl.Location = new System.Drawing.Point(56, 209);
             this.informativoIniciarPesquisaLbl.Name = "informativoIniciarPesquisaLbl";
-            this.informativoIniciarPesquisaLbl.Size = new System.Drawing.Size(339, 19);
-            this.informativoIniciarPesquisaLbl.TabIndex = 31;
+            this.informativoIniciarPesquisaLbl.Size = new System.Drawing.Size(484, 25);
+            this.informativoIniciarPesquisaLbl.TabIndex = 32;
             this.informativoIniciarPesquisaLbl.Text = "Clique em pesquisar para selecionar uma viagem";
             // 
             // FrmCadIniRetornoViagem
@@ -536,11 +686,13 @@
             this.Load += new System.EventHandler(this.FrmCadIniRetornoViagem_Load);
             this.CadRetornoIniPnl.ResumeLayout(false);
             this.CadRetornoIniPnl.PerformLayout();
-            this.retornoViagemPnl.ResumeLayout(false);
-            this.retornoViagemPnl.PerformLayout();
             this.retViagemPesquisaPnl.ResumeLayout(false);
             this.retViagemPesquisaPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).EndInit();
+            this.retornoViagemPnl.ResumeLayout(false);
+            this.retornoViagemPnl.PerformLayout();
             this.BotaoRetornoPnl.ResumeLayout(false);
             this.BotaoRetornoPnl.PerformLayout();
             this.ResumeLayout(false);
@@ -583,6 +735,22 @@
         public System.Windows.Forms.Button ExcluirRetornoBtn;
         public System.Windows.Forms.TextBox kmRetornoTbx;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel informativoIniciarPesquisaLbl;
+        private System.Windows.Forms.BindingSource syslogDataSetBindingSource;
+        private syslogDataSet syslogDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        public System.Windows.Forms.Label informativoIniciarPesquisaLbl;
     }
 }
