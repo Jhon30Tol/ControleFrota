@@ -22,7 +22,9 @@ namespace PimFrota.Formularios.Base
         public FrmBase()
         {
             InitializeComponent();
-          
+            UsuarioLogado();
+
+
 
         }
 
@@ -47,7 +49,15 @@ namespace PimFrota.Formularios.Base
 
         private void FrmBase_Load(object sender, EventArgs e)
         {
+            
 
+
+        }
+
+        public void UsuarioLogado()
+        {
+            FrmLogin frmLogin = (FrmLogin)Application.OpenForms["FrmLogin"];
+            usuarioLogadoLbl.Text = frmLogin.Usuariotxb.Text;
         }
     }
 }

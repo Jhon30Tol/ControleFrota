@@ -173,7 +173,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private MaterialSkin.Controls.MaterialLabel versaoLbl;
-        private MaterialSkin.Controls.MaterialLabel usuarioLogadoLbl;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        public MaterialSkin.Controls.MaterialLabel usuarioLogadoLbl;
     }
 }

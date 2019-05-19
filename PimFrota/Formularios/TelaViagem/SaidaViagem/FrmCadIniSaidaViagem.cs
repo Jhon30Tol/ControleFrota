@@ -66,6 +66,8 @@ namespace PimFrota.Formularios.TelaViagem
             cidadePesquisarPnl.Visible = false;
             saidaViagemPesquisaPnl.Visible = false;
             msgNaoRetornouLbl.Visible = false;
+            KmRodadoLbl.Visible = false;
+            valKmRodadoLbl.Visible = false;
 
         }
 
@@ -89,6 +91,11 @@ namespace PimFrota.Formularios.TelaViagem
             CidadeSaidaViagTbx.Text = "<-- Clique para incluir a cidade de saida";
             CidadeDestSaidaViagTbx.Text = "<-- Clique para incluir a cidade de destino";
 
+            DtRetornoLbl.Visible = false;
+            DtaRetornoDtm.Visible = false;
+
+            KmRetornoLbl.Visible = false;
+            kmRetornoTbx.Visible = false;
 
             saidaViagemPnl.Visible = true;
 
@@ -569,7 +576,7 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             if (DtaRetornoDtm.Text == "01/01/2000")
             {
                 DtaRetornoDtm.Visible = false;
-                KmRetornoLlbl.Visible = false;
+                KmRetornoLbl.Visible = false;
                 DtRetornoLbl.Visible = false;
                 kmRetornoTbx.Visible = false;
                 msgNaoRetornouLbl.Visible = true;
