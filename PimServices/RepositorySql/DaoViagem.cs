@@ -878,7 +878,7 @@ namespace PimServices.RepositorySql
 
 
                     novo.id_veiculo = (int)reader["id_veiculo"];
-                    novo.modelo_veiculo = Convert.ToString(reader["modelo_veiculo"]);
+                    novo.ModeloVeiculo = Convert.ToString(reader["ModeloVeiculo"]);
 
 
 
@@ -931,7 +931,7 @@ namespace PimServices.RepositorySql
 
 
                     novo.id_veiculo = (int)reader["id_veiculo"];
-                    novo.modelo_veiculo = Convert.ToString(reader["modelo_veiculo"]);
+                    novo.ModeloVeiculo = Convert.ToString(reader["ModeloVeiculo"]);
 
 
 

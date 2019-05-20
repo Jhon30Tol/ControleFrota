@@ -116,6 +116,7 @@ F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Micro
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.pdb
+<<<<<<< HEAD
 F:\Users\wagner.neves\Documents\git1\ControleFrota - Copia\PimServices\bin\Debug\PimServices.dll
 F:\Users\wagner.neves\Documents\git1\ControleFrota - Copia\PimServices\bin\Debug\PimServices.pdb
 F:\Users\wagner.neves\Documents\git1\ControleFrota - Copia\PimServices\bin\Debug\Correios.Net.dll
@@ -132,3 +133,19 @@ F:\Users\wagner.neves\Documents\git1\ControleFrota - Copia\PimServices\obj\Debug
 F:\Users\wagner.neves\Documents\git1\ControleFrota - Copia\PimServices\obj\Debug\PimServices.csproj.CopyComplete
 F:\Users\wagner.neves\Documents\git1\ControleFrota - Copia\PimServices\obj\Debug\PimServices.dll
 F:\Users\wagner.neves\Documents\git1\ControleFrota - Copia\PimServices\obj\Debug\PimServices.pdb
+=======
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csprojAssemblyReference.cache
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csproj.CoreCompileInputs.cache
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.dll
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.pdb
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\PimServices.dll
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\PimServices.pdb
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.dll
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\DocsBr.dll
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\bin\Debug\Correios.Net.pdb
+F:\Breno\Unip\2019\GitHub\ControleFrota\PimServices\obj\Debug\PimServices.csproj.CopyComplete
+>>>>>>> a0b4479e084e4f21d3da40f3689a826901dd9523

@@ -1257,7 +1257,11 @@
         RU5ErkJggg==
 </value>
   </data>
+<<<<<<< HEAD
   <metadata name="materialFlatButton1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+=======
+  <metadata name="ManutencaoViagemBtn.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+>>>>>>> a0b4479e084e4f21d3da40f3689a826901dd9523
     <value>False</value>
   </metadata>
   <data name="MotoristaPctBx.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

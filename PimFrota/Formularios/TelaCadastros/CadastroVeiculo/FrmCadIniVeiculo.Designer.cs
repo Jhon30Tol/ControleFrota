@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniVeiculo));
             this.CadVeiculoIniPnl = new System.Windows.Forms.Panel();
-            this.veiculoPesquisarPnl = new System.Windows.Forms.Panel();
+            this.PesquisarVeiculoPnl = new System.Windows.Forms.Panel();
             this.dataGridViewVeiculo = new System.Windows.Forms.DataGridView();
             this.PlacaCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
@@ -39,13 +39,17 @@
             this.CodigoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.veiculoPnl = new System.Windows.Forms.Panel();
+            this.AdicionarVeiculoPnl = new System.Windows.Forms.Panel();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisaCodVeiculoBtn = new System.Windows.Forms.Button();
+            this.ModeloVeiculoTbx = new System.Windows.Forms.TextBox();
+            this.AnoVeiculoLbl = new System.Windows.Forms.Label();
             this.TipCombustivelCbx = new System.Windows.Forms.ComboBox();
             this.ChassiTbx = new System.Windows.Forms.TextBox();
-            this.AnoModelVeiculoTbx = new System.Windows.Forms.TextBox();
+            this.AnoModeloVeiculoTbx = new System.Windows.Forms.TextBox();
             this.CorVeiculoTbx = new System.Windows.Forms.TextBox();
             this.PlacaTbx = new System.Windows.Forms.TextBox();
-            this.AnoVeiucloTbx = new System.Windows.Forms.TextBox();
+            this.AnoVeiculoTbx = new System.Windows.Forms.TextBox();
             this.MarcaVeiculoTbx = new System.Windows.Forms.TextBox();
             this.CodVeiculoTbx = new System.Windows.Forms.TextBox();
             this.AnoModeloVeiucloLbl = new System.Windows.Forms.Label();
@@ -53,48 +57,48 @@
             this.PlacaLbl = new System.Windows.Forms.Label();
             this.CorVeiuclolbl = new System.Windows.Forms.Label();
             this.TipCombustivelLbl = new System.Windows.Forms.Label();
-            this.AnoVeiuclolbl = new System.Windows.Forms.Label();
+            this.ModeloVeiuclolbl = new System.Windows.Forms.Label();
             this.ChassiLbl = new System.Windows.Forms.Label();
             this.MarcaVeiculolbl = new System.Windows.Forms.Label();
             this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
-            this.CancelarVeiucloBtn = new System.Windows.Forms.Button();
-            this.EditarVeiucloBtn = new System.Windows.Forms.Button();
-            this.IncluirVeiucloBtn = new System.Windows.Forms.Button();
-            this.GravarVeiucloBtn = new System.Windows.Forms.Button();
-            this.PesquisarVeiucloBtn = new System.Windows.Forms.Button();
-            this.ExcluirVeiucloBtn = new System.Windows.Forms.Button();
+            this.CancelarVeiculoBtn = new System.Windows.Forms.Button();
+            this.EditarVeiculoBtn = new System.Windows.Forms.Button();
+            this.IncluirVeiculoBtn = new System.Windows.Forms.Button();
+            this.GravarVeiculoBtn = new System.Windows.Forms.Button();
+            this.PesquisarVeiculoBtn = new System.Windows.Forms.Button();
+            this.ExcluirVeiculoBtn = new System.Windows.Forms.Button();
             this.linhaVeiculoLbl = new System.Windows.Forms.Label();
             this.veiculoLbl = new System.Windows.Forms.Label();
             this.CadVeiculoIniPnl.SuspendLayout();
-            this.veiculoPesquisarPnl.SuspendLayout();
+            this.PesquisarVeiculoPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).BeginInit();
-            this.veiculoPnl.SuspendLayout();
+            this.AdicionarVeiculoPnl.SuspendLayout();
             this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadVeiculoIniPnl
             // 
-            this.CadVeiculoIniPnl.Controls.Add(this.veiculoPesquisarPnl);
-            this.CadVeiculoIniPnl.Controls.Add(this.veiculoPnl);
+            this.CadVeiculoIniPnl.Controls.Add(this.PesquisarVeiculoPnl);
+            this.CadVeiculoIniPnl.Controls.Add(this.AdicionarVeiculoPnl);
             this.CadVeiculoIniPnl.Location = new System.Drawing.Point(1, 67);
             this.CadVeiculoIniPnl.Name = "CadVeiculoIniPnl";
             this.CadVeiculoIniPnl.Size = new System.Drawing.Size(594, 325);
             this.CadVeiculoIniPnl.TabIndex = 25;
             // 
-            // veiculoPesquisarPnl
+            // PesquisarVeiculoPnl
             // 
-            this.veiculoPesquisarPnl.Controls.Add(this.dataGridViewVeiculo);
-            this.veiculoPesquisarPnl.Controls.Add(this.PlacaCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.veiculoPesquisarPnl.Controls.Add(this.AnoCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.MarcaCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.CodigoCkbx);
-            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.veiculoPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.veiculoPesquisarPnl.Location = new System.Drawing.Point(9, 11);
-            this.veiculoPesquisarPnl.Name = "veiculoPesquisarPnl";
-            this.veiculoPesquisarPnl.Size = new System.Drawing.Size(575, 279);
-            this.veiculoPesquisarPnl.TabIndex = 125;
+            this.PesquisarVeiculoPnl.Controls.Add(this.dataGridViewVeiculo);
+            this.PesquisarVeiculoPnl.Controls.Add(this.PlacaCkbx);
+            this.PesquisarVeiculoPnl.Controls.Add(this.PesquisarLbl);
+            this.PesquisarVeiculoPnl.Controls.Add(this.AnoCkbx);
+            this.PesquisarVeiculoPnl.Controls.Add(this.MarcaCkbx);
+            this.PesquisarVeiculoPnl.Controls.Add(this.CodigoCkbx);
+            this.PesquisarVeiculoPnl.Controls.Add(this.PesquisarBtn);
+            this.PesquisarVeiculoPnl.Controls.Add(this.PesquisarTbx);
+            this.PesquisarVeiculoPnl.Location = new System.Drawing.Point(3, 3);
+            this.PesquisarVeiculoPnl.Name = "PesquisarVeiculoPnl";
+            this.PesquisarVeiculoPnl.Size = new System.Drawing.Size(575, 279);
+            this.PesquisarVeiculoPnl.TabIndex = 125;
             // 
             // dataGridViewVeiculo
             // 
@@ -127,7 +131,7 @@
             this.PesquisarLbl.Depth = 0;
             this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(222, 8);
+            this.PesquisarLbl.Location = new System.Drawing.Point(209, 7);
             this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.PesquisarLbl.Name = "PesquisarLbl";
             this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
@@ -201,28 +205,75 @@
             this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
             this.PesquisarTbx.TabIndex = 18;
             // 
-            // veiculoPnl
+            // AdicionarVeiculoPnl
             // 
-            this.veiculoPnl.Controls.Add(this.TipCombustivelCbx);
-            this.veiculoPnl.Controls.Add(this.ChassiTbx);
-            this.veiculoPnl.Controls.Add(this.AnoModelVeiculoTbx);
-            this.veiculoPnl.Controls.Add(this.CorVeiculoTbx);
-            this.veiculoPnl.Controls.Add(this.PlacaTbx);
-            this.veiculoPnl.Controls.Add(this.AnoVeiucloTbx);
-            this.veiculoPnl.Controls.Add(this.MarcaVeiculoTbx);
-            this.veiculoPnl.Controls.Add(this.CodVeiculoTbx);
-            this.veiculoPnl.Controls.Add(this.AnoModeloVeiucloLbl);
-            this.veiculoPnl.Controls.Add(this.CodVeiculolbl);
-            this.veiculoPnl.Controls.Add(this.PlacaLbl);
-            this.veiculoPnl.Controls.Add(this.CorVeiuclolbl);
-            this.veiculoPnl.Controls.Add(this.TipCombustivelLbl);
-            this.veiculoPnl.Controls.Add(this.AnoVeiuclolbl);
-            this.veiculoPnl.Controls.Add(this.ChassiLbl);
-            this.veiculoPnl.Controls.Add(this.MarcaVeiculolbl);
-            this.veiculoPnl.Location = new System.Drawing.Point(11, 21);
-            this.veiculoPnl.Name = "veiculoPnl";
-            this.veiculoPnl.Size = new System.Drawing.Size(554, 155);
-            this.veiculoPnl.TabIndex = 0;
+            this.AdicionarVeiculoPnl.Controls.Add(this.materialLabel1);
+            this.AdicionarVeiculoPnl.Controls.Add(this.PesquisaCodVeiculoBtn);
+            this.AdicionarVeiculoPnl.Controls.Add(this.ModeloVeiculoTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.AnoVeiculoLbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.TipCombustivelCbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.ChassiTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.AnoModeloVeiculoTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.CorVeiculoTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.PlacaTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.AnoVeiculoTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.MarcaVeiculoTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.CodVeiculoTbx);
+            this.AdicionarVeiculoPnl.Controls.Add(this.AnoModeloVeiucloLbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.CodVeiculolbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.PlacaLbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.CorVeiuclolbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.TipCombustivelLbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.ModeloVeiuclolbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.ChassiLbl);
+            this.AdicionarVeiculoPnl.Controls.Add(this.MarcaVeiculolbl);
+            this.AdicionarVeiculoPnl.Location = new System.Drawing.Point(11, 21);
+            this.AdicionarVeiculoPnl.Name = "AdicionarVeiculoPnl";
+            this.AdicionarVeiculoPnl.Size = new System.Drawing.Size(554, 155);
+            this.AdicionarVeiculoPnl.TabIndex = 0;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(253, 15);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(76, 19);
+            this.materialLabel1.TabIndex = 130;
+            this.materialLabel1.Text = "Pesquisar";
+            // 
+            // PesquisaCodVeiculoBtn
+            // 
+            this.PesquisaCodVeiculoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisaCodVeiculoBtn.BackgroundImage")));
+            this.PesquisaCodVeiculoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisaCodVeiculoBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisaCodVeiculoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisaCodVeiculoBtn.Location = new System.Drawing.Point(204, 11);
+            this.PesquisaCodVeiculoBtn.Name = "PesquisaCodVeiculoBtn";
+            this.PesquisaCodVeiculoBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisaCodVeiculoBtn.TabIndex = 129;
+            this.PesquisaCodVeiculoBtn.UseVisualStyleBackColor = true;
+            this.PesquisaCodVeiculoBtn.Click += new System.EventHandler(this.PesquisaCodVeiculoBtn_Click);
+            // 
+            // ModeloVeiculoTbx
+            // 
+            this.ModeloVeiculoTbx.Location = new System.Drawing.Point(422, 40);
+            this.ModeloVeiculoTbx.Name = "ModeloVeiculoTbx";
+            this.ModeloVeiculoTbx.Size = new System.Drawing.Size(104, 20);
+            this.ModeloVeiculoTbx.TabIndex = 126;
+            // 
+            // AnoVeiculoLbl
+            // 
+            this.AnoVeiculoLbl.AutoSize = true;
+            this.AnoVeiculoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.AnoVeiculoLbl.Location = new System.Drawing.Point(375, 67);
+            this.AnoVeiculoLbl.Name = "AnoVeiculoLbl";
+            this.AnoVeiculoLbl.Size = new System.Drawing.Size(41, 17);
+            this.AnoVeiculoLbl.TabIndex = 125;
+            this.AnoVeiculoLbl.Text = "Ano:";
             // 
             // TipCombustivelCbx
             // 
@@ -245,33 +296,33 @@
             this.ChassiTbx.Size = new System.Drawing.Size(226, 20);
             this.ChassiTbx.TabIndex = 123;
             // 
-            // AnoModelVeiculoTbx
+            // AnoModeloVeiculoTbx
             // 
-            this.AnoModelVeiculoTbx.Location = new System.Drawing.Point(118, 66);
-            this.AnoModelVeiculoTbx.Name = "AnoModelVeiculoTbx";
-            this.AnoModelVeiculoTbx.Size = new System.Drawing.Size(226, 20);
-            this.AnoModelVeiculoTbx.TabIndex = 122;
+            this.AnoModeloVeiculoTbx.Location = new System.Drawing.Point(118, 66);
+            this.AnoModeloVeiculoTbx.Name = "AnoModeloVeiculoTbx";
+            this.AnoModeloVeiculoTbx.Size = new System.Drawing.Size(226, 20);
+            this.AnoModeloVeiculoTbx.TabIndex = 122;
             // 
             // CorVeiculoTbx
             // 
-            this.CorVeiculoTbx.Location = new System.Drawing.Point(422, 68);
+            this.CorVeiculoTbx.Location = new System.Drawing.Point(422, 118);
             this.CorVeiculoTbx.Name = "CorVeiculoTbx";
             this.CorVeiculoTbx.Size = new System.Drawing.Size(104, 20);
             this.CorVeiculoTbx.TabIndex = 121;
             // 
             // PlacaTbx
             // 
-            this.PlacaTbx.Location = new System.Drawing.Point(422, 94);
+            this.PlacaTbx.Location = new System.Drawing.Point(422, 92);
             this.PlacaTbx.Name = "PlacaTbx";
             this.PlacaTbx.Size = new System.Drawing.Size(104, 20);
             this.PlacaTbx.TabIndex = 120;
             // 
-            // AnoVeiucloTbx
+            // AnoVeiculoTbx
             // 
-            this.AnoVeiucloTbx.Location = new System.Drawing.Point(422, 42);
-            this.AnoVeiucloTbx.Name = "AnoVeiucloTbx";
-            this.AnoVeiucloTbx.Size = new System.Drawing.Size(104, 20);
-            this.AnoVeiucloTbx.TabIndex = 119;
+            this.AnoVeiculoTbx.Location = new System.Drawing.Point(422, 66);
+            this.AnoVeiculoTbx.Name = "AnoVeiculoTbx";
+            this.AnoVeiculoTbx.Size = new System.Drawing.Size(104, 20);
+            this.AnoVeiculoTbx.TabIndex = 119;
             // 
             // MarcaVeiculoTbx
             // 
@@ -282,10 +333,12 @@
             // 
             // CodVeiculoTbx
             // 
+            this.CodVeiculoTbx.Enabled = false;
             this.CodVeiculoTbx.Location = new System.Drawing.Point(118, 14);
             this.CodVeiculoTbx.Name = "CodVeiculoTbx";
             this.CodVeiculoTbx.Size = new System.Drawing.Size(80, 20);
             this.CodVeiculoTbx.TabIndex = 117;
+            this.CodVeiculoTbx.Text = "Automático";
             // 
             // AnoModeloVeiucloLbl
             // 
@@ -325,7 +378,7 @@
             this.CorVeiuclolbl.AutoSize = true;
             this.CorVeiuclolbl.BackColor = System.Drawing.Color.Transparent;
             this.CorVeiuclolbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CorVeiuclolbl.Location = new System.Drawing.Point(378, 70);
+            this.CorVeiuclolbl.Location = new System.Drawing.Point(378, 119);
             this.CorVeiuclolbl.Name = "CorVeiuclolbl";
             this.CorVeiuclolbl.Size = new System.Drawing.Size(38, 17);
             this.CorVeiuclolbl.TabIndex = 113;
@@ -336,22 +389,22 @@
             this.TipCombustivelLbl.AutoSize = true;
             this.TipCombustivelLbl.BackColor = System.Drawing.Color.Transparent;
             this.TipCombustivelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipCombustivelLbl.Location = new System.Drawing.Point(12, 122);
+            this.TipCombustivelLbl.Location = new System.Drawing.Point(12, 119);
             this.TipCombustivelLbl.Name = "TipCombustivelLbl";
             this.TipCombustivelLbl.Size = new System.Drawing.Size(100, 17);
             this.TipCombustivelLbl.TabIndex = 112;
             this.TipCombustivelLbl.Text = "Combustível:";
             // 
-            // AnoVeiuclolbl
+            // ModeloVeiuclolbl
             // 
-            this.AnoVeiuclolbl.AutoSize = true;
-            this.AnoVeiuclolbl.BackColor = System.Drawing.Color.Transparent;
-            this.AnoVeiuclolbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnoVeiuclolbl.Location = new System.Drawing.Point(375, 41);
-            this.AnoVeiuclolbl.Name = "AnoVeiuclolbl";
-            this.AnoVeiuclolbl.Size = new System.Drawing.Size(41, 17);
-            this.AnoVeiuclolbl.TabIndex = 111;
-            this.AnoVeiuclolbl.Text = "Ano:";
+            this.ModeloVeiuclolbl.AutoSize = true;
+            this.ModeloVeiuclolbl.BackColor = System.Drawing.Color.Transparent;
+            this.ModeloVeiuclolbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModeloVeiuclolbl.Location = new System.Drawing.Point(351, 43);
+            this.ModeloVeiuclolbl.Name = "ModeloVeiuclolbl";
+            this.ModeloVeiuclolbl.Size = new System.Drawing.Size(65, 17);
+            this.ModeloVeiuclolbl.TabIndex = 111;
+            this.ModeloVeiuclolbl.Text = "Modelo:";
             // 
             // ChassiLbl
             // 
@@ -377,127 +430,129 @@
             // 
             // BotaoCadastroPnl
             // 
-            this.BotaoCadastroPnl.Controls.Add(this.CancelarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.EditarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.IncluirVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.GravarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.PesquisarVeiucloBtn);
-            this.BotaoCadastroPnl.Controls.Add(this.ExcluirVeiucloBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.CancelarVeiculoBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.EditarVeiculoBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.IncluirVeiculoBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.GravarVeiculoBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.PesquisarVeiculoBtn);
+            this.BotaoCadastroPnl.Controls.Add(this.ExcluirVeiculoBtn);
             this.BotaoCadastroPnl.Location = new System.Drawing.Point(1, 2);
             this.BotaoCadastroPnl.Name = "BotaoCadastroPnl";
             this.BotaoCadastroPnl.Size = new System.Drawing.Size(258, 47);
             this.BotaoCadastroPnl.TabIndex = 24;
             // 
-            // CancelarVeiucloBtn
+            // CancelarVeiculoBtn
             // 
-            this.CancelarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.CancelarVeiculoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelarVeiucloBtn.AutoSize = true;
-            this.CancelarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CancelarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarVeiucloBtn.BackgroundImage")));
-            this.CancelarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CancelarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.CancelarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelarVeiucloBtn.Location = new System.Drawing.Point(142, 3);
-            this.CancelarVeiucloBtn.Name = "CancelarVeiucloBtn";
-            this.CancelarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CancelarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.CancelarVeiucloBtn.TabIndex = 18;
-            this.CancelarVeiucloBtn.UseVisualStyleBackColor = false;
-            this.CancelarVeiucloBtn.Click += new System.EventHandler(this.CancelarVeiucloBtn_Click);
+            this.CancelarVeiculoBtn.AutoSize = true;
+            this.CancelarVeiculoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CancelarVeiculoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelarVeiculoBtn.BackgroundImage")));
+            this.CancelarVeiculoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CancelarVeiculoBtn.FlatAppearance.BorderSize = 0;
+            this.CancelarVeiculoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelarVeiculoBtn.Location = new System.Drawing.Point(142, 3);
+            this.CancelarVeiculoBtn.Name = "CancelarVeiculoBtn";
+            this.CancelarVeiculoBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CancelarVeiculoBtn.Size = new System.Drawing.Size(26, 44);
+            this.CancelarVeiculoBtn.TabIndex = 18;
+            this.CancelarVeiculoBtn.UseVisualStyleBackColor = false;
+            this.CancelarVeiculoBtn.Click += new System.EventHandler(this.CancelarVeiucloBtn_Click);
             // 
-            // EditarVeiucloBtn
+            // EditarVeiculoBtn
             // 
-            this.EditarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.EditarVeiculoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditarVeiucloBtn.AutoSize = true;
-            this.EditarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.EditarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarVeiucloBtn.BackgroundImage")));
-            this.EditarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EditarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.EditarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditarVeiucloBtn.Location = new System.Drawing.Point(103, 3);
-            this.EditarVeiucloBtn.Name = "EditarVeiucloBtn";
-            this.EditarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.EditarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.EditarVeiucloBtn.TabIndex = 20;
-            this.EditarVeiucloBtn.UseVisualStyleBackColor = false;
+            this.EditarVeiculoBtn.AutoSize = true;
+            this.EditarVeiculoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.EditarVeiculoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditarVeiculoBtn.BackgroundImage")));
+            this.EditarVeiculoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditarVeiculoBtn.FlatAppearance.BorderSize = 0;
+            this.EditarVeiculoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditarVeiculoBtn.Location = new System.Drawing.Point(103, 3);
+            this.EditarVeiculoBtn.Name = "EditarVeiculoBtn";
+            this.EditarVeiculoBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EditarVeiculoBtn.Size = new System.Drawing.Size(26, 44);
+            this.EditarVeiculoBtn.TabIndex = 20;
+            this.EditarVeiculoBtn.UseVisualStyleBackColor = false;
+            this.EditarVeiculoBtn.Click += new System.EventHandler(this.EditarVeiculoBtn_Click_1);
             // 
-            // IncluirVeiucloBtn
+            // IncluirVeiculoBtn
             // 
-            this.IncluirVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.IncluirVeiculoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IncluirVeiucloBtn.AutoSize = true;
-            this.IncluirVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.IncluirVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirVeiucloBtn.BackgroundImage")));
-            this.IncluirVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.IncluirVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.IncluirVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IncluirVeiucloBtn.Location = new System.Drawing.Point(15, 3);
-            this.IncluirVeiucloBtn.Name = "IncluirVeiucloBtn";
-            this.IncluirVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.IncluirVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.IncluirVeiucloBtn.TabIndex = 15;
-            this.IncluirVeiucloBtn.UseVisualStyleBackColor = false;
-            this.IncluirVeiucloBtn.Click += new System.EventHandler(this.IncluirVeiucloBtn_Click);
+            this.IncluirVeiculoBtn.AutoSize = true;
+            this.IncluirVeiculoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.IncluirVeiculoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IncluirVeiculoBtn.BackgroundImage")));
+            this.IncluirVeiculoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.IncluirVeiculoBtn.FlatAppearance.BorderSize = 0;
+            this.IncluirVeiculoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IncluirVeiculoBtn.Location = new System.Drawing.Point(15, 3);
+            this.IncluirVeiculoBtn.Name = "IncluirVeiculoBtn";
+            this.IncluirVeiculoBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.IncluirVeiculoBtn.Size = new System.Drawing.Size(26, 44);
+            this.IncluirVeiculoBtn.TabIndex = 15;
+            this.IncluirVeiculoBtn.UseVisualStyleBackColor = false;
+            this.IncluirVeiculoBtn.Click += new System.EventHandler(this.IncluirVeiculoBtn_Click);
             // 
-            // GravarVeiucloBtn
+            // GravarVeiculoBtn
             // 
-            this.GravarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GravarVeiculoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GravarVeiucloBtn.AutoSize = true;
-            this.GravarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.GravarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarVeiucloBtn.BackgroundImage")));
-            this.GravarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GravarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.GravarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GravarVeiucloBtn.Location = new System.Drawing.Point(61, 3);
-            this.GravarVeiucloBtn.Name = "GravarVeiucloBtn";
-            this.GravarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.GravarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.GravarVeiucloBtn.TabIndex = 19;
-            this.GravarVeiucloBtn.UseVisualStyleBackColor = false;
+            this.GravarVeiculoBtn.AutoSize = true;
+            this.GravarVeiculoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.GravarVeiculoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GravarVeiculoBtn.BackgroundImage")));
+            this.GravarVeiculoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GravarVeiculoBtn.FlatAppearance.BorderSize = 0;
+            this.GravarVeiculoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GravarVeiculoBtn.Location = new System.Drawing.Point(61, 3);
+            this.GravarVeiculoBtn.Name = "GravarVeiculoBtn";
+            this.GravarVeiculoBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.GravarVeiculoBtn.Size = new System.Drawing.Size(26, 44);
+            this.GravarVeiculoBtn.TabIndex = 19;
+            this.GravarVeiculoBtn.UseVisualStyleBackColor = false;
+            this.GravarVeiculoBtn.Click += new System.EventHandler(this.GravarVeiculoBtn_Click);
             // 
-            // PesquisarVeiucloBtn
+            // PesquisarVeiculoBtn
             // 
-            this.PesquisarVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PesquisarVeiculoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PesquisarVeiucloBtn.AutoSize = true;
-            this.PesquisarVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.PesquisarVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarVeiucloBtn.BackgroundImage")));
-            this.PesquisarVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarVeiucloBtn.Location = new System.Drawing.Point(222, 3);
-            this.PesquisarVeiucloBtn.Name = "PesquisarVeiucloBtn";
-            this.PesquisarVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PesquisarVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.PesquisarVeiucloBtn.TabIndex = 16;
-            this.PesquisarVeiucloBtn.UseVisualStyleBackColor = false;
-            this.PesquisarVeiucloBtn.Click += new System.EventHandler(this.PesquisarVeiucloBtn_Click);
+            this.PesquisarVeiculoBtn.AutoSize = true;
+            this.PesquisarVeiculoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PesquisarVeiculoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarVeiculoBtn.BackgroundImage")));
+            this.PesquisarVeiculoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarVeiculoBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarVeiculoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarVeiculoBtn.Location = new System.Drawing.Point(222, 3);
+            this.PesquisarVeiculoBtn.Name = "PesquisarVeiculoBtn";
+            this.PesquisarVeiculoBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PesquisarVeiculoBtn.Size = new System.Drawing.Size(26, 44);
+            this.PesquisarVeiculoBtn.TabIndex = 16;
+            this.PesquisarVeiculoBtn.UseVisualStyleBackColor = false;
+            this.PesquisarVeiculoBtn.Click += new System.EventHandler(this.PesquisarVeiucloBtn_Click);
             // 
-            // ExcluirVeiucloBtn
+            // ExcluirVeiculoBtn
             // 
-            this.ExcluirVeiucloBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ExcluirVeiculoBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExcluirVeiucloBtn.AutoSize = true;
-            this.ExcluirVeiucloBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ExcluirVeiucloBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirVeiucloBtn.BackgroundImage")));
-            this.ExcluirVeiucloBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ExcluirVeiucloBtn.FlatAppearance.BorderSize = 0;
-            this.ExcluirVeiucloBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcluirVeiucloBtn.Location = new System.Drawing.Point(181, 3);
-            this.ExcluirVeiucloBtn.Name = "ExcluirVeiucloBtn";
-            this.ExcluirVeiucloBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ExcluirVeiucloBtn.Size = new System.Drawing.Size(26, 44);
-            this.ExcluirVeiucloBtn.TabIndex = 17;
-            this.ExcluirVeiucloBtn.UseVisualStyleBackColor = false;
+            this.ExcluirVeiculoBtn.AutoSize = true;
+            this.ExcluirVeiculoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ExcluirVeiculoBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcluirVeiculoBtn.BackgroundImage")));
+            this.ExcluirVeiculoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ExcluirVeiculoBtn.FlatAppearance.BorderSize = 0;
+            this.ExcluirVeiculoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcluirVeiculoBtn.Location = new System.Drawing.Point(181, 3);
+            this.ExcluirVeiculoBtn.Name = "ExcluirVeiculoBtn";
+            this.ExcluirVeiculoBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ExcluirVeiculoBtn.Size = new System.Drawing.Size(26, 44);
+            this.ExcluirVeiculoBtn.TabIndex = 17;
+            this.ExcluirVeiculoBtn.UseVisualStyleBackColor = false;
             // 
             // linhaVeiculoLbl
             // 
@@ -530,11 +585,11 @@
             this.Name = "FrmCadIniVeiculo";
             this.Load += new System.EventHandler(this.FrmCadIniVeiculo_Load);
             this.CadVeiculoIniPnl.ResumeLayout(false);
-            this.veiculoPesquisarPnl.ResumeLayout(false);
-            this.veiculoPesquisarPnl.PerformLayout();
+            this.PesquisarVeiculoPnl.ResumeLayout(false);
+            this.PesquisarVeiculoPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVeiculo)).EndInit();
-            this.veiculoPnl.ResumeLayout(false);
-            this.veiculoPnl.PerformLayout();
+            this.AdicionarVeiculoPnl.ResumeLayout(false);
+            this.AdicionarVeiculoPnl.PerformLayout();
             this.BotaoCadastroPnl.ResumeLayout(false);
             this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
@@ -546,20 +601,20 @@
 
         private System.Windows.Forms.Panel CadVeiculoIniPnl;
         private System.Windows.Forms.Panel BotaoCadastroPnl;
-        private System.Windows.Forms.Button CancelarVeiucloBtn;
-        private System.Windows.Forms.Button EditarVeiucloBtn;
-        private System.Windows.Forms.Button IncluirVeiucloBtn;
-        private System.Windows.Forms.Button GravarVeiucloBtn;
-        private System.Windows.Forms.Button PesquisarVeiucloBtn;
-        private System.Windows.Forms.Button ExcluirVeiucloBtn;
-        private System.Windows.Forms.Panel veiculoPnl;
-        private System.Windows.Forms.Panel veiculoPesquisarPnl;
+        private System.Windows.Forms.Button CancelarVeiculoBtn;
+        private System.Windows.Forms.Button EditarVeiculoBtn;
+        private System.Windows.Forms.Button IncluirVeiculoBtn;
+        private System.Windows.Forms.Button GravarVeiculoBtn;
+        private System.Windows.Forms.Button PesquisarVeiculoBtn;
+        private System.Windows.Forms.Button ExcluirVeiculoBtn;
+        private System.Windows.Forms.Panel AdicionarVeiculoPnl;
+        private System.Windows.Forms.Panel PesquisarVeiculoPnl;
         private System.Windows.Forms.ComboBox TipCombustivelCbx;
         private System.Windows.Forms.TextBox ChassiTbx;
-        private System.Windows.Forms.TextBox AnoModelVeiculoTbx;
+        private System.Windows.Forms.TextBox AnoModeloVeiculoTbx;
         private System.Windows.Forms.TextBox CorVeiculoTbx;
         private System.Windows.Forms.TextBox PlacaTbx;
-        private System.Windows.Forms.TextBox AnoVeiucloTbx;
+        private System.Windows.Forms.TextBox AnoVeiculoTbx;
         private System.Windows.Forms.TextBox MarcaVeiculoTbx;
         private System.Windows.Forms.TextBox CodVeiculoTbx;
         private System.Windows.Forms.Label AnoModeloVeiucloLbl;
@@ -567,7 +622,7 @@
         private System.Windows.Forms.Label PlacaLbl;
         private System.Windows.Forms.Label CorVeiuclolbl;
         private System.Windows.Forms.Label TipCombustivelLbl;
-        private System.Windows.Forms.Label AnoVeiuclolbl;
+        private System.Windows.Forms.Label ModeloVeiuclolbl;
         private System.Windows.Forms.Label ChassiLbl;
         private System.Windows.Forms.Label MarcaVeiculolbl;
         private System.Windows.Forms.DataGridView dataGridViewVeiculo;
@@ -580,5 +635,9 @@
         private System.Windows.Forms.TextBox PesquisarTbx;
         private System.Windows.Forms.Label linhaVeiculoLbl;
         private System.Windows.Forms.Label veiculoLbl;
+        private System.Windows.Forms.TextBox ModeloVeiculoTbx;
+        private System.Windows.Forms.Label AnoVeiculoLbl;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.Button PesquisaCodVeiculoBtn;
     }
 }
