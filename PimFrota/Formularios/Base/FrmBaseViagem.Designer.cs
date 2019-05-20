@@ -31,6 +31,7 @@
             MaterialSkin.Controls.MaterialFlatButton RetornoViagemBtn;
             MaterialSkin.Controls.MaterialFlatButton SaidaViagemBtn;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaseViagem));
+            MaterialSkin.Controls.MaterialFlatButton ManutencaoViagemBtn;
             this.BaseVendaMenuFecharPnl = new System.Windows.Forms.Panel();
             this.ViagemLbl = new System.Windows.Forms.Label();
             this.BaseViagemPnl = new System.Windows.Forms.FlowLayoutPanel();
@@ -42,6 +43,7 @@
             this.BaseIniViagemPnl = new System.Windows.Forms.FlowLayoutPanel();
             RetornoViagemBtn = new MaterialSkin.Controls.MaterialFlatButton();
             SaidaViagemBtn = new MaterialSkin.Controls.MaterialFlatButton();
+            ManutencaoViagemBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.BaseVendaMenuFecharPnl.SuspendLayout();
             this.BaseViagemMenuPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MotoristaPctBx)).BeginInit();
@@ -77,14 +79,14 @@
             SaidaViagemBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             SaidaViagemBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             SaidaViagemBtn.ForeColor = System.Drawing.Color.White;
-            SaidaViagemBtn.Location = new System.Drawing.Point(57, 28);
+            SaidaViagemBtn.Location = new System.Drawing.Point(59, 12);
             SaidaViagemBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             SaidaViagemBtn.MouseState = MaterialSkin.MouseState.HOVER;
             SaidaViagemBtn.Name = "SaidaViagemBtn";
             SaidaViagemBtn.Primary = false;
-            SaidaViagemBtn.Size = new System.Drawing.Size(51, 36);
+            SaidaViagemBtn.Size = new System.Drawing.Size(63, 36);
             SaidaViagemBtn.TabIndex = 26;
-            SaidaViagemBtn.Text = "Saída";
+            SaidaViagemBtn.Text = "Saída e";
             SaidaViagemBtn.UseVisualStyleBackColor = false;
             SaidaViagemBtn.Click += new System.EventHandler(this.SaidaViagemBtn_Click);
             // 
@@ -158,6 +160,7 @@
             // BaseViagemMenuPnl
             // 
             this.BaseViagemMenuPnl.BackColor = System.Drawing.Color.YellowGreen;
+            this.BaseViagemMenuPnl.Controls.Add(ManutencaoViagemBtn);
             this.BaseViagemMenuPnl.Controls.Add(RetornoViagemBtn);
             this.BaseViagemMenuPnl.Controls.Add(this.MotoristaPctBx);
             this.BaseViagemMenuPnl.Controls.Add(SaidaViagemBtn);
@@ -194,6 +197,26 @@
             this.BaseIniViagemPnl.Size = new System.Drawing.Size(597, 500);
             this.BaseIniViagemPnl.TabIndex = 28;
             this.BaseIniViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.BaseIniViagemPnl_Paint);
+            // 
+            // ManutencaoViagemBtn
+            // 
+            ManutencaoViagemBtn.AutoSize = true;
+            ManutencaoViagemBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            ManutencaoViagemBtn.BackColor = System.Drawing.Color.Ivory;
+            ManutencaoViagemBtn.Depth = 0;
+            ManutencaoViagemBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            ManutencaoViagemBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ManutencaoViagemBtn.ForeColor = System.Drawing.Color.White;
+            ManutencaoViagemBtn.Location = new System.Drawing.Point(59, 39);
+            ManutencaoViagemBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            ManutencaoViagemBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            ManutencaoViagemBtn.Name = "ManutencaoViagemBtn";
+            ManutencaoViagemBtn.Primary = false;
+            ManutencaoViagemBtn.Size = new System.Drawing.Size(105, 36);
+            ManutencaoViagemBtn.TabIndex = 29;
+            ManutencaoViagemBtn.Text = "Manutenção";
+            ManutencaoViagemBtn.UseVisualStyleBackColor = false;
+            ManutencaoViagemBtn.Click += new System.EventHandler(this.ManutencaoViagemBtn_Click);
             // 
             // FrmBaseViagem
             // 
