@@ -55,10 +55,8 @@ namespace PimServices.RepositorySql
                     }
                 }
 
-            public void EditarMotorista(Motorista m)
+            public bool EditarMotorista(Motorista m)
                 {
-
-
                 try
                     {
 
@@ -83,13 +81,12 @@ namespace PimServices.RepositorySql
                     cmd.ExecuteNonQuery();
 
                     conn.Close();
-
-                    MessageBox.Show("Motorista Editado com sucesso!");
+                    return true;
                     }
                 catch (Exception ex)
                     {
                     MessageBox.Show("Erro ao editar o Motorista, verifique a conexão com o banco de dados: " + ex.ToString());
-
+                    return false;
                     }
                 }
           
@@ -101,7 +98,7 @@ namespace PimServices.RepositorySql
                     {
                     MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                     conn = new MySqlConnection(connectionString);
-                    String excluirDados = "DELETE FROM ccadastro_motorista where nome_motorista = @nome";
+                    String excluirDados = "DELETE FROM cadastro_motorista where nome_motorista = @nome";
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(excluirDados, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_motorista", m.nome));
@@ -120,7 +117,7 @@ namespace PimServices.RepositorySql
                     }
                 }
 
-          /*  public List<Motorista> buscarMotoristas(Motorista m)
+          /* public List<Motorista> buscarMotoristas(Motorista m)
                 {
                 List<Motorista> todosMotoristas = new List<Motorista>();
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
@@ -154,20 +151,18 @@ namespace PimServices.RepositorySql
                         novo.dtaNascimento = (DateTime)reader["dta_nascimento_motorista"];
                         novo.cpf = reader["cpf_motorista"].ToString();
                         novo.dtaVencimentoCnh = (DateTime)reader["dta_vencimento_cnh_motorista"];
-                        todosMotoristas.Add(novo);
-
-
-                        }
-
+                        };
+                    todosMotoristas.Add(m);
+                        
                     conn.Close();
-                    return todosMotoristas;
+                    todosMotoristas.Add(m);
                     }
                 finally
                     {
                     conn.Close();
                     }
-                //}*/
-
+                }*/
+               
             }
 
         }

@@ -112,6 +112,7 @@
             this.CancelarMotoristaBtn.Size = new System.Drawing.Size(26, 44);
             this.CancelarMotoristaBtn.TabIndex = 18;
             this.CancelarMotoristaBtn.UseVisualStyleBackColor = false;
+            this.CancelarMotoristaBtn.Click += new System.EventHandler(this.CancelarMotoristaBtn_Click);
             // 
             // EditarMotoristaBtn
             // 
@@ -206,6 +207,7 @@
             this.ExcluirMotoristaBtn.Size = new System.Drawing.Size(26, 44);
             this.ExcluirMotoristaBtn.TabIndex = 17;
             this.ExcluirMotoristaBtn.UseVisualStyleBackColor = false;
+            this.ExcluirMotoristaBtn.Click += new System.EventHandler(this.ExcluirMotoristaBtn_Click);
             // 
             // linhaMotoristaLbl
             // 

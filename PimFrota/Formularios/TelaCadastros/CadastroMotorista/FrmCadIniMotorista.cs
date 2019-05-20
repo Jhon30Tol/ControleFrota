@@ -1,6 +1,4 @@
-﻿using Correios.Net;
-using PimFrota.Formularios.Mensagens;
-using PimServices.Model;
+﻿using PimServices.Model;
 using PimServices.RepositorySql.PimServices.RepositorySql;
 using System;
 using System.Windows.Forms;
@@ -39,9 +37,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             {
             motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = false;
+         
+
             }
 
-        
+
 
         private void CepMotoristaTbx_TextChanged(object sender, EventArgs e)
             {
@@ -74,29 +74,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             }
         public void salvarMotorista(Motorista m)
             {
-            m.nome = NomeMotoristaTbx.Text;
-            m.cpf = CpfMotoristaTbx.Text;
-            m.dtaNascimento = Convert.ToDateTime(DtNascimentoMotoristaTbx.Text);
-            m.cnh = cnhMotoristaTbx.Text;
-            m.dtaVencimentoCnh = Convert.ToDateTime(DtVencCnhTbx.Text);
-            m.telefoneFixo = Convert.ToInt32(telefoneMotoristaTbx.Text);
-            m.celular = Convert.ToInt32(celularMotoristaTbx.Text);
 
-            var ws = new WsCorreios.AtendeClienteClient();
-            var resultado = ws.consultaCEP(CepMotoristaTbx.Text);
-            RuaMotoristaTbx.Text = resultado.end;
-            m.nomeRua = resultado.end;
-            BairroMotoristaTbx.Text = resultado.bairro;
-            m.bairro = resultado.bairro;
-            cidadeMotoristaTbx.Text = resultado.cidade;
-            m.Cidade = resultado.cidade;
-            ufMotoristaTbx.Text = resultado.uf;
-            m.Uf = resultado.uf;
 
-            daoMotorista.SalvarMotorista(m);
+
 
             }
-       
+
         public void limparDados()
             {
             NomeMotoristaTbx.Clear();
@@ -123,19 +106,99 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void GravarMotoristaBtn_Click(object sender, EventArgs e)
             {
-            salvarMotorista(m);
+
+            if (validaCampos())
+                {
+                m.nome = NomeMotoristaTbx.Text;
+                m.cpf = CpfMotoristaTbx.Text;
+                m.dtaNascimento = Convert.ToDateTime(DtNascimentoMotoristaTbx.Text);
+                m.cnh = cnhMotoristaTbx.Text;
+                m.dtaVencimentoCnh = Convert.ToDateTime(DtVencCnhTbx.Text);
+                m.telefoneFixo = Convert.ToInt32(telefoneMotoristaTbx.Text);
+                m.celular = Convert.ToInt32(celularMotoristaTbx.Text);
+
+                var ws = new WsCorreios.AtendeClienteClient();
+                var resultado = ws.consultaCEP(CepMotoristaTbx.Text);
+                RuaMotoristaTbx.Text = resultado.end;
+                m.nomeRua = resultado.end;
+                BairroMotoristaTbx.Text = resultado.bairro;
+                m.bairro = resultado.bairro;
+                cidadeMotoristaTbx.Text = resultado.cidade;
+                m.Cidade = resultado.cidade;
+                ufMotoristaTbx.Text = resultado.uf;
+                m.Uf = resultado.uf;
+
+                daoMotorista.SalvarMotorista(m);
+                MessageBox.Show("Motorista cadastrado com sucesso!");
+                limparDados();
+                }
             }
+
+
+        private bool validaCampos()
+            {
+
+            if (NomeMotoristaTbx.Text != "" || CpfMotoristaTbx.Text != "" || DtNascimentoMotoristaTbx.Text != "" ||
+               cnhMotoristaTbx.Text != "" || DtVencCnhTbx.Text != "" || telefoneMotoristaTbx.Text != "" ||
+               celularMotoristaTbx.Text != "" || CepMotoristaTbx.Text != "" || NomeMotoristaTbx.Text != "" || BairroMotoristaTbx.Text != "" ||
+               cidadeMotoristaTbx.Text != "" || ufMotoristaTbx.Text != "")
+                {
+                return true;
+                }
+            else
+                {
+                MessageBox.Show("Preencha todos os campos antes de salvar Motorista.");
+                return false;
+                }
+            }
+
 
         private void EditarMotoristaBtn_Click(object sender, EventArgs e)
             {
-            
+
+            if (validaCampos())
+                {
+                m.nome = NomeMotoristaTbx.Text;
+                m.cpf = CpfMotoristaTbx.Text;
+                m.dtaNascimento = Convert.ToDateTime(DtNascimentoMotoristaTbx.Text);
+                m.cnh = cnhMotoristaTbx.Text;
+                m.dtaVencimentoCnh = Convert.ToDateTime(DtVencCnhTbx.Text);
+                m.telefoneFixo = Convert.ToInt32(telefoneMotoristaTbx.Text);
+                m.celular = Convert.ToInt32(celularMotoristaTbx.Text);
+
+                var ws = new WsCorreios.AtendeClienteClient();
+                var resultado = ws.consultaCEP(CepMotoristaTbx.Text);
+                RuaMotoristaTbx.Text = resultado.end;
+                m.nomeRua = resultado.end;
+                BairroMotoristaTbx.Text = resultado.bairro;
+                m.bairro = resultado.bairro;
+                cidadeMotoristaTbx.Text = resultado.cidade;
+                m.Cidade = resultado.cidade;
+                ufMotoristaTbx.Text = resultado.uf;
+                m.Uf = resultado.uf;
+
+                daoMotorista.EditarMotorista(m);
+                MessageBox.Show("Motorista editado com sucesso!");
+                limparDados();
+                }
             }
 
         private void PesquisarBtn_Click(object sender, EventArgs e)
             {
 
             }
+
+        private void CancelarMotoristaBtn_Click(object sender, EventArgs e)
+            {
+
+            }
+
+        private void ExcluirMotoristaBtn_Click(object sender, EventArgs e)
+            {
+            daoMotorista.ExcluirMotorista(m);
+            limparDados();
+            }
         }
     }
-
+    
 
