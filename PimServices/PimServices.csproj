@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Cidade.cs" />
+    <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Endereco.cs" />
     <Compile Include="Model\Motorista.cs" />
     <Compile Include="Model\Usuario.cs" />
@@ -70,9 +71,11 @@
     <Compile Include="Model\Viagem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorySql\ConexaoBancoMySQL.cs" />
+    <Compile Include="RepositorySql\DaoCliente.cs" />
     <Compile Include="RepositorySql\DaoLogin.cs" />
     <Compile Include="RepositorySql\DaoMotorista.cs" />
     <Compile Include="RepositorySql\DaoUsuario.cs" />
+    <Compile Include="RepositorySql\DaoVeiculo.cs" />
     <Compile Include="RepositorySql\DaoViagem.cs" />
   </ItemGroup>
   <ItemGroup>

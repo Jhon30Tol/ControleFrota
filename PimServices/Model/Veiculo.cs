@@ -8,20 +8,67 @@ namespace PimServices.Model
 {
     public class Veiculo
     {
-        public int id_veiculo { get; set; }
+        private int _id_veiculo;
+        public int id_veiculo
+        {
+            get { return _id_veiculo; }
+            set { _id_veiculo = value; }
+        }
 
-        public String marca_veiculo { get; set; }
+        private String _marcaVeiculo;
+        public String MarcaVeiculo
+        {
+            get { return _marcaVeiculo; }
+            set { _marcaVeiculo = value; }
+        }
 
-        public String tipo_combustivel { get; set; }
+        private String _modeloVeiculo;
+        public String ModeloVeiculo
+        {
+            get { return _modeloVeiculo; }
+            set { _modeloVeiculo = value; }
+        }
 
-        public String placa_veiculo { get; set; }
+        private int _anoVeiculo;
+        public int AnoVeiculo
+        {
+            get { return _anoVeiculo; }
+            set { _anoVeiculo = value; }
+        }
 
-        public String ano_modelo { get; set; }
+        private int _anoModeloVeiculo;
+        public int AnoModeloVeiculo
+        {
+            get { return _anoModeloVeiculo; }
+            set { _anoModeloVeiculo = value; }
+        }
 
-        public String cor_veiculo { get; set; }
+        private String _chassi;
+        public String Chassi
+        {
+            get { return _chassi; }
+            set { _chassi = value; }
+        }
 
-        public String chassi_veiculo { get; set; }
+        private String _tipoCombustivel;
+        public String TipoCombustivel
+        {
+            get { return _tipoCombustivel; }
+            set { _tipoCombustivel = value; }
+        }
 
-        public String modelo_veiculo { get; set; }
+        private String _corVeiculo;
+        public String CorVeiculo
+        {
+            get { return _corVeiculo; }
+            set { _corVeiculo = value; }
+        }
+
+        private String _placa;
+        public String Placa
+        {
+            get { return _placa; }
+            set { _placa = value; }
+        }
     }
 }
