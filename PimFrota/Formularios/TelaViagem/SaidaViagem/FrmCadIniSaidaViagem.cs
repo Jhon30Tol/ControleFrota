@@ -1,5 +1,6 @@
 ﻿//using PimFrota.Formularios.TelaViagem.SaidaViagem;
 using MySql.Data.MySqlClient;
+using PimFrota.Formularios.Mensagens;
 using PimFrota.Formularios.TelaCadastros.CadastroMotorista;
 using PimServices.Model;
 using PimServices.RepositorySql;
@@ -9,6 +10,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace PimFrota.Formularios.TelaViagem
@@ -51,6 +53,7 @@ namespace PimFrota.Formularios.TelaViagem
 
         public void PosGravar()
         {
+
             CadViagemIniPnl.Visible = false;
             IniciaForm();
 
@@ -130,45 +133,117 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void GravarViagemBtn_Click(object sender, EventArgs e)
         {
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorio = (FrmMensagemCampoObrigatorio)Application.OpenForms["FrmMensagemCampoObrigatorio"];
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorioMsg = new FrmMensagemCampoObrigatorio();
+
+            FrmMensagemCadSucesso frmMsgSucesso = (FrmMensagemCadSucesso)Application.OpenForms["FrmMensagemCadSucesso"];
+            FrmMensagemCadSucesso frmMsgSucessomsg = new FrmMensagemCadSucesso();
 
 
-            if
-                  (modoEdit == false)
+
+
+
+            if (MotoristaSaidaViagTbx.Text == "<-- Clique para incluir o motorista") 
             {
-                DaoViagem dao = new DaoViagem();
-                v.DtaSaida = Convert.ToDateTime(DtaSaidaDtm.Text);
-                v.KmSaida = Convert.ToInt32(KmSaidaTbx.Text);
-                v.passageiro = passageiroTbx.Text;
-
-                dao.SalvarViagem(v);
-
-                CodSaidaViagTbx.Text = " ";
-                MotoristaSaidaViagTbx.Text = " ";
-                VeiculoSaidaViagTbx.Text = " ";
-                CidadeSaidaViagTbx.Text = " ";
-                CidadeDestSaidaViagTbx.Text = " ";
-                DtaSaidaDtm.Text.Trim();
-                KmSaidaTbx.Text = " ";
-                passageiroTbx.Text = " ";
-
-                PosGravar();
-            }
-            else
-            {
-                DaoViagem dao = new DaoViagem();
-
-                MessageBox.Show(Convert.ToString(v.Id_motorista));
-                v.KmSaida = Convert.ToInt32(KmSaidaTbx.Text);
-                v.passageiro = passageiroTbx.Text;
-                v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
-                v.DtaSaida = Convert.ToDateTime(DtaSaidaDtm.Text);
-                v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
-                MessageBox.Show(Convert.ToString(v.KmRetorno));
-                
-                dao.EditarViagem(v);
-                PosGravar();
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Motorista é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.MotoristaSaidaViagTbx.Focus();
 
             }
+
+            else if (VeiculoSaidaViagTbx.Text == "<-- Clique para incluir o veeiculo")    
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Veiculo é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.VeiculoSaidaViagTbx.Focus();
+
+
+            }
+
+            else if (CidadeSaidaViagTbx.Text == "<-- Clique para incluir a cidade de saida")
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Cidade de Saida é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.CidadeSaidaViagTbx.Focus();
+
+
+            }
+
+            else if (CidadeDestSaidaViagTbx.Text == "<-- Clique para incluir a cidade de destino")
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Cidade de Destino é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.CidadeDestSaidaViagTbx.Focus();
+
+
+            }
+
+            else if (String.IsNullOrEmpty(KmSaidaTbx.Text))
+            {
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Km Saida é obrigatorio";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
+                this.kmRetornoTbx.Focus();
+            }
+
+            else if (!Regex.IsMatch(KmSaidaTbx.Text, @"^[0-9]+$"))
+             {
+                 frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Nome deve conter somente Numeros";
+                 frmMsgCampoObrigatorioMsg.ShowDialog();
+                 this.kmRetornoTbx.Focus();
+
+            }
+
+
+           else if
+                      (modoEdit == false)
+                {
+                    DaoViagem dao = new DaoViagem();
+                    v.DtaSaida = Convert.ToDateTime(DtaSaidaDtm.Text);
+                    v.KmSaida = Convert.ToInt32(KmSaidaTbx.Text);
+                    v.passageiro = passageiroTbx.Text;
+
+                    dao.SalvarViagem(v);
+
+
+                    frmMsgSucessomsg.MensagemSucessoLbl.Text = "Viagem Salva com Sucesso !";
+                    frmMsgSucessomsg.ShowDialog();
+
+                BotaoViagemPnl.Visible = false;
+
+
+
+                    CodSaidaViagTbx.Text = " ";
+                    MotoristaSaidaViagTbx.Text = " ";
+                    VeiculoSaidaViagTbx.Text = " ";
+                    CidadeSaidaViagTbx.Text = " ";
+                    CidadeDestSaidaViagTbx.Text = " ";
+                    DtaSaidaDtm.Text.Trim();
+                    KmSaidaTbx.Text = " ";
+                    passageiroTbx.Text = " ";
+
+                    PosGravar();
+                }
+                else
+                {
+                    DaoViagem dao = new DaoViagem();
+
+                    v.KmSaida = Convert.ToInt32(KmSaidaTbx.Text);
+                    v.passageiro = passageiroTbx.Text;
+                    v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
+                    v.DtaSaida = Convert.ToDateTime(DtaSaidaDtm.Text);
+                    v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
+
+                    dao.EditarViagem(v);
+                    frmMsgSucessomsg.MensagemSucessoLbl.Text = "Viagem Editada com Sucesso !";
+                    frmMsgSucessomsg.ShowDialog();
+                    BotaoViagemPnl.Visible = false;
+
+
+                PosGravar();
+
+                }
+
+            
 
         }
 
@@ -385,101 +460,6 @@ namespace PimFrota.Formularios.TelaViagem
                 dataGridViewSaiViagem.DataSource = daoViagem.PesquisarVeiculoViagens(nome);
             }
 
-
-          //  dataGridViewSaiViagem.DataSource = daoViagem.PesquisarTodasViagens(v);
-
-
-            /*
-
-             string nome = pesquisaSaidaViagemTbx.Text;
-             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
-             MySqlCommand cmd = new MySqlCommand();
-             conn.Open();
-
-
-
-
-
-             if (pesquTodosCkbx.Checked == true)
-             {
-
-                 MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                     "v.id_viagem as Codigo_Viagem," +
-                     "m.nome_motorista as Nome_Motorista, " +
-                     "a.modelo_veiculo as Modelo_Veiculo, " +
-                     "c.nome_cidade as Cidade_Saida, " +
-                     "b.nome_cidade as Cidade_Destino, " +
-                     "date(v.dta_saida) as Data_Saida, " +
-                     "v.km_cidade_origem as Km_saida, " +
-                     "v.passageiro_viagem as Passageiro, " +
-                     "v.km_cidade_retorno as Km_retorno" +
-                     "FROM viagem v " +
-                     "JOIN cadastro_motorista m " +
-                     "JOIN cadastro_veiculo a " +
-                     "JOIN cadastro_cidade c " +
-                     "JOIN cadastro_cidade b " +
-                     "ON v.id_motorista = m.id_motorista  " +
-                     "AND v.id_veiculo = a.id_veiculo " +
-                     "AND  v.id_cidade_origem = c.id_cidade " +
-                     "AND  v.id_cidade_destino = b.id_cidade ;", conn);
-                 DataTable pesq3 = new DataTable();
-                 pesq1.Fill(pesq3);
-                 dataGridViewSaiViagem.DataSource = pesq3;
-
-             }
-             else if (pesqMotoristaCbx.Checked == true)
-             {
-                 MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                    "v.id_viagem as Codigo_Viagem," +
-                    "m.nome_motorista as Nome_Motorista, " +
-                    "a.modelo_veiculo as Modelo_Veiculo, " +
-                    "c.nome_cidade as Cidade_Saida, " +
-                    "b.nome_cidade as Cidade_Destino, " +
-                    "date(v.dta_saida) as Data_Saida, " +
-                    "v.km_cidade_origem as Km_saida, " +
-                    "v.passageiro_viagem as Passageiro, " +
-                    "v.km_cidade_retorno as Km_retorno " +
-                    "FROM viagem v " +
-                    "JOIN cadastro_motorista m " +
-                    "JOIN cadastro_veiculo a " +
-                    "JOIN cadastro_cidade c " +
-                    "JOIN cadastro_cidade b " +
-                    "ON v.id_motorista = m.id_motorista  " +
-                    "AND v.id_veiculo = a.id_veiculo " +
-                    "AND  v.id_cidade_origem = c.id_cidade " +
-                    "AND  v.id_cidade_destino = b.id_cidade " +
-                    "and m.nome_motorista like '%" + @nome + "%'", conn);
-                 DataTable pesq3 = new DataTable();
-                 pesq1.Fill(pesq3);
-                 dataGridViewSaiViagem.DataSource = pesq3;
-             }
-             else if (pesqVeiculoCbx.Checked == true)
-             {
-                 MySqlDataAdapter pesq1 = new MySqlDataAdapter("SELECT " +
-                   "v.id_viagem as Codigo_Viagem," +
-                   "m.nome_motorista as Nome_Motorista, " +
-                   "a.modelo_veiculo as Modelo_Veiculo, " +
-                   "c.nome_cidade as Cidade_Saida, " +
-                   "b.nome_cidade as Cidade_Destino, " +
-                   "date(v.dta_saida) as Data_Saida, " +
-                   "v.km_cidade_origem as Km_saida, " +
-                   "v.passageiro_viagem as Passageiro, " +
-                   "v.km_cidade_retorno as Km_retorno " +
-                   "FROM viagem v " +
-                   "JOIN cadastro_motorista m " +
-                   "JOIN cadastro_veiculo a " +
-                   "JOIN cadastro_cidade c " +
-                   "JOIN cadastro_cidade b " +
-                   "ON v.id_motorista = m.id_motorista  " +
-                   "AND v.id_veiculo = a.id_veiculo " +
-                   "AND  v.id_cidade_origem = c.id_cidade " +
-                   "AND  v.id_cidade_destino = b.id_cidade " +
-                   "and a.modelo_veiculo like '%" + @nome + "%'", conn);
-                 DataTable pesq3 = new DataTable();
-                 pesq1.Fill(pesq3);
-                 dataGridViewSaiViagem.DataSource = pesq3;
-             }
-             */
         }
 
         private void pesquTodosCkbx_CheckedChanged(object sender, EventArgs e)
@@ -569,9 +549,11 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
             v.Id_cidadeSaida = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[12].Value.ToString());
             v.Id_cidadeDestino = Convert.ToInt32(dataGridViewSaiViagem.CurrentRow.Cells[13].Value.ToString());
 
+            int KmSaidaCalc = Convert.ToInt32(KmSaidaTbx.Text);
+            int KmRetornoCalc = Convert.ToInt32(kmRetornoTbx.Text);
+
           
 
-            MessageBox.Show(DtaRetornoDtm.Text);
 
             if (DtaRetornoDtm.Text == "01/01/2000")
             {
@@ -580,7 +562,21 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
                 DtRetornoLbl.Visible = false;
                 kmRetornoTbx.Visible = false;
                 msgNaoRetornouLbl.Visible = true;
+                KmRodadoLbl.Visible = false;
+                valKmRodadoLbl.Visible = false;
             }
+            else if (DtaRetornoDtm.Text != "01/01/2000")
+            {
+                msgNaoRetornouLbl.Visible = false;
+                DtaRetornoDtm.Visible = true;
+                KmRetornoLbl.Visible = true;
+                DtRetornoLbl.Visible = true;
+                kmRetornoTbx.Visible = true;
+                valKmRodadoLbl.Text = Convert.ToString(KmRetornoCalc - KmSaidaCalc);
+                KmRodadoLbl.Visible = true;
+                valKmRodadoLbl.Visible = true;
+            }
+
 
 
             v.Id_viagem = Convert.ToInt32(CodSaidaViagTbx.Text);
@@ -640,9 +636,29 @@ private void pesqMotoristaCbx_CheckedChanged(object sender, EventArgs e)
 
         private void ExcluirViagemBtn_Click(object sender, EventArgs e)
         {
-            DaoViagem dao = new DaoViagem();
-            dao.ExcluirViagem(v);
-            this.Close();
+            FrmMensagemCadSucesso frmMsgSucesso = (FrmMensagemCadSucesso)Application.OpenForms["FrmMensagemCadSucesso"];
+            FrmMensagemCadSucesso frmMsgSucessomsg = new FrmMensagemCadSucesso();
+
+            FrmMsgSimNao frmMsgExcluirv = (FrmMsgSimNao)Application.OpenForms["FrmSairSistema"];
+            FrmMsgSimNao frmMsgExcluir = new FrmMsgSimNao();
+
+            frmMsgExcluir.msgSairSistemaLbl.Text = "Deseja mesmo Excluir esta viagem ?";
+            frmMsgExcluir.ShowDialog();
+
+            if (frmMsgExcluir.btnSairClick == true)
+            {
+                DaoViagem dao = new DaoViagem();
+                dao.ExcluirViagem(v);
+                frmMsgSucessomsg.MensagemSucessoLbl.Text = "Viagem Excluida com Sucesso !";
+                frmMsgSucessomsg.ShowDialog();
+                PosGravar();
+                BotaoViagemPnl.Visible = false;
+
+
+
+            }
+
+            
         }
 
         private void CidadeCkbx_CheckedChanged(object sender, EventArgs e)

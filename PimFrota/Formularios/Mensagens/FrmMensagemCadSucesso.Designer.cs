@@ -54,7 +54,7 @@
             // 
             this.MensagemSucessoLbl.AutoSize = true;
             this.MensagemSucessoLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MensagemSucessoLbl.Location = new System.Drawing.Point(10, 23);
+            this.MensagemSucessoLbl.Location = new System.Drawing.Point(30, 40);
             this.MensagemSucessoLbl.Name = "MensagemSucessoLbl";
             this.MensagemSucessoLbl.Size = new System.Drawing.Size(248, 16);
             this.MensagemSucessoLbl.TabIndex = 27;

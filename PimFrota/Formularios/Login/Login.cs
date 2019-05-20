@@ -6,6 +6,7 @@ using PimServices.RepositorySql;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using PimFrota.Formularios.Mensagens;
 
 namespace PimFrota.Formularios.Login
 {
@@ -25,7 +26,8 @@ namespace PimFrota.Formularios.Login
             u.Nome = Usuariotxb.Text;
             u.Senha = Senhatxb.Text;
 
-            
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorio = (FrmMensagemCampoObrigatorio)Application.OpenForms["FrmMensagemCampoObrigatorio"];
+            FrmMensagemCampoObrigatorio frmMsgCampoObrigatorioMsg = new FrmMensagemCampoObrigatorio();
 
             if (daoLogin.AutenticarUsuario(u))
             {
@@ -38,7 +40,8 @@ namespace PimFrota.Formularios.Login
             }
             else
             {
-                MessageBox.Show("Dados Incorretos");
+                frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Dados Incorretos";
+                frmMsgCampoObrigatorioMsg.ShowDialog();
                 Usuariotxb.Focus();
                 Usuariotxb.Clear();
                 Senhatxb.Clear();

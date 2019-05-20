@@ -12,6 +12,7 @@ namespace PimFrota.Formularios.Mensagens
 {
     public partial class FrmSairSistema : PimFrota.Formularios.Base.FrmBaseFundoCad
     {
+
         public FrmSairSistema()
         {
             InitializeComponent();
@@ -27,10 +28,11 @@ namespace PimFrota.Formularios.Mensagens
             this.Close();
         }
 
-        private void SimSairSistemaBtn_Click(object sender, EventArgs e)
+        public void SimSairSistemaBtn_Click(object sender, EventArgs e)
         {
             foreach (FrmLogin  frmLogin in Application.OpenForms)
             {
+
                 if (frmLogin is FrmLogin)
                 {
                     frmLogin.Close();
@@ -55,5 +57,13 @@ namespace PimFrota.Formularios.Mensagens
         {
 
         }
+
+        private void msgSairSistemaLbl_Resize(object sender, EventArgs e)
+        {
+           
+        }
+
+        
+
     }
 }

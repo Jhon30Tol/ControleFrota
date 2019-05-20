@@ -36,12 +36,12 @@
             this.Usuariolbl = new System.Windows.Forms.Label();
             this.Usuariotxb = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MsgFecharPnl = new System.Windows.Forms.Panel();
             this.Fecharbtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.MsgFecharPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MsgFecharPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // BemVindoLbl
@@ -132,6 +132,16 @@
             this.panel1.Size = new System.Drawing.Size(365, 246);
             this.panel1.TabIndex = 14;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 90);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 82);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // MsgFecharPnl
             // 
             this.MsgFecharPnl.BackColor = System.Drawing.Color.YellowGreen;
@@ -160,16 +170,6 @@
             this.Fecharbtn.UseVisualStyleBackColor = false;
             this.Fecharbtn.Click += new System.EventHandler(this.Fecharbtn_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 90);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 82);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,8 +189,8 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.MsgFecharPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MsgFecharPnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

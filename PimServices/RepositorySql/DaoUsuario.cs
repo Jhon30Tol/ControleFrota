@@ -54,7 +54,7 @@ namespace PimServices.RepositorySql
 
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
-                String alteratDados = "UPDATE cadastro_usuario set nome_usuario = @nome, senha_usuario = @senha, ativo = @ativo where id_usuario = @id";
+                String alteratDados = "UPDATE cadastro_usuario set nome_usuario = @nome, senha_usuario = MD5(@senha), ativo = @ativo where id_usuario = @id";
                 conn.Open();
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alteratDados, conn);
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", u.Id));
@@ -67,7 +67,6 @@ namespace PimServices.RepositorySql
 
                 conn.Close();
 
-                MessageBox.Show("Usuario Editado com sucesso!");
             }
             catch (Exception ex)
             {

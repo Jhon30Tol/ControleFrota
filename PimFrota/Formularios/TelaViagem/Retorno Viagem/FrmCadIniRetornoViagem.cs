@@ -15,6 +15,7 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
     public partial class FrmCadIniRetornoViagem : PimFrota.Formularios.Base.FrmBaseFundoCad
     {
         Viagem v = new Viagem();
+        int kmSaidaValidar;
 
 
         public FrmCadIniRetornoViagem()
@@ -91,7 +92,9 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
             CidadeSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[3].Value.ToString();
             CidadeDestSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[4].Value.ToString();
             DtSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[5].Value.ToString();
+            kmSaidaValidar = Convert.ToInt32(dataGridViewRetViagem.CurrentRow.Cells[6].Value.ToString());
 
+            
 
             CodSaidaViagRTbx.Enabled = false;
             MotoristaSaidaViagRTbx.Enabled = false;
@@ -127,27 +130,47 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
             FrmMensagemCadSucesso frmMsgSucessomsg = new FrmMensagemCadSucesso();
 
 
-            if (String.IsNullOrEmpty(kmRetornoTbx.Text))
+             if (String.IsNullOrEmpty(kmRetornoTbx.Text))
             {
                 frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Km Retorno é obrigatorio";
                 frmMsgCampoObrigatorioMsg.ShowDialog();
                 this.kmRetornoTbx.Focus();
             }
-            else
+
+
+
+            else 
             {
-                DaoViagem dao = new DaoViagem();
-                v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
-                v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
-                v.Id_viagem = Convert.ToInt32(CodSaidaViagRTbx.Text);
 
-                dao.GravarRetornoViagem(v);
-                CadRetornoIniPnl.Visible = false;
-                CancelarRetornoBtn.Visible = false;
-                PesquisarRetornoBtn.Visible = false;
-                GravarRetornoBtn.Visible = false;
+                int kmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
 
-                frmMsgSucessomsg.MensagemSucessoLbl.Text = "Retorno Efetuado com Sucesso !";
-                frmMsgSucessomsg.ShowDialog();
+
+                if (kmRetorno < kmSaidaValidar)
+                {
+                    frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Km Retorno deve ser maior que Km de saida";
+                    frmMsgCampoObrigatorioMsg.ShowDialog();
+                    this.kmRetornoTbx.Focus();
+                }
+                else
+                {
+                    DaoViagem dao = new DaoViagem();
+                    v.DtaRetorno = Convert.ToDateTime(DtaRetornoDtm.Text);
+                    v.KmRetorno = Convert.ToInt32(kmRetornoTbx.Text);
+                    v.Id_viagem = Convert.ToInt32(CodSaidaViagRTbx.Text);
+
+                    dao.GravarRetornoViagem(v);
+                    CadRetornoIniPnl.Visible = false;
+                    CancelarRetornoBtn.Visible = false;
+                    PesquisarRetornoBtn.Visible = false;
+                    GravarRetornoBtn.Visible = false;
+
+
+                    frmMsgSucessomsg.MensagemSucessoLbl.Text = "Percorrido  " + Convert.ToString(kmRetorno - kmSaidaValidar) + "  Km";
+                    frmMsgSucessomsg.ShowDialog();
+
+                    frmMsgSucessomsg.MensagemSucessoLbl.Text = "Retorno Efetuado com Sucesso !";
+                    frmMsgSucessomsg.ShowDialog();
+                }
             }
 
 

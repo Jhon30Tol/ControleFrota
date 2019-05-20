@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSairSistema));
-            this.label1 = new System.Windows.Forms.Label();
+            this.msgSairSistemaLbl = new System.Windows.Forms.Label();
             this.SimSairSistemaBtn = new System.Windows.Forms.Button();
             this.NaoSairSistemaBtn = new System.Windows.Forms.Button();
             this.SairSistemaPnl = new System.Windows.Forms.Panel();
@@ -39,16 +39,17 @@
             this.MsgFecharPnl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // msgSairSistemaLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 16);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Deseja mesmo sair do sistema?";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.msgSairSistemaLbl.AutoSize = true;
+            this.msgSairSistemaLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msgSairSistemaLbl.Location = new System.Drawing.Point(36, 54);
+            this.msgSairSistemaLbl.Name = "msgSairSistemaLbl";
+            this.msgSairSistemaLbl.Size = new System.Drawing.Size(239, 16);
+            this.msgSairSistemaLbl.TabIndex = 32;
+            this.msgSairSistemaLbl.Text = "Deseja mesmo sair do sistema?";
+            this.msgSairSistemaLbl.Click += new System.EventHandler(this.label1_Click);
+            this.msgSairSistemaLbl.Resize += new System.EventHandler(this.msgSairSistemaLbl_Resize);
             // 
             // SimSairSistemaBtn
             // 
@@ -80,7 +81,7 @@
             // 
             this.SairSistemaPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SairSistemaPnl.Controls.Add(this.MsgFecharPnl);
-            this.SairSistemaPnl.Controls.Add(this.label1);
+            this.SairSistemaPnl.Controls.Add(this.msgSairSistemaLbl);
             this.SairSistemaPnl.Controls.Add(this.NaoSairSistemaBtn);
             this.SairSistemaPnl.Controls.Add(this.SimSairSistemaBtn);
             this.SairSistemaPnl.Location = new System.Drawing.Point(0, 0);
@@ -131,11 +132,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button SimSairSistemaBtn;
-        private System.Windows.Forms.Button NaoSairSistemaBtn;
         private System.Windows.Forms.Panel SairSistemaPnl;
         private System.Windows.Forms.Panel MsgFecharPnl;
         private System.Windows.Forms.Button Fecharbtn;
+        public System.Windows.Forms.Label msgSairSistemaLbl;
+        public System.Windows.Forms.Button SimSairSistemaBtn;
+        public System.Windows.Forms.Button NaoSairSistemaBtn;
     }
 }

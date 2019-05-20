@@ -42,7 +42,6 @@ namespace PimServices.RepositorySql
 
                 conn.Close();
 
-                MessageBox.Show("Viagem salva com sucesso!");
             }
             catch (Exception ex)
             {
@@ -70,7 +69,6 @@ namespace PimServices.RepositorySql
 
                 conn.Close();
 
-                MessageBox.Show("Viagem Excluido com sucesso!");
             }
             catch (Exception ex)
             {
@@ -118,7 +116,6 @@ namespace PimServices.RepositorySql
 
                 conn.Close();
 
-                MessageBox.Show("Viagem Editada com sucesso!");
             }
             catch (Exception ex)
             {

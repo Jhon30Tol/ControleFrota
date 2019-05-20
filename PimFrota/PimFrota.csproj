@@ -146,6 +146,12 @@
     <Compile Include="Formularios\Mensagens\FrmMensagemErroCadastro.Designer.cs">
       <DependentUpon>FrmMensagemErroCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMsgSimNao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mensagens\FrmMsgSimNao.Designer.cs">
+      <DependentUpon>FrmMsgSimNao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mensagens\FrmSairSistema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mensagens\FrmMensagemErroCadastro.resx">
       <DependentUpon>FrmMensagemErroCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mensagens\FrmMsgSimNao.resx">
+      <DependentUpon>FrmMsgSimNao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mensagens\FrmSairSistema.resx">
       <DependentUpon>FrmSairSistema.cs</DependentUpon>

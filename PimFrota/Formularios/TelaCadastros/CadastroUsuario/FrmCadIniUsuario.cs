@@ -40,6 +40,9 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             ExcluirUsuBtn.Enabled = false;
             IncluirUsuBtn.Enabled = true;
 
+            NomeUsuarioTbx.Text = "";
+            SenhaUsuarioTbx.Text = "";
+
         }
 
         public void modoGravar()
@@ -55,11 +58,18 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         public void IncluirBtn_Click(object sender, EventArgs e)
         {
+           
             modoGravar();
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
             IncluirUsuBtn.Enabled = false;
             AtivoCbx.Text = "S";
+
+            SenhaUsuarioTbx.Enabled = true;
+            NomeUsuarioTbx.Enabled = true;
+            AtivoCbx.Enabled = true;
+
+            
 
         }
 
@@ -74,6 +84,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
         {
             FrmMensagemCampoObrigatorio frmMsgCampoObrigatorio = (FrmMensagemCampoObrigatorio)Application.OpenForms["FrmMensagemCampoObrigatorio"];
             FrmMensagemCampoObrigatorio frmMsgCampoObrigatorioMsg = new FrmMensagemCampoObrigatorio();
+
+            FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
+
+            FrmCadIniUsuario frminiusuario = new FrmCadIniUsuario();
+
+
 
 
             if (String.IsNullOrEmpty(AtivoCbx.Text))
@@ -121,9 +137,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                     dao.SalvarUsuario(u);
 
 
-                    FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
 
                     msgCadastroSucesso.ShowDialog();
+
+
 
                 }
                 else
@@ -134,9 +151,16 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
                     u.Senha = SenhaUsuarioTbx.Text;
                     u.Ativo = AtivoCbx.Text;
                     dao.EditarrUsuario(u);
+
+                    msgCadastroSucesso.MensagemSucessoLbl.Text = "Usurio editado com sucesso !";
+                    msgCadastroSucesso.ShowDialog();
+                    
+
+
+
+
                 }
 
-               // InitializeComponent();
                 iniciaForm();
             }
             
@@ -145,10 +169,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
         private void PesquisarUsuBtn_Click(object sender, EventArgs e)
         {
 
-            dataGridViewUsuario.DataSource = null;
-            dataGridViewUsuario.Columns.Clear();
-            dataGridViewUsuario.Rows.Clear();
-            dataGridViewUsuario.Refresh();
+          
             PesquisarTbx.Enabled = true;
 
             usuarioPnl.Visible = false;
@@ -253,17 +274,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void dataGridViewUsuario_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-            u.Id = Convert.ToInt32(dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString());
 
-            AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString();
+            AtivoCbx.Text = dataGridViewUsuario.CurrentRow.Cells[0].Value.ToString();
+            u.Id = Convert.ToInt32(dataGridViewUsuario.CurrentRow.Cells[1].Value.ToString());
             NomeUsuarioTbx.Text = dataGridViewUsuario.CurrentRow.Cells[2].Value.ToString();
             u.Senha =  dataGridViewUsuario.CurrentRow.Cells[3].Value.ToString();
 
-
-            MessageBox.Show(Convert.ToString(u.Id));
-
-
-            // u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
 
             usuarioPesquisaPnl.Visible = false;
             usuarioPnl.Visible = true;
@@ -279,14 +295,26 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void ExcluirUsuBtn_Click(object sender, EventArgs e)
         {
-            //FrmCadusuario frmusu = (FrmCadusuario)Application.OpenForms["FrmCadusuario"];
-            Usuario u = new Usuario();
-            DaoUsuario dao = new DaoUsuario();
+            FrmMsgSimNao frmMsgExcluirv = (FrmMsgSimNao)Application.OpenForms["FrmSairSistema"];
+            FrmMsgSimNao frmMsgExcluir = new FrmMsgSimNao();
 
-            u.Id = Convert.ToInt32(CodUsuarioTbx.Text);
- 
-            dao.ExcluirUsuario(u);
-            usuarioPnl.Visible = false;
+            FrmCadIniUsuario frminiusuario = new FrmCadIniUsuario();
+
+            frmMsgExcluir.msgSairSistemaLbl.Text = "Deseja mesmo Excluir este Usuario ?";
+            frmMsgExcluir.ShowDialog();
+
+            if (frmMsgExcluir.btnSairClick == true)
+            {
+                DaoUsuario dao = new DaoUsuario();
+
+                dao.ExcluirUsuario(u);
+                usuarioPnl.Visible = false;
+                
+
+                iniciaForm();
+            }
+
+                
         }
 
         private void AtivoCkbx_CheckedChanged(object sender, EventArgs e)
@@ -318,7 +346,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
         private void usuarioPesquisaPnl_Paint(object sender, PaintEventArgs e)
         {
-            //dataGridViewUsuario.AutoGenerateColumns = false;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     
