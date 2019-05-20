@@ -69,5 +69,16 @@ namespace PimFrota.Formularios.Base
         {
             
         }
+
+        private void ManutencaoViagemBtn_Click(object sender, EventArgs e)
+        {
+            FechaFormViagem();
+            iniSaidaViagem = new FrmCadIniSaidaViagem();
+            iniSaidaViagem.TopLevel = false;
+            iniSaidaViagem.AutoScroll = true;
+            iniSaidaViagem.FormBorderStyle = FormBorderStyle.None;
+            this.BaseIniViagemPnl.Controls.Add(iniSaidaViagem);
+            iniSaidaViagem.Show();
+        }
     }
 }
