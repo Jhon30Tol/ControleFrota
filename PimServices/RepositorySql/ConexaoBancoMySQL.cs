@@ -13,7 +13,7 @@ namespace PimServices.RepositorySql
     {
 
         public MySqlConnection conn = null;
-        public String connectionString = @"server=localhost;User Id = root; password=senha;database=sislog; SslMode = none";
+        public String connectionString = @"server=localhost;User Id = root; password=root;database=sislog; SslMode = none";
         public MySqlConnection getConnection()
             {
                 MySqlConnection conn = new MySqlConnection(connectionString);
