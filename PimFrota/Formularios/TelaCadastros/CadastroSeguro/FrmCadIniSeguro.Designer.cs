@@ -48,10 +48,8 @@
             this.NomeCorretorLbl = new MaterialSkin.Controls.MaterialLabel();
             this.DadoCorretorLbl = new MaterialSkin.Controls.MaterialLabel();
             this.LinhaSeparadoraLbl = new System.Windows.Forms.Label();
-            this.dtFimSeguriPck = new System.Windows.Forms.DateTimePicker();
             this.DtFimSeguroLbl = new MaterialSkin.Controls.MaterialLabel();
             this.DtInicioLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.dtIniSeguroPck = new System.Windows.Forms.DateTimePicker();
             this.AsseguradoTbx = new System.Windows.Forms.TextBox();
             this.AsseguradoLbl = new MaterialSkin.Controls.MaterialLabel();
             this.CodSeguroTbx = new System.Windows.Forms.TextBox();
@@ -65,6 +63,8 @@
             this.ExcluirSeguroBtn = new System.Windows.Forms.Button();
             this.linhaSeguroLbl = new System.Windows.Forms.Label();
             this.seguroLbl = new System.Windows.Forms.Label();
+            this.DtaIniSeguroDtm = new System.Windows.Forms.DateTimePicker();
+            this.DtFimSeguroDtm = new System.Windows.Forms.DateTimePicker();
             this.CadSeguroIniPnl.SuspendLayout();
             this.seguroPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSeguro)).BeginInit();
@@ -74,7 +74,6 @@
             // 
             // CadSeguroIniPnl
             // 
-            this.CadSeguroIniPnl.Controls.Add(this.seguroPesquisarPnl);
             this.CadSeguroIniPnl.Controls.Add(this.SeguroPnl);
             this.CadSeguroIniPnl.Location = new System.Drawing.Point(1, 71);
             this.CadSeguroIniPnl.Name = "CadSeguroIniPnl";
@@ -89,7 +88,7 @@
             this.seguroPesquisarPnl.Controls.Add(this.PesquisarLbl);
             this.seguroPesquisarPnl.Controls.Add(this.PesquisarBtn);
             this.seguroPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.seguroPesquisarPnl.Location = new System.Drawing.Point(11, 7);
+            this.seguroPesquisarPnl.Location = new System.Drawing.Point(12, 62);
             this.seguroPesquisarPnl.Name = "seguroPesquisarPnl";
             this.seguroPesquisarPnl.Size = new System.Drawing.Size(573, 297);
             this.seguroPesquisarPnl.TabIndex = 1;
@@ -169,6 +168,8 @@
             // 
             // SeguroPnl
             // 
+            this.SeguroPnl.Controls.Add(this.DtFimSeguroDtm);
+            this.SeguroPnl.Controls.Add(this.DtaIniSeguroDtm);
             this.SeguroPnl.Controls.Add(this.SinistroCorretorTbx);
             this.SeguroPnl.Controls.Add(this.SinistroCorretorLbl);
             this.SeguroPnl.Controls.Add(this.TelCorretorTbx);
@@ -179,10 +180,8 @@
             this.SeguroPnl.Controls.Add(this.NomeCorretorLbl);
             this.SeguroPnl.Controls.Add(this.DadoCorretorLbl);
             this.SeguroPnl.Controls.Add(this.LinhaSeparadoraLbl);
-            this.SeguroPnl.Controls.Add(this.dtFimSeguriPck);
             this.SeguroPnl.Controls.Add(this.DtFimSeguroLbl);
             this.SeguroPnl.Controls.Add(this.DtInicioLbl);
-            this.SeguroPnl.Controls.Add(this.dtIniSeguroPck);
             this.SeguroPnl.Controls.Add(this.AsseguradoTbx);
             this.SeguroPnl.Controls.Add(this.AsseguradoLbl);
             this.SeguroPnl.Controls.Add(this.CodSeguroTbx);
@@ -293,13 +292,6 @@
             this.LinhaSeparadoraLbl.Size = new System.Drawing.Size(228, 14);
             this.LinhaSeparadoraLbl.TabIndex = 27;
             // 
-            // dtFimSeguriPck
-            // 
-            this.dtFimSeguriPck.Location = new System.Drawing.Point(134, 91);
-            this.dtFimSeguriPck.Name = "dtFimSeguriPck";
-            this.dtFimSeguriPck.Size = new System.Drawing.Size(219, 20);
-            this.dtFimSeguriPck.TabIndex = 26;
-            // 
             // DtFimSeguroLbl
             // 
             this.DtFimSeguroLbl.AutoSize = true;
@@ -325,13 +317,6 @@
             this.DtInicioLbl.Size = new System.Drawing.Size(69, 19);
             this.DtInicioLbl.TabIndex = 24;
             this.DtInicioLbl.Text = "Dt. Início";
-            // 
-            // dtIniSeguroPck
-            // 
-            this.dtIniSeguroPck.Location = new System.Drawing.Point(134, 65);
-            this.dtIniSeguroPck.Name = "dtIniSeguroPck";
-            this.dtIniSeguroPck.Size = new System.Drawing.Size(219, 20);
-            this.dtIniSeguroPck.TabIndex = 23;
             // 
             // AsseguradoTbx
             // 
@@ -459,6 +444,7 @@
             this.GravarSeguroBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarSeguroBtn.TabIndex = 19;
             this.GravarSeguroBtn.UseVisualStyleBackColor = false;
+            this.GravarSeguroBtn.Click += new System.EventHandler(this.GravarSeguroBtn_Click);
             // 
             // PesquisarSeguroBtn
             // 
@@ -517,11 +503,30 @@
             this.seguroLbl.TabIndex = 29;
             this.seguroLbl.Text = "Seguro";
             // 
+            // DtaIniSeguroDtm
+            // 
+            this.DtaIniSeguroDtm.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtaIniSeguroDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtaIniSeguroDtm.Location = new System.Drawing.Point(134, 66);
+            this.DtaIniSeguroDtm.Name = "DtaIniSeguroDtm";
+            this.DtaIniSeguroDtm.Size = new System.Drawing.Size(219, 26);
+            this.DtaIniSeguroDtm.TabIndex = 44;
+            // 
+            // DtFimSeguroDtm
+            // 
+            this.DtFimSeguroDtm.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtFimSeguroDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtFimSeguroDtm.Location = new System.Drawing.Point(134, 98);
+            this.DtFimSeguroDtm.Name = "DtFimSeguroDtm";
+            this.DtFimSeguroDtm.Size = new System.Drawing.Size(219, 26);
+            this.DtFimSeguroDtm.TabIndex = 45;
+            // 
             // FrmCadIniSeguro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
             this.Controls.Add(this.linhaSeguroLbl);
+            this.Controls.Add(this.seguroPesquisarPnl);
             this.Controls.Add(this.CadSeguroIniPnl);
             this.Controls.Add(this.seguroLbl);
             this.Controls.Add(this.BotaoCadastroPnl);
@@ -541,8 +546,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel CadSeguroIniPnl;
         private System.Windows.Forms.Panel BotaoCadastroPnl;
         private System.Windows.Forms.Button CancelarSeguroBtn;
         private System.Windows.Forms.Button EditarSeguroBtn;
@@ -562,10 +565,8 @@
         private MaterialSkin.Controls.MaterialLabel NomeCorretorLbl;
         private MaterialSkin.Controls.MaterialLabel DadoCorretorLbl;
         private System.Windows.Forms.Label LinhaSeparadoraLbl;
-        private System.Windows.Forms.DateTimePicker dtFimSeguriPck;
         private MaterialSkin.Controls.MaterialLabel DtFimSeguroLbl;
         private MaterialSkin.Controls.MaterialLabel DtInicioLbl;
-        private System.Windows.Forms.DateTimePicker dtIniSeguroPck;
         private System.Windows.Forms.TextBox AsseguradoTbx;
         private MaterialSkin.Controls.MaterialLabel AsseguradoLbl;
         private System.Windows.Forms.TextBox CodSeguroTbx;
@@ -578,5 +579,8 @@
         private System.Windows.Forms.TextBox PesquisarTbx;
         private System.Windows.Forms.Label linhaSeguroLbl;
         private System.Windows.Forms.Label seguroLbl;
+        public System.Windows.Forms.DateTimePicker DtFimSeguroDtm;
+        public System.Windows.Forms.DateTimePicker DtaIniSeguroDtm;
+        public System.Windows.Forms.Panel CadSeguroIniPnl;
     }
 }

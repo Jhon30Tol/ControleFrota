@@ -30,19 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniCliente));
             this.CadClienteIniPnl = new System.Windows.Forms.Panel();
-            this.ClientePesquisarPnl = new System.Windows.Forms.Panel();
-            this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
-            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.ClientePnl = new System.Windows.Forms.Panel();
             this.NumeroRuaClienteTbx = new System.Windows.Forms.TextBox();
             this.CidadeClienteTbx = new System.Windows.Forms.TextBox();
             this.CepClienteTbx = new System.Windows.Forms.TextBox();
             this.RuaClienteTbx = new System.Windows.Forms.TextBox();
-            this.DtNascimentoClienteTbx = new System.Windows.Forms.TextBox();
             this.UfClienteTbx = new System.Windows.Forms.TextBox();
             this.BairroClienteTbx = new System.Windows.Forms.TextBox();
             this.CelularClienteTbx = new System.Windows.Forms.TextBox();
@@ -60,6 +52,13 @@
             this.CpfClieentelbl = new System.Windows.Forms.Label();
             this.RuaClientelbl = new System.Windows.Forms.Label();
             this.NomeClientelbl = new System.Windows.Forms.Label();
+            this.ClientePesquisarPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
+            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
             this.CancelarClienteBtn = new System.Windows.Forms.Button();
             this.EditarClienteBtn = new System.Windows.Forms.Button();
@@ -69,115 +68,29 @@
             this.ExcluirClienteBtn = new System.Windows.Forms.Button();
             this.linhaClienteLbl = new System.Windows.Forms.Label();
             this.clienteLbl = new System.Windows.Forms.Label();
+            this.DtaNascClienteDtm = new System.Windows.Forms.DateTimePicker();
             this.CadClienteIniPnl.SuspendLayout();
+            this.ClientePnl.SuspendLayout();
             this.ClientePesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
-            this.ClientePnl.SuspendLayout();
             this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadClienteIniPnl
             // 
-            this.CadClienteIniPnl.Controls.Add(this.ClientePesquisarPnl);
             this.CadClienteIniPnl.Controls.Add(this.ClientePnl);
             this.CadClienteIniPnl.Location = new System.Drawing.Point(1, 75);
             this.CadClienteIniPnl.Name = "CadClienteIniPnl";
             this.CadClienteIniPnl.Size = new System.Drawing.Size(594, 317);
             this.CadClienteIniPnl.TabIndex = 27;
             // 
-            // ClientePesquisarPnl
-            // 
-            this.ClientePesquisarPnl.Controls.Add(this.dataGridViewCliente);
-            this.ClientePesquisarPnl.Controls.Add(this.CpfCkbx);
-            this.ClientePesquisarPnl.Controls.Add(this.NomeCkbx);
-            this.ClientePesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.ClientePesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.ClientePesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.ClientePesquisarPnl.Location = new System.Drawing.Point(3, 13);
-            this.ClientePesquisarPnl.Name = "ClientePesquisarPnl";
-            this.ClientePesquisarPnl.Size = new System.Drawing.Size(581, 300);
-            this.ClientePesquisarPnl.TabIndex = 99;
-            // 
-            // dataGridViewCliente
-            // 
-            this.dataGridViewCliente.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCliente.Location = new System.Drawing.Point(14, 93);
-            this.dataGridViewCliente.Name = "dataGridViewCliente";
-            this.dataGridViewCliente.Size = new System.Drawing.Size(552, 186);
-            this.dataGridViewCliente.TabIndex = 57;
-            // 
-            // CpfCkbx
-            // 
-            this.CpfCkbx.AutoSize = true;
-            this.CpfCkbx.Depth = 0;
-            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CpfCkbx.Location = new System.Drawing.Point(136, 44);
-            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CpfCkbx.Name = "CpfCkbx";
-            this.CpfCkbx.Ripple = true;
-            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
-            this.CpfCkbx.TabIndex = 56;
-            this.CpfCkbx.Text = "CPF";
-            this.CpfCkbx.UseVisualStyleBackColor = true;
-            // 
-            // NomeCkbx
-            // 
-            this.NomeCkbx.AutoSize = true;
-            this.NomeCkbx.Depth = 0;
-            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NomeCkbx.Location = new System.Drawing.Point(14, 44);
-            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NomeCkbx.Name = "NomeCkbx";
-            this.NomeCkbx.Ripple = true;
-            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
-            this.NomeCkbx.TabIndex = 55;
-            this.NomeCkbx.Text = "Nome";
-            this.NomeCkbx.UseVisualStyleBackColor = true;
-            // 
-            // PesquisarLbl
-            // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(220, 16);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 54;
-            this.PesquisarLbl.Text = "Pesquisar";
-            // 
-            // PesquisarBtn
-            // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(171, 12);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 53;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
-            // 
-            // PesquisarTbx
-            // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(14, 15);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 51;
-            // 
             // ClientePnl
             // 
+            this.ClientePnl.Controls.Add(this.DtaNascClienteDtm);
             this.ClientePnl.Controls.Add(this.NumeroRuaClienteTbx);
             this.ClientePnl.Controls.Add(this.CidadeClienteTbx);
             this.ClientePnl.Controls.Add(this.CepClienteTbx);
             this.ClientePnl.Controls.Add(this.RuaClienteTbx);
-            this.ClientePnl.Controls.Add(this.DtNascimentoClienteTbx);
             this.ClientePnl.Controls.Add(this.UfClienteTbx);
             this.ClientePnl.Controls.Add(this.BairroClienteTbx);
             this.ClientePnl.Controls.Add(this.CelularClienteTbx);
@@ -228,13 +141,6 @@
             this.RuaClienteTbx.Size = new System.Drawing.Size(289, 20);
             this.RuaClienteTbx.TabIndex = 95;
             // 
-            // DtNascimentoClienteTbx
-            // 
-            this.DtNascimentoClienteTbx.Location = new System.Drawing.Point(142, 94);
-            this.DtNascimentoClienteTbx.Name = "DtNascimentoClienteTbx";
-            this.DtNascimentoClienteTbx.Size = new System.Drawing.Size(117, 20);
-            this.DtNascimentoClienteTbx.TabIndex = 94;
-            // 
             // UfClienteTbx
             // 
             this.UfClienteTbx.Location = new System.Drawing.Point(378, 175);
@@ -251,7 +157,7 @@
             // 
             // CelularClienteTbx
             // 
-            this.CelularClienteTbx.Location = new System.Drawing.Point(302, 94);
+            this.CelularClienteTbx.Location = new System.Drawing.Point(302, 97);
             this.CelularClienteTbx.Name = "CelularClienteTbx";
             this.CelularClienteTbx.Size = new System.Drawing.Size(129, 20);
             this.CelularClienteTbx.TabIndex = 91;
@@ -398,6 +304,92 @@
             this.NomeClientelbl.TabIndex = 77;
             this.NomeClientelbl.Text = "Nome Completo:";
             // 
+            // ClientePesquisarPnl
+            // 
+            this.ClientePesquisarPnl.Controls.Add(this.dataGridViewCliente);
+            this.ClientePesquisarPnl.Controls.Add(this.CpfCkbx);
+            this.ClientePesquisarPnl.Controls.Add(this.NomeCkbx);
+            this.ClientePesquisarPnl.Controls.Add(this.PesquisarLbl);
+            this.ClientePesquisarPnl.Controls.Add(this.PesquisarBtn);
+            this.ClientePesquisarPnl.Controls.Add(this.PesquisarTbx);
+            this.ClientePesquisarPnl.Location = new System.Drawing.Point(1, 65);
+            this.ClientePesquisarPnl.Name = "ClientePesquisarPnl";
+            this.ClientePesquisarPnl.Size = new System.Drawing.Size(581, 300);
+            this.ClientePesquisarPnl.TabIndex = 99;
+            // 
+            // dataGridViewCliente
+            // 
+            this.dataGridViewCliente.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCliente.Location = new System.Drawing.Point(14, 93);
+            this.dataGridViewCliente.Name = "dataGridViewCliente";
+            this.dataGridViewCliente.Size = new System.Drawing.Size(552, 186);
+            this.dataGridViewCliente.TabIndex = 57;
+            // 
+            // CpfCkbx
+            // 
+            this.CpfCkbx.AutoSize = true;
+            this.CpfCkbx.Depth = 0;
+            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CpfCkbx.Location = new System.Drawing.Point(136, 44);
+            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CpfCkbx.Name = "CpfCkbx";
+            this.CpfCkbx.Ripple = true;
+            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
+            this.CpfCkbx.TabIndex = 56;
+            this.CpfCkbx.Text = "CPF";
+            this.CpfCkbx.UseVisualStyleBackColor = true;
+            // 
+            // NomeCkbx
+            // 
+            this.NomeCkbx.AutoSize = true;
+            this.NomeCkbx.Depth = 0;
+            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NomeCkbx.Location = new System.Drawing.Point(14, 44);
+            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NomeCkbx.Name = "NomeCkbx";
+            this.NomeCkbx.Ripple = true;
+            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
+            this.NomeCkbx.TabIndex = 55;
+            this.NomeCkbx.Text = "Nome";
+            this.NomeCkbx.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarLbl
+            // 
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(220, 16);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 54;
+            this.PesquisarLbl.Text = "Pesquisar";
+            // 
+            // PesquisarBtn
+            // 
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(171, 12);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 53;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(14, 15);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 51;
+            // 
             // BotaoCadastroPnl
             // 
             this.BotaoCadastroPnl.Controls.Add(this.CancelarClienteBtn);
@@ -484,6 +476,7 @@
             this.GravarClienteBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarClienteBtn.TabIndex = 19;
             this.GravarClienteBtn.UseVisualStyleBackColor = false;
+            this.GravarClienteBtn.Click += new System.EventHandler(this.GravarClienteBtn_Click);
             // 
             // PesquisarClienteBtn
             // 
@@ -542,22 +535,32 @@
             this.clienteLbl.TabIndex = 100;
             this.clienteLbl.Text = "Cliente";
             // 
+            // DtaNascClienteDtm
+            // 
+            this.DtaNascClienteDtm.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtaNascClienteDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtaNascClienteDtm.Location = new System.Drawing.Point(141, 93);
+            this.DtaNascClienteDtm.Name = "DtaNascClienteDtm";
+            this.DtaNascClienteDtm.Size = new System.Drawing.Size(116, 26);
+            this.DtaNascClienteDtm.TabIndex = 100;
+            // 
             // FrmCadIniCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
             this.Controls.Add(this.linhaClienteLbl);
+            this.Controls.Add(this.ClientePesquisarPnl);
             this.Controls.Add(this.CadClienteIniPnl);
             this.Controls.Add(this.clienteLbl);
             this.Controls.Add(this.BotaoCadastroPnl);
             this.Name = "FrmCadIniCliente";
             this.Load += new System.EventHandler(this.FrmCadIniCliente_Load);
             this.CadClienteIniPnl.ResumeLayout(false);
+            this.ClientePnl.ResumeLayout(false);
+            this.ClientePnl.PerformLayout();
             this.ClientePesquisarPnl.ResumeLayout(false);
             this.ClientePesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
-            this.ClientePnl.ResumeLayout(false);
-            this.ClientePnl.PerformLayout();
             this.BotaoCadastroPnl.ResumeLayout(false);
             this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
@@ -580,7 +583,6 @@
         private System.Windows.Forms.TextBox CidadeClienteTbx;
         private System.Windows.Forms.TextBox CepClienteTbx;
         private System.Windows.Forms.TextBox RuaClienteTbx;
-        private System.Windows.Forms.TextBox DtNascimentoClienteTbx;
         private System.Windows.Forms.TextBox UfClienteTbx;
         private System.Windows.Forms.TextBox BairroClienteTbx;
         private System.Windows.Forms.TextBox CelularClienteTbx;
@@ -607,5 +609,6 @@
         private System.Windows.Forms.TextBox PesquisarTbx;
         private System.Windows.Forms.Label linhaClienteLbl;
         private System.Windows.Forms.Label clienteLbl;
+        public System.Windows.Forms.DateTimePicker DtaNascClienteDtm;
     }
 }

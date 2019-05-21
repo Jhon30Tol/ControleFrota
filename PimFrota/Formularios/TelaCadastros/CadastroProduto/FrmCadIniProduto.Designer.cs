@@ -47,8 +47,6 @@
             this.FabricanteProdLbl = new MaterialSkin.Controls.MaterialLabel();
             this.MarcaProdLbl = new MaterialSkin.Controls.MaterialLabel();
             this.NomeProdLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.TipoProdCbx = new System.Windows.Forms.ComboBox();
-            this.TipProdutoLbl = new MaterialSkin.Controls.MaterialLabel();
             this.CodProdutoTxb = new System.Windows.Forms.TextBox();
             this.CodProdutoLbl = new MaterialSkin.Controls.MaterialLabel();
             this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
@@ -69,7 +67,6 @@
             // 
             // CadProdutoIniPnl
             // 
-            this.CadProdutoIniPnl.Controls.Add(this.produtoPesquisarPnl);
             this.CadProdutoIniPnl.Controls.Add(this.produtoPnl);
             this.CadProdutoIniPnl.Location = new System.Drawing.Point(1, 72);
             this.CadProdutoIniPnl.Name = "CadProdutoIniPnl";
@@ -85,7 +82,7 @@
             this.produtoPesquisarPnl.Controls.Add(this.PesquisarLbl);
             this.produtoPesquisarPnl.Controls.Add(this.PesquisarBtn);
             this.produtoPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.produtoPesquisarPnl.Location = new System.Drawing.Point(11, 16);
+            this.produtoPesquisarPnl.Location = new System.Drawing.Point(4, 65);
             this.produtoPesquisarPnl.Name = "produtoPesquisarPnl";
             this.produtoPesquisarPnl.Size = new System.Drawing.Size(548, 287);
             this.produtoPesquisarPnl.TabIndex = 1;
@@ -189,8 +186,6 @@
             this.produtoPnl.Controls.Add(this.FabricanteProdLbl);
             this.produtoPnl.Controls.Add(this.MarcaProdLbl);
             this.produtoPnl.Controls.Add(this.NomeProdLbl);
-            this.produtoPnl.Controls.Add(this.TipoProdCbx);
-            this.produtoPnl.Controls.Add(this.TipProdutoLbl);
             this.produtoPnl.Controls.Add(this.CodProdutoTxb);
             this.produtoPnl.Controls.Add(this.CodProdutoLbl);
             this.produtoPnl.Location = new System.Drawing.Point(11, 16);
@@ -200,28 +195,28 @@
             // 
             // ValorProdTbx
             // 
-            this.ValorProdTbx.Location = new System.Drawing.Point(113, 144);
+            this.ValorProdTbx.Location = new System.Drawing.Point(114, 126);
             this.ValorProdTbx.Name = "ValorProdTbx";
             this.ValorProdTbx.Size = new System.Drawing.Size(100, 20);
             this.ValorProdTbx.TabIndex = 23;
             // 
             // FabricanteProdTbx
             // 
-            this.FabricanteProdTbx.Location = new System.Drawing.Point(113, 118);
+            this.FabricanteProdTbx.Location = new System.Drawing.Point(114, 100);
             this.FabricanteProdTbx.Name = "FabricanteProdTbx";
             this.FabricanteProdTbx.Size = new System.Drawing.Size(215, 20);
             this.FabricanteProdTbx.TabIndex = 22;
             // 
             // MarcaProdTbx
             // 
-            this.MarcaProdTbx.Location = new System.Drawing.Point(113, 92);
+            this.MarcaProdTbx.Location = new System.Drawing.Point(114, 74);
             this.MarcaProdTbx.Name = "MarcaProdTbx";
             this.MarcaProdTbx.Size = new System.Drawing.Size(215, 20);
             this.MarcaProdTbx.TabIndex = 21;
             // 
             // NomeProdutoTxb
             // 
-            this.NomeProdutoTxb.Location = new System.Drawing.Point(113, 66);
+            this.NomeProdutoTxb.Location = new System.Drawing.Point(114, 48);
             this.NomeProdutoTxb.Name = "NomeProdutoTxb";
             this.NomeProdutoTxb.Size = new System.Drawing.Size(215, 20);
             this.NomeProdutoTxb.TabIndex = 20;
@@ -232,7 +227,7 @@
             this.ValorProdLbl.Depth = 0;
             this.ValorProdLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.ValorProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ValorProdLbl.Location = new System.Drawing.Point(18, 144);
+            this.ValorProdLbl.Location = new System.Drawing.Point(19, 126);
             this.ValorProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.ValorProdLbl.Name = "ValorProdLbl";
             this.ValorProdLbl.Size = new System.Drawing.Size(45, 19);
@@ -245,7 +240,7 @@
             this.FabricanteProdLbl.Depth = 0;
             this.FabricanteProdLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.FabricanteProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.FabricanteProdLbl.Location = new System.Drawing.Point(18, 118);
+            this.FabricanteProdLbl.Location = new System.Drawing.Point(19, 100);
             this.FabricanteProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.FabricanteProdLbl.Name = "FabricanteProdLbl";
             this.FabricanteProdLbl.Size = new System.Drawing.Size(79, 19);
@@ -258,7 +253,7 @@
             this.MarcaProdLbl.Depth = 0;
             this.MarcaProdLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.MarcaProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MarcaProdLbl.Location = new System.Drawing.Point(18, 92);
+            this.MarcaProdLbl.Location = new System.Drawing.Point(19, 74);
             this.MarcaProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.MarcaProdLbl.Name = "MarcaProdLbl";
             this.MarcaProdLbl.Size = new System.Drawing.Size(51, 19);
@@ -271,33 +266,12 @@
             this.NomeProdLbl.Depth = 0;
             this.NomeProdLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.NomeProdLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.NomeProdLbl.Location = new System.Drawing.Point(18, 66);
+            this.NomeProdLbl.Location = new System.Drawing.Point(19, 48);
             this.NomeProdLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.NomeProdLbl.Name = "NomeProdLbl";
             this.NomeProdLbl.Size = new System.Drawing.Size(50, 19);
             this.NomeProdLbl.TabIndex = 16;
             this.NomeProdLbl.Text = "Nome";
-            // 
-            // TipoProdCbx
-            // 
-            this.TipoProdCbx.FormattingEnabled = true;
-            this.TipoProdCbx.Location = new System.Drawing.Point(113, 39);
-            this.TipoProdCbx.Name = "TipoProdCbx";
-            this.TipoProdCbx.Size = new System.Drawing.Size(121, 21);
-            this.TipoProdCbx.TabIndex = 15;
-            // 
-            // TipProdutoLbl
-            // 
-            this.TipProdutoLbl.AutoSize = true;
-            this.TipProdutoLbl.Depth = 0;
-            this.TipProdutoLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.TipProdutoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TipProdutoLbl.Location = new System.Drawing.Point(19, 39);
-            this.TipProdutoLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TipProdutoLbl.Name = "TipProdutoLbl";
-            this.TipProdutoLbl.Size = new System.Drawing.Size(39, 19);
-            this.TipProdutoLbl.TabIndex = 14;
-            this.TipProdutoLbl.Text = "Tipo";
             // 
             // CodProdutoTxb
             // 
@@ -405,6 +379,7 @@
             this.GravarProdutoBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarProdutoBtn.TabIndex = 19;
             this.GravarProdutoBtn.UseVisualStyleBackColor = false;
+            this.GravarProdutoBtn.Click += new System.EventHandler(this.GravarProdutoBtn_Click);
             // 
             // PesquisarProdutoBtn
             // 
@@ -467,6 +442,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(597, 395);
+            this.Controls.Add(this.produtoPesquisarPnl);
             this.Controls.Add(this.linhaProdutoLbl);
             this.Controls.Add(this.CadProdutoIniPnl);
             this.Controls.Add(this.produtoLbl);
@@ -506,8 +482,6 @@
         private MaterialSkin.Controls.MaterialLabel FabricanteProdLbl;
         private MaterialSkin.Controls.MaterialLabel MarcaProdLbl;
         private MaterialSkin.Controls.MaterialLabel NomeProdLbl;
-        private System.Windows.Forms.ComboBox TipoProdCbx;
-        private MaterialSkin.Controls.MaterialLabel TipProdutoLbl;
         private System.Windows.Forms.TextBox CodProdutoTxb;
         private MaterialSkin.Controls.MaterialLabel CodProdutoLbl;
         private System.Windows.Forms.DataGridView dataGridViewProduto;

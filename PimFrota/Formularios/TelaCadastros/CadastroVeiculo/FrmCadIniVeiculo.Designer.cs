@@ -95,7 +95,7 @@
             this.PesquisarVeiculoPnl.Controls.Add(this.CodigoCkbx);
             this.PesquisarVeiculoPnl.Controls.Add(this.PesquisarBtn);
             this.PesquisarVeiculoPnl.Controls.Add(this.PesquisarTbx);
-            this.PesquisarVeiculoPnl.Location = new System.Drawing.Point(3, 3);
+            this.PesquisarVeiculoPnl.Location = new System.Drawing.Point(9, 3);
             this.PesquisarVeiculoPnl.Name = "PesquisarVeiculoPnl";
             this.PesquisarVeiculoPnl.Size = new System.Drawing.Size(575, 279);
             this.PesquisarVeiculoPnl.TabIndex = 125;
@@ -244,6 +244,7 @@
             this.materialLabel1.Size = new System.Drawing.Size(76, 19);
             this.materialLabel1.TabIndex = 130;
             this.materialLabel1.Text = "Pesquisar";
+            this.materialLabel1.Visible = false;
             // 
             // PesquisaCodVeiculoBtn
             // 
@@ -256,6 +257,7 @@
             this.PesquisaCodVeiculoBtn.Size = new System.Drawing.Size(43, 25);
             this.PesquisaCodVeiculoBtn.TabIndex = 129;
             this.PesquisaCodVeiculoBtn.UseVisualStyleBackColor = true;
+            this.PesquisaCodVeiculoBtn.Visible = false;
             this.PesquisaCodVeiculoBtn.Click += new System.EventHandler(this.PesquisaCodVeiculoBtn_Click);
             // 
             // ModeloVeiculoTbx
@@ -288,6 +290,7 @@
             this.TipCombustivelCbx.Name = "TipCombustivelCbx";
             this.TipCombustivelCbx.Size = new System.Drawing.Size(226, 21);
             this.TipCombustivelCbx.TabIndex = 124;
+            this.TipCombustivelCbx.Text = "Flex";
             // 
             // ChassiTbx
             // 
@@ -338,7 +341,6 @@
             this.CodVeiculoTbx.Name = "CodVeiculoTbx";
             this.CodVeiculoTbx.Size = new System.Drawing.Size(80, 20);
             this.CodVeiculoTbx.TabIndex = 117;
-            this.CodVeiculoTbx.Text = "Automático";
             // 
             // AnoModeloVeiucloLbl
             // 
@@ -356,11 +358,11 @@
             this.CodVeiculolbl.AutoSize = true;
             this.CodVeiculolbl.BackColor = System.Drawing.Color.Transparent;
             this.CodVeiculolbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodVeiculolbl.Location = new System.Drawing.Point(8, 17);
+            this.CodVeiculolbl.Location = new System.Drawing.Point(46, 14);
             this.CodVeiculolbl.Name = "CodVeiculolbl";
-            this.CodVeiculolbl.Size = new System.Drawing.Size(104, 17);
+            this.CodVeiculolbl.Size = new System.Drawing.Size(66, 17);
             this.CodVeiculolbl.TabIndex = 115;
-            this.CodVeiculolbl.Text = "Cod. Veículo:";
+            this.CodVeiculolbl.Text = "Veículo:";
             // 
             // PlacaLbl
             // 

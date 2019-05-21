@@ -19,6 +19,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
         public FrmCadIniVeiculo()
         {
             InitializeComponent();
+
+            EditarVeiculoBtn.Enabled = false;
+            ExcluirVeiculoBtn.Enabled = false;
+            GravarVeiculoBtn.Enabled = false;
+            IncluirVeiculoBtn.Enabled = true;
+            PesquisarVeiculoBtn.Enabled = true;
         }
 
         public void modoGravar()
@@ -31,12 +37,22 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
 
         private void IncluirVeiculoBtn_Click(object sender, EventArgs e)
         {
+            /*
             PesquisarVeiculoPnl.Visible = false;
             AdicionarVeiculoPnl.Visible = true;
             PesquisaCodVeiculoBtn.Enabled = false;
             CodVeiculoTbx.Enabled = false;
-            CodVeiculoTbx.Text = "Automático";
+            //CodVeiculoTbx.Text = "Automático";
             AtivaCampos();
+            */
+
+            EditarVeiculoBtn.Enabled = false;
+            ExcluirVeiculoBtn.Enabled = false;
+            GravarVeiculoBtn.Enabled = true;
+            IncluirVeiculoBtn.Enabled = false;
+            PesquisarVeiculoBtn.Enabled = false;
+            AdicionarVeiculoPnl.Visible = true;
+
         }
 
         private void CancelarVeiucloBtn_Click(object sender, EventArgs e)
@@ -69,37 +85,43 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
                     frmMsgCampoObrigatorioMsg.ShowDialog();
                     this.MarcaVeiculoTbx.Focus();
                 }
-                if (String.IsNullOrEmpty(AnoModeloVeiculoTbx.Text))
+                else if (String.IsNullOrEmpty(AnoModeloVeiculoTbx.Text))
                 {
                     frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Ano/Modelo é obrigatório";
                     frmMsgCampoObrigatorioMsg.ShowDialog();
                     this.AnoModeloVeiculoTbx.Focus();
                 }
-                if (String.IsNullOrEmpty(ChassiTbx.Text))
+               else if (String.IsNullOrEmpty(ChassiTbx.Text))
                 {
                     frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Chassi é obrigatório";
                     frmMsgCampoObrigatorioMsg.ShowDialog();
                     this.ChassiTbx.Focus();
                 }
-                if (String.IsNullOrEmpty(TipCombustivelCbx.Text))
+               else if (String.IsNullOrEmpty(TipCombustivelCbx.Text))
                 {
                     frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Combustível é obrigatório";
                     frmMsgCampoObrigatorioMsg.ShowDialog();
                     this.TipCombustivelCbx.Focus();
                 }
-                if (String.IsNullOrEmpty(AnoVeiculoTbx.Text))
+                else if (String.IsNullOrEmpty(ModeloVeiculoTbx.Text))
+                {
+                    frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Modelo é obrigatório";
+                    frmMsgCampoObrigatorioMsg.ShowDialog();
+                    this.ModeloVeiculoTbx.Focus();
+                }
+                else if (String.IsNullOrEmpty(AnoVeiculoTbx.Text))
                 {
                     frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Ano é obrigatório";
                     frmMsgCampoObrigatorioMsg.ShowDialog();
                     this.AnoVeiculoTbx.Focus();
                 }
-                if (String.IsNullOrEmpty(CorVeiculoTbx.Text))
+               else if (String.IsNullOrEmpty(CorVeiculoTbx.Text))
                 {
                     frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Cor é obrigatório";
                     frmMsgCampoObrigatorioMsg.ShowDialog();
                     this.CorVeiculoTbx.Focus();
                 }
-                if (String.IsNullOrEmpty(PlacaTbx.Text))
+               else if (String.IsNullOrEmpty(PlacaTbx.Text))
                 {
                     frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Placa é obrigatório";
                     frmMsgCampoObrigatorioMsg.ShowDialog();
@@ -107,12 +129,12 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
                 }
                 else
                 {
-                    veiculo.MarcaVeiculo = MarcaVeiculoTbx.Text;
-                    veiculo.ModeloVeiculo = ModeloVeiculoTbx.Text;
-                    veiculo.AnoModeloVeiculo = Convert.ToInt32(AnoModeloVeiculoTbx.Text);
-                    veiculo.AnoVeiculo = Convert.ToInt32(AnoVeiculoTbx.Text);
-                    veiculo.Chassi = ChassiTbx.Text;
-                    veiculo.Placa = PlacaTbx.Text;
+                   // veiculo.MarcaVeiculo = MarcaVeiculoTbx.Text;
+                   // veiculo.ModeloVeiculo = ModeloVeiculoTbx.Text;
+                  //  veiculo.AnoModeloVeiculo = Convert.ToInt32(AnoModeloVeiculoTbx.Text);
+                  //  veiculo.AnoVeiculo = Convert.ToInt32(AnoVeiculoTbx.Text);
+                  //  veiculo.Chassi = ChassiTbx.Text;
+                  //  veiculo.Placa = PlacaTbx.Text;
                     switch (TipCombustivelCbx.SelectedIndex)
                     {
                         case 0:
@@ -133,12 +155,21 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
                     }
                     veiculo.CorVeiculo = CorVeiculoTbx.Text;
 
-                    DaoVeiculo daoVeiculo = new DaoVeiculo();
-                    daoVeiculo.SalvarVeiculo(veiculo);
+                  //  DaoVeiculo daoVeiculo = new DaoVeiculo();
+                  //  daoVeiculo.SalvarVeiculo(veiculo);
 
                     FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
                     msgCadastroSucesso.ShowDialog();
-                    this.Close();
+                    //this.Close();
+
+                    AdicionarVeiculoPnl.Visible = false;
+
+                    EditarVeiculoBtn.Enabled = false;
+                    ExcluirVeiculoBtn.Enabled = false;
+                    GravarVeiculoBtn.Enabled = false;
+                    IncluirVeiculoBtn.Enabled = true;
+                    PesquisarVeiculoBtn.Enabled = true;
+
                 }
             }
             if (modoEdit == true)

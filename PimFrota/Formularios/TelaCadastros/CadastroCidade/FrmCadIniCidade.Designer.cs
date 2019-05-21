@@ -334,6 +334,7 @@
             this.GravarCidadeBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarCidadeBtn.TabIndex = 19;
             this.GravarCidadeBtn.UseVisualStyleBackColor = false;
+            this.GravarCidadeBtn.Click += new System.EventHandler(this.GravarCidadeBtn_Click);
             // 
             // PesquisarCidadeBtn
             // 

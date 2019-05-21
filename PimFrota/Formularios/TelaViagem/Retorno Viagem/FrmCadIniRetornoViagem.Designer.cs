@@ -55,6 +55,7 @@
             this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
+            this.informativoIniciarPesquisaLbl = new System.Windows.Forms.Label();
             this.retornoViagemPnl = new System.Windows.Forms.Panel();
             this.kmRetornoTbx = new System.Windows.Forms.TextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -80,7 +81,6 @@
             this.GravarRetornoBtn = new System.Windows.Forms.Button();
             this.PesquisarRetornoBtn = new System.Windows.Forms.Button();
             this.ExcluirRetornoBtn = new System.Windows.Forms.Button();
-            this.informativoIniciarPesquisaLbl = new System.Windows.Forms.Label();
             this.CadRetornoIniPnl.SuspendLayout();
             this.retViagemPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).BeginInit();
@@ -110,7 +110,7 @@
             this.retViagemPesquisaPnl.Controls.Add(this.pesquTodosCkbx);
             this.retViagemPesquisaPnl.Controls.Add(this.PesquisarBtn);
             this.retViagemPesquisaPnl.Controls.Add(this.PesquisarTbx);
-            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(0, 4);
+            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(3, 10);
             this.retViagemPesquisaPnl.Name = "retViagemPesquisaPnl";
             this.retViagemPesquisaPnl.Size = new System.Drawing.Size(591, 429);
             this.retViagemPesquisaPnl.TabIndex = 2;
@@ -345,6 +345,16 @@
             this.PesquisarTbx.Name = "PesquisarTbx";
             this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
             this.PesquisarTbx.TabIndex = 11;
+            // 
+            // informativoIniciarPesquisaLbl
+            // 
+            this.informativoIniciarPesquisaLbl.AutoSize = true;
+            this.informativoIniciarPesquisaLbl.Font = new System.Drawing.Font("Miriam Libre", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informativoIniciarPesquisaLbl.Location = new System.Drawing.Point(56, 209);
+            this.informativoIniciarPesquisaLbl.Name = "informativoIniciarPesquisaLbl";
+            this.informativoIniciarPesquisaLbl.Size = new System.Drawing.Size(484, 25);
+            this.informativoIniciarPesquisaLbl.TabIndex = 32;
+            this.informativoIniciarPesquisaLbl.Text = "Clique em pesquisar para selecionar uma viagem";
             // 
             // retornoViagemPnl
             // 
@@ -665,16 +675,6 @@
             this.ExcluirRetornoBtn.Size = new System.Drawing.Size(26, 44);
             this.ExcluirRetornoBtn.TabIndex = 17;
             this.ExcluirRetornoBtn.UseVisualStyleBackColor = false;
-            // 
-            // informativoIniciarPesquisaLbl
-            // 
-            this.informativoIniciarPesquisaLbl.AutoSize = true;
-            this.informativoIniciarPesquisaLbl.Font = new System.Drawing.Font("Miriam Libre", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informativoIniciarPesquisaLbl.Location = new System.Drawing.Point(56, 209);
-            this.informativoIniciarPesquisaLbl.Name = "informativoIniciarPesquisaLbl";
-            this.informativoIniciarPesquisaLbl.Size = new System.Drawing.Size(484, 25);
-            this.informativoIniciarPesquisaLbl.TabIndex = 32;
-            this.informativoIniciarPesquisaLbl.Text = "Clique em pesquisar para selecionar uma viagem";
             // 
             // FrmCadIniRetornoViagem
             // 

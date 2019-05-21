@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniServico));
             this.CadServicoIniPnl = new System.Windows.Forms.Panel();
-            this.servicoPesquisarPnl = new System.Windows.Forms.Panel();
-            this.dataGridViewServico = new System.Windows.Forms.DataGridView();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarBtn = new System.Windows.Forms.Button();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.servicoPnl = new System.Windows.Forms.Panel();
             this.DescServicoTbx = new System.Windows.Forms.RichTextBox();
             this.CodVeiculoServicoTbx = new System.Windows.Forms.TextBox();
@@ -47,6 +41,12 @@
             this.CodVeiculoServicoLbl = new MaterialSkin.Controls.MaterialLabel();
             this.CodServicoTxb = new System.Windows.Forms.TextBox();
             this.CodServicoLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.servicoPesquisarPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewServico = new System.Windows.Forms.DataGridView();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarBtn = new System.Windows.Forms.Button();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
             this.CancelarServicoBtn = new System.Windows.Forms.Button();
             this.EditarServicoBtn = new System.Windows.Forms.Button();
@@ -57,9 +57,9 @@
             this.linhaServicoLbl = new System.Windows.Forms.Label();
             this.servicoLbl = new System.Windows.Forms.Label();
             this.CadServicoIniPnl.SuspendLayout();
+            this.servicoPnl.SuspendLayout();
             this.servicoPesquisarPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServico)).BeginInit();
-            this.servicoPnl.SuspendLayout();
             this.BotaoCadastroPnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,72 +71,6 @@
             this.CadServicoIniPnl.Name = "CadServicoIniPnl";
             this.CadServicoIniPnl.Size = new System.Drawing.Size(594, 315);
             this.CadServicoIniPnl.TabIndex = 33;
-            // 
-            // servicoPesquisarPnl
-            // 
-            this.servicoPesquisarPnl.Controls.Add(this.dataGridViewServico);
-            this.servicoPesquisarPnl.Controls.Add(this.materialLabel1);
-            this.servicoPesquisarPnl.Controls.Add(this.PesquisarLbl);
-            this.servicoPesquisarPnl.Controls.Add(this.PesquisarBtn);
-            this.servicoPesquisarPnl.Controls.Add(this.PesquisarTbx);
-            this.servicoPesquisarPnl.Location = new System.Drawing.Point(7, 15);
-            this.servicoPesquisarPnl.Name = "servicoPesquisarPnl";
-            this.servicoPesquisarPnl.Size = new System.Drawing.Size(577, 270);
-            this.servicoPesquisarPnl.TabIndex = 1;
-            // 
-            // dataGridViewServico
-            // 
-            this.dataGridViewServico.BackgroundColor = System.Drawing.Color.Snow;
-            this.dataGridViewServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewServico.Location = new System.Drawing.Point(19, 83);
-            this.dataGridViewServico.Name = "dataGridViewServico";
-            this.dataGridViewServico.Size = new System.Drawing.Size(541, 184);
-            this.dataGridViewServico.TabIndex = 31;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(17, 12);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(104, 19);
-            this.materialLabel1.TabIndex = 30;
-            this.materialLabel1.Text = "Nome Serviço";
-            // 
-            // PesquisarLbl
-            // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(225, 44);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 29;
-            this.PesquisarLbl.Text = "Pesquisar";
-            // 
-            // PesquisarBtn
-            // 
-            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
-            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
-            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(176, 40);
-            this.PesquisarBtn.Name = "PesquisarBtn";
-            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
-            this.PesquisarBtn.TabIndex = 28;
-            this.PesquisarBtn.UseVisualStyleBackColor = true;
-            // 
-            // PesquisarTbx
-            // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(19, 43);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 26;
             // 
             // servicoPnl
             // 
@@ -229,12 +163,12 @@
             this.CodVeiculoServicoLbl.Depth = 0;
             this.CodVeiculoServicoLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.CodVeiculoServicoLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CodVeiculoServicoLbl.Location = new System.Drawing.Point(23, 35);
+            this.CodVeiculoServicoLbl.Location = new System.Drawing.Point(58, 35);
             this.CodVeiculoServicoLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.CodVeiculoServicoLbl.Name = "CodVeiculoServicoLbl";
-            this.CodVeiculoServicoLbl.Size = new System.Drawing.Size(95, 19);
+            this.CodVeiculoServicoLbl.Size = new System.Drawing.Size(60, 19);
             this.CodVeiculoServicoLbl.TabIndex = 28;
-            this.CodVeiculoServicoLbl.Text = "Cod. Veículo";
+            this.CodVeiculoServicoLbl.Text = "Veículo";
             // 
             // CodServicoTxb
             // 
@@ -255,6 +189,72 @@
             this.CodServicoLbl.Size = new System.Drawing.Size(57, 19);
             this.CodServicoLbl.TabIndex = 26;
             this.CodServicoLbl.Text = "Código";
+            // 
+            // servicoPesquisarPnl
+            // 
+            this.servicoPesquisarPnl.Controls.Add(this.dataGridViewServico);
+            this.servicoPesquisarPnl.Controls.Add(this.materialLabel1);
+            this.servicoPesquisarPnl.Controls.Add(this.PesquisarLbl);
+            this.servicoPesquisarPnl.Controls.Add(this.PesquisarBtn);
+            this.servicoPesquisarPnl.Controls.Add(this.PesquisarTbx);
+            this.servicoPesquisarPnl.Location = new System.Drawing.Point(7, 3);
+            this.servicoPesquisarPnl.Name = "servicoPesquisarPnl";
+            this.servicoPesquisarPnl.Size = new System.Drawing.Size(577, 270);
+            this.servicoPesquisarPnl.TabIndex = 1;
+            // 
+            // dataGridViewServico
+            // 
+            this.dataGridViewServico.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridViewServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewServico.Location = new System.Drawing.Point(19, 83);
+            this.dataGridViewServico.Name = "dataGridViewServico";
+            this.dataGridViewServico.Size = new System.Drawing.Size(541, 184);
+            this.dataGridViewServico.TabIndex = 31;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(17, 12);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(104, 19);
+            this.materialLabel1.TabIndex = 30;
+            this.materialLabel1.Text = "Nome Serviço";
+            // 
+            // PesquisarLbl
+            // 
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(225, 44);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 29;
+            this.PesquisarLbl.Text = "Pesquisar";
+            // 
+            // PesquisarBtn
+            // 
+            this.PesquisarBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PesquisarBtn.BackgroundImage")));
+            this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PesquisarBtn.FlatAppearance.BorderSize = 0;
+            this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PesquisarBtn.Location = new System.Drawing.Point(176, 40);
+            this.PesquisarBtn.Name = "PesquisarBtn";
+            this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
+            this.PesquisarBtn.TabIndex = 28;
+            this.PesquisarBtn.UseVisualStyleBackColor = true;
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(19, 43);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 26;
             // 
             // BotaoCadastroPnl
             // 
@@ -342,6 +342,7 @@
             this.GravarServicoBtn.Size = new System.Drawing.Size(26, 44);
             this.GravarServicoBtn.TabIndex = 19;
             this.GravarServicoBtn.UseVisualStyleBackColor = false;
+            this.GravarServicoBtn.Click += new System.EventHandler(this.GravarServicoBtn_Click);
             // 
             // PesquisarServicoBtn
             // 
@@ -411,11 +412,11 @@
             this.Name = "FrmCadIniServico";
             this.Load += new System.EventHandler(this.FrmCadIniServico_Load);
             this.CadServicoIniPnl.ResumeLayout(false);
+            this.servicoPnl.ResumeLayout(false);
+            this.servicoPnl.PerformLayout();
             this.servicoPesquisarPnl.ResumeLayout(false);
             this.servicoPesquisarPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServico)).EndInit();
-            this.servicoPnl.ResumeLayout(false);
-            this.servicoPnl.PerformLayout();
             this.BotaoCadastroPnl.ResumeLayout(false);
             this.BotaoCadastroPnl.PerformLayout();
             this.ResumeLayout(false);
