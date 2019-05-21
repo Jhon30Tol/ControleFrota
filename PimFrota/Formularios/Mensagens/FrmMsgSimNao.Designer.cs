@@ -124,6 +124,7 @@
             this.Controls.Add(this.SairSistemaPnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMsgSimNao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMsgSimNao";
             this.SairSistemaPnl.ResumeLayout(false);
             this.SairSistemaPnl.PerformLayout();

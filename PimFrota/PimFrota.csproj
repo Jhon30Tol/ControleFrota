@@ -318,6 +318,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Relatorios\RptrRelatorio.resx">
       <DependentUpon>RptrRelatorio.cs</DependentUpon>
@@ -534,6 +535,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="logo_syslog.ico" />
+    <None Include="Resources\PESQUISA.png" />
     <Content Include="Syslog.ico" />
   </ItemGroup>
   <ItemGroup>

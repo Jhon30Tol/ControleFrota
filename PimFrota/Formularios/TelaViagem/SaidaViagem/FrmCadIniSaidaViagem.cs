@@ -187,7 +187,7 @@ namespace PimFrota.Formularios.TelaViagem
 
             else if (!Regex.IsMatch(KmSaidaTbx.Text, @"^[0-9]+$"))
              {
-                 frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Nome deve conter somente Numeros";
+                 frmMsgCampoObrigatorioMsg.MensagemCampoObrigatorioLbl.Text = "Campo Km deve conter somente Numeros";
                  frmMsgCampoObrigatorioMsg.ShowDialog();
                  this.kmRetornoTbx.Focus();
 

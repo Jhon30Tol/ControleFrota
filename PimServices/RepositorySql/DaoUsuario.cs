@@ -183,7 +183,7 @@ namespace PimServices.RepositorySql
             List<Usuario> BuscarPorNomeInativo = new List<Usuario>();
             MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
             conn = new MySqlConnection(connectionString);
-            String selecionaPorNome = "select id_usuario, nome_usuario, ativo, senha_usuario from cadastro_usuario where ativo = 'n' and nome_usuario like '%" + @nome + "%'";
+            String selecionaPorNome = "select id_usuario, nome_usuario, ativo, senha_usuario from cadastro_usuario where ativo = 'n'and  nome_usuario like '%" + @nome + "%'";
             conn.Open();
             MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaPorNome, conn);
             cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
@@ -216,6 +216,46 @@ namespace PimServices.RepositorySql
                 conn.Close();
             }
         }
+
+        public List<Usuario> BuscarPorNomeUsuarioAtivo(String nome)
+        {
+            List<Usuario> BuscarPorNomeUsuarioAtivo = new List<Usuario>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+            String selecionaPorNome = "select id_usuario, nome_usuario, ativo, senha_usuario from cadastro_usuario where ativo = 's' and nome_usuario like '%" + @nome + "%'";
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaPorNome, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nomw", nome));
+
+
+            try
+            {
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    Usuario novo = new Usuario();
+
+                    novo.Id = (int)reader["id_usuario"];
+                    novo.Nome = reader["nome_usuario"].ToString();
+                    novo.Senha = reader["senha_usuario"].ToString();
+                    novo.Ativo = reader["ativo"].ToString();
+                    BuscarPorNomeUsuarioAtivo.Add(novo);
+
+
+                }
+
+                conn.Close();
+                return BuscarPorNomeUsuarioAtivo;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
 
     }
 }

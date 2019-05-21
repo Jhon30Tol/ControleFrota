@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniUsuario));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BotaoCadastroPnl = new System.Windows.Forms.Panel();
             this.CancelarUsuBtn = new System.Windows.Forms.Button();
             this.EditarUsuBtn = new System.Windows.Forms.Button();
@@ -39,9 +40,13 @@
             this.ExcluirUsuBtn = new System.Windows.Forms.Button();
             this.CadUsuIniPnl = new System.Windows.Forms.Panel();
             this.usuarioPesquisaPnl = new System.Windows.Forms.Panel();
+            this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.syslogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.syslogDataSet = new PimFrota.syslogDataSet();
-            this.dataGridViewUsuario = new System.Windows.Forms.DataGridView();
             this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
             this.TodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.AtivoCkbx = new MaterialSkin.Controls.MaterialCheckBox();
@@ -59,16 +64,12 @@
             this.usuarioLbl = new System.Windows.Forms.Label();
             this.linhaUsuarioLbl = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadUsuIniPnl.SuspendLayout();
             this.usuarioPesquisaPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).BeginInit();
             this.usuarioPnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -230,20 +231,12 @@
             this.usuarioPesquisaPnl.TabIndex = 1;
             this.usuarioPesquisaPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.usuarioPesquisaPnl_Paint);
             // 
-            // syslogDataSetBindingSource
-            // 
-            this.syslogDataSetBindingSource.DataSource = this.syslogDataSet;
-            this.syslogDataSetBindingSource.Position = 0;
-            // 
-            // syslogDataSet
-            // 
-            this.syslogDataSet.DataSetName = "C";
-            this.syslogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridViewUsuario
             // 
             this.dataGridViewUsuario.AllowUserToAddRows = false;
             this.dataGridViewUsuario.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewUsuario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUsuario.AutoGenerateColumns = false;
             this.dataGridViewUsuario.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridViewUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -259,6 +252,46 @@
             this.dataGridViewUsuario.Size = new System.Drawing.Size(531, 325);
             this.dataGridViewUsuario.TabIndex = 17;
             this.dataGridViewUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuario_CellContentClick_2);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Ativo";
+            this.Column1.HeaderText = "Ativo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id usuario";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Nome";
+            this.Column2.HeaderText = "Nome";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Senha";
+            this.Column3.HeaderText = "Senha";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // syslogDataSetBindingSource
+            // 
+            this.syslogDataSetBindingSource.DataSource = this.syslogDataSet;
+            this.syslogDataSetBindingSource.Position = 0;
+            // 
+            // syslogDataSet
+            // 
+            this.syslogDataSet.DataSetName = "C";
+            this.syslogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // PesquisarLbl
             // 
@@ -449,36 +482,6 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup_1);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Ativo";
-            this.Column1.HeaderText = "Ativo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id usuario";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Nome";
-            this.Column2.HeaderText = "Nome";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Senha";
-            this.Column3.HeaderText = "Senha";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
             // FrmCadIniUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,9 +498,9 @@
             this.CadUsuIniPnl.PerformLayout();
             this.usuarioPesquisaPnl.ResumeLayout(false);
             this.usuarioPesquisaPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuario)).EndInit();
             this.usuarioPnl.ResumeLayout(false);
             this.usuarioPnl.PerformLayout();
             this.ResumeLayout(false);

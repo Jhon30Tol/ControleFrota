@@ -195,11 +195,17 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             string nome = PesquisarTbx.Text;
         
 
-            if (AtivoCkbx.Checked == true)
+            if (AtivoCkbx.Checked == false)
             {
                 DaoUsuario daoUsuario = new DaoUsuario();
-                dataGridViewUsuario.DataSource = daoUsuario.BuscarPorNomeAtivo(nome);
+                dataGridViewUsuario.DataSource = daoUsuario.BuscarPorNomeInativo(nome);
                 
+            }
+            else if (AtivoCkbx.Checked == true)
+            {
+                DaoUsuario daoUsuario = new DaoUsuario();
+                dataGridViewUsuario.DataSource = daoUsuario.BuscarPorNomeUsuarioAtivo(nome);
+
             }
             else
             {
@@ -245,9 +251,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             {
 
                 dataGridViewUsuario.DataSource = daoUsuario.BuscarTodosUsuarios(u);
+               // AtivoCkbx.Checked = false;
                 AtivoCkbx.Enabled = false;
                 PesquisarTbx.Text = "";
-                PesquisarTbx.Enabled = false;
+                PesquisarTbx.Enabled = true;
+                
  
             }
             else

@@ -30,8 +30,8 @@
         {
             MaterialSkin.Controls.MaterialFlatButton RetornoViagemBtn;
             MaterialSkin.Controls.MaterialFlatButton SaidaViagemBtn;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaseViagem));
             MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaseViagem));
             this.BaseVendaMenuFecharPnl = new System.Windows.Forms.Panel();
             this.ViagemLbl = new System.Windows.Forms.Label();
             this.BaseViagemPnl = new System.Windows.Forms.FlowLayoutPanel();
@@ -79,16 +79,36 @@
             SaidaViagemBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             SaidaViagemBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             SaidaViagemBtn.ForeColor = System.Drawing.Color.White;
-            SaidaViagemBtn.Location = new System.Drawing.Point(80, 9);
+            SaidaViagemBtn.Location = new System.Drawing.Point(59, 9);
             SaidaViagemBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             SaidaViagemBtn.MouseState = MaterialSkin.MouseState.HOVER;
             SaidaViagemBtn.Name = "SaidaViagemBtn";
             SaidaViagemBtn.Primary = false;
-            SaidaViagemBtn.Size = new System.Drawing.Size(51, 36);
+            SaidaViagemBtn.Size = new System.Drawing.Size(63, 36);
             SaidaViagemBtn.TabIndex = 26;
-            SaidaViagemBtn.Text = "Saída";
+            SaidaViagemBtn.Text = "Saída e";
             SaidaViagemBtn.UseVisualStyleBackColor = false;
             SaidaViagemBtn.Click += new System.EventHandler(this.SaidaViagemBtn_Click);
+            // 
+            // materialFlatButton1
+            // 
+            materialFlatButton1.AutoSize = true;
+            materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            materialFlatButton1.BackColor = System.Drawing.Color.Ivory;
+            materialFlatButton1.Depth = 0;
+            materialFlatButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            materialFlatButton1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            materialFlatButton1.ForeColor = System.Drawing.Color.White;
+            materialFlatButton1.Location = new System.Drawing.Point(59, 35);
+            materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialFlatButton1.Name = "materialFlatButton1";
+            materialFlatButton1.Primary = false;
+            materialFlatButton1.Size = new System.Drawing.Size(105, 36);
+            materialFlatButton1.TabIndex = 29;
+            materialFlatButton1.Text = "Manutenção";
+            materialFlatButton1.UseVisualStyleBackColor = false;
+            materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // BaseVendaMenuFecharPnl
             // 
@@ -197,25 +217,6 @@
             this.BaseIniViagemPnl.Size = new System.Drawing.Size(597, 500);
             this.BaseIniViagemPnl.TabIndex = 28;
             this.BaseIniViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.BaseIniViagemPnl_Paint);
-            // 
-            // materialFlatButton1
-            // 
-            materialFlatButton1.AutoSize = true;
-            materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            materialFlatButton1.BackColor = System.Drawing.Color.Ivory;
-            materialFlatButton1.Depth = 0;
-            materialFlatButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            materialFlatButton1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            materialFlatButton1.ForeColor = System.Drawing.Color.White;
-            materialFlatButton1.Location = new System.Drawing.Point(59, 35);
-            materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialFlatButton1.Name = "materialFlatButton1";
-            materialFlatButton1.Primary = false;
-            materialFlatButton1.Size = new System.Drawing.Size(105, 36);
-            materialFlatButton1.TabIndex = 29;
-            materialFlatButton1.Text = "Manutenção";
-            materialFlatButton1.UseVisualStyleBackColor = false;
             // 
             // FrmBaseViagem
             // 
