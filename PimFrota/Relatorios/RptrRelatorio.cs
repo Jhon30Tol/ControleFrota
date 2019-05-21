@@ -14,5 +14,20 @@ namespace PimFrota.Relatorios
         {
             InitializeComponent();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fecharbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Fecharbtn_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

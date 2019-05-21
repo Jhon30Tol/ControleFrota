@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using PimFrota.Formularios.TelaViagem;
 using PimFrota.Formularios.TelaViagem.Retorno_Viagem;
+using PimFrota.Relatorios;
 
 namespace PimFrota.Formularios.Base
 {
@@ -29,6 +30,7 @@ namespace PimFrota.Formularios.Base
 
         FrmCadIniSaidaViagem iniSaidaViagem;
         FrmCadIniRetornoViagem iniRetornoViagem;
+        RptrRelatorio relatorio;
 
 
         public object FrmBaseViagemPnl { get; private set; }
@@ -90,6 +92,13 @@ namespace PimFrota.Formularios.Base
             iniSaidaViagem.FormBorderStyle = FormBorderStyle.None;
             this.BaseIniViagemPnl.Controls.Add(iniSaidaViagem);
             iniSaidaViagem.Show();
+        }
+
+        private void materialFlatButton2_Click(object sender, EventArgs e)
+        {
+            FechaFormViagem();
+            relatorio = new RptrRelatorio();
+            relatorio.ShowDialog();
         }
     }
 }

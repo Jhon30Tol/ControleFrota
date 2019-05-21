@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             MaterialSkin.Controls.MaterialFlatButton UsuarioBtn;
             MaterialSkin.Controls.MaterialFlatButton MotoristaBtn;
             MaterialSkin.Controls.MaterialFlatButton ClienteBtn;
@@ -39,7 +40,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseCadastro));
             this.BaseCadastroMenuFecharPnl = new System.Windows.Forms.Panel();
             this.CadaastroLbl = new System.Windows.Forms.Label();
-            this.MinimizeBtn = new System.Windows.Forms.Button();
             this.Fecharbtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BaseCadastroMenuPnl = new System.Windows.Forms.Panel();
@@ -52,6 +52,7 @@
             this.MotoristaPctBx = new System.Windows.Forms.PictureBox();
             this.usuarioPctbx = new System.Windows.Forms.PictureBox();
             this.BaseCadastroPnl = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             UsuarioBtn = new MaterialSkin.Controls.MaterialFlatButton();
             MotoristaBtn = new MaterialSkin.Controls.MaterialFlatButton();
             ClienteBtn = new MaterialSkin.Controls.MaterialFlatButton();
@@ -237,7 +238,6 @@
             // 
             this.BaseCadastroMenuFecharPnl.BackColor = System.Drawing.Color.YellowGreen;
             this.BaseCadastroMenuFecharPnl.Controls.Add(this.CadaastroLbl);
-            this.BaseCadastroMenuFecharPnl.Controls.Add(this.MinimizeBtn);
             this.BaseCadastroMenuFecharPnl.Controls.Add(this.Fecharbtn);
             this.BaseCadastroMenuFecharPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.BaseCadastroMenuFecharPnl.Location = new System.Drawing.Point(0, 0);
@@ -257,24 +257,6 @@
             this.CadaastroLbl.TabIndex = 30;
             this.CadaastroLbl.Text = "CADASTRO";
             // 
-            // MinimizeBtn
-            // 
-            this.MinimizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MinimizeBtn.BackColor = System.Drawing.Color.YellowGreen;
-            this.MinimizeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MinimizeBtn.BackgroundImage")));
-            this.MinimizeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MinimizeBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.MinimizeBtn.FlatAppearance.BorderSize = 0;
-            this.MinimizeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.MinimizeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinimizeBtn.Location = new System.Drawing.Point(721, 9);
-            this.MinimizeBtn.Name = "MinimizeBtn";
-            this.MinimizeBtn.Size = new System.Drawing.Size(28, 28);
-            this.MinimizeBtn.TabIndex = 2;
-            this.MinimizeBtn.UseVisualStyleBackColor = false;
-            this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
-            // 
             // Fecharbtn
             // 
             this.Fecharbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -290,6 +272,7 @@
             this.Fecharbtn.Name = "Fecharbtn";
             this.Fecharbtn.Size = new System.Drawing.Size(25, 25);
             this.Fecharbtn.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Fecharbtn, "Fechar");
             this.Fecharbtn.UseVisualStyleBackColor = false;
             this.Fecharbtn.Click += new System.EventHandler(this.Fecharbtn_Click);
             // 
@@ -453,7 +436,6 @@
 
         #endregion
         private System.Windows.Forms.Panel BaseCadastroMenuFecharPnl;
-        private System.Windows.Forms.Button MinimizeBtn;
         private System.Windows.Forms.Button Fecharbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel BaseCadastroMenuPnl;
@@ -467,5 +449,6 @@
         private System.Windows.Forms.PictureBox ServicoPctBx;
         private System.Windows.Forms.PictureBox SeguroPctBx;
         private System.Windows.Forms.Label CadaastroLbl;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

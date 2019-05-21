@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBase));
             this.MinimizeBtn = new System.Windows.Forms.Button();
             this.Fecharbtn = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.versaoLbl = new MaterialSkin.Controls.MaterialLabel();
             this.usuarioLogadoLbl = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.BarraBasePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +58,7 @@
             this.MinimizeBtn.Name = "MinimizeBtn";
             this.MinimizeBtn.Size = new System.Drawing.Size(28, 28);
             this.MinimizeBtn.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.MinimizeBtn, "Minimizar");
             this.MinimizeBtn.UseVisualStyleBackColor = false;
             this.MinimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
@@ -74,6 +77,7 @@
             this.Fecharbtn.Name = "Fecharbtn";
             this.Fecharbtn.Size = new System.Drawing.Size(25, 25);
             this.Fecharbtn.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Fecharbtn, "Fechar");
             this.Fecharbtn.UseVisualStyleBackColor = false;
             this.Fecharbtn.Click += new System.EventHandler(this.Fecharbtn_Click);
             // 
@@ -175,5 +179,6 @@
         private MaterialSkin.Controls.MaterialLabel versaoLbl;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         public MaterialSkin.Controls.MaterialLabel usuarioLogadoLbl;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
