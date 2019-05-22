@@ -182,6 +182,7 @@
     <Compile Include="Formularios\TelaCadastros\CadastroMotorista\FrmCadiniMotorista.Designer.cs">
       <DependentUpon>FrmCadiniMotorista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TelaCadastros\CadastroMotorista\ServerValidateEventArgs.cs" />
     <Compile Include="Formularios\TelaCadastros\CadastroProduto\FrmCadIniProduto.cs">
       <SubType>Form</SubType>
     </Compile>
