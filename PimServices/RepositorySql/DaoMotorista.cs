@@ -23,13 +23,14 @@ namespace PimServices.RepositorySql
                     String insertDados = "INSERT INTO cadastro_motorista" +
                         "(nome_rua_motorista, endereco_numero_motorista, cep_motorista," +
                         "id_cidade, cnh_motorista, nome_motorista, bairro_motorista, " +
-                        "dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista)" +
-                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+                        "dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista," +
+                        "celular,telefone_fixo)" +
+                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?);";
 
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(insertDados, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_rua_motorista", m.nomeRua));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("endereco_numero_motorista", m.numeroRua));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("endereco_numero_motorista", m.numero));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cep_motorista", m.Cep));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id_cidade", m.idCidade));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cnh_motorista", m.cnh));
@@ -38,7 +39,8 @@ namespace PimServices.RepositorySql
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dta_nascimento_motorista", m.dtaNascimento));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cpf_motorista", m.cpf));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dta_vencimento_cnh_motorista", m.dtaVencimentoCnh));
-
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("celular", m.celular));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("telefone_fixo", m.telefoneFixo));
 
                     cmd.Prepare();
 
@@ -46,7 +48,7 @@ namespace PimServices.RepositorySql
 
                     conn.Close();
 
-                    MessageBox.Show("Motorista salvo com sucesso!");
+
                     }
                 catch (Exception ex)
                     {
@@ -64,7 +66,7 @@ namespace PimServices.RepositorySql
                     conn = new MySqlConnection(connectionString);
                     String alterarDados = "UPDATE cadastro_motorista set nome_rua_motorista = @nomeRua, endereco_numero_motorista = @numeroRua, cep_motorista = @Cep," +
                     " id_cidade = @idCidade, cnh_motorista = @cnh, nome_motorista = @nome, bairro_motorista = @bairro, dta_nascimento_motorista = @dtaNascimento," +
-                    "cpf_motorista = @cpf, dta_vencimento_cnh_motorista = @dtaVencimentoCnh";
+                    "cpf_motorista = @cpf, dta_vencimento_cnh_motorista = @dtaVencimentoCnh,@telefone_fixo,@celular";
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alterarDados, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_rua_motorista", m.nomeRua));
@@ -77,6 +79,8 @@ namespace PimServices.RepositorySql
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dta_nascimento_motorista", m.dtaNascimento));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cpf_motorista", m.cpf));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dta_vencimento_cnh_motorista", m.dtaVencimentoCnh));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("celular", m.celular));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("telefone_fixo", m.telefoneFixo));
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
 
@@ -89,7 +93,7 @@ namespace PimServices.RepositorySql
                     return false;
                     }
                 }
-          
+
 
             public void ExcluirMotorista(Motorista m)
                 {
@@ -117,15 +121,12 @@ namespace PimServices.RepositorySql
                     }
                 }
 
-          /* public List<Motorista> buscarMotoristas(Motorista m)
+            public List<Motorista> TodosMotoristas(Motorista m)
                 {
                 List<Motorista> todosMotoristas = new List<Motorista>();
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
-                String selecionaTodos = "SELECT FROM cadastro_motorista" +
-                        "nome_rua_motorista, endereco_numero_motorista, cep_motorista," +
-                        "id_cidade, cnh_motorista, nome_motorista, bairro_motorista, " +
-                        "dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista";
+                String selecionaTodos = "SELECT nome_rua_motorista, endereco_numero_motorista, cep_motorista,id_cidade, cnh_motorista, nome_motorista, bairro_motorista, dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista, celular, telefone_fixo FROM cadastro_motorista";
                 conn.Open();
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
 
@@ -139,30 +140,32 @@ namespace PimServices.RepositorySql
                         {
                         Motorista novo = new Motorista();
 
-                        novo.nome = reader["id_usuario"].ToString();
+                        novo.nome = reader["nome_motorista"].ToString();
                         novo.nomeRua = reader["nome_rua_motorista"].ToString();
-                        novo.numeroRua = reader["endereco_numero_rua"].ToString();
-                        novo.cep = (int)reader["cep_motorista"];
-                        novo.idCidade = (int)reader["id_cidade"];
-                        novo.cnh = reader["id_cidade"].ToString();
+                        novo.numeroRua = reader["endereco_numero_motorista"].ToString();
+                        novo.Cep = reader["cep_motorista"].ToString();
+                        novo.idCidade = Convert.ToInt32(reader["id_cidade"].ToString());
                         novo.cnh = reader["cnh_motorista"].ToString();
                         novo.nome = reader["nome_motorista"].ToString();
                         novo.Bairro = reader["bairro_motorista"].ToString();
-                        novo.dtaNascimento = (DateTime)reader["dta_nascimento_motorista"];
+                        novo.dtaNascimento = Convert.ToDateTime(reader["dta_nascimento_motorista"].ToString());
                         novo.cpf = reader["cpf_motorista"].ToString();
-                        novo.dtaVencimentoCnh = (DateTime)reader["dta_vencimento_cnh_motorista"];
+                        novo.dtaVencimentoCnh = Convert.ToDateTime(reader["dta_vencimento_cnh_motorista"].ToString());
+                        novo.celular = reader["celular"].ToString();
+                        novo.telefoneFixo = reader["telefone_fixo"].ToString();
                         };
                     todosMotoristas.Add(m);
-                        
+
                     conn.Close();
-                    todosMotoristas.Add(m);
+
                     }
                 finally
                     {
                     conn.Close();
                     }
-                }*/
-               
+                return todosMotoristas;
+                }
+
             }
 
         }

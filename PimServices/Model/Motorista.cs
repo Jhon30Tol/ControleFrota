@@ -11,9 +11,9 @@ namespace PimServices.Model
         public String cpf { get; set; }
         public DateTime dtaValidadeCpf { get; set; }
         public DateTime dtaNascimento { get; set; }
-        public int Cep { get; set; }
+        public String Cep { get; set; }
         public string rua { get; set; }
-        public int numero { get; set; }
+        public String numero { get; set; }
         public string complementoRua { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
@@ -22,13 +22,8 @@ namespace PimServices.Model
         public DateTime dtaVencimentoCnh { get; set; }
         public int id_motorista { get; set; }
 
-        public int telefoneFixo { get; set; }
-        public int celular { get; set; }
-
-       
-
-
-
+        public String telefoneFixo { get; set; }
+        public String celular { get; set; }
 
         }
     }
