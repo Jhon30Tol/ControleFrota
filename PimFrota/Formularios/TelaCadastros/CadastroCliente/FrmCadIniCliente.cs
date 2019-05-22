@@ -29,6 +29,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroCliente
             ExcluirClienteBtn.Enabled = false;
             PesquisarBtn.Enabled = false;
             CodClienteTbx.Enabled = false;
+            GravarClienteBtn.Enabled = true;
 
         }
 
