@@ -15,7 +15,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         public FrmCadiniMotorista()
             {
             InitializeComponent();
-            atualizarGrid();
+          //  atualizarGrid();
             }
 
         private void FrmCadiniMotorista_Load(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             {
             motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = false;
-            atualizarGrid();
+           // atualizarGrid();
 
             }
 
@@ -232,8 +232,9 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
             dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
 
-            dataGridViewMotorista.Columns[0].Visible = false;
-            dataGridViewMotorista.Columns[1].HeaderText = "id_motorista";
+          //  dataGridViewMotorista.Columns[0].Visible = false;
+          /*
+            dataGridViewMotorista.Columns[0].HeaderText = "id_motorista";
             dataGridViewMotorista.Columns[2].HeaderText = "Nome";
             dataGridViewMotorista.Columns[3].HeaderText = "CPF";
             dataGridViewMotorista.Columns[4].HeaderText = "Data.Nasc";
@@ -254,6 +255,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             dataGridViewMotorista.Columns[3].Width = 80;
             dataGridViewMotorista.Columns[4].Width = 75;
             dataGridViewMotorista.Columns[5].Width = 80;
+            */
             }
 
 
@@ -293,34 +295,53 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             CadMotoristaIniPnl.Visible = false;
 
             string nome = PesquisarTbx.Text;
-            Motorista m = new Motorista();
-            DaoMotorista dao = new DaoMotorista();
-            dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
-            validaCamposMotorista();
+            string cpf = PesquisarTbx.Text;
+
+            // Motorista m = new Motorista();
+            //   validaCamposMotorista();
             if (NomeCkbx.Checked == true)
                 {
 
-                DaoMotorista daoMotorista = new DaoMotorista();
-                dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
+                dataGridViewMotorista.DataSource = daoMotorista.NomeMotoristas(nome);
 
                 }
 
             else if (CpfCkbx.Checked == true)
                 {
-                DaoMotorista daoMotorista = new DaoMotorista();
-                dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
+                dataGridViewMotorista.DataSource = daoMotorista.CpfMotoristas(cpf);
                 }
-            atualizarGrid();
+            else if (PesquisatTodosCkb.Checked == true)
+            {
+                 atualizarGrid();
 
             }
+           
+
+        }
+       
+
 
         private void dataGridViewMotorista_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
             {
 
             }
 
+        private void NomeCkbx_CheckedChanged_1(object sender, EventArgs e)
+        {
 
         }
+
+        private void PesquisatTodosCkb_CheckedChanged(object sender, EventArgs e)
+        {
+            DaoMotorista daoMotorista = new DaoMotorista();
+            dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
+        }
+
+        private void motoristaPesquisarPnl_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
     }
 
 

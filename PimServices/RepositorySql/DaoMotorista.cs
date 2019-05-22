@@ -121,18 +121,19 @@ namespace PimServices.RepositorySql
 
             public List<Motorista> TodosMotoristas()
                 {
-                List<Motorista> todosMotoristas = new List<Motorista>();
+                List<Motorista> list = new List<Motorista>();
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
-                String selecionaTodos = "SELECT * FROM cadastro_motorista";
+                String selecionaTodos = "SELECT id_motorista, nome_motorista, nome_rua_motorista, endereco_numero_motorista, cep_motorista, cnh_motorista, bairro_motorista, dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista, celular, telefone_fixo FROM cadastro_motorista;";
                 conn.Open();
+
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
 
                 try
                     {
 
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    List<Motorista> list = new List<Motorista>();
+                    // List<Motorista> list = new List<Motorista>();
 
                     while (reader.Read())
                         {
@@ -161,40 +162,140 @@ namespace PimServices.RepositorySql
                     {
                     conn.Close();
                     }
-                return todosMotoristas;
+                return list;
                 }
 
-            }
-        /*public bool RetornaNome()
-            {
-            try
+            
+
+        public List<Motorista> NomeMotoristas(string nome)
+        {
+            List<Motorista> list = new List<Motorista>();
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+            String selecionaTodos = "SELECT id_motorista, nome_motorista, nome_rua_motorista, endereco_numero_motorista, cep_motorista, cnh_motorista, bairro_motorista, dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista, celular, telefone_fixo FROM cadastro_motorista where nome_motorista like '%" + @nome + "%'";
+            conn.Open();
+
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", nome));
+
+
+                try
                 {
 
+                MySqlDataReader reader = cmd.ExecuteReader();
+                // List<Motorista> list = new List<Motorista>();
+
+                while (reader.Read())
+                {
+                    Motorista novo = new Motorista();
+
+
+                    novo.id_motorista = Convert.ToInt32(reader["id_motorista"].ToString());
+                    novo.nome = reader["nome_motorista"].ToString();
+                    novo.rua = reader["nome_rua_motorista"].ToString();
+                    novo.numero = reader["endereco_numero_motorista"].ToString();
+                    novo.Cep = reader["cep_motorista"].ToString();
+                    novo.cnh = reader["cnh_motorista"].ToString();
+                    novo.Bairro = reader["bairro_motorista"].ToString();
+                    novo.dtaNascimento = Convert.ToDateTime(reader["dta_nascimento_motorista"].ToString());
+                    novo.cpf = reader["cpf_motorista"].ToString();
+                    novo.dtaVencimentoCnh = Convert.ToDateTime(reader["dta_vencimento_cnh_motorista"].ToString());
+                    novo.celular = reader["celular"].ToString();
+                    novo.telefoneFixo = reader["telefone_fixo"].ToString();
+
+                    list.Add(novo);
+                }
+                conn.Close();
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return list;
+        }
+            public List<Motorista> CpfMotoristas(string cpf)
+            {
+                List<Motorista> list = new List<Motorista>();
                 MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                 conn = new MySqlConnection(connectionString);
-                String buscaNome = "SELECT * FROM cadastro_motorista WHERE nome_motorista = '@nome_motorista'";
+                String selecionaTodos = "SELECT id_motorista, nome_motorista, nome_rua_motorista, endereco_numero_motorista, cep_motorista, cnh_motorista, bairro_motorista, dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista, celular, telefone_fixo FROM cadastro_motorista where nome_motorista like '%" + @cpf + "%'";
                 conn.Open();
-                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(buscaNome, conn);
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_motorista", conn));
-                
-               
-                cmd.Prepare();
-                cmd.ExecuteNonQuery();
 
-                conn.Close();
-                return true;
-                }
-            catch (Exception ex)
+                MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
+                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", cpf));
+
+
+                try
                 {
-                MessageBox.Show("Erro ao editar o Motorista, verifique a conexão com o banco de dados: " + ex.ToString());
-                return false;
-                }
-            }
 
-        }*/
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    // List<Motorista> list = new List<Motorista>();
+
+                    while (reader.Read())
+                    {
+                        Motorista novo = new Motorista();
+
+
+                        novo.id_motorista = Convert.ToInt32(reader["id_motorista"].ToString());
+                        novo.nome = reader["nome_motorista"].ToString();
+                        novo.rua = reader["nome_rua_motorista"].ToString();
+                        novo.numero = reader["endereco_numero_motorista"].ToString();
+                        novo.Cep = reader["cep_motorista"].ToString();
+                        novo.cnh = reader["cnh_motorista"].ToString();
+                        novo.Bairro = reader["bairro_motorista"].ToString();
+                        novo.dtaNascimento = Convert.ToDateTime(reader["dta_nascimento_motorista"].ToString());
+                        novo.cpf = reader["cpf_motorista"].ToString();
+                        novo.dtaVencimentoCnh = Convert.ToDateTime(reader["dta_vencimento_cnh_motorista"].ToString());
+                        novo.celular = reader["celular"].ToString();
+                        novo.telefoneFixo = reader["telefone_fixo"].ToString();
+
+                        list.Add(novo);
+                    }
+                    conn.Close();
+
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                return list;
+            }
 
 
         }
+
+
+    /*public bool RetornaNome()
+        {
+        try
+            {
+
+            MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
+            conn = new MySqlConnection(connectionString);
+            String buscaNome = "SELECT * FROM cadastro_motorista WHERE nome_motorista = '@nome_motorista'";
+            conn.Open();
+            MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(buscaNome, conn);
+            cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_motorista", conn));
+
+
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return true;
+            }
+        catch (Exception ex)
+            {
+            MessageBox.Show("Erro ao editar o Motorista, verifique a conexão com o banco de dados: " + ex.ToString());
+            return false;
+            }
+        }
+
+    }*/
+
+
+}
     }
 
 
