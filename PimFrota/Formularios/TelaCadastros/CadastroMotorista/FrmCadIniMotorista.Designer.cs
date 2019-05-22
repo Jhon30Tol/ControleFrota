@@ -351,7 +351,7 @@
             this.PesquisarBtn.Size = new System.Drawing.Size(43, 25);
             this.PesquisarBtn.TabIndex = 47;
             this.PesquisarBtn.UseVisualStyleBackColor = true;
-            this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click);
+            //this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click);
             // 
             // PesquisarTbx
             // 

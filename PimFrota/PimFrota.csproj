@@ -109,6 +109,12 @@
     <Compile Include="Formularios\Base\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Base\FrmBaseEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBaseEstoque.Designer.cs">
+      <DependentUpon>FrmBaseEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Base\FrmBaseFundoCad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,18 @@
     <Compile Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadIniVeiculo.Designer.cs">
       <DependentUpon>FrmCadIniVeiculo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TelaEstoque\FrmEstoqueProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaEstoque\FrmEstoqueProduto.Designer.cs">
+      <DependentUpon>FrmEstoqueProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TelaEstoque\FrmEstoqueServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaEstoque\FrmEstoqueServico.Designer.cs">
+      <DependentUpon>FrmEstoqueServico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\TelaHome\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Base\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Base\FrmBaseEstoque.resx">
+      <DependentUpon>FrmBaseEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Base\FrmBaseFundoCad.resx">
       <DependentUpon>FrmBaseFundoCad.cs</DependentUpon>
@@ -300,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaCadastros\CadastroVeiculo\FrmCadIniVeiculo.resx">
       <DependentUpon>FrmCadIniVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaEstoque\FrmEstoqueProduto.resx">
+      <DependentUpon>FrmEstoqueProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaEstoque\FrmEstoqueServico.resx">
+      <DependentUpon>FrmEstoqueServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaHome\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
@@ -545,5 +572,6 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\WsCorreios\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

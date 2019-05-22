@@ -88,3 +88,6 @@ F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFr
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.csproj.CopyComplete
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.exe
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.pdb
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBaseEstoque.resources
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaEstoque.FrmEstoqueProduto.resources
+F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaEstoque.FrmEstoqueServico.resources
