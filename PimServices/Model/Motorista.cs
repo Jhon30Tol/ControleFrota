@@ -3,7 +3,7 @@ using PimServices.RepositorySql.PimServices.RepositorySql;
 namespace PimServices.Model
     {
 
-    public class Motorista : Endereco
+    public class Motorista
         {
 
         public string nome { get; set; }
@@ -14,7 +14,6 @@ namespace PimServices.Model
         public String Cep { get; set; }
         public string rua { get; set; }
         public String numero { get; set; }
-        public string complementoRua { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Uf { get; set; }

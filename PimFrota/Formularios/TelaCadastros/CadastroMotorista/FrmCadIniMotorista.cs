@@ -15,12 +15,13 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         public FrmCadiniMotorista()
             {
             InitializeComponent();
+            atualizarGrid();
             }
 
         private void FrmCadiniMotorista_Load(object sender, EventArgs e)
             {
             motoristaPesquisarPnl.Visible = false;
-            CadMotoristaIniPnl.Visible = true ;
+            CadMotoristaIniPnl.Visible = true;
             }
 
         private void IncluirMotoristaBtn_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             {
             motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = false;
-
+            atualizarGrid();
 
             }
 
@@ -118,10 +119,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                 var resultado = ws.consultaCEP(CepMotoristaTbx.Text);
                 m.Cep = CepMotoristaTbx.Text;
                 RuaMotoristaTbx.Text = resultado.end;
-                m.nomeRua = resultado.end;
+                m.rua = resultado.end;
                 m.numero = NumeroRuaMotoristaTbx.Text;
                 BairroMotoristaTbx.Text = resultado.bairro;
-                m.bairro = resultado.bairro;
+                m.Bairro = resultado.bairro;
                 cidadeMotoristaTbx.Text = resultado.cidade;
                 m.Cidade = resultado.cidade;
                 ufMotoristaTbx.Text = resultado.uf;
@@ -189,10 +190,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                 var resultado = ws.consultaCEP(CepMotoristaTbx.Text);
                 m.Cep = CepMotoristaTbx.Text;
                 RuaMotoristaTbx.Text = resultado.end;
-                m.nomeRua = resultado.end;
+                m.rua = resultado.end;
                 m.numero = NumeroRuaMotoristaTbx.Text;
                 BairroMotoristaTbx.Text = resultado.bairro;
-                m.bairro = resultado.bairro;
+                m.Bairro = resultado.bairro;
                 cidadeMotoristaTbx.Text = resultado.cidade;
                 m.Cidade = resultado.cidade;
                 ufMotoristaTbx.Text = resultado.uf;
@@ -219,39 +220,42 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void dataGridViewMotorista_CellContentClick(object sender, DataGridViewCellEventArgs e)
             {
-            DaoMotorista daoMotorista = new DaoMotorista();
-            dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas(m);
-            NomeMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[0].Value.ToString();
-            CpfMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[1].Value.ToString();
-            DtNascimentoMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[2].Value.ToString();
-            cnhMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[3].Value.ToString();
-            DtVencCnhTbx.Text = dataGridViewMotorista.CurrentRow.Cells[4].Value.ToString();
-            telefoneMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[5].Value.ToString();
-            celularMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[6].Value.ToString();
-            CepMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[7].Value.ToString();
-            RuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[8].Value.ToString();
-            NumeroRuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[9].Value.ToString();
-            cidadeMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[10].Value.ToString();
-            ufMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[11].Value.ToString();
-
-            NomeMotoristaTbx.Enabled = false;
-            CpfMotoristaTbx.Enabled = false;
-            DtNascimentoMotoristaTbx.Enabled = false;
-            cnhMotoristaTbx.Enabled = false;
-            DtVencCnhTbx.Enabled = false;
-            telefoneMotoristaTbx.Enabled = false;
-            celularMotoristaTbx.Enabled = false;
-            CepMotoristaTbx.Enabled = false;
-            RuaMotoristaTbx.Enabled = false;
-            NumeroRuaMotoristaTbx.Enabled = false;
-            cidadeMotoristaTbx.Enabled = false;
-            ufMotoristaTbx.Enabled = false;
 
             motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = false;
 
 
             }
+        public void atualizarGrid()
+            {
+            DaoMotorista daoMotorista = new DaoMotorista();
+
+            dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
+
+            dataGridViewMotorista.Columns[0].Visible = false;
+            dataGridViewMotorista.Columns[1].HeaderText = "id_motorista";
+            dataGridViewMotorista.Columns[2].HeaderText = "Nome";
+            dataGridViewMotorista.Columns[3].HeaderText = "CPF";
+            dataGridViewMotorista.Columns[4].HeaderText = "Data.Nasc";
+            dataGridViewMotorista.Columns[5].HeaderText = "CNH";
+            dataGridViewMotorista.Columns[6].HeaderText = "Venc.CNH";
+            dataGridViewMotorista.Columns[7].HeaderText = "Telefone";
+            dataGridViewMotorista.Columns[8].HeaderText = "Celular";
+            dataGridViewMotorista.Columns[9].HeaderText = "CEP";
+            dataGridViewMotorista.Columns[10].HeaderText = "Rua";
+            dataGridViewMotorista.Columns[11].HeaderText = "Numero";
+            dataGridViewMotorista.Columns[12].HeaderText = "Bairro";
+            dataGridViewMotorista.Columns[13].HeaderText = "Cidade";
+            dataGridViewMotorista.Columns[14].HeaderText = "UF";
+
+
+            dataGridViewMotorista.Columns[0].Width = 40;
+            dataGridViewMotorista.Columns[1].Width = 150;
+            dataGridViewMotorista.Columns[3].Width = 80;
+            dataGridViewMotorista.Columns[4].Width = 75;
+            dataGridViewMotorista.Columns[5].Width = 80;
+            }
+
 
 
         private void PesquisarLbl_Click(object sender, EventArgs e)
@@ -289,21 +293,24 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             CadMotoristaIniPnl.Visible = false;
 
             string nome = PesquisarTbx.Text;
-
+            Motorista m = new Motorista();
+            DaoMotorista dao = new DaoMotorista();
+            dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
             validaCamposMotorista();
             if (NomeCkbx.Checked == true)
                 {
 
                 DaoMotorista daoMotorista = new DaoMotorista();
-                dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas(m);
+                dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
 
                 }
 
             else if (CpfCkbx.Checked == true)
                 {
                 DaoMotorista daoMotorista = new DaoMotorista();
-                dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas(m);
+                dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
                 }
+            atualizarGrid();
 
             }
 
