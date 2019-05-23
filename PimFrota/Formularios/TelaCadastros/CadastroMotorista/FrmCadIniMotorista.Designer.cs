@@ -73,24 +73,24 @@
             this.PesquisatTodosCkb = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.dataGridViewMotorista = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone_fixo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sislogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sislogDataSet = new PimFrota.sislogDataSet();
             this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
+            this.telefone_fixo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadMotoristaIniPnl.SuspendLayout();
             this.motoristaPnl.SuspendLayout();
@@ -639,97 +639,6 @@
             this.dataGridViewMotorista.TabIndex = 51;
             this.dataGridViewMotorista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMotorista_CellContentClick_1);
             // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "nome";
-            this.Column2.HeaderText = "Nome";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "id_motorista";
-            this.Column1.HeaderText = "Id Motorista";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "rua";
-            this.Column3.HeaderText = "Rua";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "numero";
-            this.Column4.HeaderText = "Numero";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "cep";
-            this.Column5.HeaderText = "Cep";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "cnh";
-            this.Column6.HeaderText = "Cnh";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "dtaVencimentoCnh";
-            this.Column10.HeaderText = "Vencimento Cnh";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "bairro";
-            this.Column7.HeaderText = "Bairro";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "dtaNascimento";
-            this.Column8.HeaderText = "Data Nascimento";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "cpf_motorista";
-            this.Column9.HeaderText = "Cpf";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // celular
-            // 
-            this.celular.DataPropertyName = "celular";
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            this.celular.Visible = false;
-            // 
-            // telefone_fixo
-            // 
-            this.telefone_fixo.DataPropertyName = "telefoneFixo";
-            this.telefone_fixo.HeaderText = "Telefone Fixo";
-            this.telefone_fixo.Name = "telefone_fixo";
-            this.telefone_fixo.ReadOnly = true;
-            this.telefone_fixo.Visible = false;
-            // 
             // sislogDataSetBindingSource
             // 
             this.sislogDataSetBindingSource.DataSource = this.sislogDataSet;
@@ -792,6 +701,97 @@
             this.PesquisarTbx.Name = "PesquisarTbx";
             this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
             this.PesquisarTbx.TabIndex = 45;
+            // 
+            // telefone_fixo
+            // 
+            this.telefone_fixo.DataPropertyName = "telefoneFixo";
+            this.telefone_fixo.HeaderText = "Telefone Fixo";
+            this.telefone_fixo.Name = "telefone_fixo";
+            this.telefone_fixo.ReadOnly = true;
+            this.telefone_fixo.Visible = false;
+            // 
+            // celular
+            // 
+            this.celular.DataPropertyName = "celular";
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            this.celular.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "cpf_motorista";
+            this.Column9.HeaderText = "Cpf";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "dtaNascimento";
+            this.Column8.HeaderText = "Data Nascimento";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "bairro";
+            this.Column7.HeaderText = "Bairro";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "dtaVencimentoCnh";
+            this.Column10.HeaderText = "Vencimento Cnh";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "cnh";
+            this.Column6.HeaderText = "Cnh";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "cep";
+            this.Column5.HeaderText = "Cep";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "numero";
+            this.Column4.HeaderText = "Numero";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "rua";
+            this.Column3.HeaderText = "Rua";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id_motorista";
+            this.Column1.HeaderText = "Id Motorista";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "nome";
+            this.Column2.HeaderText = "Nome";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // FrmCadiniMotorista
             // 
@@ -867,6 +867,9 @@
         private System.Windows.Forms.MaskedTextBox cnhMotoristaTbx;
         private System.Windows.Forms.BindingSource sislogDataSetBindingSource;
         private sislogDataSet sislogDataSet;
+        public MaterialSkin.Controls.MaterialCheckBox CpfCkbx;
+        public MaterialSkin.Controls.MaterialCheckBox NomeCkbx;
+        public MaterialSkin.Controls.MaterialCheckBox PesquisatTodosCkb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -879,8 +882,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone_fixo;
-        public MaterialSkin.Controls.MaterialCheckBox CpfCkbx;
-        public MaterialSkin.Controls.MaterialCheckBox NomeCkbx;
-        public MaterialSkin.Controls.MaterialCheckBox PesquisatTodosCkb;
-    }
+        }
 }

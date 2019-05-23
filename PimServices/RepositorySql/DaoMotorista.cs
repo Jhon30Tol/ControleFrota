@@ -109,8 +109,7 @@ namespace PimServices.RepositorySql
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-
-                    MessageBox.Show("Motorista Excluido com sucesso!");
+                  
                     }
                 catch (Exception ex)
                     {

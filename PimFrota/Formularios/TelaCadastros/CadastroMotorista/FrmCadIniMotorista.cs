@@ -264,16 +264,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             limparDados();
             }
 
-
-
-        private void dataGridViewMotorista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-            {
-
-            motoristaPesquisarPnl.Visible = true;
-            CadMotoristaIniPnl.Visible = false;
-
-
-            }
         public void atualizarGrid()
             {
             DaoMotorista daoMotorista = new DaoMotorista();
@@ -348,7 +338,21 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void dataGridViewMotorista_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
             {
+            NomeMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[0].Value.ToString();
+            RuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[1].Value.ToString();
+            NumeroRuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[2].Value.ToString();
+            CepMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[3].Value.ToString();
+            cnhMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[4].Value.ToString();
+            DtVencCnhTbx.Text = dataGridViewMotorista.CurrentRow.Cells[5].Value.ToString();
+            BairroMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[6].Value.ToString();
+            DtNascimentoMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[7].Value.ToString();
+            CpfMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[8].Value.ToString();
+            celularMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[9].Value.ToString();
+            telefoneMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[10].Value.ToString();
+            atualizarGrid();
 
+            motoristaPesquisarPnl.Visible = true;
+            CadMotoristaIniPnl.Visible = false;
             }
 
         private void NomeCkbx_CheckedChanged_1(object sender, EventArgs e)
