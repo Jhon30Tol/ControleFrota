@@ -48,5 +48,11 @@ namespace PimFrota.Formularios.TelaHome
             FrmBaseEstoque baseEstoque = new FrmBaseEstoque();
             baseEstoque.ShowDialog();
         }
+
+        private void AvisoBtn_Click(object sender, EventArgs e)
+        {
+            FrmBaseMensagem baseMensagem = new FrmBaseMensagem();
+            baseMensagem.ShowDialog();
+        }
     }
 }

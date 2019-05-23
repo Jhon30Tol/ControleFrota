@@ -40,11 +40,6 @@
             this.FinanceiroLbl = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
-            // usuarioLogadoLbl
-            // 
-            this.usuarioLogadoLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.usuarioLogadoLbl.Size = new System.Drawing.Size(61, 19);
-            // 
             // EstoqueLbl
             // 
             this.EstoqueLbl.AutoSize = true;
@@ -152,6 +147,7 @@
             this.AvisoBtn.Size = new System.Drawing.Size(77, 102);
             this.AvisoBtn.TabIndex = 16;
             this.AvisoBtn.UseVisualStyleBackColor = false;
+            this.AvisoBtn.Click += new System.EventHandler(this.AvisoBtn_Click);
             // 
             // FinanceiroBtn
             // 
