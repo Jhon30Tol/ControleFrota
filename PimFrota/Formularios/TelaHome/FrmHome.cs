@@ -54,5 +54,10 @@ namespace PimFrota.Formularios.TelaHome
             FrmBaseMensagem baseMensagem = new FrmBaseMensagem();
             baseMensagem.ShowDialog();
         }
+
+        private void usuarioLogadoLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

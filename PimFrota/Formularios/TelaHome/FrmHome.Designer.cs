@@ -40,6 +40,12 @@
             this.FinanceiroLbl = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
+            // usuarioLogadoLbl
+            // 
+            this.usuarioLogadoLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.usuarioLogadoLbl.Size = new System.Drawing.Size(61, 19);
+            this.usuarioLogadoLbl.Click += new System.EventHandler(this.usuarioLogadoLbl_Click);
+            // 
             // EstoqueLbl
             // 
             this.EstoqueLbl.AutoSize = true;

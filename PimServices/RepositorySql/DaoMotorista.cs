@@ -63,22 +63,25 @@ namespace PimServices.RepositorySql
 
                     MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                     conn = new MySqlConnection(connectionString);
-                    String alterarDados = "UPDATE cadastro_motorista set nome_rua_motorista = @rua, endereco_numero_motorista = @numero, cep_motorista = @Cep," +
+                    String alterarDados = "UPDATE cadastro_motorista set nome_rua_motorista = @rua, endereco_numero_motorista = @numero, cep_motorista = @cep," +
                     "cnh_motorista = @cnh, nome_motorista = @nome, bairro_motorista = @Bairro, dta_nascimento_motorista = @dtaNascimento," +
-                    "cpf_motorista = @cpf, dta_vencimento_cnh_motorista = @dtaVencimentoCnh,telefone_fixo=@telefone_fixo,celular=@celular";
+                    "cpf_motorista = @cpf, dta_vencimento_cnh_motorista = @dtaVencimentoCnh,telefone_fixo=@telefone,celular=@celular where id_motorista = @id";
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alterarDados, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_rua_motorista", m.rua));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("endereco_numero_motorista", m.numero));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cep_motorista", m.Cep));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cnh_motorista", m.cnh));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_motorista", m.nome));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("bairro_motorista", m.Bairro));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dta_nascimento_motorista", m.dtaNascimento));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cpf_motorista", m.cpf));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dta_vencimento_cnh_motorista", m.dtaVencimentoCnh));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("numero", m.numero));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cep", m.Cep));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cnh", m.cnh));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", m.nome));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("Bairro", m.Bairro));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dtaNascimento", m.dtaNascimento));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("cpf", m.cpf));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dtaVencimentoCnh", m.dtaVencimentoCnh));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("celular", m.celular));
-                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("telefone_fixo", m.telefoneFixo));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("telefone", m.telefoneFixo));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("rua", m.rua));
+                    cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", m.id_motorista));
+                    ;
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
 
@@ -105,6 +108,7 @@ namespace PimServices.RepositorySql
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(excluirDados, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id_motorista", m.id_motorista));
 
+                    
 
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
