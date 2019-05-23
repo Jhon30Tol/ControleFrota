@@ -31,28 +31,26 @@
             this.components = new System.ComponentModel.Container();
             MaterialSkin.Controls.MaterialFlatButton RetornoViagemBtn;
             MaterialSkin.Controls.MaterialFlatButton SaidaViagemBtn;
-            MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaseViagem));
             MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBaseViagem));
             this.BaseVendaMenuFecharPnl = new System.Windows.Forms.Panel();
             this.ViagemLbl = new System.Windows.Forms.Label();
             this.BaseViagemPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.Fecharbtn = new System.Windows.Forms.Button();
             this.BaseViagemMenuPnl = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MotoristaPctBx = new System.Windows.Forms.PictureBox();
             this.usuarioPctbx = new System.Windows.Forms.PictureBox();
             this.BaseIniViagemPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             RetornoViagemBtn = new MaterialSkin.Controls.MaterialFlatButton();
             SaidaViagemBtn = new MaterialSkin.Controls.MaterialFlatButton();
-            materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.BaseVendaMenuFecharPnl.SuspendLayout();
             this.BaseViagemMenuPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MotoristaPctBx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioPctbx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // RetornoViagemBtn
@@ -84,36 +82,36 @@
             SaidaViagemBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             SaidaViagemBtn.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             SaidaViagemBtn.ForeColor = System.Drawing.Color.White;
-            SaidaViagemBtn.Location = new System.Drawing.Point(59, 9);
+            SaidaViagemBtn.Location = new System.Drawing.Point(59, 28);
             SaidaViagemBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             SaidaViagemBtn.MouseState = MaterialSkin.MouseState.HOVER;
             SaidaViagemBtn.Name = "SaidaViagemBtn";
             SaidaViagemBtn.Primary = false;
-            SaidaViagemBtn.Size = new System.Drawing.Size(63, 36);
+            SaidaViagemBtn.Size = new System.Drawing.Size(51, 36);
             SaidaViagemBtn.TabIndex = 26;
-            SaidaViagemBtn.Text = "Saída e";
+            SaidaViagemBtn.Text = "Saída";
             SaidaViagemBtn.UseVisualStyleBackColor = false;
             SaidaViagemBtn.Click += new System.EventHandler(this.SaidaViagemBtn_Click);
             // 
-            // materialFlatButton1
+            // materialFlatButton2
             // 
-            materialFlatButton1.AutoSize = true;
-            materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            materialFlatButton1.BackColor = System.Drawing.Color.Ivory;
-            materialFlatButton1.Depth = 0;
-            materialFlatButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            materialFlatButton1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            materialFlatButton1.ForeColor = System.Drawing.Color.White;
-            materialFlatButton1.Location = new System.Drawing.Point(59, 35);
-            materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialFlatButton1.Name = "materialFlatButton1";
-            materialFlatButton1.Primary = false;
-            materialFlatButton1.Size = new System.Drawing.Size(105, 36);
-            materialFlatButton1.TabIndex = 29;
-            materialFlatButton1.Text = "Manutenção";
-            materialFlatButton1.UseVisualStyleBackColor = false;
-            materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            materialFlatButton2.AutoSize = true;
+            materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            materialFlatButton2.BackColor = System.Drawing.Color.Ivory;
+            materialFlatButton2.Depth = 0;
+            materialFlatButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            materialFlatButton2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            materialFlatButton2.ForeColor = System.Drawing.Color.White;
+            materialFlatButton2.Location = new System.Drawing.Point(59, 131);
+            materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialFlatButton2.Name = "materialFlatButton2";
+            materialFlatButton2.Primary = false;
+            materialFlatButton2.Size = new System.Drawing.Size(85, 36);
+            materialFlatButton2.TabIndex = 30;
+            materialFlatButton2.Text = "Relatório";
+            materialFlatButton2.UseVisualStyleBackColor = false;
+            materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // BaseVendaMenuFecharPnl
             // 
@@ -169,7 +167,6 @@
             this.BaseViagemMenuPnl.BackColor = System.Drawing.Color.YellowGreen;
             this.BaseViagemMenuPnl.Controls.Add(this.pictureBox1);
             this.BaseViagemMenuPnl.Controls.Add(materialFlatButton2);
-            this.BaseViagemMenuPnl.Controls.Add(materialFlatButton1);
             this.BaseViagemMenuPnl.Controls.Add(RetornoViagemBtn);
             this.BaseViagemMenuPnl.Controls.Add(this.MotoristaPctBx);
             this.BaseViagemMenuPnl.Controls.Add(SaidaViagemBtn);
@@ -178,6 +175,16 @@
             this.BaseViagemMenuPnl.Name = "BaseViagemMenuPnl";
             this.BaseViagemMenuPnl.Size = new System.Drawing.Size(200, 557);
             this.BaseViagemMenuPnl.TabIndex = 26;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 49);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
             // MotoristaPctBx
             // 
@@ -207,36 +214,6 @@
             this.BaseIniViagemPnl.TabIndex = 28;
             this.BaseIniViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.BaseIniViagemPnl_Paint);
             // 
-            // materialFlatButton2
-            // 
-            materialFlatButton2.AutoSize = true;
-            materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            materialFlatButton2.BackColor = System.Drawing.Color.Ivory;
-            materialFlatButton2.Depth = 0;
-            materialFlatButton2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            materialFlatButton2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            materialFlatButton2.ForeColor = System.Drawing.Color.White;
-            materialFlatButton2.Location = new System.Drawing.Point(59, 131);
-            materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialFlatButton2.Name = "materialFlatButton2";
-            materialFlatButton2.Primary = false;
-            materialFlatButton2.Size = new System.Drawing.Size(85, 36);
-            materialFlatButton2.TabIndex = 30;
-            materialFlatButton2.Text = "Relatório";
-            materialFlatButton2.UseVisualStyleBackColor = false;
-            materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 125);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 49);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmBaseViagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,9 +226,9 @@
             this.BaseVendaMenuFecharPnl.PerformLayout();
             this.BaseViagemMenuPnl.ResumeLayout(false);
             this.BaseViagemMenuPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MotoristaPctBx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioPctbx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -94,3 +94,4 @@ F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFro
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.csproj.CopyComplete
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.exe
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.pdb
+F:\Users\wagner.neves\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBaseMensagem.resources

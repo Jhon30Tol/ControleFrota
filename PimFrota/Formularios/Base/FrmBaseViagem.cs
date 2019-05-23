@@ -49,6 +49,7 @@ namespace PimFrota.Formularios.Base
             iniSaidaViagem.FormBorderStyle = FormBorderStyle.None;
             this.BaseIniViagemPnl.Controls.Add(iniSaidaViagem);
             iniSaidaViagem.Show();
+
         }
 
         private void RetornoViagemBtn_Click(object sender, EventArgs e)

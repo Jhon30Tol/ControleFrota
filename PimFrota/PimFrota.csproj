@@ -121,6 +121,12 @@
     <Compile Include="Formularios\Base\FrmBaseFundoCad.Designer.cs">
       <DependentUpon>FrmBaseFundoCad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Base\FrmBaseMensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBaseMensagem.Designer.cs">
+      <DependentUpon>FrmBaseMensagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Base\FrmBaseViagem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Base\FrmBaseFundoCad.resx">
       <DependentUpon>FrmBaseFundoCad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Base\FrmBaseMensagem.resx">
+      <DependentUpon>FrmBaseMensagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Base\FrmBaseViagem.resx">
       <DependentUpon>FrmBaseViagem.cs</DependentUpon>

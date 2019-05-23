@@ -45,6 +45,7 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
             CidadeSaidaViagRTbx.Enabled = false;
             CidadeDestSaidaViagRTbx.Enabled = false;
             DtSaidaViagRTbx.Enabled = false;
+            kmSaidaTbx.Enabled = false;
 
             GravarRetornoBtn.Enabled = false;
             EditarRetornoBtn.Visible = false;
@@ -93,8 +94,10 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
             CidadeDestSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[4].Value.ToString();
             DtSaidaViagRTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[5].Value.ToString();
             kmSaidaValidar = Convert.ToInt32(dataGridViewRetViagem.CurrentRow.Cells[6].Value.ToString());
+            kmSaidaTbx.Text = dataGridViewRetViagem.CurrentRow.Cells[6].Value.ToString();
 
-            
+
+
 
             CodSaidaViagRTbx.Enabled = false;
             MotoristaSaidaViagRTbx.Enabled = false;

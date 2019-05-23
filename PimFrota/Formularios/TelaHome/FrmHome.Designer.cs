@@ -21,7 +21,6 @@
         }
 
         #region Código gerado pelo Windows Form Designer
-
         /// <summary>
         /// Método necessário para suporte ao Designer - não modifique 
         /// o conteúdo deste método com o editor de código.

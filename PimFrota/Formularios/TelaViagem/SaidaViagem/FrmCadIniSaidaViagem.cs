@@ -55,6 +55,8 @@ namespace PimFrota.Formularios.TelaViagem
         {
 
             CadViagemIniPnl.Visible = false;
+            CadViagemIniPnl.Visible = false;
+
             IniciaForm();
 
 
@@ -77,6 +79,8 @@ namespace PimFrota.Formularios.TelaViagem
         public FrmCadIniSaidaViagem()
         {
             InitializeComponent();
+            CadViagemIniPnl.Visible = false;
+
             IniciaForm();
 
             iniarIncluir();
@@ -88,6 +92,9 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void IncluirViagemBtn_Click(object sender, EventArgs e)
         {
+
+            CadViagemIniPnl.Visible = true;
+
 
             MotoristaSaidaViagTbx.Text = "<-- Clique para incluir o motorista";
             VeiculoSaidaViagTbx.Text = "<-- Clique para incluir o veiculo";
@@ -128,7 +135,6 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void FrmCadIniSaidaViagem_Load(object sender, EventArgs e)
         {
-
         }
 
         private void GravarViagemBtn_Click(object sender, EventArgs e)

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadIniRetornoViagem));
             this.CadRetornoIniPnl = new System.Windows.Forms.Panel();
+            this.retornoViagemPnl = new System.Windows.Forms.Panel();
             this.retViagemPesquisaPnl = new System.Windows.Forms.Panel();
             this.pesqVeiculoCbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.pesqMotoristaCbx = new MaterialSkin.Controls.MaterialCheckBox();
@@ -55,8 +56,8 @@
             this.pesquTodosCkbx = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
-            this.informativoIniciarPesquisaLbl = new System.Windows.Forms.Label();
-            this.retornoViagemPnl = new System.Windows.Forms.Panel();
+            this.kmSaidaTbx = new System.Windows.Forms.TextBox();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.kmRetornoTbx = new System.Windows.Forms.TextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.DtaRetornoDtm = new System.Windows.Forms.DateTimePicker();
@@ -74,6 +75,7 @@
             this.VeiculoSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
             this.MotoristaSaidaViagRLbl = new MaterialSkin.Controls.MaterialLabel();
             this.CodViagemRLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.informativoIniciarPesquisaLbl = new System.Windows.Forms.Label();
             this.BotaoRetornoPnl = new System.Windows.Forms.Panel();
             this.CancelarRetornoBtn = new System.Windows.Forms.Button();
             this.EditarRetornoBtn = new System.Windows.Forms.Button();
@@ -82,23 +84,50 @@
             this.PesquisarRetornoBtn = new System.Windows.Forms.Button();
             this.ExcluirRetornoBtn = new System.Windows.Forms.Button();
             this.CadRetornoIniPnl.SuspendLayout();
+            this.retornoViagemPnl.SuspendLayout();
             this.retViagemPesquisaPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).BeginInit();
-            this.retornoViagemPnl.SuspendLayout();
             this.BotaoRetornoPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // CadRetornoIniPnl
             // 
             this.CadRetornoIniPnl.Controls.Add(this.retViagemPesquisaPnl);
-            this.CadRetornoIniPnl.Controls.Add(this.informativoIniciarPesquisaLbl);
             this.CadRetornoIniPnl.Controls.Add(this.retornoViagemPnl);
+            this.CadRetornoIniPnl.Controls.Add(this.informativoIniciarPesquisaLbl);
             this.CadRetornoIniPnl.Location = new System.Drawing.Point(1, 55);
             this.CadRetornoIniPnl.Name = "CadRetornoIniPnl";
             this.CadRetornoIniPnl.Size = new System.Drawing.Size(594, 442);
             this.CadRetornoIniPnl.TabIndex = 29;
+            // 
+            // retornoViagemPnl
+            // 
+            this.retornoViagemPnl.Controls.Add(this.kmSaidaTbx);
+            this.retornoViagemPnl.Controls.Add(this.materialLabel2);
+            this.retornoViagemPnl.Controls.Add(this.kmRetornoTbx);
+            this.retornoViagemPnl.Controls.Add(this.materialLabel1);
+            this.retornoViagemPnl.Controls.Add(this.DtaRetornoDtm);
+            this.retornoViagemPnl.Controls.Add(this.DtRetonoViagLbl);
+            this.retornoViagemPnl.Controls.Add(this.LinhaLbl);
+            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CidadeDestSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CodSaidaViagRTbx);
+            this.retornoViagemPnl.Controls.Add(this.CidadeDestRetornoViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRLbl);
+            this.retornoViagemPnl.Controls.Add(this.CodViagemRLbl);
+            this.retornoViagemPnl.Location = new System.Drawing.Point(11, 16);
+            this.retornoViagemPnl.Name = "retornoViagemPnl";
+            this.retornoViagemPnl.Size = new System.Drawing.Size(577, 370);
+            this.retornoViagemPnl.TabIndex = 0;
+            this.retornoViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.retornoViagemPnl_Paint);
             // 
             // retViagemPesquisaPnl
             // 
@@ -110,7 +139,7 @@
             this.retViagemPesquisaPnl.Controls.Add(this.pesquTodosCkbx);
             this.retViagemPesquisaPnl.Controls.Add(this.PesquisarBtn);
             this.retViagemPesquisaPnl.Controls.Add(this.PesquisarTbx);
-            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(3, 10);
+            this.retViagemPesquisaPnl.Location = new System.Drawing.Point(3, 4);
             this.retViagemPesquisaPnl.Name = "retViagemPesquisaPnl";
             this.retViagemPesquisaPnl.Size = new System.Drawing.Size(591, 429);
             this.retViagemPesquisaPnl.TabIndex = 2;
@@ -346,44 +375,29 @@
             this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
             this.PesquisarTbx.TabIndex = 11;
             // 
-            // informativoIniciarPesquisaLbl
+            // kmSaidaTbx
             // 
-            this.informativoIniciarPesquisaLbl.AutoSize = true;
-            this.informativoIniciarPesquisaLbl.Font = new System.Drawing.Font("Miriam Libre", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informativoIniciarPesquisaLbl.Location = new System.Drawing.Point(56, 209);
-            this.informativoIniciarPesquisaLbl.Name = "informativoIniciarPesquisaLbl";
-            this.informativoIniciarPesquisaLbl.Size = new System.Drawing.Size(484, 25);
-            this.informativoIniciarPesquisaLbl.TabIndex = 32;
-            this.informativoIniciarPesquisaLbl.Text = "Clique em pesquisar para selecionar uma viagem";
+            this.kmSaidaTbx.Location = new System.Drawing.Point(147, 188);
+            this.kmSaidaTbx.Name = "kmSaidaTbx";
+            this.kmSaidaTbx.Size = new System.Drawing.Size(250, 20);
+            this.kmSaidaTbx.TabIndex = 47;
             // 
-            // retornoViagemPnl
+            // materialLabel2
             // 
-            this.retornoViagemPnl.Controls.Add(this.kmRetornoTbx);
-            this.retornoViagemPnl.Controls.Add(this.materialLabel1);
-            this.retornoViagemPnl.Controls.Add(this.DtaRetornoDtm);
-            this.retornoViagemPnl.Controls.Add(this.DtRetonoViagLbl);
-            this.retornoViagemPnl.Controls.Add(this.LinhaLbl);
-            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.DtSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.CidadeDestSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.CodSaidaViagRTbx);
-            this.retornoViagemPnl.Controls.Add(this.CidadeDestRetornoViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.CidadeSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.VeiculoSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.MotoristaSaidaViagRLbl);
-            this.retornoViagemPnl.Controls.Add(this.CodViagemRLbl);
-            this.retornoViagemPnl.Location = new System.Drawing.Point(3, 24);
-            this.retornoViagemPnl.Name = "retornoViagemPnl";
-            this.retornoViagemPnl.Size = new System.Drawing.Size(577, 325);
-            this.retornoViagemPnl.TabIndex = 0;
-            this.retornoViagemPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.retornoViagemPnl_Paint);
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(42, 188);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(72, 19);
+            this.materialLabel2.TabIndex = 46;
+            this.materialLabel2.Text = "Km Saida";
             // 
             // kmRetornoTbx
             // 
-            this.kmRetornoTbx.Location = new System.Drawing.Point(139, 291);
+            this.kmRetornoTbx.Location = new System.Drawing.Point(139, 300);
             this.kmRetornoTbx.Name = "kmRetornoTbx";
             this.kmRetornoTbx.Size = new System.Drawing.Size(250, 20);
             this.kmRetornoTbx.TabIndex = 45;
@@ -394,7 +408,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(34, 291);
+            this.materialLabel1.Location = new System.Drawing.Point(34, 300);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(88, 19);
@@ -405,7 +419,7 @@
             // 
             this.DtaRetornoDtm.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtaRetornoDtm.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtaRetornoDtm.Location = new System.Drawing.Point(139, 239);
+            this.DtaRetornoDtm.Location = new System.Drawing.Point(139, 248);
             this.DtaRetornoDtm.Name = "DtaRetornoDtm";
             this.DtaRetornoDtm.Size = new System.Drawing.Size(250, 26);
             this.DtaRetornoDtm.TabIndex = 43;
@@ -416,7 +430,7 @@
             this.DtRetonoViagLbl.Depth = 0;
             this.DtRetonoViagLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.DtRetonoViagLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DtRetonoViagLbl.Location = new System.Drawing.Point(37, 246);
+            this.DtRetonoViagLbl.Location = new System.Drawing.Point(37, 255);
             this.DtRetonoViagLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.DtRetonoViagLbl.Name = "DtRetonoViagLbl";
             this.DtRetonoViagLbl.Size = new System.Drawing.Size(85, 19);
@@ -426,7 +440,7 @@
             // LinhaLbl
             // 
             this.LinhaLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.LinhaLbl.Location = new System.Drawing.Point(11, 202);
+            this.LinhaLbl.Location = new System.Drawing.Point(12, 226);
             this.LinhaLbl.Name = "LinhaLbl";
             this.LinhaLbl.Size = new System.Drawing.Size(405, 10);
             this.LinhaLbl.TabIndex = 39;
@@ -550,6 +564,16 @@
             this.CodViagemRLbl.Size = new System.Drawing.Size(112, 19);
             this.CodViagemRLbl.TabIndex = 27;
             this.CodViagemRLbl.Text = "Código Viagem";
+            // 
+            // informativoIniciarPesquisaLbl
+            // 
+            this.informativoIniciarPesquisaLbl.AutoSize = true;
+            this.informativoIniciarPesquisaLbl.Font = new System.Drawing.Font("Miriam Libre", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informativoIniciarPesquisaLbl.Location = new System.Drawing.Point(47, 411);
+            this.informativoIniciarPesquisaLbl.Name = "informativoIniciarPesquisaLbl";
+            this.informativoIniciarPesquisaLbl.Size = new System.Drawing.Size(484, 25);
+            this.informativoIniciarPesquisaLbl.TabIndex = 32;
+            this.informativoIniciarPesquisaLbl.Text = "Clique em pesquisar para selecionar uma viagem";
             // 
             // BotaoRetornoPnl
             // 
@@ -687,13 +711,13 @@
             this.Load += new System.EventHandler(this.FrmCadIniRetornoViagem_Load);
             this.CadRetornoIniPnl.ResumeLayout(false);
             this.CadRetornoIniPnl.PerformLayout();
+            this.retornoViagemPnl.ResumeLayout(false);
+            this.retornoViagemPnl.PerformLayout();
             this.retViagemPesquisaPnl.ResumeLayout(false);
             this.retViagemPesquisaPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRetViagem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.syslogDataSet)).EndInit();
-            this.retornoViagemPnl.ResumeLayout(false);
-            this.retornoViagemPnl.PerformLayout();
             this.BotaoRetornoPnl.ResumeLayout(false);
             this.BotaoRetornoPnl.PerformLayout();
             this.ResumeLayout(false);
@@ -753,5 +777,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         public System.Windows.Forms.Label informativoIniciarPesquisaLbl;
+        public System.Windows.Forms.TextBox kmSaidaTbx;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }
