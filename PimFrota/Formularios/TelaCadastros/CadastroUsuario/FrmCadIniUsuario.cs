@@ -308,7 +308,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
             FrmCadIniUsuario frminiusuario = new FrmCadIniUsuario();
 
-            frmMsgExcluir.msgSairSistemaLbl.Text = "Deseja mesmo Excluir este Usuario ?";
+            //frmMsgExcluir.msgSairSistemaLbl.Text = "Deseja mesmo Excluir ?";
             frmMsgExcluir.ShowDialog();
 
             if (frmMsgExcluir.btnSairClick == true)

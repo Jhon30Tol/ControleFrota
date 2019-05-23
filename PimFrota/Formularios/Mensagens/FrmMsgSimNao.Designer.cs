@@ -82,11 +82,11 @@
             // 
             this.msgSairSistemaLbl.AutoSize = true;
             this.msgSairSistemaLbl.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msgSairSistemaLbl.Location = new System.Drawing.Point(36, 54);
+            this.msgSairSistemaLbl.Location = new System.Drawing.Point(58, 50);
             this.msgSairSistemaLbl.Name = "msgSairSistemaLbl";
-            this.msgSairSistemaLbl.Size = new System.Drawing.Size(122, 16);
+            this.msgSairSistemaLbl.Size = new System.Drawing.Size(181, 16);
             this.msgSairSistemaLbl.TabIndex = 32;
-            this.msgSairSistemaLbl.Text = "msg sim ou nao";
+            this.msgSairSistemaLbl.Text = "Deseja mesmo Excluir ?";
             this.msgSairSistemaLbl.Resize += new System.EventHandler(this.msgSairSistemaLbl_Resize);
             // 
             // NaoSairSistemaBtn
