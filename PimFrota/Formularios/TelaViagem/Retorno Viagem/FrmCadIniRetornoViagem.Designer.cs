@@ -600,6 +600,7 @@
             this.EditarRetornoBtn.Size = new System.Drawing.Size(26, 44);
             this.EditarRetornoBtn.TabIndex = 20;
             this.EditarRetornoBtn.UseVisualStyleBackColor = false;
+            this.EditarRetornoBtn.Click += new System.EventHandler(this.EditarRetornoBtn_Click);
             // 
             // IncluirRetornoBtn
             // 

@@ -247,5 +247,10 @@ namespace PimFrota.Formularios.TelaViagem.Retorno_Viagem
                 PesquisarTbx.Text = "";
             }
         }
-    }
+
+        private void EditarRetornoBtn_Click(object sender, EventArgs e)
+            {
+
+            }
+        }
 }

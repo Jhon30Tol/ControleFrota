@@ -90,7 +90,7 @@ namespace PimFrota.Formularios.TelaViagem
         {
 
             MotoristaSaidaViagTbx.Text = "<-- Clique para incluir o motorista";
-            VeiculoSaidaViagTbx.Text = "<-- Clique para incluir o veeiculo";
+            VeiculoSaidaViagTbx.Text = "<-- Clique para incluir o veiculo";
             CidadeSaidaViagTbx.Text = "<-- Clique para incluir a cidade de saida";
             CidadeDestSaidaViagTbx.Text = "<-- Clique para incluir a cidade de destino";
 

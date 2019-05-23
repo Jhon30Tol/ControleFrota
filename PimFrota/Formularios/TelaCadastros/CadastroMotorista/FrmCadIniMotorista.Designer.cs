@@ -252,7 +252,7 @@
             this.CadMotoristaIniPnl.Controls.Add(this.motoristaPnl);
             this.CadMotoristaIniPnl.Location = new System.Drawing.Point(5, 65);
             this.CadMotoristaIniPnl.Name = "CadMotoristaIniPnl";
-            this.CadMotoristaIniPnl.Size = new System.Drawing.Size(594, 251);
+            this.CadMotoristaIniPnl.Size = new System.Drawing.Size(594, 350);
             this.CadMotoristaIniPnl.TabIndex = 128;
             // 
             // motoristaPnl
@@ -285,9 +285,9 @@
             this.motoristaPnl.Controls.Add(this.CpfMotoristaLbl);
             this.motoristaPnl.Controls.Add(this.RuaMotoristaLbl);
             this.motoristaPnl.Controls.Add(this.NomeClientelbl);
-            this.motoristaPnl.Location = new System.Drawing.Point(7, 12);
+            this.motoristaPnl.Location = new System.Drawing.Point(3, 4);
             this.motoristaPnl.Name = "motoristaPnl";
-            this.motoristaPnl.Size = new System.Drawing.Size(469, 358);
+            this.motoristaPnl.Size = new System.Drawing.Size(465, 320);
             this.motoristaPnl.TabIndex = 0;
             // 
             // cnhMotoristaTbx
@@ -336,7 +336,7 @@
             // 
             this.Buscar.AutoSize = true;
             this.Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.Buscar.Location = new System.Drawing.Point(188, 204);
+            this.Buscar.Location = new System.Drawing.Point(188, 207);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(58, 17);
             this.Buscar.TabIndex = 133;
@@ -353,10 +353,10 @@
             this.buscarCepTbx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buscarCepTbx.FlatAppearance.BorderSize = 0;
             this.buscarCepTbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buscarCepTbx.Location = new System.Drawing.Point(167, 204);
+            this.buscarCepTbx.Location = new System.Drawing.Point(167, 205);
             this.buscarCepTbx.Name = "buscarCepTbx";
             this.buscarCepTbx.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buscarCepTbx.Size = new System.Drawing.Size(15, 62);
+            this.buscarCepTbx.Size = new System.Drawing.Size(15, 19);
             this.buscarCepTbx.TabIndex = 140;
             this.buscarCepTbx.UseVisualStyleBackColor = false;
             this.buscarCepTbx.Click += new System.EventHandler(this.pesquisarCepTbx_Click);
@@ -571,7 +571,7 @@
             this.motoristaPesquisarPnl.Controls.Add(this.PesquisarTbx);
             this.motoristaPesquisarPnl.Location = new System.Drawing.Point(8, 55);
             this.motoristaPesquisarPnl.Name = "motoristaPesquisarPnl";
-            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(641, 382);
+            this.motoristaPesquisarPnl.Size = new System.Drawing.Size(576, 363);
             this.motoristaPesquisarPnl.TabIndex = 123;
             this.motoristaPesquisarPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.motoristaPesquisarPnl_Paint_1);
             // 
@@ -603,10 +603,10 @@
             this.PesquisarBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PesquisarBtn.FlatAppearance.BorderSize = 0;
             this.PesquisarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PesquisarBtn.Location = new System.Drawing.Point(169, 2);
+            this.PesquisarBtn.Location = new System.Drawing.Point(169, 3);
             this.PesquisarBtn.Name = "PesquisarBtn";
             this.PesquisarBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PesquisarBtn.Size = new System.Drawing.Size(48, 32);
+            this.PesquisarBtn.Size = new System.Drawing.Size(29, 24);
             this.PesquisarBtn.TabIndex = 52;
             this.PesquisarBtn.UseVisualStyleBackColor = false;
             this.PesquisarBtn.Click += new System.EventHandler(this.PesquisarBtn_Click_2);
@@ -779,7 +779,7 @@
             this.PesquisarLbl.Depth = 0;
             this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
             this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(237, 10);
+            this.PesquisarLbl.Location = new System.Drawing.Point(204, 7);
             this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
             this.PesquisarLbl.Name = "PesquisarLbl";
             this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);

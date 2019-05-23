@@ -22,7 +22,7 @@ namespace PimServices.RepositorySql
                     conn = new MySqlConnection(connectionString);
                     String insertDados = "INSERT INTO cadastro_motorista" +
                         "(nome_rua_motorista, endereco_numero_motorista, cep_motorista," +
-                        "id_cidade, cnh_motorista, nome_motorista, bairro_motorista, " +
+                        "cnh_motorista, nome_motorista, bairro_motorista, " +
                         "dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista," +
                         "celular,telefone_fixo)" +
                         "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?);";
@@ -63,9 +63,9 @@ namespace PimServices.RepositorySql
 
                     MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                     conn = new MySqlConnection(connectionString);
-                    String alterarDados = "UPDATE cadastro_motorista set nome_rua_motorista = @nomeRua, endereco_numero_motorista = @numeroRua, cep_motorista = @Cep," +
-                    " id_cidade = @idCidade, cnh_motorista = @cnh, nome_motorista = @nome, bairro_motorista = @bairro, dta_nascimento_motorista = @dtaNascimento," +
-                    "cpf_motorista = @cpf, dta_vencimento_cnh_motorista = @dtaVencimentoCnh,@telefone_fixo,@celular";
+                    String alterarDados = "UPDATE cadastro_motorista set nome_rua_motorista = @rua, endereco_numero_motorista = @numero, cep_motorista = @Cep," +
+                    "cnh_motorista = @cnh, nome_motorista = @nome, bairro_motorista = @Bairro, dta_nascimento_motorista = @dtaNascimento," +
+                    "cpf_motorista = @cpf, dta_vencimento_cnh_motorista = @dtaVencimentoCnh,telefone_fixo=@telefone_fixo,celular=@celular";
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(alterarDados, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome_rua_motorista", m.rua));
