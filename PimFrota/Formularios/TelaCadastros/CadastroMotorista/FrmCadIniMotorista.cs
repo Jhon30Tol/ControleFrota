@@ -100,6 +100,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void GravarMotoristaBtn_Click(object sender, EventArgs e)
             {
 
+            FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
+
 
             if (modoEdit == false)
                 {
@@ -130,8 +132,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     m.Uf = resultado.uf;
 
                     daoMotorista.SalvarMotorista(m);
-                    MessageBox.Show("Motorista cadastrado com sucesso!");
-                    limparDados();
+                    msgCadastroSucesso.ShowDialog(); limparDados();
                     }
                 else 
                     {
@@ -165,7 +166,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     m.Uf = ufMotoristaTbx.Text;
 
                     daoMotorista.EditarMotorista(m);
-                    MessageBox.Show("Motorista Editado com sucesso!");
+                    msgCadastroSucesso.MensagemSucessoLbl.Text = "Motorista editado com sucesso !";
+                    msgCadastroSucesso.ShowDialog();
                     limparDados();
                     motoristaPesquisarPnl.Enabled = true;
                     }
@@ -202,6 +204,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void EditarMotoristaBtn_Click(object sender, EventArgs e)
             {
             modoEdit = true;
+            
             NomeMotoristaTbx.Enabled = true;
             RuaMotoristaTbx.Enabled = true;
             NumeroRuaMotoristaTbx.Enabled = true;
@@ -218,6 +221,9 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             PesquisarBtn.Enabled = true;
             EditarMotoristaBtn.Enabled = true;
             ExcluirMotoristaBtn.Enabled = false;
+
+            cidadeMotoristaTbx.Enabled = true;
+            ufMotoristaTbx.Enabled = true;
             // GravarMotoristaBtn.Enabled = true;
             permissao();
 
@@ -362,6 +368,20 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             CpfMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[9].Value.ToString();
             celularMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[10].Value.ToString();
             telefoneMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[11].Value.ToString();
+
+            NomeMotoristaTbx.Enabled = false;
+            RuaMotoristaTbx.Enabled = false;
+            NumeroRuaMotoristaTbx.Enabled = false;
+            CepMotoristaTbx.Enabled = false;
+            cnhMotoristaTbx.Enabled = false;
+            DtVencCnhTbx.Enabled = false;
+            BairroMotoristaTbx.Enabled = false;
+            DtNascimentoMotoristaTbx.Enabled = false;
+            CpfMotoristaTbx.Enabled = false;
+            celularMotoristaTbx.Enabled = false;
+            telefoneMotoristaTbx.Enabled = false;
+            cidadeMotoristaTbx.Enabled = false;
+            ufMotoristaTbx.Enabled = false;
 
 
             motoristaPesquisarPnl.Visible = false;
