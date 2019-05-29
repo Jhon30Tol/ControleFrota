@@ -93,6 +93,7 @@
             this.BaseEstoquePnl.Name = "BaseEstoquePnl";
             this.BaseEstoquePnl.Size = new System.Drawing.Size(597, 500);
             this.BaseEstoquePnl.TabIndex = 31;
+            this.BaseEstoquePnl.Paint += new System.Windows.Forms.PaintEventHandler(this.BaseEstoquePnl_Paint);
             // 
             // BaseCadastroMenuPnl
             // 

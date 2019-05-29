@@ -353,6 +353,9 @@
     <EmbeddedResource Include="Formularios\TelaEstoque\FrmEstoqueServico.resx">
       <DependentUpon>FrmEstoqueServico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TelaFinanceiro\FrmFinanceiro.resx">
+      <DependentUpon>FrmFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TelaHome\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>

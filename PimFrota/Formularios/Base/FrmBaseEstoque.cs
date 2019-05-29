@@ -55,5 +55,10 @@ namespace PimFrota.Formularios.Base
             estoqueServico.Show();
 
         }
+
+        private void BaseEstoquePnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
