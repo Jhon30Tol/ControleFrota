@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PimFrota", "PimFrota\PimFro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PimServices", "PimServices\PimServices.csproj", "{98DBAA37-A792-4DAD-B431-6B3F23FDCE87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaCep", "BuscaCep\BuscaCep.csproj", "{6DC06396-89B2-4616-B513-81BABA39F97A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{98DBAA37-A792-4DAD-B431-6B3F23FDCE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98DBAA37-A792-4DAD-B431-6B3F23FDCE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98DBAA37-A792-4DAD-B431-6B3F23FDCE87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6DC06396-89B2-4616-B513-81BABA39F97A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DC06396-89B2-4616-B513-81BABA39F97A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DC06396-89B2-4616-B513-81BABA39F97A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DC06396-89B2-4616-B513-81BABA39F97A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
