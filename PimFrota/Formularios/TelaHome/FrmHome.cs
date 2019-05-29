@@ -30,7 +30,8 @@ namespace PimFrota.Formularios.TelaHome
 
         private void FinanceiroBtn_Click(object sender, EventArgs e)
         {
-
+            FrmBaseFinanceiro financeiro = new FrmBaseFinanceiro();
+            financeiro.ShowDialog();
         }
 
         private void materialLabel2_Click(object sender, EventArgs e)

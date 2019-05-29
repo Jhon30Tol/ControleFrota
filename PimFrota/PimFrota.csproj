@@ -115,6 +115,12 @@
     <Compile Include="Formularios\Base\FrmBaseEstoque.Designer.cs">
       <DependentUpon>FrmBaseEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Base\FrmBaseFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Base\FrmBaseFinanceiro.Designer.cs">
+      <DependentUpon>FrmBaseFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Base\FrmBaseFundoCad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,12 @@
     <Compile Include="Formularios\TelaEstoque\FrmEstoqueServico.Designer.cs">
       <DependentUpon>FrmEstoqueServico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TelaFinanceiro\FrmFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TelaFinanceiro\FrmFinanceiro.Designer.cs">
+      <DependentUpon>FrmFinanceiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\TelaHome\FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Base\FrmBaseEstoque.resx">
       <DependentUpon>FrmBaseEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Base\FrmBaseFinanceiro.resx">
+      <DependentUpon>FrmBaseFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Base\FrmBaseFundoCad.resx">
       <DependentUpon>FrmBaseFundoCad.cs</DependentUpon>
