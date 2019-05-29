@@ -5,16 +5,13 @@ using System.Collections.Generic;
 
 namespace PimServices.RepositorySql
     {
-
     using System.Windows.Forms;
-
     namespace PimServices.RepositorySql
         {
         public class DaoMotorista : ConexaoBancoMySQL
             {
             public void SalvarMotorista(Motorista m)
                 {
-
                 try
                     {
 
@@ -40,27 +37,19 @@ namespace PimServices.RepositorySql
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("dta_vencimento_cnh_motorista", m.dtaVencimentoCnh));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("celular", m.celular));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("telefone_fixo", m.telefoneFixo));
-
                     cmd.Prepare();
-
                     cmd.ExecuteNonQuery();
-
                     conn.Close();
-
-
                     }
                 catch (Exception ex)
                     {
                     MessageBox.Show("Erro ao cadastrar Motorista, verifique a conexão com o banco de dados: " + ex.ToString());
-
                     }
                 }
-
             public bool EditarMotorista(Motorista m)
                 {
                 try
                     {
-
                     MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
                     conn = new MySqlConnection(connectionString);
                     String alterarDados = "UPDATE cadastro_motorista set nome_rua_motorista = @rua, endereco_numero_motorista = @numero, cep_motorista = @cep," +
@@ -81,10 +70,9 @@ namespace PimServices.RepositorySql
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("telefone", m.telefoneFixo));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("rua", m.rua));
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id", m.id_motorista));
-                    ;
+
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
-
                     conn.Close();
                     return true;
                     }
@@ -94,11 +82,8 @@ namespace PimServices.RepositorySql
                     return false;
                     }
                 }
-
-
             public void ExcluirMotorista(Motorista m)
                 {
-
                 try
                     {
                     MySqlConnection conn = new ConexaoBancoMySQL().getConnection();
@@ -108,20 +93,15 @@ namespace PimServices.RepositorySql
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(excluirDados, conn);
                     cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("id_motorista", m.id_motorista));
 
-                    
-
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                  
                     }
                 catch (Exception ex)
                     {
                     MessageBox.Show("Erro ao excluir, verifique a conexão com o banco de dados: " + ex.ToString());
-
                     }
                 }
-
             public List<Motorista> TodosMotoristas()
                 {
                 List<Motorista> list = new List<Motorista>();
@@ -129,20 +109,14 @@ namespace PimServices.RepositorySql
                 conn = new MySqlConnection(connectionString);
                 String selecionaTodos = "SELECT id_motorista, nome_motorista, nome_rua_motorista, endereco_numero_motorista, cep_motorista, cnh_motorista, bairro_motorista, dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista, celular, telefone_fixo FROM cadastro_motorista;";
                 conn.Open();
-
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
-
                 try
                     {
-
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    // List<Motorista> list = new List<Motorista>();
 
                     while (reader.Read())
                         {
                         Motorista novo = new Motorista();
-
-
                         novo.id_motorista = Convert.ToInt32(reader["id_motorista"].ToString());
                         novo.nome = reader["nome_motorista"].ToString();
                         novo.rua = reader["nome_rua_motorista"].ToString();
@@ -155,11 +129,9 @@ namespace PimServices.RepositorySql
                         novo.dtaVencimentoCnh = Convert.ToDateTime(reader["dta_vencimento_cnh_motorista"].ToString());
                         novo.celular = reader["celular"].ToString();
                         novo.telefoneFixo = reader["telefone_fixo"].ToString();
-
                         list.Add(novo);
                         }
                     conn.Close();
-
                     }
                 finally
                     {
@@ -167,9 +139,6 @@ namespace PimServices.RepositorySql
                     }
                 return list;
                 }
-
-
-
             public List<Motorista> NomeMotoristas(string nome)
                 {
                 List<Motorista> list = new List<Motorista>();
@@ -177,22 +146,16 @@ namespace PimServices.RepositorySql
                 conn = new MySqlConnection(connectionString);
                 String selecionaTodos = "SELECT id_motorista, nome_motorista, nome_rua_motorista, endereco_numero_motorista, cep_motorista, cnh_motorista, bairro_motorista, dta_nascimento_motorista, cpf_motorista, dta_vencimento_cnh_motorista, celular, telefone_fixo FROM cadastro_motorista where nome_motorista like '%" + @nome + "%'";
                 conn.Open();
-
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", nome));
 
-
                 try
                     {
-
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    // List<Motorista> list = new List<Motorista>();
 
                     while (reader.Read())
                         {
                         Motorista novo = new Motorista();
-
-
                         novo.id_motorista = Convert.ToInt32(reader["id_motorista"].ToString());
                         novo.nome = reader["nome_motorista"].ToString();
                         novo.rua = reader["nome_rua_motorista"].ToString();
@@ -205,11 +168,9 @@ namespace PimServices.RepositorySql
                         novo.dtaVencimentoCnh = Convert.ToDateTime(reader["dta_vencimento_cnh_motorista"].ToString());
                         novo.celular = reader["celular"].ToString();
                         novo.telefoneFixo = reader["telefone_fixo"].ToString();
-
                         list.Add(novo);
                         }
                     conn.Close();
-
                     }
                 finally
                     {
@@ -228,18 +189,13 @@ namespace PimServices.RepositorySql
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(selecionaTodos, conn);
                 cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("nome", cpf));
 
-
                 try
                     {
-
                     MySqlDataReader reader = cmd.ExecuteReader();
-                    // List<Motorista> list = new List<Motorista>();
 
                     while (reader.Read())
                         {
                         Motorista novo = new Motorista();
-
-
                         novo.id_motorista = Convert.ToInt32(reader["id_motorista"].ToString());
                         novo.nome = reader["nome_motorista"].ToString();
                         novo.rua = reader["nome_rua_motorista"].ToString();
@@ -252,11 +208,9 @@ namespace PimServices.RepositorySql
                         novo.dtaVencimentoCnh = Convert.ToDateTime(reader["dta_vencimento_cnh_motorista"].ToString());
                         novo.celular = reader["celular"].ToString();
                         novo.telefoneFixo = reader["telefone_fixo"].ToString();
-
                         list.Add(novo);
                         }
                     conn.Close();
-
                     }
                 finally
                     {

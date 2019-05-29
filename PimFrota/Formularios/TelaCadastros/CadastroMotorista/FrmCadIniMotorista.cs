@@ -13,11 +13,9 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         Endereco endereco = new Endereco();
         bool modoEdit = false;
 
-
         public FrmCadiniMotorista()
             {
             InitializeComponent();
-
             }
 
         private void FrmCadiniMotorista_Load(object sender, EventArgs e)
@@ -28,33 +26,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
         private void IncluirMotoristaBtn_Click(object sender, EventArgs e)
             {
-
             motoristaPesquisarPnl.Visible = false;
             CadMotoristaIniPnl.Visible = true;
-
             }
-
-
 
         private void PesquisarMotoristaBtn_Click(object sender, EventArgs e)
             {
             motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = false;
- 
-
-            }
-
-
-
-        private void CepMotoristaTbx_TextChanged(object sender, EventArgs e)
-            {
-
-            }
-
-
-        private void validarTxb_Click(object sender, EventArgs e)
-            {
-
             }
 
         private void pesquisarCepTbx_Click(object sender, EventArgs e)
@@ -73,9 +52,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     {
                     MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
             }
-
 
         public void limparDados()
             {
@@ -93,26 +70,20 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             BairroMotoristaTbx.Clear();
             ufMotoristaTbx.Clear();
             CepMotoristaTbx.Clear();
-
             }
-
 
         private void GravarMotoristaBtn_Click(object sender, EventArgs e)
             {
-
             FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
-
 
             if (modoEdit == false)
                 {
-
                 if (validaCampos() == true)
                     {
                     m.nome = NomeMotoristaTbx.Text;
                     m.cpf = CpfMotoristaTbx.Text;
                     m.dtaNascimento = Convert.ToDateTime(DtNascimentoMotoristaTbx.Text.ToString());
                     m.cnh = cnhMotoristaTbx.Text;
-
 
                     m.dtaVencimentoCnh = Convert.ToDateTime(DtVencCnhTbx.Text.ToString());
                     m.telefoneFixo = Convert.ToString(telefoneMotoristaTbx.Text);
@@ -134,15 +105,13 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     daoMotorista.SalvarMotorista(m);
                     msgCadastroSucesso.ShowDialog(); limparDados();
                     }
-                else 
+                else
                     {
                     MessageBox.Show("Preencha todos os campos corretamente!");
-                   
                     }
                 }
             else if (modoEdit == true)
                 {
-
                 if (validaCampos() == true)
                     {
 
@@ -151,14 +120,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     m.dtaNascimento = Convert.ToDateTime(DtNascimentoMotoristaTbx.Text.ToString());
                     m.cnh = cnhMotoristaTbx.Text;
 
-
                     m.dtaVencimentoCnh = Convert.ToDateTime(DtVencCnhTbx.Text.ToString());
                     m.telefoneFixo = Convert.ToString(telefoneMotoristaTbx.Text);
                     m.celular = Convert.ToString(celularMotoristaTbx.Text);
 
-
                     m.Cep = CepMotoristaTbx.Text;
-
                     m.rua = RuaMotoristaTbx.Text;
                     m.numero = NumeroRuaMotoristaTbx.Text;
                     m.Bairro = BairroMotoristaTbx.Text;
@@ -176,16 +142,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                     MessageBox.Show("Preencha todos os campos corretamente!");
                     }
                 }
-
-            }
-        public void semprePreenchido()
-            {
-
             }
 
         private bool validaCampos()
             {
-
             if (NomeMotoristaTbx.Text == "" && CpfMotoristaTbx.Text == "" && DtNascimentoMotoristaTbx.Text == "" &&
                cnhMotoristaTbx.Text == "" && DtVencCnhTbx.Text == "" && telefoneMotoristaTbx.Text == "" &&
                celularMotoristaTbx.Text == "" && CepMotoristaTbx.Text == "" && RuaMotoristaTbx.Text == "" && NomeMotoristaTbx.Text == "" && BairroMotoristaTbx.Text == "" &&
@@ -200,11 +160,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                 }
             }
 
-
         private void EditarMotoristaBtn_Click(object sender, EventArgs e)
             {
             modoEdit = true;
-            
+
             NomeMotoristaTbx.Enabled = true;
             RuaMotoristaTbx.Enabled = true;
             NumeroRuaMotoristaTbx.Enabled = true;
@@ -224,19 +183,14 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
             cidadeMotoristaTbx.Enabled = true;
             ufMotoristaTbx.Enabled = true;
-            // GravarMotoristaBtn.Enabled = true;
             permissao();
-
-
-
-
             }
 
         private void CancelarMotoristaBtn_Click(object sender, EventArgs e)
             {
             this.Close();
-
             }
+
         public void permissao()
             {
             if (EditarMotoristaBtn != null)
@@ -249,22 +203,18 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
                 GravarMotoristaBtn.Enabled = false;
                 }
             }
+
         public void PosGravar()
             {
 
             CadMotoristaIniPnl.Visible = false;
             IniciaForm();
             atualizarGrid();
-
-
-
-
             }
         public void IniciaForm()
             {
             motoristaPesquisarPnl.Visible = false;
             }
-
         private void ExcluirMotoristaBtn_Click(object sender, EventArgs e)
             {
             FrmMensagemCadSucesso frmMsgSucesso = (FrmMensagemCadSucesso)Application.OpenForms["FrmMensagemCadSucesso"];
@@ -273,16 +223,13 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             FrmMsgSimNao frmMsgExcluirv = (FrmMsgSimNao)Application.OpenForms["FrmSairSistema"];
             FrmMsgSimNao frmMsgExcluir = new FrmMsgSimNao();
 
-
             frmMsgExcluir.ShowDialog();
 
             if (frmMsgExcluir.btnSairClick == true)
                 {
                 DaoMotorista daoMotorista = new DaoMotorista();
                 daoMotorista.ExcluirMotorista(m);
-
                 PosGravar();
-
                 }
             daoMotorista.ExcluirMotorista(m);
             limparDados();
@@ -293,8 +240,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             DaoMotorista daoMotorista = new DaoMotorista();
 
             dataGridViewMotorista.DataSource = daoMotorista.TodosMotoristas();
-
-
             }
 
 
@@ -304,41 +249,18 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
 
             }
 
-        private void CpfCkbx_CheckedChanged(object sender, EventArgs e)
-            {
-
-            }
-
-        private void NomeCkbx_CheckedChanged(object sender, EventArgs e)
-            {
-
-            }
-
-        private void motoristaPesquisarPnl_Paint(object sender, PaintEventArgs e)
-            {
-
-            }
-
-
         private void PesquisarBtn_Click_2(object sender, EventArgs e)
             {
             motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = false;
-           
-            
 
             string nome = PesquisarTbx.Text;
             string cpf = PesquisarTbx.Text;
 
-
             if (NomeCkbx.Checked == true)
                 {
-
                 dataGridViewMotorista.DataSource = daoMotorista.NomeMotoristas(nome);
-                
-
                 }
-
             else if (CpfCkbx.Checked == true)
                 {
                 dataGridViewMotorista.DataSource = daoMotorista.CpfMotoristas(cpf);
@@ -346,15 +268,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             else if (PesquisatTodosCkb.Checked == true)
                 {
                 atualizarGrid();
-
                 }
-
-
             }
 
         private void dataGridViewMotorista_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
             {
-           
 
             m.nome = NomeMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[0].Value.ToString();
             m.id_motorista = Convert.ToInt32(dataGridViewMotorista.CurrentRow.Cells[1].Value.ToString());
@@ -383,10 +301,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             cidadeMotoristaTbx.Enabled = false;
             ufMotoristaTbx.Enabled = false;
 
-
             motoristaPesquisarPnl.Visible = false;
             CadMotoristaIniPnl.Visible = true;
-
 
             }
 
@@ -418,25 +334,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             BairroMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[6].Value.ToString();
             DtNascimentoMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[7].Value.ToString();
             CpfMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[8].Value.ToString();
-            // celularMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[9].Value.ToString();
             telefoneMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[10].Value.ToString();
-            // atualizarGrid();
-
-            // motoristaPesquisarPnl.Visible = true;
             CadMotoristaIniPnl.Visible = true;
             }
 
-        private void dataGridViewMoto_CellContentClick(object sender, DataGridViewCellEventArgs e)
-            {
-
-            }
-
         private void BotaoCadastroPnl_Paint(object sender, PaintEventArgs e)
-            {
-
-            }
-
-        private void Enter(object sender, KeyEventArgs e)
             {
 
             }

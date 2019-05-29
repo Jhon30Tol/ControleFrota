@@ -12,8 +12,6 @@ namespace PimServices.Model
         public int Id { get; set; }
         public string Ativo { get; set; }
         public string Nome { get; set; }
-        public string Senha { get; set; }
-
-       
+        public string Senha { get; set; }       
     }
 }

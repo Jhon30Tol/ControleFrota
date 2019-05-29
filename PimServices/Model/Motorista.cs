@@ -2,7 +2,6 @@
 using PimServices.RepositorySql.PimServices.RepositorySql;
 namespace PimServices.Model
     {
-
     public class Motorista
         {
 
@@ -20,7 +19,6 @@ namespace PimServices.Model
         public DateTime dtaEmissaoCnh { get; set; }
         public DateTime dtaVencimentoCnh { get; set; }
         public int id_motorista { get; set; }
-
         public String telefoneFixo { get; set; }
         public String celular { get; set; }
 

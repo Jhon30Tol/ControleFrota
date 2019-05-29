@@ -147,3 +147,5 @@ F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFr
 F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBaseMensagem.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBaseFinanceiro.resources
 F:\Users\Jonathas.toledo\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaFinanceiro.FrmFinanceiro.resources
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.Base.FrmBaseFinanceiro.resources
+F:\Users\paluan.batista\Documents\GitHub\ControleFrota\PimFrota\obj\Debug\PimFrota.Formularios.TelaFinanceiro.FrmFinanceiro.resources

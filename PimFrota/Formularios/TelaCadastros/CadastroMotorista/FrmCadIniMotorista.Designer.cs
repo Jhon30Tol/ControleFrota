@@ -647,7 +647,7 @@
             this.dataGridViewMotorista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMotorista_CellContentClick_1);
             this.dataGridViewMotorista.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMotorista_CellContentClick_1);
             this.dataGridViewMotorista.EnabledChanged += new System.EventHandler(this.EditarMotoristaBtn_Click);
-            this.dataGridViewMotorista.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Enter);
+    
             // 
             // Column2
             // 

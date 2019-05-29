@@ -31,12 +31,10 @@ namespace PimFrota.Formularios.Login
 
             if (daoLogin.AutenticarUsuario(u))
             {
-
                 this.Hide();
                 FrmHome home = new FrmHome();
                 home.Closed += (s, args) => this.Close();
                 home.ShowDialog();
-
             }
             else
             {
@@ -46,16 +44,11 @@ namespace PimFrota.Formularios.Login
                 Usuariotxb.Clear();
                 Senhatxb.Clear();
             }
-
         }
-
         private void Entrarbtn_Click(object sender, EventArgs e)
         {
             autenticaUsuario();
-            
-
         }
-
         private void Usuariotxb_Validating(object sender, CancelEventArgs e)
         {
 
@@ -68,19 +61,11 @@ namespace PimFrota.Formularios.Login
         private void Login_Load(object sender, EventArgs e)
         {
 
-
-
         }
         private void Senhatxb_KeyDown(object sender, EventArgs u)
         {
           
         }
-
-        private void Usuariotxb_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmLogin_KeyUp(object sender, KeyEventArgs e)
             {
             if (e.KeyCode == Keys.Enter)
@@ -88,7 +73,6 @@ namespace PimFrota.Formularios.Login
                 autenticaUsuario();
                 }
             }
-
         private void Senhatxb_KeyUp(object sender, KeyEventArgs e)
             {
             if (e.KeyCode == Keys.Enter)
