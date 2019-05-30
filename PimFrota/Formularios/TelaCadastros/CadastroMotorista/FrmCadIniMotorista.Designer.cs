@@ -73,7 +73,14 @@
             this.PesquisatTodosCkb = new MaterialSkin.Controls.MaterialCheckBox();
             this.PesquisarBtn = new System.Windows.Forms.Button();
             this.dataGridViewMotorista = new System.Windows.Forms.DataGridView();
+            this.sislogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sislogDataSet = new PimFrota.sislogDataSet();
+            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
+            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
+            this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,12 +92,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone_fixo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sislogDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sislogDataSet = new PimFrota.sislogDataSet();
-            this.CpfCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.NomeCkbx = new MaterialSkin.Controls.MaterialCheckBox();
-            this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
-            this.PesquisarTbx = new System.Windows.Forms.TextBox();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadMotoristaIniPnl.SuspendLayout();
             this.motoristaPnl.SuspendLayout();
@@ -622,6 +624,7 @@
             this.dataGridViewMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMotorista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
+            this.Uf,
             this.Column1,
             this.Column3,
             this.Column4,
@@ -632,12 +635,13 @@
             this.Column8,
             this.Column9,
             this.celular,
-            this.telefone_fixo});
+            this.telefone_fixo,
+            this.Cidade});
             this.dataGridViewMotorista.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.dataGridViewMotorista.DataSource = this.sislogDataSetBindingSource;
             this.dataGridViewMotorista.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMotorista.GridColor = System.Drawing.Color.YellowGreen;
-            this.dataGridViewMotorista.Location = new System.Drawing.Point(12, 68);
+            this.dataGridViewMotorista.Location = new System.Drawing.Point(8, 58);
             this.dataGridViewMotorista.Name = "dataGridViewMotorista";
             this.dataGridViewMotorista.ReadOnly = true;
             this.dataGridViewMotorista.RowTemplate.ReadOnly = true;
@@ -647,7 +651,70 @@
             this.dataGridViewMotorista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMotorista_CellContentClick_1);
             this.dataGridViewMotorista.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMotorista_CellContentClick_1);
             this.dataGridViewMotorista.EnabledChanged += new System.EventHandler(this.EditarMotoristaBtn_Click);
-    
+            // 
+            // sislogDataSetBindingSource
+            // 
+            this.sislogDataSetBindingSource.DataSource = this.sislogDataSet;
+            this.sislogDataSetBindingSource.Position = 0;
+            // 
+            // sislogDataSet
+            // 
+            this.sislogDataSet.DataSetName = "sislogDataSet";
+            this.sislogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // CpfCkbx
+            // 
+            this.CpfCkbx.AutoSize = true;
+            this.CpfCkbx.Depth = 0;
+            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.CpfCkbx.Location = new System.Drawing.Point(134, 35);
+            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CpfCkbx.Name = "CpfCkbx";
+            this.CpfCkbx.Ripple = true;
+            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
+            this.CpfCkbx.TabIndex = 50;
+            this.CpfCkbx.Text = "CPF";
+            this.CpfCkbx.UseVisualStyleBackColor = true;
+            // 
+            // NomeCkbx
+            // 
+            this.NomeCkbx.AutoSize = true;
+            this.NomeCkbx.Depth = 0;
+            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
+            this.NomeCkbx.Location = new System.Drawing.Point(12, 35);
+            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
+            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
+            this.NomeCkbx.Name = "NomeCkbx";
+            this.NomeCkbx.Ripple = true;
+            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
+            this.NomeCkbx.TabIndex = 49;
+            this.NomeCkbx.Text = "Nome";
+            this.NomeCkbx.UseVisualStyleBackColor = true;
+            this.NomeCkbx.CheckedChanged += new System.EventHandler(this.NomeCkbx_CheckedChanged_1);
+            // 
+            // PesquisarLbl
+            // 
+            this.PesquisarLbl.AutoSize = true;
+            this.PesquisarLbl.Depth = 0;
+            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
+            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.PesquisarLbl.Location = new System.Drawing.Point(204, 7);
+            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PesquisarLbl.Name = "PesquisarLbl";
+            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
+            this.PesquisarLbl.TabIndex = 48;
+            this.PesquisarLbl.Text = "Pesquisar";
+            // 
+            // PesquisarTbx
+            // 
+            this.PesquisarTbx.Location = new System.Drawing.Point(12, 6);
+            this.PesquisarTbx.Name = "PesquisarTbx";
+            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
+            this.PesquisarTbx.TabIndex = 45;
+            this.PesquisarTbx.TextChanged += new System.EventHandler(this.PesquisarTbx_TextChanged);
             // 
             // Column2
             // 
@@ -655,6 +722,14 @@
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            // 
+            // Uf
+            // 
+            this.Uf.DataPropertyName = "Uf";
+            this.Uf.HeaderText = "Uf";
+            this.Uf.Name = "Uf";
+            this.Uf.ReadOnly = true;
+            this.Uf.Visible = false;
             // 
             // Column1
             // 
@@ -740,68 +815,13 @@
             this.telefone_fixo.ReadOnly = true;
             this.telefone_fixo.Visible = false;
             // 
-            // sislogDataSetBindingSource
+            // Cidade
             // 
-            this.sislogDataSetBindingSource.DataSource = this.sislogDataSet;
-            this.sislogDataSetBindingSource.Position = 0;
-            // 
-            // sislogDataSet
-            // 
-            this.sislogDataSet.DataSetName = "sislogDataSet";
-            this.sislogDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // CpfCkbx
-            // 
-            this.CpfCkbx.AutoSize = true;
-            this.CpfCkbx.Depth = 0;
-            this.CpfCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.CpfCkbx.Location = new System.Drawing.Point(134, 35);
-            this.CpfCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.CpfCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.CpfCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.CpfCkbx.Name = "CpfCkbx";
-            this.CpfCkbx.Ripple = true;
-            this.CpfCkbx.Size = new System.Drawing.Size(55, 30);
-            this.CpfCkbx.TabIndex = 50;
-            this.CpfCkbx.Text = "CPF";
-            this.CpfCkbx.UseVisualStyleBackColor = true;
-            // 
-            // NomeCkbx
-            // 
-            this.NomeCkbx.AutoSize = true;
-            this.NomeCkbx.Depth = 0;
-            this.NomeCkbx.Font = new System.Drawing.Font("Roboto", 10F);
-            this.NomeCkbx.Location = new System.Drawing.Point(12, 35);
-            this.NomeCkbx.Margin = new System.Windows.Forms.Padding(0);
-            this.NomeCkbx.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.NomeCkbx.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NomeCkbx.Name = "NomeCkbx";
-            this.NomeCkbx.Ripple = true;
-            this.NomeCkbx.Size = new System.Drawing.Size(67, 30);
-            this.NomeCkbx.TabIndex = 49;
-            this.NomeCkbx.Text = "Nome";
-            this.NomeCkbx.UseVisualStyleBackColor = true;
-            this.NomeCkbx.CheckedChanged += new System.EventHandler(this.NomeCkbx_CheckedChanged_1);
-            // 
-            // PesquisarLbl
-            // 
-            this.PesquisarLbl.AutoSize = true;
-            this.PesquisarLbl.Depth = 0;
-            this.PesquisarLbl.Font = new System.Drawing.Font("Roboto", 11F);
-            this.PesquisarLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.PesquisarLbl.Location = new System.Drawing.Point(204, 7);
-            this.PesquisarLbl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PesquisarLbl.Name = "PesquisarLbl";
-            this.PesquisarLbl.Size = new System.Drawing.Size(76, 19);
-            this.PesquisarLbl.TabIndex = 48;
-            this.PesquisarLbl.Text = "Pesquisar";
-            // 
-            // PesquisarTbx
-            // 
-            this.PesquisarTbx.Location = new System.Drawing.Point(12, 6);
-            this.PesquisarTbx.Name = "PesquisarTbx";
-            this.PesquisarTbx.Size = new System.Drawing.Size(151, 20);
-            this.PesquisarTbx.TabIndex = 45;
+            this.Cidade.DataPropertyName = "Cidade";
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
+            this.Cidade.Visible = false;
             // 
             // FrmCadiniMotorista
             // 
@@ -881,6 +901,7 @@
         public MaterialSkin.Controls.MaterialCheckBox NomeCkbx;
         public MaterialSkin.Controls.MaterialCheckBox PesquisatTodosCkb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Uf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -892,5 +913,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone_fixo;
-    }
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
+        }
 }

@@ -286,6 +286,8 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
             CpfMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[9].Value.ToString();
             celularMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[10].Value.ToString();
             telefoneMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[11].Value.ToString();
+            cidadeMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[12].Value.ToString();
+            ufMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[13].Value.ToString();
 
             NomeMotoristaTbx.Enabled = false;
             RuaMotoristaTbx.Enabled = false;
@@ -326,19 +328,27 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroMotorista
         private void dataGridViewMotorista_CellClick(object sender, DataGridViewCellEventArgs e)
             {
             NomeMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[0].Value.ToString();
-            RuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[1].Value.ToString();
-            NumeroRuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[2].Value.ToString();
-            CepMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[3].Value.ToString();
-            cnhMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[4].Value.ToString();
-            DtVencCnhTbx.Text = dataGridViewMotorista.CurrentRow.Cells[5].Value.ToString();
-            BairroMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[6].Value.ToString();
-            DtNascimentoMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[7].Value.ToString();
-            CpfMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[8].Value.ToString();
+            m.id_motorista = Convert.ToInt32(dataGridViewMotorista.CurrentRow.Cells[1].Value.ToString());
+            RuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[2].Value.ToString();
+            NumeroRuaMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[3].Value.ToString();
+            CepMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[4].Value.ToString();
+            cnhMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[5].Value.ToString();
+            DtVencCnhTbx.Text = dataGridViewMotorista.CurrentRow.Cells[6].Value.ToString();
+            BairroMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[7].Value.ToString();
+            DtNascimentoMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[8].Value.ToString();
+            CpfMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[9].Value.ToString();
             telefoneMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[10].Value.ToString();
+            cidadeMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[11].Value.ToString();
+            ufMotoristaTbx.Text = dataGridViewMotorista.CurrentRow.Cells[12].Value.ToString();
             CadMotoristaIniPnl.Visible = true;
             }
 
         private void BotaoCadastroPnl_Paint(object sender, PaintEventArgs e)
+            {
+
+            }
+
+        private void PesquisarTbx_TextChanged(object sender, EventArgs e)
             {
 
             }
