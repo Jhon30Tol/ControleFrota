@@ -80,7 +80,6 @@
             this.PesquisarLbl = new MaterialSkin.Controls.MaterialLabel();
             this.PesquisarTbx = new System.Windows.Forms.TextBox();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +92,7 @@
             this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone_fixo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BotaoCadastroPnl.SuspendLayout();
             this.CadMotoristaIniPnl.SuspendLayout();
             this.motoristaPnl.SuspendLayout();
@@ -624,7 +624,6 @@
             this.dataGridViewMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMotorista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
-            this.Uf,
             this.Column1,
             this.Column3,
             this.Column4,
@@ -636,7 +635,8 @@
             this.Column9,
             this.celular,
             this.telefone_fixo,
-            this.Cidade});
+            this.Cidade,
+            this.Uf});
             this.dataGridViewMotorista.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.dataGridViewMotorista.DataSource = this.sislogDataSetBindingSource;
             this.dataGridViewMotorista.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -722,14 +722,6 @@
             this.Column2.HeaderText = "Nome";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            // 
-            // Uf
-            // 
-            this.Uf.DataPropertyName = "Uf";
-            this.Uf.HeaderText = "Uf";
-            this.Uf.Name = "Uf";
-            this.Uf.ReadOnly = true;
-            this.Uf.Visible = false;
             // 
             // Column1
             // 
@@ -823,6 +815,14 @@
             this.Cidade.ReadOnly = true;
             this.Cidade.Visible = false;
             // 
+            // Uf
+            // 
+            this.Uf.DataPropertyName = "Uf";
+            this.Uf.HeaderText = "Uf";
+            this.Uf.Name = "Uf";
+            this.Uf.ReadOnly = true;
+            this.Uf.Visible = false;
+            // 
             // FrmCadiniMotorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -901,7 +901,6 @@
         public MaterialSkin.Controls.MaterialCheckBox NomeCkbx;
         public MaterialSkin.Controls.MaterialCheckBox PesquisatTodosCkb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Uf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -914,5 +913,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone_fixo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
-        }
+        private System.Windows.Forms.DataGridViewTextBoxColumn Uf;
+    }
 }
