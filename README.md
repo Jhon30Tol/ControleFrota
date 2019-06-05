@@ -44,6 +44,10 @@ Usuário padrão: admin
 
 Senha padrão: admin
 
+Obs: Caso ocorra o erro abaixo ao compila, basta recompilar o projeto, este bug se da a um problema no Visual Studio, onde já estamos buscando a solução permanente.
+Error: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
+
+
 REQUISITOS PARA A INSTALAÇÃO DO SOFTWARE:
 WINDOWS 7, 8 OU 10 COMO SISTEMA OPERACIONAL.
 
