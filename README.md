@@ -1,8 +1,6 @@
-﻿# ControleFrota
+# SisLog
 
- # Sistema: SisLog
-
-Trabalho Acadêmico - Projeto e Desenvolvimento de um Sistema para Controle de frotas.
+# Trabalho Acadêmico - Projeto e Desenvolvimento de um Sistema para Controle de frotas.
 
 
 # Atenção
