@@ -58,8 +58,7 @@ UTILIZAÇÃO DO SOFTWARE:
 
 DEPENDÊNCIAS
 
-Algumas rotinas possuem dependências relacionadas umas as outras, ou seja, algumas dependem de outras para existir através de um relacionamento, como por exemplo:
-para que um viagem possa ser cadastrada, ele deve ter cadastrado um motorista, um Veiculo e cidades.
+ALGUMAS ROTINAS POSSUEM DEPENDÊNCIAS RELACIONADAS UMAS AS OUTRAS, OU SEJA, ALGUMAS DEPENDEM DE OUTRAS PARA EXISTIR ATRAVÉS DE UM RELACIONAMENTO, COMO POR EXEMPLO: PARA QUE UM VIAGEM POSSA SER CADASTRADA, ELE DEVE TER CADASTRADO UM MOTORISTA, UM VEICULO E CIDADES.
 
 DEPENDÊNCIAS EXISTENTES
 
