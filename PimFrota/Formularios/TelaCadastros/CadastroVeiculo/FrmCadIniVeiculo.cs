@@ -37,14 +37,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
 
         private void IncluirVeiculoBtn_Click(object sender, EventArgs e)
         {
-            /*
-            PesquisarVeiculoPnl.Visible = false;
-            AdicionarVeiculoPnl.Visible = true;
-            PesquisaCodVeiculoBtn.Enabled = false;
-            CodVeiculoTbx.Enabled = false;
-            //CodVeiculoTbx.Text = "Automático";
-            AtivaCampos();
-            */
+           
 
             EditarVeiculoBtn.Enabled = false;
             ExcluirVeiculoBtn.Enabled = false;
@@ -129,12 +122,7 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
                 }
                 else
                 {
-                   // veiculo.MarcaVeiculo = MarcaVeiculoTbx.Text;
-                   // veiculo.ModeloVeiculo = ModeloVeiculoTbx.Text;
-                  //  veiculo.AnoModeloVeiculo = Convert.ToInt32(AnoModeloVeiculoTbx.Text);
-                  //  veiculo.AnoVeiculo = Convert.ToInt32(AnoVeiculoTbx.Text);
-                  //  veiculo.Chassi = ChassiTbx.Text;
-                  //  veiculo.Placa = PlacaTbx.Text;
+                   
                     switch (TipCombustivelCbx.SelectedIndex)
                     {
                         case 0:
@@ -155,12 +143,10 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
                     }
                     veiculo.CorVeiculo = CorVeiculoTbx.Text;
 
-                  //  DaoVeiculo daoVeiculo = new DaoVeiculo();
-                  //  daoVeiculo.SalvarVeiculo(veiculo);
-
+                 
                     FrmMensagemCadSucesso msgCadastroSucesso = new FrmMensagemCadSucesso();
                     msgCadastroSucesso.ShowDialog();
-                    //this.Close();
+                   
 
                     AdicionarVeiculoPnl.Visible = false;
 
@@ -271,7 +257,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
         {
             DaoVeiculo pesquisa_veiculo = new DaoVeiculo();
             Veiculo veiculo = new Veiculo();
-            //MarcaVeiculoTbx.Text = pesquisa_veiculo.BuscarVeiculoPorCodigo(CodVeiculoTbx.Text);
 
             if (veiculo.MarcaVeiculo != null)
             {
@@ -328,6 +313,11 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroVeiculo
             PlacaTbx.Text = null;
             TipCombustivelCbx.Text = null;
             CorVeiculoTbx.Text = null;
+        }
+
+        private void linhaVeiculoLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

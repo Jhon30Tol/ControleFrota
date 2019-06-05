@@ -251,7 +251,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
             {
 
                 dataGridViewUsuario.DataSource = daoUsuario.BuscarTodosUsuarios(u);
-               // AtivoCkbx.Checked = false;
                 AtivoCkbx.Enabled = false;
                 PesquisarTbx.Text = "";
                 PesquisarTbx.Enabled = true;
@@ -308,7 +307,6 @@ namespace PimFrota.Formularios.TelaCadastros.CadastroUsuario
 
             FrmCadIniUsuario frminiusuario = new FrmCadIniUsuario();
 
-            //frmMsgExcluir.msgSairSistemaLbl.Text = "Deseja mesmo Excluir ?";
             frmMsgExcluir.ShowDialog();
 
             if (frmMsgExcluir.btnSairClick == true)

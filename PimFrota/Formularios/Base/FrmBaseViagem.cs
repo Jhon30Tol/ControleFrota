@@ -50,6 +50,7 @@ namespace PimFrota.Formularios.Base
             this.BaseIniViagemPnl.Controls.Add(iniSaidaViagem);
             iniSaidaViagem.Show();
 
+
         }
 
         private void RetornoViagemBtn_Click(object sender, EventArgs e)

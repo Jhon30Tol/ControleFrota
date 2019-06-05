@@ -128,6 +128,7 @@
             this.usuarioLogadoLbl.Size = new System.Drawing.Size(61, 19);
             this.usuarioLogadoLbl.TabIndex = 4;
             this.usuarioLogadoLbl.Text = "Usuario";
+            this.usuarioLogadoLbl.Click += new System.EventHandler(this.usuarioLogadoLbl_Click);
             // 
             // materialLabel1
             // 

@@ -563,6 +563,7 @@
             this.linhaVeiculoLbl.Name = "linhaVeiculoLbl";
             this.linhaVeiculoLbl.Size = new System.Drawing.Size(598, 10);
             this.linhaVeiculoLbl.TabIndex = 30;
+            this.linhaVeiculoLbl.Click += new System.EventHandler(this.linhaVeiculoLbl_Click);
             // 
             // veiculoLbl
             // 

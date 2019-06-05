@@ -94,27 +94,6 @@ namespace PimServices.RepositorySql
 
 
 
-
-
-                //==========================================================//
-                //                                                          //
-                //        Esta com Erro este metodo, ainda n terminei       //
-                //                                                          //
-                //==========================================================//
-
-
-
-
-
-                /*veiculo.ModeloVeiculo = dr.GetString(1);
-                veiculo.AnoModeloVeiculo = Convert.ToInt32(dr.GetString(2));
-                veiculo.AnoVeiculo = Convert.ToInt32(dr.GetString(3));
-                veiculo.Chassi = dr.GetString(4);
-                veiculo.Placa = dr.GetString(5);
-                veiculo.TipoCombustivel = dr.GetString(6);
-                veiculo.CorVeiculo = dr.GetString(7);*/
-
-
             }
             catch (Exception ex)
             {
@@ -127,7 +106,7 @@ namespace PimServices.RepositorySql
                     conn.Close();
             }
             
-            //return veiculo;
+           
         }
     }
 }

@@ -47,6 +47,8 @@ namespace PimFrota.Formularios.TelaViagem
 
             EditarViagemBtn.Enabled = false;
             ExcluirViagemBtn.Enabled = false;
+            GravarViagemBtn.Enabled = false;
+
 
         }
 
@@ -94,6 +96,8 @@ namespace PimFrota.Formularios.TelaViagem
         {
 
             CadViagemIniPnl.Visible = true;
+            saidaViagemPesquisaPnl.Visible = false;
+            GravarViagemBtn.Enabled = true;
 
 
             MotoristaSaidaViagTbx.Text = "<-- Clique para incluir o motorista";
@@ -442,10 +446,13 @@ namespace PimFrota.Formularios.TelaViagem
 
         private void PesquisarViagemBtn_Click(object sender, EventArgs e)
         {
-            saidaViagemPesquisaPnl.Visible = true;
-            saidaViagemPesquisaPnl.Location = new Point(0, 0);
+            
             DtaRetornoDtm.Visible = true;
             GravarViagemBtn.Enabled = false;
+            CadViagemIniPnl.Visible = true;
+
+            saidaViagemPesquisaPnl.Visible = true;
+
 
         }
 
