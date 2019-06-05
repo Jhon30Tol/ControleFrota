@@ -1,11 +1,11 @@
 ﻿# ControleFrot
 
-Sistema: SisLog
+﻿# Sistema: SisLog
 
 Trabalho Acadêmico - Projeto e Desenvolvimento de um Sistema para Controle de frotas.
 
 
-Atenção
+﻿# Atenção
 
 Conforme o proposto em sala de aula, foi implementado somente as funcionalidades abaixo:
 - Cadastro de Usuários
@@ -13,7 +13,7 @@ Conforme o proposto em sala de aula, foi implementado somente as funcionalidades
 - Entrada e saída de viagens/veículos
 
 
-Desenvolvedores:
+﻿# Desenvolvedores:
 
 WAGNER RODRIGUES NEVES
 
@@ -28,7 +28,7 @@ IGOR HENRIQUE DA SILVA
 MARCIO BRENO BERNARDI BARBARO
 
 
-INSTALAÇÃO DO SOFTWARE:
+﻿# INSTALAÇÃO DO SOFTWARE:
 
 1 - Acessar a Pasta ControleFrotas.
 
@@ -49,12 +49,12 @@ Obs: Caso ocorra o erro abaixo ao compilar, basta recompilar o projeto, este bug
 Error: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
 
 
-REQUISITOS PARA A INSTALAÇÃO DO SOFTWARE:
+﻿# REQUISITOS PARA A INSTALAÇÃO DO SOFTWARE:
 WINDOWS 7, 8 OU 10 COMO SISTEMA OPERACIONAL.
 
 MYSQL WORKBENCH COMO SGBD.
 
-UTILIZAÇÃO DO SOFTWARE:
+﻿# UTILIZAÇÃO DO SOFTWARE:
 
 DEPENDÊNCIAS
 
