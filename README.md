@@ -1,29 +1,43 @@
-# ControleFrota
-SisLog
+﻿# ControleFrota
+
+ >> Sistema: SisLog <<
 
 Trabalho Acadêmico - Projeto e Desenvolvimento de um Sistema para Controle de frotas.
-Desenvolvido por:
+
+
+*** Atenção ***
+Conforme o proposto em sala de aula, foi implementado somente as funcionalidades abaixo:
+- Cadastro de Usuários
+- Cadastro de Motorista
+- Entrada e saída de viagens/veículos
+
+
+Desenvolvedores:
+
 WAGNER RODRIGUES NEVES
 
-JONATHAS TOLEDO PEREIRA 
+JONATHAS TOLEDO PEREIRA
 
-PALUAN BATISTA DA SILVA 
+PALUAN BATISTA DA SILVA
 
-MARCOS ROBERTO LOPES 
+MARCOS ROBERTO LOPES
 
-IGOR HENRIQUE DA SILVA 
+IGOR HENRIQUE DA SILVA
 
-MARCIO BRENO BERNARDI BARBARO 
+MARCIO BRENO BERNARDI BARBARO
 
 
-INSTALAÇÃO DO SOFTWARE
+INSTALAÇÃO DO SOFTWARE:
+
 1 - Acessar a Pasta ControleFrotas.
 
-2 - Executar o arquivo PimSql.sql no MySql Workbench. Selecionar todas as linhas e executar. O banco estará criado e pronto para utilização.
+2 - Executar o arquivo PimSql.sql no MySql Workbench. Selecionar todas as linhas e executar. O banco estará criado e pronto apara utilização.
 
-3 - Executar o software pelo executável PimFrota.exe
+3 - Adequar o banco de dados com o usuario: root e senha: root, para ficar de acordo com o configurado no programa.
 
-4 - Informar usuário e senha padrão:
+4 - Executar o software pelo executável PimFrota.exe
+
+5 - Informar usuário e senha padrão:
 
 Usuário padrão: admin
 
@@ -35,27 +49,30 @@ WINDOWS 7, 8 OU 10 COMO SISTEMA OPERACIONAL.
 MYSQL WORKBENCH COMO SGBD.
 
 UTILIZAÇÃO DO SOFTWARE
+
+
 DEPENDÊNCIAS
 
-Algumas rotias possuem dependências relacionadas umas as outras, ou seja, algumas dependem de outras para existir através de um relacionamento, como por exemplo: 
+Algumas rotinas possuem dependências relacionadas umas as outras, ou seja, algumas dependem de outras para existir através de um relacionamento, como por exemplo:
 para que um viagem possa ser cadastrada, ele deve ter cadastrado um motorista, um Veiculo e cidades.
 
 DEPENDÊNCIAS EXISTENTES
 
 VIAGEM > MOTORISTA
 
-Para que uma viagem possa ser cadastrado, é necessario ter pelo menos um motorista cadastrado.
+Para que uma viagem possa ser cadastrado, é necessário ter pelo menos um motorista cadastrado.
 
 VIAGEM > VEICULO
 
-Para que uma viagem possa ser cadastrado, é necessario ter pelo menos um veiculo cadastrado.
+Para que uma viagem possa ser cadastrado, é necessário ter pelo menos um veiculo cadastrado.
 
 
 VIAGEM > CIDADE ORIGEM
 
-Para que uma viagem possa ser cadastrado, é necessario ter pelo menos um cidade cadastrada.
+Para que uma viagem possa ser cadastrado, é necessário ter pelo menos um cidade cadastrada.
 
 VIAGEM > CIDADE DESTINO
 
-Para que uma viagem possa ser cadastrado, é necessario ter pelo menos um cidade cadastrada.
+Para que uma viagem possa ser cadastrado, é necessário ter pelo menos um cidade cadastrada.
+
 
