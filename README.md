@@ -48,17 +48,17 @@ Error: Files has invalid value "<<<<<<< HEAD". Illegal characters in path.
 
 
 # REQUISITOS PARA A INSTALAÇÃO DO SOFTWARE:
-WINDOWS 7, 8 OU 10 COMO SISTEMA OPERACIONAL.
+Windows 7, 8 ou 10 como sistema operacional.
 
-MYSQL WORKBENCH COMO SGBD.
+Mysql workbench como sgbd.
 
 # UTILIZAÇÃO DO SOFTWARE:
 
-DEPENDÊNCIAS
+Dependências
 
-ALGUMAS ROTINAS POSSUEM DEPENDÊNCIAS RELACIONADAS UMAS AS OUTRAS, OU SEJA, ALGUMAS DEPENDEM DE OUTRAS PARA EXISTIR ATRAVÉS DE UM RELACIONAMENTO, COMO POR EXEMPLO: PARA QUE UM VIAGEM POSSA SER CADASTRADA, ELE DEVE TER CADASTRADO UM MOTORISTA, UM VEICULO E CIDADES.
+Algumas rotinas possuem dependências relacionadas umas as outras, ou seja, algumas dependem de outras para existir através de um relacionamento, como por exemplo: para que um viagem possa ser cadastrada, ele deve ter cadastrado um motorista, um veiculo e cidades.
 
-DEPENDÊNCIAS EXISTENTES
+Dependências existentes
 
 VIAGEM > MOTORISTA
 
